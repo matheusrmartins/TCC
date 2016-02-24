@@ -1,4 +1,3 @@
 <?php
-//teste
-//teste
-//teste
+   echo "Olá Mundo";
+?>
