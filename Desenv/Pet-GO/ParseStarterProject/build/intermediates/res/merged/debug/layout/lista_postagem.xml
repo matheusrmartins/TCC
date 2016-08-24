@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/text_usuario"
+            android:textColor="@android:color/white"
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_marginTop="6dp"/>
+
+        <ImageView
+        android:id="@+id/image_lista_postagem"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        android:padding="8dp"
+        android:paddingBottom="15dp"
+        android:layout_marginBottom="10dp"
+            android:layout_weight="17.76" />
+
+    </TableLayout>
+
+
+
+
+</RelativeLayout><!-- From: file:/C:/Users/Matheus/Documents/Pet-GO/ParseStarterProject/src/main/res/layout/lista_postagem.xml -->

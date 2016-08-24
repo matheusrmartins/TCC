@@ -1,0 +1,38 @@
+<!--
+  ~ Copyright (c) 2015-present, Parse, LLC.
+  ~ All rights reserved.
+  ~
+  ~ This source code is licensed under the BSD-style license found in the
+  ~ LICENSE file in the root directory of this source tree. An additional grant
+  ~ of patent rights can be found in the PATENTS file in the same directory.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditarActivity"
+    android:orientation="vertical"
+
+    android:background="@drawable/fundo_degrade_aplicacao">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_postagens_editar"
+        android:layout_gravity="center_horizontal|top"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_editar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Matheus/Documents/Pet-GO/ParseStarterProject/src/main/res/layout/activity_editar.xml -->
