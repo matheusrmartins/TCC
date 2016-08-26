@@ -11,6 +11,8 @@ public class Erros {
                 return "O usuário deve conter no mínimo 5 caracteres.";
             case "APP-101":
                 return "A senha deve conter no mínimo 6 caracteres";
+            case "APP-102":
+                return "O e-mail é obrigatório";
             case "PAR-202":
                 return "Esse usuário já está cadastrado.";
             case "PAR-203":

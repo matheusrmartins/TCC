@@ -56,6 +56,7 @@ public class HomeFragment extends Fragment {
         query = ParseQuery.getQuery("Animal");
         query.orderByDescending("createdAt");
 
+
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {

@@ -37,7 +37,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:textColor="@android:color/white"
-        android:hint="Digite seu usuário"
+        android:hint="Digite seu e-mail"
         android:padding="14dp"
         android:layout_marginTop="0dp"
         android:background="@drawable/fundo_caixa_texto"
@@ -88,4 +88,4 @@
 
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/Matheus/Documents/Pet-GO/ParseStarterProject/src/main/res/layout/activity_login.xml -->
+<!-- From: file:/C:/Users/Leo/Documents/Git/TCC/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/activity_login.xml -->

@@ -20,4 +20,4 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"
       android:paddingBottom="@dimen/design_navigation_separator_vertical_padding" />
-<!-- From: file:/C:/Users/Matheus/Documents/Pet-GO/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_item_header.xml -->
+<!-- From: file:/C:/Users/Leo/Documents/Git/TCC/Desenv/Pet-GO/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_item_header.xml -->
