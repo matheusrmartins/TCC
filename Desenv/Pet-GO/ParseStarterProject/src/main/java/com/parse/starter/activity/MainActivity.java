@@ -8,7 +8,9 @@
  */
 package com.parse.starter.activity;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -43,31 +45,31 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-  private Toolbar toolbarPrincipal;
-  private SlidingTabLayout slidingTabLayout;
-  private ViewPager viewPager;
-  private ProgressDialog progressDialog;
+    private Toolbar toolbarPrincipal;
+    private SlidingTabLayout slidingTabLayout;
+    private ViewPager viewPager;
+    private ProgressDialog progressDialog;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-      toolbarPrincipal = (Toolbar) findViewById(R.id.toolbar_principal);
-      toolbarPrincipal.setLogo(R.drawable.logo_escrita);
-      slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tab_main);
-      viewPager = (ViewPager) findViewById(R.id.view_pager_main);
+        toolbarPrincipal = (Toolbar) findViewById(R.id.toolbar_principal);
+        toolbarPrincipal.setLogo(R.drawable.logo_escrita);
+        slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tab_main);
+        viewPager = (ViewPager) findViewById(R.id.view_pager_main);
 
-      setSupportActionBar(toolbarPrincipal);
+        setSupportActionBar(toolbarPrincipal);
 
-      TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(), this);
-      viewPager.setAdapter(tabsAdapter);
-      slidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.text_item_tab);
-      slidingTabLayout.setDistributeEvenly(true);
-      slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.CorPrincipal));
-      slidingTabLayout.setViewPager(viewPager);
+        TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(), this);
+        viewPager.setAdapter(tabsAdapter);
+        slidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.text_item_tab);
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.CorPrincipal));
+        slidingTabLayout.setViewPager(viewPager);
 
-  }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -85,11 +87,28 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.action_sair:
-                progressDialog =  new ProgressDialog(MainActivity.this);
-                progressDialog.setCancelable(false);
-                progressDialog.setMessage("Saindo...");
-                progressDialog.show();
-                deslogarUsuario();
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        MainActivity.this);
+                alertDialogBuilder.setTitle("Alerta");
+                alertDialogBuilder
+                        .setMessage("Tem certeza que deseja sair?")
+                        .setCancelable(true)
+                        .setPositiveButton("Sim",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                progressDialog =  new ProgressDialog(MainActivity.this);
+                                progressDialog.setCancelable(false);
+                                progressDialog.setMessage("Saindo...");
+                                progressDialog.show();
+                                deslogarUsuario();
+                            }
+                        })
+                        .setNegativeButton("Não",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
                 return true;
             case R.id.action_configuracoes:
                 return true;
@@ -124,6 +143,5 @@ public class MainActivity extends AppCompatActivity {
         ParseUser.logOut();
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-
     }
 }

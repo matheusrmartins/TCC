@@ -41,18 +41,18 @@
             android:layout_below="@+id/spinner_tipo_usuario"
             android:layout_gravity="center_horizontal" />
 
-        <EditText
-            android:fontFamily="sans-serif"
+    <EditText
+        android:fontFamily="sans-serif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
+        android:inputType="textEmailAddress"
         android:textColor="@android:color/white"
         android:id="@+id/editText_email"
         android:hint="Digite o seu e-mail"
-            android:layout_below="@+id/editText_cnpj"
+        android:layout_below="@+id/editText_cnpj"
         android:background="@drawable/fundo_caixa_texto"
-        android:padding="13dp" />
+        android:padding="13dp"
+        android:layout_alignParentLeft="true" />
 
     <EditText
         android:fontFamily="sans-serif"
@@ -60,7 +60,6 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-
         android:textColor="@android:color/white"
         android:layout_marginTop="20dp"
         android:id="@+id/editText_password"
@@ -83,6 +82,7 @@
             android:layout_below="@+id/editText_password"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
 
 
 

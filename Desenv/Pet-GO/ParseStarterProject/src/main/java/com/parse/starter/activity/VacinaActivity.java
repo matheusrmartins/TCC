@@ -148,6 +148,8 @@ public class VacinaActivity extends AppCompatActivity {
 
                             Toast.makeText(VacinaActivity.this,  "Sucesso ao publicar animal" , Toast.LENGTH_SHORT).show();
                             finish();
+                            Intent intent = new Intent(VacinaActivity.this, MainActivity.class);
+                            startActivity(intent);
                         }
                         else{
                             progressDialog.dismiss();
