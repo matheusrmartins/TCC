@@ -75,6 +75,8 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (tipo_usuario.getSelectedItem().toString().equals("Pessoa Física")) {
+
+                    cnpj.setText(null);
                     cnpj.setVisibility(View.INVISIBLE);
                     /*Mudar layout*/
                     RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,

@@ -97,27 +97,6 @@ public class EditarActivity extends AppCompatActivity {
 
         parseObject = postagens.get(position);
 
-        try {
-            Bundle bundle = new Bundle();
-            bundle.putString("nome_animal", parseObject.get("nome_animal").toString());
-            bundle.putString("lista_genero", parseObject.get("lista_genero").toString());
-            bundle.putString("lista_tipo", parseObject.get("lista_tipo").toString());
-            bundle.putString("lista_raca", parseObject.get("lista_raca").toString());
-            bundle.putString("lista_ano", parseObject.get("lista_ano").toString());
-            bundle.putString("lista_mes", parseObject.get("lista_mes").toString());
-            //bundle.putString("castrado", parseObject.get("castrado").toString());
-            bundle.putString("lista_estado", parseObject.get("lista_estado").toString());
-            bundle.putString("lista_cidade", parseObject.get("lista_cidade").toString());
-            bundle.putString("descricao", parseObject.get("descricao").toString());
-            bundle.putByteArray("imagem", parseObject.getBytes("imagem"));
-            Intent intent = new Intent(EditarActivity.this, EditarPetActivity.class);
-            intent.putExtras(bundle);
-
-            startActivity(intent);
-        }catch(Exception e){
-            Toast.makeText(EditarActivity.this,  e.getMessage() + " Codigo: AND-"+ e.hashCode(), Toast.LENGTH_SHORT).show();
-        }
-
         adapter.notifyDataSetChanged();
     }
 

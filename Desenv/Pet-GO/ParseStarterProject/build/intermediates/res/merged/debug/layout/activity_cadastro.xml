@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -89,7 +94,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editText_nome"
-        android:hint="Digite o seu nome ou instituição"
+        android:hint="Digite o seu nome"
         android:background="@drawable/fundo_caixa_texto"
         android:layout_marginTop="20dp"
         android:padding="13dp"
@@ -135,4 +140,5 @@
 
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/activity_cadastro.xml -->
+
+</ScrollView><!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/activity_cadastro.xml -->

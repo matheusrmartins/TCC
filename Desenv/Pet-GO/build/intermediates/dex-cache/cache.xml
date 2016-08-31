@@ -2,81 +2,81 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-40ec9233ccfce19ed7261b57fb15febcfdf7ebfa.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.4.0-717ae103fd4d4b7f12bddd521b59776645e6c4dc.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-a4d6ab5147eabdd4bae645fa3ed5953a5b74f75c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.4.0-a1e80e323af7300c09c62b9b3a0c82d2d61e30ca.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-d942ef81b10562ad1e8f1387111f15c44457ce60.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\parse-android-1.13.0-742f261711b62a32d7a4221717d61734748187a5.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-f4aaa13b2311a560834fd1eb05b1e24f6d9bc5e9.jar" />
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-a948a234363038d51c00a5d2efb6e307cb2df167.jar" />
     </item>
     <item
-        jar="C:\Users\Leo\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\picasso-2.5.2-235fa305e42b2f16cc37170d86465e938a4299b0.jar" />
+        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\parse-android-1.13.0-d508ff289f6f66f420dd68f5bd896b7c93e40466.jar" />
     </item>
     <item
-        jar="C:\Users\Leo\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-70f72db10b941719c41bfb605a6d965a7c2ad1d0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-ec4b33e6416cacef57b440735cda1790008f0f3e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="C:\Users\Leo\Documents\Git\TCC\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-044953d5c204a842bbb7cdf7adae68215084b8f3.jar" />
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-54e0ab827f013a8770d128d6a90d338085c72f75.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-c982e53063a08d6ee62b7b0ffbc5e47076ec5538.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.4.0-e3a6a631f57cd53d1a2cd9f681a6cab0e3d6a592.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-7fc0a8ccd1de22f36ed36c4033d648a827908eb6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-04d9f0b642d73be8e78a9096c11437ee19c50fcc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.4.0-96489d72c0272f033089e3c49908771649a6c33b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-39a3a7a209e23efdced1788531e283427b5dbbe7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\picasso-2.5.2-d789d38494a16120f03df3a01c90458623c3b213.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-e955549c71cc69e68a6a36e884a4f2354e940a53.jar" />
     </item>
 
 </items>

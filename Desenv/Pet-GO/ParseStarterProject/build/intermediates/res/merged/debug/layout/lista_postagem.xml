@@ -3,11 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="1">
+
 
         <TextView
             android:id="@+id/text_usuario"
@@ -18,20 +14,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:gravity="center"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="15dp"
+            />
 
         <ImageView
         android:id="@+id/image_lista_postagem"
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
+            android:layout_below="@+id/text_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
         android:scaleType="fitCenter"
         android:padding="8dp"
-        android:paddingBottom="15dp"
         android:layout_marginBottom="10dp"
             android:layout_weight="17.76" />
-
-    </TableLayout>
-
 
 
 

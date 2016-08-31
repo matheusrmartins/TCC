@@ -96,6 +96,7 @@ public class VacinaActivity extends AppCompatActivity {
                 String lista_mes = getIntent().getExtras().getString("lista_mes");
                 String lista_estado = getIntent().getExtras().getString("lista_estado");
                 String lista_cidade = getIntent().getExtras().getString("lista_cidade");
+                String lista_tipo = getIntent().getExtras().getString("lista_tipo");
                 String descricao = getIntent().getExtras().getString("descricao");
                 Boolean castrado_checked = getIntent().getExtras().getBoolean("castrado_checked");
                 byte[] imagem = getIntent().getExtras().getByteArray("imagem");
@@ -138,7 +139,8 @@ public class VacinaActivity extends AppCompatActivity {
                 parseObject.put("descricao", descricao);
                 parseObject.put("imagem", parseFile);
                 parseObject.put("vacinas", lista_vacinas);
-                parseObject.put("castrado", castrado);
+                parseObject.put("castrado", ""+castrado);
+                parseObject.put("lista_tipo", lista_tipo);
 
 
                 parseObject.saveInBackground(new SaveCallback() {
