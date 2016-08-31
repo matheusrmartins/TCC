@@ -12,4 +12,4 @@
         android:id="@+id/list_postagens_home"
         android:layout_gravity="center_horizontal|top"/>
 </FrameLayout>
-<!-- From: file:/C:/Users/Leo/Documents/Git/TCC/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/fragment_home.xml -->
+<!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/fragment_home.xml -->

@@ -23,16 +23,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <ImageView
-        android:id="@+id/image_lista_postagem"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="fitCenter"
-        android:padding="8dp"
-            android:layout_gravity="left"
-        android:paddingBottom="15dp"
-        android:layout_marginBottom="10dp"
-            android:layout_weight="3.80" />
+            <ImageView
+                android:id="@+id/image_lista_postagem"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                android:layout_gravity="left"
+                android:paddingBottom="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="3.80" />
 
             <TableLayout
                 android:gravity="center"
@@ -43,23 +43,25 @@
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/image_lista_postagem"
                 >
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Editar"
-                android:id="@+id/botao_editar"
-                android:background="@drawable/fundo_botao"
-                />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar"
+                    android:id="@+id/botao_editar"
+                    android:background="@drawable/fundo_botao"
+                    android:onClick="editarAnimal"
+                    />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Deletar"
-                android:background="@drawable/fundo_botao_vermelho"
-                android:layout_below="@+id/botao_editar"
-                android:layout_toRightOf="@id/image_lista_postagem"
-                android:layout_marginTop="24dp"
-                android:id="@+id/botao_deletar" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deletar"
+                    android:background="@drawable/fundo_botao_vermelho"
+                    android:layout_below="@+id/botao_editar"
+                    android:layout_toRightOf="@id/image_lista_postagem"
+                    android:layout_marginTop="24dp"
+                    android:id="@+id/botao_deletar"
+                    android:onClick="excluirAnimal"/>
             </TableLayout>
 
         </RelativeLayout>
@@ -69,4 +71,4 @@
 
 
 
-</RelativeLayout><!-- From: file:/C:/Users/Leo/Documents/Git/TCC/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/lista_postagem_edit.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/layout/lista_postagem_edit.xml -->

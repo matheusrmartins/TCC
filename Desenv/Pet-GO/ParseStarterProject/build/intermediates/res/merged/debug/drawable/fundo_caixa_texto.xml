@@ -3,4 +3,4 @@
     android:shape="rectangle">
     <solid android:color="#33FFFFFF"></solid>
     <corners android:radius="5dp"></corners>
-</shape><!-- From: file:/C:/Users/Leo/Documents/Git/TCC/Desenv/Pet-GO/ParseStarterProject/src/main/res/drawable/fundo_caixa_texto.xml -->
+</shape><!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/drawable/fundo_caixa_texto.xml -->
