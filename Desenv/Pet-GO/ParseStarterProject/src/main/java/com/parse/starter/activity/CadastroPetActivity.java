@@ -259,6 +259,20 @@ public class CadastroPetActivity extends AppCompatActivity {
         lista_cidade.setAdapter(spinnerArrayAdapter);
     }
 
+    private Bitmap createScaledBitmapKeepingAspectRatio(Bitmap bitmap, int maxSide) {
+        int orgHeight = bitmap.getHeight();
+        int orgWidth = bitmap.getWidth();
+        Log.d("Mine", "orgHeight="+orgHeight + " orgWidth="+orgWidth);
+
+        int scaledWidth = (orgWidth >= orgHeight) ? maxSide : (int) ((float) maxSide * ((float) orgWidth / (float) orgHeight));
+        int scaledHeight = (orgHeight >= orgWidth) ? maxSide : (int) ((float) maxSide * ((float) orgHeight / (float) orgWidth));
+        Log.d("Mine", "scaledHeight="+scaledHeight + " scaledWidth="+scaledWidth);
+
+        // create the scaled bitmap
+        Bitmap scaledGalleryPic = Bitmap.createScaledBitmap(bitmap, scaledWidth, scaledHeight, true);
+        return scaledGalleryPic;
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -271,6 +285,7 @@ public class CadastroPetActivity extends AppCompatActivity {
             try {
                 Bitmap imagem = MediaStore.Images.Media.getBitmap(getContentResolver(), localImagem); //Importando imagem
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                imagem = createScaledBitmapKeepingAspectRatio(imagem,400);
                 imagem.compress(Bitmap.CompressFormat.PNG, 100, stream);
                 imagem_byteArray = stream.toByteArray();
                 botao_foto.setText("Mudar foto");
