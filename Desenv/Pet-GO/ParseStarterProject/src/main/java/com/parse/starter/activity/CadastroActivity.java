@@ -33,6 +33,7 @@ public class CadastroActivity extends AppCompatActivity {
     private Button botao_cadastrar;
     private int cod_erro = 0;
     private EditText cnpj;
+    private EditText nome;
     ProgressDialog progressDialog;
 
 
@@ -46,6 +47,7 @@ public class CadastroActivity extends AppCompatActivity {
         botao_cadastrar = (Button)   findViewById(R.id.button_cadastrar);
         tipo_usuario    = (Spinner)  findViewById(R.id.spinner_tipo_usuario);
         cnpj            = (EditText) findViewById(R.id.editText_cnpj);
+        nome            = (EditText) findViewById(R.id.editText_nome);
 
 
 
@@ -99,6 +101,8 @@ public class CadastroActivity extends AppCompatActivity {
         }
         if(senha.length() < 6)
             return 101;
+        if((tipo_usuario.getSelectedItem().toString().equals("Pessoa Jurídica")) && (cnpj.getText().toString().trim().length() == 0))
+            return 103;
         else
             return 0;
     }
@@ -114,6 +118,11 @@ public class CadastroActivity extends AppCompatActivity {
             usuario.setUsername(texto_email.getText().toString().toLowerCase());
             usuario.setEmail(texto_email.getText().toString().toLowerCase());
             usuario.setPassword(texto_senha.getText().toString());
+            usuario.put("nome", nome.getText().toString());
+            usuario.put("tipo_usuario", tipo_usuario.getSelectedItem().toString());
+            usuario.put("cnpj", cnpj.getText().toString());
+
+
 
             usuario.signUpInBackground(new SignUpCallback() {
                 @Override
