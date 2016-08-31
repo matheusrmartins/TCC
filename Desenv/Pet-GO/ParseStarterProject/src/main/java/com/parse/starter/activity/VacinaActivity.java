@@ -138,6 +138,7 @@ public class VacinaActivity extends AppCompatActivity {
                 parseObject.put("descricao", descricao);
                 parseObject.put("imagem", parseFile);
                 parseObject.put("vacinas", lista_vacinas);
+                parseObject.put("castrado", castrado);
 
 
                 parseObject.saveInBackground(new SaveCallback() {
