@@ -97,7 +97,25 @@ public class EditarActivity extends AppCompatActivity {
 
         parseObject = postagens.get(position);
 
+        Bundle bundle = new Bundle();
+        bundle.putString("nome_animal", parseObject.getString("nome_animal"));
+        bundle.putString("lista_genero", parseObject.getString("lista_genero"));
+        bundle.putString("lista_tipo", parseObject.getString("lista_tipo"));
+        bundle.putString("lista_raca", parseObject.getString("lista_raca"));
+        bundle.putString("lista_ano", parseObject.getString("lista_ano"));
+        bundle.putString("lista_mes", parseObject.getString("lista_mes"));
+        bundle.putString("castrado_checked", parseObject.getString("castrado"));
+        bundle.putString("lista_estado", parseObject.getString("lista_estado"));
+        bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
+        bundle.putString("descricao", parseObject.getString("descricao"));
+        bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
+
         adapter.notifyDataSetChanged();
+
+        Intent intent = new Intent(EditarActivity.this, EditarPetActivity.class);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
     }
 
     public void excluirAnimal(View v){

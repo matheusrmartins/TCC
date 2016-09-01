@@ -75,6 +75,9 @@ public class CadastroPetActivity extends AppCompatActivity {
         lista_ano = (Spinner) findViewById(R.id.spinner_lista_ano);
         descricao = (EditText) findViewById(R.id.editText_descricao);
 
+        //lista_estado.setSelection(2);
+        //lista_estado.getSelectedItemPosition();
+
         toolbar = (Toolbar) findViewById(R.id.toolbar_cadastro_pet);
         toolbar.setTitle("Publicar Pet");
         toolbar.setTitleTextColor(R.color.Preto);
