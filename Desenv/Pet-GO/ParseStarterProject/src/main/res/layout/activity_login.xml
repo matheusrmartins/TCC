@@ -83,6 +83,15 @@
             android:layout_marginTop="10dp"
             android:onClick="abrirCadastroUsuario" />
 
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/textView_cadastrese"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
 

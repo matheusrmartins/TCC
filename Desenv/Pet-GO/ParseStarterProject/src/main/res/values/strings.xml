@@ -17,6 +17,8 @@
     <string name="action_sair">Sair</string>
     <string name="action_compartilhar">Compartilhar</string>
 
+    <string name="facebook_app_id">1775241256052867</string>
+
     <string-array name="tipo_animal">
         <item>Cachorro</item>
         <item>Gato</item>

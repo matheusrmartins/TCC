@@ -175,13 +175,6 @@ public class CadastroPetActivity extends AppCompatActivity {
         else if (lista_estado.getSelectedItem().toString().equals("AL")){
             spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AL));
         }
-
-        else if (lista_estado.getSelectedItem().toString().equals("AC")){
-        spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AC));
-    }
-            else if (lista_estado.getSelectedItem().toString().equals("AL")){
-    spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AL));
-}
         else if (lista_estado.getSelectedItem().toString().equals("AP")){
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AP));
         }

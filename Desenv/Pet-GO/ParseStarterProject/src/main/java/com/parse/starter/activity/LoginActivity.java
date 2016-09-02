@@ -2,17 +2,44 @@ package com.parse.starter.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.parse.LogInCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
+import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 import com.parse.starter.R;
+
+import com.facebook.FacebookSdk;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,17 +47,49 @@ public class LoginActivity extends AppCompatActivity {
     private EditText texto_senha;
     private Button botao_entrar;
     private ProgressDialog progressDialog;
+    private String email;
+    private String nome;
+    private LoginButton login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         verificarUsuarioLogado();
 
         texto_usuario   = (EditText) findViewById(R.id.editText_user);
         texto_senha     = (EditText) findViewById(R.id.editText_password);
         botao_entrar    = (Button)   findViewById(R.id.button_entrar);
+        login = (LoginButton) findViewById(R.id.login_button);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final List<String> mPermissions = Arrays.asList("public_profile", "email");
+                ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginActivity.this, mPermissions, new LogInCallback() {
+                    @Override
+                    public void done(ParseUser user, ParseException err) {
+                        if (user == null) {
+                            Log.d("MyApp", "Uh oh. The user cancelled the Facebook login.");
+                            Toast.makeText(LoginActivity.this, "Uh oh. The user cancelled the Facebook login.", Toast.LENGTH_LONG).show();
+                            ParseUser.logOut();
+                        } else if (user.isNew()) {
+                            Log.d("MyApp", "User signed up and logged in through Facebook!");
+                            Toast.makeText(LoginActivity.this, "User signed up and logged in through Facebook!", Toast.LENGTH_LONG).show();
+                            getUserDetailsFromFB();
+                            verificarUsuarioLogado();
+                        } else {
+                            Log.d("MyApp", "User logged in through Facebook!");
+                            Toast.makeText(LoginActivity.this, "User logged in through Facebook!", Toast.LENGTH_LONG).show();
+                            getUserDetailsFromParse();
+                        }
+                    }
+                });
+            }
+        });
+
 
         botao_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void verificarLogin(String usuario, String senha){
         ParseUser.logInInBackground(usuario, senha, new LogInCallback() {
@@ -57,6 +117,41 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void getUserDetailsFromParse() {
+        ParseUser parseUser = ParseUser.getCurrentUser();
+//Fetch profile photo
+        try {
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Toast.makeText(LoginActivity.this, "Welcome back " + parseUser.getString("usuario"), Toast.LENGTH_SHORT).show();
+    }
+
+    private void getUserDetailsFromFB() {
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "email,name");
+        new GraphRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/me",
+                parameters,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        try {
+
+                            email = response.getJSONObject().getString("email");
+                            nome = response.getJSONObject().getString("name");
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).executeAsync();
+    }
+
 
     private void verificarUsuarioLogado(){
         if(ParseUser.getCurrentUser() != null){
@@ -77,5 +172,11 @@ public class LoginActivity extends AppCompatActivity {
     public void abrirCadastroUsuario(View view){
         Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
     }
 }

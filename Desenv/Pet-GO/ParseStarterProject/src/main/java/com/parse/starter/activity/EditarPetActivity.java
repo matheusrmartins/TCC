@@ -35,6 +35,7 @@ public class EditarPetActivity extends AppCompatActivity {
     private EditText descricao;
     private CheckBox castrado;
     private ArrayAdapter<String> spinnerArrayAdapter;
+    private int count_listener_estado = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,8 @@ public class EditarPetActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(R.color.Preto);
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left);
         setSupportActionBar(toolbar);
+
+        count_listener_estado = 0;
 
         botao_continuar = (Button) findViewById(R.id.botao_continuar);
         botao_foto = (Button) findViewById(R.id.botao_foto);
@@ -63,6 +66,8 @@ public class EditarPetActivity extends AppCompatActivity {
         lista_estado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                count_listener_estado++;
+                if (count_listener_estado > 1)
                 alteraSpinnerCidade();
             }
 
@@ -103,7 +108,143 @@ public class EditarPetActivity extends AppCompatActivity {
             castrado.setChecked(false);
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_estado));
         lista_estado.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_estado")));
-        spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, alteraSpinnerCidade());
+
+        if (getIntent().getExtras().getString("lista_estado").equals("AC")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AC));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("AL")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AL));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("AP")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AP));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("AM")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AM));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("BA")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_BA));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("CE")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_CE));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("DF")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_DF));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("ES")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_ES));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("GO")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_GO));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("MA")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MA));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("MT")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MT));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("MS")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MS));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("MG")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MG));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("PA")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PA));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("PB")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PB));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("PR")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PR));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("PE")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PE));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("PI")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PI));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("RJ")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RJ));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("RN")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RN));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("RS")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RS));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("RO")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RO));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("RR")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RR));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("SC")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_SC));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("SP")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_SP));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("SE")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_SE));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+        else if (getIntent().getExtras().getString("lista_estado").equals("TO")){
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_TO));
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            lista_cidade.setAdapter(spinnerArrayAdapter);
+        }
+
         lista_cidade.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_cidade")));
         descricao.setText(getIntent().getExtras().getString("descricao"));
         ImageView imagemEditar = (ImageView) findViewById(R.id.image_editar);
@@ -126,96 +267,90 @@ public class EditarPetActivity extends AppCompatActivity {
         lista_raca.setAdapter(spinnerArrayAdapter);
     }
 
-    private int alteraSpinnerCidade(){
-        int array_cidade = 0;
+    private void alteraSpinnerCidade(){
         if (lista_estado.getSelectedItem().toString().equals("AC")) {
-            array_cidade = R.array.lista_cidade_AC;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AC));
         }
         else if (lista_estado.getSelectedItem().toString().equals("AL")){
-            array_cidade = R.array.lista_cidade_AL;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AL));
         }
         else if (lista_estado.getSelectedItem().toString().equals("AP")){
-            array_cidade = R.array.lista_cidade_AP;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AP));
         }
         else if (lista_estado.getSelectedItem().toString().equals("AM")){
-            array_cidade = R.array.lista_cidade_AM;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_AM));
         }
         else if (lista_estado.getSelectedItem().toString().equals("BA")){
-            array_cidade = R.array.lista_cidade_BA;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_BA));
         }
         else if (lista_estado.getSelectedItem().toString().equals("CE")){
-            array_cidade = R.array.lista_cidade_CE;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_CE));
         }
         else if (lista_estado.getSelectedItem().toString().equals("DF")){
-            array_cidade = R.array.lista_cidade_DF;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_DF));
         }
         else if (lista_estado.getSelectedItem().toString().equals("ES")){
-            array_cidade = R.array.lista_cidade_ES;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_ES));
         }
         else if (lista_estado.getSelectedItem().toString().equals("GO")){
-            array_cidade = R.array.lista_cidade_GO;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_GO));
         }
         else if (lista_estado.getSelectedItem().toString().equals("MA")){
-            array_cidade = R.array.lista_cidade_MA;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MA));
         }
         else if (lista_estado.getSelectedItem().toString().equals("MT")){
-            array_cidade = R.array.lista_cidade_MT;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MT));
         }
         else if (lista_estado.getSelectedItem().toString().equals("MS")){
-            array_cidade = R.array.lista_cidade_MS;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MS));
         }
         else if (lista_estado.getSelectedItem().toString().equals("MG")){
-            array_cidade = R.array.lista_cidade_MG;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_MG));
         }
         else if (lista_estado.getSelectedItem().toString().equals("PA")){
-            array_cidade = R.array.lista_cidade_PA;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PA));
         }
         else if (lista_estado.getSelectedItem().toString().equals("PB")){
-            array_cidade = R.array.lista_cidade_PB;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PB));
         }
         else if (lista_estado.getSelectedItem().toString().equals("PR")){
-            array_cidade = R.array.lista_cidade_PR;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PR));
         }
         else if (lista_estado.getSelectedItem().toString().equals("PE")){
-            array_cidade = R.array.lista_cidade_PE;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PE));
         }
         else if (lista_estado.getSelectedItem().toString().equals("PI")){
-            array_cidade = R.array.lista_cidade_PI;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_PI));
         }
         else if (lista_estado.getSelectedItem().toString().equals("RJ")){
-            array_cidade = R.array.lista_cidade_RJ;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RJ));
         }
         else if (lista_estado.getSelectedItem().toString().equals("RN")){
-            array_cidade = R.array.lista_cidade_RN;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RN));
         }
         else if (lista_estado.getSelectedItem().toString().equals("RS")){
-            array_cidade = R.array.lista_cidade_RS;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RS));
         }
         else if (lista_estado.getSelectedItem().toString().equals("RO")){
-            array_cidade = R.array.lista_cidade_RO;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RO));
         }
         else if (lista_estado.getSelectedItem().toString().equals("RR")){
-            array_cidade = R.array.lista_cidade_RR;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_RR));
         }
         else if (lista_estado.getSelectedItem().toString().equals("SC")){
-            array_cidade = R.array.lista_cidade_SC;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_SC));
         }
         else if (lista_estado.getSelectedItem().toString().equals("SP")){
-            array_cidade = R.array.lista_cidade_SP;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_SP));
         }
         else if (lista_estado.getSelectedItem().toString().equals("SE")){
-            array_cidade = R.array.lista_cidade_SE;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_SE));
         }
         else if (lista_estado.getSelectedItem().toString().equals("TO")){
-            array_cidade = R.array.lista_cidade_TO;
+            spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_cidade_TO));
         }
-
-        spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(array_cidade));
-
 
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         lista_cidade.setAdapter(spinnerArrayAdapter);
-
-        return array_cidade;
     }
 }
