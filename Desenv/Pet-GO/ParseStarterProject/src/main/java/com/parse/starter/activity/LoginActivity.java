@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +29,7 @@ import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 
@@ -50,6 +52,8 @@ public class LoginActivity extends AppCompatActivity {
     private String email;
     private String nome;
     private LoginButton login;
+    private CallbackManager callbackManager;
+    List<String> mPermissions = Arrays.asList("public_profile", "email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,25 +67,39 @@ public class LoginActivity extends AppCompatActivity {
         texto_senha     = (EditText) findViewById(R.id.editText_password);
         botao_entrar    = (Button)   findViewById(R.id.button_entrar);
         login = (LoginButton) findViewById(R.id.login_button);
+        callbackManager = CallbackManager.Factory.create();
+
+        /*login.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Toast.makeText(LoginActivity.this,  "OnSuccess", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancel() {
+                Toast.makeText(LoginActivity.this,  "OnCancel", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Toast.makeText(LoginActivity.this,  "OnError", Toast.LENGTH_SHORT).show();
+            }
+
+        });*/
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final List<String> mPermissions = Arrays.asList("public_profile", "email");
                 ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginActivity.this, mPermissions, new LogInCallback() {
                     @Override
                     public void done(ParseUser user, ParseException err) {
                         if (user == null) {
-                            Log.d("MyApp", "Uh oh. The user cancelled the Facebook login.");
                             Toast.makeText(LoginActivity.this, "Uh oh. The user cancelled the Facebook login.", Toast.LENGTH_LONG).show();
-                            ParseUser.logOut();
                         } else if (user.isNew()) {
-                            Log.d("MyApp", "User signed up and logged in through Facebook!");
                             Toast.makeText(LoginActivity.this, "User signed up and logged in through Facebook!", Toast.LENGTH_LONG).show();
                             getUserDetailsFromFB();
                             verificarUsuarioLogado();
                         } else {
-                            Log.d("MyApp", "User logged in through Facebook!");
                             Toast.makeText(LoginActivity.this, "User logged in through Facebook!", Toast.LENGTH_LONG).show();
                             getUserDetailsFromParse();
                         }
@@ -120,7 +138,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void getUserDetailsFromParse() {
         ParseUser parseUser = ParseUser.getCurrentUser();
-//Fetch profile photo
         try {
         } catch (Exception e) {
             e.printStackTrace();
@@ -139,11 +156,8 @@ public class LoginActivity extends AppCompatActivity {
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
                         try {
-
                             email = response.getJSONObject().getString("email");
                             nome = response.getJSONObject().getString("name");
-
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -177,6 +191,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 }

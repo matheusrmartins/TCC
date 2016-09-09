@@ -109,6 +109,7 @@ public class EditarActivity extends AppCompatActivity {
         bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
         bundle.putString("descricao", parseObject.getString("descricao"));
         bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
+        bundle.putString("objectId", parseObject.getString("objectId"));
 
         adapter.notifyDataSetChanged();
 

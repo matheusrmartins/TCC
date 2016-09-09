@@ -2,9 +2,15 @@ package com.parse.starter.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.ParseException;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,9 +20,22 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.Toast;
 
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.parse.starter.R;
 import com.squareup.picasso.Picasso;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 public class EditarPetActivity extends AppCompatActivity {
 
@@ -34,6 +53,8 @@ public class EditarPetActivity extends AppCompatActivity {
     private Spinner lista_estado;
     private EditText descricao;
     private CheckBox castrado;
+    private byte[] imagem_byteArray;
+    private ImageView imagemEditar;
     private ArrayAdapter<String> spinnerArrayAdapter;
     private int count_listener_estado = 0;
 
@@ -63,6 +84,14 @@ public class EditarPetActivity extends AppCompatActivity {
         lista_ano = (Spinner) findViewById(R.id.spinner_lista_ano);
         descricao = (EditText) findViewById(R.id.editText_descricao);
 
+        botao_foto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                compartilhar();
+            }
+        });
+
+
         lista_estado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -76,6 +105,57 @@ public class EditarPetActivity extends AppCompatActivity {
 
             }
         });
+
+        botao_continuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ParseQuery<ParseObject> query = ParseQuery.getQuery("Animal");
+                query.whereEqualTo("lista_cidade", getIntent().getExtras().getString("lista_cidade"));
+                query.findInBackground(new FindCallback<ParseObject>() {
+                    @Override
+                    public void done(List<ParseObject> objects, com.parse.ParseException e) {
+                        if (e == null) {
+                            progressDialog = new ProgressDialog(EditarPetActivity.this);
+                            progressDialog.setCancelable(false);
+                            progressDialog.setMessage("Atualizando animal...");
+                            progressDialog.show();
+
+                            ParseObject object = objects.get(0);
+                            //Define o nome da imagem a ser gravada no banco
+                            SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyyyhhmmss");
+                            String nomeimagem = dateFormat.format( new Date());
+                            ParseFile parseFile = new ParseFile(ParseUser.getCurrentUser().getObjectId() + nomeimagem + ".png", imagem_byteArray);
+
+                            char animal_castrado = 'N';
+
+                            if (castrado.isChecked())
+                            {
+                                animal_castrado = 'S';
+                            }
+
+                            object.put("imagem", parseFile);
+                            object.put("lista_cidade", lista_cidade.getSelectedItem().toString());
+                            object.put("lista_estado",lista_estado.getSelectedItem().toString());
+                            object.put("lista_raca",lista_raca.getSelectedItem().toString());
+                            object.put("lista_ano",lista_ano.getSelectedItem().toString());
+                            object.put("lista_mes",lista_mes.getSelectedItem().toString());
+                            object.put("descricao",descricao.getText().toString());
+                            object.put("lista_genero",lista_genero.getSelectedItem().toString());
+                            object.put("lista_tipo",lista_tipo.getSelectedItem().toString());
+                            object.put("castrado", ""+animal_castrado);
+                            object.put("nome_animal", nome_animal.getText().toString());
+                            object.saveInBackground();
+
+                            finish();
+                            Intent activity = new Intent(EditarPetActivity.this, EditarActivity.class);
+                            startActivity(activity);
+                            progressDialog.dismiss();
+                        }
+                    }
+
+                });
+            }});
 
 
         lista_tipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -247,12 +327,15 @@ public class EditarPetActivity extends AppCompatActivity {
 
         lista_cidade.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_cidade")));
         descricao.setText(getIntent().getExtras().getString("descricao"));
-        ImageView imagemEditar = (ImageView) findViewById(R.id.image_editar);
+        imagemEditar = (ImageView) findViewById(R.id.image_editar);
         Picasso.with(this)
                 .load(getIntent().getExtras().getString("imagem"))
                 .fit()
                 .centerInside()
                 .into(imagemEditar);
+
+
+
 
     }
 
@@ -352,5 +435,49 @@ public class EditarPetActivity extends AppCompatActivity {
 
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         lista_cidade.setAdapter(spinnerArrayAdapter);
+    }
+
+    private void compartilhar(){
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent,1);
+    }
+
+    private Bitmap createScaledBitmapKeepingAspectRatio(Bitmap bitmap, int maxSide) {
+        int orgHeight = bitmap.getHeight();
+        int orgWidth = bitmap.getWidth();
+        Log.d("Mine", "orgHeight="+orgHeight + " orgWidth="+orgWidth);
+
+        int scaledWidth = (orgWidth >= orgHeight) ? maxSide : (int) ((float) maxSide * ((float) orgWidth / (float) orgHeight));
+        int scaledHeight = (orgHeight >= orgWidth) ? maxSide : (int) ((float) maxSide * ((float) orgHeight / (float) orgWidth));
+        Log.d("Mine", "scaledHeight="+scaledHeight + " scaledWidth="+scaledWidth);
+
+        // create the scaled bitmap
+        Bitmap scaledGalleryPic = Bitmap.createScaledBitmap(bitmap, scaledWidth, scaledHeight, true);
+        return scaledGalleryPic;
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
+            progressDialog = new ProgressDialog(EditarPetActivity.this);
+            progressDialog.setCancelable(false);
+            progressDialog.setMessage("Carregando imagem...");
+            progressDialog.show();
+            Uri localImagem = data.getData(); //Recupera local da imagem
+            try {
+                Bitmap imagem = MediaStore.Images.Media.getBitmap(getContentResolver(), localImagem); //Importando imagem
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                imagem = createScaledBitmapKeepingAspectRatio(imagem, 400);
+                imagem.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                imagem_byteArray = stream.toByteArray();
+                imagemEditar.setImageBitmap(imagem);
+                botao_foto.setText("Mudar foto");
+                botao_foto.setBackgroundColor(R.drawable.fundo_botao_vermelho);
+                progressDialog.dismiss();
+            } catch (IOException e) {
+                progressDialog.dismiss();
+                Toast.makeText(EditarPetActivity.this, e.getMessage() + " Codigo: AND-" + e.hashCode(), Toast.LENGTH_SHORT).show();
+            }
+
+        }
     }
 }
