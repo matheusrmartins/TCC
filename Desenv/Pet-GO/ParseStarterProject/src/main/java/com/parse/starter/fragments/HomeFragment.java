@@ -1,12 +1,14 @@
 package com.parse.starter.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.print.PrintHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -16,6 +18,10 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.starter.R;
+import com.parse.starter.activity.EditarActivity;
+import com.parse.starter.activity.EditarPetActivity;
+import com.parse.starter.activity.MainActivity;
+import com.parse.starter.activity.PerfilAnimalActivity;
 import com.parse.starter.adapter.HomeAdapter;
 
 import java.util.ArrayList;
@@ -30,6 +36,8 @@ public class HomeFragment extends Fragment {
     private ArrayList<ParseObject> postagens;
     private ArrayAdapter<ParseObject> adapter;
     private ParseQuery<ParseObject> query;
+    private ParseObject parseObject;
+    private int position;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -46,6 +54,37 @@ public class HomeFragment extends Fragment {
         listView = (ListView) view.findViewById(R.id.list_postagens_home);
         adapter = new HomeAdapter(getActivity(), postagens);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                position = listView.getPositionForView(view);
+                parseObject = postagens.get(position);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("nome_animal", parseObject.getString("nome_animal"));
+                bundle.putString("lista_genero", parseObject.getString("lista_genero"));
+                bundle.putString("lista_tipo", parseObject.getString("lista_tipo"));
+                bundle.putString("lista_raca", parseObject.getString("lista_raca"));
+                bundle.putString("lista_ano", parseObject.getString("lista_ano"));
+                bundle.putString("lista_mes", parseObject.getString("lista_mes"));
+                bundle.putString("castrado_checked", parseObject.getString("castrado"));
+                bundle.putString("lista_estado", parseObject.getString("lista_estado"));
+                bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
+                bundle.putString("descricao", parseObject.getString("descricao"));
+                bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
+                bundle.putString("vacinas", (parseObject.getString("vacinas").trim().equals("")) ?
+                                    "" : parseObject.getString("vacinas"));
+                bundle.putString("objectId", parseObject.getObjectId());
+
+                adapter.notifyDataSetChanged();
+
+                Intent intent = new Intent(getActivity(), PerfilAnimalActivity.class);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+            }
+        });
 
         getPostagens();
 

@@ -28,10 +28,10 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.parse.APPLICATION_ID"
-            android:value="@string/parse_app_id" />
+            android:value="LdVxRPC6mx6I43ljmVC3YSZQPbRpOIuab4prY1Nl" />
         <meta-data
             android:name="com.parse.CLIENT_KEY"
-            android:value="@string/parse_client_key" />
+            android:value="s5iaDHvP96DNaECMNcP31cFaEnRLk6D3TnyZdaXU" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -75,6 +75,11 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.EditarActivity" />
+        </activity>
+        <activity android:name="com.parse.starter.activity.PerfilAnimalActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.activity.MainActivity" />
         </activity>
         <activity
             android:name="com.facebook.CustomTabActivity"

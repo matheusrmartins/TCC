@@ -5748,7 +5748,7 @@
     <!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="ColorPrimary">#FFFFFF</color>
-    <color name="CorPrincipal">#228b22</color>
+    <color name="CorPrincipal">#228B22</color>
     <color name="Preto">#000000</color>
     <!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml -->
     <eat-comment/>
@@ -6147,10 +6147,6 @@
     <!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.15.0/res/values/values.xml -->
     <eat-comment/>
     <string name="messenger_send_button_text">Send</string>
-    <!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/values/strings.xml -->
-    <eat-comment/>
-    <string name="parse_app_id">YOUR_APPLICATION_ID</string>
-    <string name="parse_client_key">YOUR_CLIENT_KEY</string>
     <!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>

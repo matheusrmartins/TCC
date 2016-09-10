@@ -21,14 +21,6 @@
     <include layout="@layout/toolbar"
         android:id="@+id/toolbar_editar_pet" />
 
-        <ImageView
-            android:id="@+id/image_editar"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:scaleType="fitCenter"
-            android:padding="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="17.76" />
     </LinearLayout>
 
 
@@ -54,6 +46,15 @@
                 android:id="@+id/relativeLayout4"
                 android:weightSum="1"
                 android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/image_editar"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="17.76" />
 
                 <EditText
                     android:fontFamily="sans-serif"
