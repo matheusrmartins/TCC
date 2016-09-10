@@ -68,7 +68,6 @@ public class EditarAdapter extends ArrayAdapter<ParseObject> {
         }
 
         return view;
-
     }
 
 

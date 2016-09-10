@@ -15,10 +15,14 @@ public class Erros {
                 return "O e-mail é obrigatório";
             case "APP-103":
                 return "O CNPJ é obrigatório";
+            case "APP-104":
+                return "A cidade informada é inválida";
             case "PAR-202":
                 return "Esse usuário já está cadastrado.";
             case "PAR-203":
                 return "Esse e-mail já está cadastrado.";
+            case "PAR-125":
+                return "Digite um e-mail válido.";
             default:
                 return "Ocorreu um erro inesperado";
         }

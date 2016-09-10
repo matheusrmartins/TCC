@@ -79,13 +79,6 @@ public class EditarActivity extends AppCompatActivity {
         adapter = new EditarAdapter(EditarActivity.this, postagens);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(EditarActivity.this, "Teste", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         getPostagens();
     }
 
@@ -109,7 +102,7 @@ public class EditarActivity extends AppCompatActivity {
         bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
         bundle.putString("descricao", parseObject.getString("descricao"));
         bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
-        bundle.putString("objectId", parseObject.getString("objectId"));
+        bundle.putString("objectId", parseObject.getObjectId());
 
         adapter.notifyDataSetChanged();
 
@@ -117,6 +110,23 @@ public class EditarActivity extends AppCompatActivity {
         intent.putExtras(bundle);
 
         startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        listView.setAdapter(adapter);
+
+        getPostagens();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        listView.setAdapter(adapter);
+
+        getPostagens();
     }
 
     public void excluirAnimal(View v){
@@ -159,6 +169,8 @@ public class EditarActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
     private void getPostagens(){

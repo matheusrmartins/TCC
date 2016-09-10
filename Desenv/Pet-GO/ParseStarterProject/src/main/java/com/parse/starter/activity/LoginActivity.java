@@ -65,7 +65,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         verificarUsuarioLogado();
 
         texto_usuario   = (EditText) findViewById(R.id.editText_user);

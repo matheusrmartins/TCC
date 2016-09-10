@@ -182,12 +182,13 @@
                     android:layout_marginTop="17dp"
                     />
 
-                <Spinner
+                <AutoCompleteTextView
                     android:layout_width="match_parent"
                     android:padding="13dp"
                     android:background="@drawable/fundo_caixa_texto"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner_lista_cidade"
+                    android:id="@+id/lista_cidade"
+                    android:hint="Digite a cidade do animal"
                     android:dropDownWidth="match_parent"
                     android:layout_marginTop="17dp"
                     />
@@ -218,11 +219,11 @@
             </LinearLayout>
 
             <Button
-                android:text="Continuar"
+                android:text="Atualizar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
-                android:id="@+id/botao_continuar"
+                android:id="@+id/botao_atualizar"
                 android:background="@drawable/fundo_botao"
                 android:padding="13dp"
                 android:layout_marginTop="17dp"/>
