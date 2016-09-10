@@ -1,13 +1,18 @@
 package com.parse.starter.activity;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telecom.Call;
+import android.text.InputType;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -69,6 +74,33 @@ public class LoginActivity extends AppCompatActivity {
         login = (LoginButton) findViewById(R.id.login_button);
         callbackManager = CallbackManager.Factory.create();
 
+        texto_usuario.setInputType(InputType.TYPE_TEXT_FLAG_AUTO_COMPLETE);
+
+        SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+        StringBuilder sqlClientes = new StringBuilder();
+        sqlClientes.append("CREATE TABLE IF NOT EXISTS usuario(");
+        sqlClientes.append("_id INTEGER PRIMARY KEY, email VARCHAR(50));");
+        db.execSQL(sqlClientes.toString());
+
+        Cursor cursor = db.rawQuery("SELECT * FROM usuario", null);
+
+        cursor.moveToFirst();
+
+        try {
+            String nomeString = cursor.getString(cursor.getColumnIndex("email"));
+
+            StringBuilder conversor = new StringBuilder();
+            conversor.append(nomeString);
+            if (conversor.toString() != null)
+                texto_usuario.setText(conversor.toString());
+        }
+        catch (Exception e){
+            Log.i("Erro ", e.getMessage());
+        }
+
+        db.close();
+
         /*login.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -127,6 +159,17 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void done(ParseUser user, ParseException e) {
                 if (e == null){
+                    SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+                    StringBuilder sqlClientes = new StringBuilder();
+                    sqlClientes.append("DELETE FROM usuario;");
+                    db.execSQL(sqlClientes.toString());
+
+                    ContentValues ctv = new ContentValues();
+                    ctv.put("email", texto_usuario.getText().toString());
+
+                    db.insert("usuario","id",ctv);
+
                     abrirAreaPrincipal();
                 }else{
                     progressDialog.dismiss();

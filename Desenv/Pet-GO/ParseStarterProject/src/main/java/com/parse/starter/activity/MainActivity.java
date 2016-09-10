@@ -137,8 +137,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     private void deslogarUsuario(){
         ParseUser.logOut();
         Intent intent = new Intent(this, LoginActivity.class);
