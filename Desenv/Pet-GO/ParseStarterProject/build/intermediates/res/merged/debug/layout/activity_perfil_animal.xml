@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    android:orientation="vertical"
+    tools:context="com.parse.starter.activity.PerfilAnimalActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout1"
+            android:background="@color/ColorPrimary">
+            <include layout="@layout/toolbar"
+                android:id="@+id/toolbar_perfil_animal" />
+
+            <ImageView
+                android:id="@+id/imagem_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="17.76" />
+        </LinearLayout>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/linear_layout1"
+            android:background="@drawable/fundo_degrade_aplicacao">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_layout2"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear_layout3"
+                    android:weightSum="1"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_descricao"
+                        android:layout_marginTop="17dp"
+                        android:padding="13dp"
+                        android:textColor="@color/Preto"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:padding="13dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_tipo_genero"
+                        android:textColor="@color/Preto"
+                        android:layout_marginTop="17dp"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:padding="13dp"
+                        android:textColor="@color/Preto"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_raca"
+                        android:layout_marginTop="17dp"
+                        android:textSize="18sp"
+                        />
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/textView_idade"
+                            android:textColor="@color/Preto"
+                            android:padding="13dp"
+                            android:layout_marginTop="17dp"
+                            android:layout_height="match_parent"
+                            android:textSize="18sp"/>
+
+
+
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_castrado"
+                        android:textColor="@color/Preto"
+                    android:layout_marginTop="17dp"
+                    android:padding="13dp"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_cidade_estado"
+                        android:textColor="@color/Preto"
+                        android:layout_marginTop="17dp"
+                        android:padding="13dp"
+                        android:textSize="18sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

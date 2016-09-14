@@ -115,16 +115,20 @@ public class CadastroActivity extends AppCompatActivity {
         });
     }
 
-    private int verificaErro(String email, String senha, int posicao_cidade){
+    private int verificaErro(String email, String senha, int posicao_cidade, String nome){
 
         if((email.trim().equals(null)) || (email.trim().equals("")))
             return 102;
-        if(senha.length() < 6)
+        else if(senha.length() < 6)
             return 101;
-        if((tipo_usuario.getSelectedItem().toString().equals("Pessoa Jurídica")) && (cnpj.getText().toString().trim().length() == 0))
+        else if((tipo_usuario.getSelectedItem().toString().equals("Pessoa Jurídica")) && (cnpj.getText().toString().trim().length() == 0))
             return 103;
-        if(posicao_cidade == -1)
+        else if(posicao_cidade == -1)
             return 104;
+        else if(nome.trim().length() < 1)
+            return 105;
+        else if(nome.trim().length() > 30)
+            return 106;
         else
             return 0;
     }
@@ -134,7 +138,8 @@ public class CadastroActivity extends AppCompatActivity {
 
         cod_erro = verificaErro(texto_email.getText().toString().toLowerCase(),
                                 texto_senha.getText().toString(),
-                                adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()));
+                                adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
+                                nome.getText().toString());
 
         if (cod_erro == 0) {
             ParseUser usuario = new ParseUser();

@@ -5,4 +5,4 @@
         android:startColor="#368acc"
         android:endColor="#29e3a5"
         android:angle="135"></gradient>
-</shape><!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/src/main/res/drawable/fundo_degrade.xml -->
+</shape>

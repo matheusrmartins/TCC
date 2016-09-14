@@ -126,6 +126,8 @@ public class VacinaActivity extends AppCompatActivity {
                     Toast.makeText(VacinaActivity.this,  e.getMessage()+" Codigo: AND-"+ e.hashCode(), Toast.LENGTH_SHORT).show();
                 }
 
+
+
                 //Envia os objetos parse para o banco
                 ParseObject parseObject = new ParseObject("Animal");
                 parseObject.put("object_id_usuario", ParseUser.getCurrentUser().getObjectId().toString());
@@ -167,6 +169,7 @@ public class VacinaActivity extends AppCompatActivity {
     public void onBackPressed() {
         finish();
     }
+
 
     private void criaCheckBox(String texto, int id){
         final LinearLayout attractedTo = (LinearLayout) findViewById(R.id.activity_vacina);

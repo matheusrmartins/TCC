@@ -7,6 +7,8 @@
     android:fitsSystemWindows="true"
     android:background="@drawable/fundo_degrade_aplicacao"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.parse.starter.activity.EditarPetActivity">
 
 <RelativeLayout
@@ -70,27 +72,50 @@
                     android:layout_marginBottom="17dp"
                     android:layout_marginTop="18dp" />
 
-                <Spinner
-                    android:entries="@array/tipo_animal"
-                    android:layout_width="match_parent"
-                    android:padding="13dp"
-                    android:background="@drawable/fundo_caixa_texto"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="17dp"
-                    android:id="@+id/spinner_lista_Tipo"
-                    android:dropDownWidth="match_parent"
-                    android:layout_marginTop="17dp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
 
-                <Spinner
-                    android:entries="@array/genero_animal"
-                    android:layout_width="match_parent"
-                    android:padding="13dp"
-                    android:background="@drawable/fundo_caixa_texto"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/spinner_lista_Genero"
-                    android:layout_marginBottom="17dp"
-                    android:dropDownWidth="match_parent"
-                    android:layout_marginTop="17dp" />
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/radio_tipo">
+                        <RadioButton android:id="@+id/radio_cachorro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cachorro"
+                            android:checked="true"
+                            android:buttonTint="@color/Preto"/>
+                        <RadioButton android:id="@+id/radio_gato"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gato"
+                            android:buttonTint="@color/Preto"/>
+                    </RadioGroup>
+
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/radio_genero"
+                        android:layout_toRightOf="@+id/radio_tipo"
+                        android:layout_marginLeft="50dp">
+                        <RadioButton android:id="@+id/radio_macho"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Macho"
+                            android:buttonTint="@color/Preto"
+                            android:checked="true"/>
+                        <RadioButton android:id="@+id/radio_femea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fêmea"
+                            android:buttonTint="@color/Preto" />
+                    </RadioGroup>
+
+                </RelativeLayout>
+
 
                 <Spinner
                     android:entries="@array/lista_raca_cachorro"
@@ -110,14 +135,16 @@
                     android:layout_marginTop="17dp"
                     >
 
-                    <Spinner
+                    <EditText
                         android:entries="@array/lista_ano"
-                        android:id="@+id/spinner_lista_ano"
+                        android:id="@+id/lista_ano"
                         android:layout_width="70dp"
                         android:padding="13dp"
                         android:background="@drawable/fundo_caixa_texto"
                         android:layout_height="wrap_content"
                         android:dropDownWidth="match_parent"
+                        android:inputType="number"
+                        android:maxLength="2"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true" />
 
@@ -128,7 +155,7 @@
                         android:id="@+id/textView2"
                         android:textSize="18sp"
                         android:layout_marginLeft="8dp"
-                        android:layout_toRightOf="@id/spinner_lista_ano"
+                        android:layout_toRightOf="@id/lista_ano"
                         android:layout_centerVertical="true"/>
 
                     <TextView
@@ -139,19 +166,21 @@
                         android:textSize="18sp"
 
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@+id/spinner_lista_mes"
-                        android:layout_toEndOf="@+id/spinner_lista_mes"
+                        android:layout_toRightOf="@+id/lista_mes"
+                        android:layout_toEndOf="@+id/lista_mes"
                         android:layout_marginLeft="12dp"
                         android:layout_marginStart="12dp" />
 
-                    <Spinner
+                    <EditText
                         android:entries="@array/lista_mes"
                         android:layout_width="70dp"
                         android:padding="13dp"
                         android:background="@drawable/fundo_caixa_texto"
                         android:layout_height="wrap_content"
-                        android:id="@+id/spinner_lista_mes"
+                        android:id="@+id/lista_mes"
                         android:dropDownWidth="match_parent"
+                        android:inputType="number"
+                        android:maxLength="2"
                         android:layout_marginLeft="38dp"
                         android:layout_marginStart="38dp"
                         android:layout_alignTop="@+id/textView4"

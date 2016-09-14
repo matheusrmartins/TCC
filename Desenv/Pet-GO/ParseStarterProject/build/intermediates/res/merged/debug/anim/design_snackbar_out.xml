@@ -17,4 +17,4 @@
 
 <translate xmlns:android="http://schemas.android.com/apk/res/android"
            android:fromYDelta="0"
-           android:toYDelta="100%"/><!-- From: file:/C:/Users/Matheus/Documents/git/local/tcc/Desenv/Pet-GO/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/anim/design_snackbar_out.xml -->
+           android:toYDelta="100%"/>

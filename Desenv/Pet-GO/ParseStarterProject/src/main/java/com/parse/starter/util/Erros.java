@@ -17,6 +17,10 @@ public class Erros {
                 return "O CNPJ é obrigatório";
             case "APP-104":
                 return "A cidade informada é inválida";
+            case "APP-105":
+                return "O nome é obrigatório";
+            case "APP-106":
+                return "O nome deve conter no máximo 30 caracteres";
             case "PAR-202":
                 return "Esse usuário já está cadastrado.";
             case "PAR-203":

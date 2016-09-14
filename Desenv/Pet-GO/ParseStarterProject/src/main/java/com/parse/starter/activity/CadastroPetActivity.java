@@ -20,6 +20,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -46,11 +48,13 @@ public class CadastroPetActivity extends AppCompatActivity {
     private Button botao_continuar;
     private Button botao_foto;
     private EditText nome_animal;
-    private Spinner lista_tipo;
-    private Spinner lista_genero;
+    private RadioGroup lista_tipo;
+    private String tipo;
+    private RadioButton cachorro;
     private Spinner lista_raca;
-    private Spinner lista_ano;
-    private Spinner lista_mes;
+    private EditText lista_ano;
+    private EditText lista_mes;
+    private RadioButton macho;
     private AutoCompleteTextView lista_cidade;
     private Spinner lista_estado;
     private EditText descricao;
@@ -70,14 +74,15 @@ public class CadastroPetActivity extends AppCompatActivity {
         botao_continuar = (Button) findViewById(R.id.botao_continuar);
         botao_foto = (Button) findViewById(R.id.botao_foto);
         nome_animal = (EditText) findViewById(R.id.editText_nome_animal);
-        lista_tipo = (Spinner) findViewById(R.id.spinner_lista_Tipo);
+        lista_tipo = (RadioGroup) findViewById(R.id.radio_tipo);
         lista_raca = (Spinner) findViewById(R.id.spinner_lista_raca);
-        lista_mes = (Spinner) findViewById(R.id.spinner_lista_mes);
-        lista_genero = (Spinner) findViewById(R.id.spinner_lista_Genero);
+        lista_mes = (EditText) findViewById(R.id.lista_mes);
         lista_cidade = (AutoCompleteTextView) findViewById(R.id.lista_cidade);
         lista_estado = (Spinner) findViewById(R.id.spinner_lista_estado);
-        lista_ano = (Spinner) findViewById(R.id.spinner_lista_ano);
+        lista_ano = (EditText) findViewById(R.id.lista_ano);
         descricao = (EditText) findViewById(R.id.editText_descricao);
+        macho = (RadioButton) findViewById(R.id.radio_macho);
+        cachorro = (RadioButton) findViewById(R.id.radio_cachorro);
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_cadastro_pet);
@@ -105,15 +110,11 @@ public class CadastroPetActivity extends AppCompatActivity {
         });
 
 
-        lista_tipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        lista_tipo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                tipo = cachorro.isChecked() ? "Cachorro":"Gato";
                 alteraSpinnerRaca();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -137,11 +138,11 @@ public class CadastroPetActivity extends AppCompatActivity {
                     try {
                         Bundle bundle = new Bundle();
                         bundle.putString("nome_animal", nome_animal.getText().toString());
-                        bundle.putString("lista_genero", lista_genero.getSelectedItem().toString());
-                        bundle.putString("lista_tipo", lista_tipo.getSelectedItem().toString());
+                        bundle.putString("lista_genero", macho.isChecked() ? "Macho":"Fêmea");
+                        bundle.putString("lista_tipo", cachorro.isChecked() ? "Cachorro":"Gato");
                         bundle.putString("lista_raca", lista_raca.getSelectedItem().toString());
-                        bundle.putString("lista_ano", lista_ano.getSelectedItem().toString());
-                        bundle.putString("lista_mes", lista_mes.getSelectedItem().toString());
+                        bundle.putString("lista_ano", lista_ano.getText().toString());
+                        bundle.putString("lista_mes", lista_mes.getText().toString());
                         bundle.putBoolean("castrado_checked", castrado_checked);
                         bundle.putString("lista_estado", lista_estado.getSelectedItem().toString());
                         bundle.putString("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
@@ -171,10 +172,10 @@ public class CadastroPetActivity extends AppCompatActivity {
     }
 
     private void alteraSpinnerRaca(){
-        if (lista_tipo.getSelectedItem().toString().equals("Cachorro")) {
+        if (tipo == "Cachorro") {
             spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_cachorro));
         }
-        else if (lista_tipo.getSelectedItem().toString().equals("Gato")){
+        else if (tipo == "Gato"){
             spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_gato));
         }
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -267,6 +268,7 @@ public class CadastroPetActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cidades);
         lista_cidade.setAdapter(adapter);
         lista_cidade.setThreshold(1);
+        lista_cidade.setText(null);
     }
 
     private Bitmap createScaledBitmapKeepingAspectRatio(Bitmap bitmap, int maxSide) {

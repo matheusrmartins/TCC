@@ -19,6 +19,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
@@ -47,11 +49,16 @@ public class EditarPetActivity extends AppCompatActivity {
     private Button botao_atualizar;
     private Button botao_foto;
     private EditText nome_animal;
-    private Spinner lista_tipo;
-    private Spinner lista_genero;
     private Spinner lista_raca;
-    private Spinner lista_ano;
-    private Spinner lista_mes;
+    private EditText lista_ano;
+    private EditText lista_mes;
+    private RadioGroup lista_tipo;
+    private RadioGroup lista_genero;
+    private String tipo;
+    private RadioButton cachorro;
+    private RadioButton gato;
+    private RadioButton macho;
+    private RadioButton femea;
     private AutoCompleteTextView lista_cidade;
     private Spinner lista_estado;
     private EditText descricao;
@@ -81,15 +88,19 @@ public class EditarPetActivity extends AppCompatActivity {
         botao_foto.setText("Mudar foto");
         botao_foto.setBackgroundColor(R.drawable.fundo_botao_vermelho);
         nome_animal = (EditText) findViewById(R.id.editText_nome_animal);
-        lista_tipo = (Spinner) findViewById(R.id.spinner_lista_Tipo);
+        lista_tipo = (RadioGroup) findViewById(R.id.radio_tipo);
+        lista_genero = (RadioGroup) findViewById(R.id.radio_genero);
         lista_raca = (Spinner) findViewById(R.id.spinner_lista_raca);
-        lista_mes = (Spinner) findViewById(R.id.spinner_lista_mes);
+        lista_mes = (EditText) findViewById(R.id.lista_mes);
         castrado = (CheckBox) findViewById(R.id.castrado);
-        lista_genero = (Spinner) findViewById(R.id.spinner_lista_Genero);
         lista_cidade = (AutoCompleteTextView) findViewById(R.id.lista_cidade);
         lista_estado = (Spinner) findViewById(R.id.spinner_lista_estado);
-        lista_ano = (Spinner) findViewById(R.id.spinner_lista_ano);
+        lista_ano = (EditText) findViewById(R.id.lista_ano);
         descricao = (EditText) findViewById(R.id.editText_descricao);
+        macho = (RadioButton) findViewById(R.id.radio_macho);
+        cachorro = (RadioButton) findViewById(R.id.radio_cachorro);
+        femea = (RadioButton) findViewById(R.id.radio_femea);
+        gato = (RadioButton) findViewById(R.id.radio_gato);
 
         botao_foto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,7 +124,13 @@ public class EditarPetActivity extends AppCompatActivity {
             }
         });
 
-
+        lista_tipo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                tipo = cachorro.isChecked() ? "Cachorro":"Gato";
+                alteraSpinnerRaca();
+            }
+        });
 
         botao_atualizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,11 +170,11 @@ public class EditarPetActivity extends AppCompatActivity {
                                 object.put("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
                                 object.put("lista_estado", lista_estado.getSelectedItem().toString());
                                 object.put("lista_raca", lista_raca.getSelectedItem().toString());
-                                object.put("lista_ano", lista_ano.getSelectedItem().toString());
-                                object.put("lista_mes", lista_mes.getSelectedItem().toString());
+                                object.put("lista_ano", lista_ano.getText().toString());
+                                object.put("lista_mes", lista_mes.getText().toString());
                                 object.put("descricao", descricao.getText().toString());
-                                object.put("lista_genero", lista_genero.getSelectedItem().toString());
-                                object.put("lista_tipo", lista_tipo.getSelectedItem().toString());
+                                object.put("lista_genero", macho.isChecked() ? "Macho":"Fêmea");
+                                object.put("lista_tipo", cachorro.isChecked() ? "Cachorro":"Gato");
                                 object.put("castrado", "" + animal_castrado);
                                 object.put("nome_animal", nome_animal.getText().toString());
                                 object.saveInBackground(new SaveCallback() {
@@ -185,36 +202,29 @@ public class EditarPetActivity extends AppCompatActivity {
             }});
 
 
-        lista_tipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                alteraSpinnerRaca();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
         // Atribuição de valores do parseObject para os objetos da tela
         nome_animal.setText(getIntent().getExtras().getString("nome_animal"));
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.tipo_animal));
-        lista_tipo.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_tipo")));
-        spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.genero_animal));
-        lista_genero.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_genero")));
+        if (getIntent().getExtras().getString("lista_tipo").equals("Cachorro"))
+            cachorro.setChecked(true);
+        else
+            gato.setChecked(true);
+        if (getIntent().getExtras().getString("lista_genero").equals("Macho"))
+            macho.setChecked(true);
+        else
+            femea.setChecked(true);
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_cachorro));
         lista_raca.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_raca")));
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_ano));
-        lista_ano.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_ano")));
-        spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_mes));
-        lista_mes.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_mes")));
+        lista_ano.setText(getIntent().getExtras().getString("lista_ano"));
+        lista_mes.setText(getIntent().getExtras().getString("lista_mes"));
         if (getIntent().getExtras().getString("castrado_checked").equals("S"))
             castrado.setChecked(true);
         else
             castrado.setChecked(false);
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_estado));
         lista_estado.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_estado")));
+        alteraSpinnerCidade();
         lista_cidade.setText(getIntent().getExtras().getString("lista_cidade"));
         descricao.setText(getIntent().getExtras().getString("descricao"));
         imagemEditar = (ImageView) findViewById(R.id.image_editar);
@@ -230,10 +240,10 @@ public class EditarPetActivity extends AppCompatActivity {
     }
 
     private void alteraSpinnerRaca(){
-        if (lista_tipo.getSelectedItem().toString().equals("Cachorro")) {
+        if (tipo == "Cachorro") {
             spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_cachorro));
         }
-        else if (lista_tipo.getSelectedItem().toString().equals("Gato")){
+        else if (tipo == "Gato"){
             spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_gato));
         }
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -326,6 +336,7 @@ public class EditarPetActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cidades);
         lista_cidade.setAdapter(adapter);
         lista_cidade.setThreshold(1);
+        lista_cidade.setText(null);
     }
 
     private final int verificaErro(int posicao_cidade){
