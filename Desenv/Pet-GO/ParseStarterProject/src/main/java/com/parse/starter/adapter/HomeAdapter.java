@@ -1,17 +1,24 @@
 package com.parse.starter.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.ParseObject;
 import com.parse.starter.R;
+import com.parse.starter.activity.MainActivity;
+import com.parse.starter.activity.PerfilAnimalActivity;
 import com.squareup.picasso.Picasso;
 
 
@@ -25,6 +32,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
     private Context context;
     private ArrayList<ParseObject> postagens;
+    ParseObject parseObject;
 
     public HomeAdapter(Context c, ArrayList<ParseObject> objects) {
         super(c, 0, objects);
@@ -34,7 +42,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
 
         View view = convertView;
 
@@ -47,20 +55,34 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
             try {
                 //Cria um objeto parse para cada postagem
-                ParseObject parseObject = postagens.get(position);
+                parseObject = postagens.get(position);
 
                 //Importa o texto com o nome do animal
-                TextView objectid = (TextView) view.findViewById(R.id.text_usuario);
-                objectid.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
+                TextView nome = (TextView) view.findViewById(R.id.text_usuario);
+                nome.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
+
+                TextView detalhes = (TextView) view.findViewById(R.id.text_detalhes);
+                detalhes.setText((CharSequence) parseObject.get("lista_raca").toString()+
+                    ", "+ parseObject.get("lista_ano").toString());
+
+                detalhes.append((parseObject.get("lista_ano").equals("01")) ? " ano":" anos");
+
+                if (!parseObject.get("lista_mes").equals("00")) {
+                    detalhes.append(" e " + parseObject.get("lista_mes").toString());
+                    detalhes.append((parseObject.get("lista_mes").equals("01")) ? " mês":" meses");
+                }
+
 
                 //Importa a imagem do animal
-                ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_postagem);
+                final ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_postagem);
                 Picasso.with(context)
                         .load(parseObject.getParseFile("imagem").getUrl())
                         .fit()
                         .centerInside()
                         .into(imagemPostagem);
-                objectid.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
+                nome.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
+
+                ImageButton botao_like = (ImageButton) view.findViewById(R.id.botao_like);
 
             }catch (Exception e){
                 Toast.makeText(context, "Não foi possível carregar as imagens", Toast.LENGTH_SHORT).show();
@@ -71,4 +93,6 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
         return view;
 
     }
+
+
 }

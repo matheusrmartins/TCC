@@ -4,7 +4,6 @@
     android:layout_height="match_parent">
 
 
-
         <TextView
             android:id="@+id/text_usuario"
             android:textColor="@color/Preto"
@@ -17,16 +16,85 @@
             android:layout_marginTop="15dp"
             />
 
+    <TextView
+        android:id="@+id/text_detalhes"
+        android:textColor="@color/Preto"
+        android:layout_width="fill_parent"
+        android:textSize="20sp"
+        android:layout_below="@id/text_usuario"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
         <ImageView
         android:id="@+id/image_lista_postagem"
-            android:layout_below="@+id/text_usuario"
+            android:layout_below="@+id/text_detalhes"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
         android:scaleType="fitCenter"
         android:padding="8dp"
         android:layout_marginBottom="10dp"
-            android:layout_weight="17.76" />
+            android:layout_weight="17.76"/>
 
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_lista_postagem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp">
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/botao_like"
+                    android:background="@drawable/round_button"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:src="@drawable/like"
+                    android:elevation="10dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/ColorPrimary"
+                    android:padding="@dimen/fab_margin" />
+
+                <ImageButton
+                    android:padding="@dimen/fab_margin"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/round_button_red"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_toRightOf="@id/botao_like"
+                    android:src="@drawable/ic_favorite"
+                    android:adjustViewBounds="true"
+                    android:elevation="10dp"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/ColorPrimary"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/botao_favoritar"/>
+
+                <TextView
+                    android:text="Favoritar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/botao_favoritar"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:text="Curtir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/textView3"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@+id/botao_like"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp" />
+
+        </RelativeLayout>
 
 
 </RelativeLayout>

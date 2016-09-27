@@ -1,14 +1,18 @@
 package com.parse.starter.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.starter.R;
 import com.squareup.picasso.Picasso;
@@ -81,4 +85,6 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
 
 
     }
+
+
 }

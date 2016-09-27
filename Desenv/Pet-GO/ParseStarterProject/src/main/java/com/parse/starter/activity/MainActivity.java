@@ -25,14 +25,19 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
+import com.parse.starter.adapter.HomeAdapter;
 import com.parse.starter.adapter.TabsAdapter;
 import com.parse.starter.fragments.HomeFragment;
 import com.parse.starter.util.SlidingTabLayout;
@@ -40,6 +45,7 @@ import com.parse.starter.util.SlidingTabLayout;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -49,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
     private SlidingTabLayout slidingTabLayout;
     private ViewPager viewPager;
     private ProgressDialog progressDialog;
+    private ListView listView;
+    private ArrayList<ParseObject> postagens;
+    private ArrayAdapter<ParseObject> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,12 +71,14 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbarPrincipal);
 
+
         TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(), this);
         viewPager.setAdapter(tabsAdapter);
         slidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.text_item_tab);
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.CorPrincipal));
         slidingTabLayout.setViewPager(viewPager);
+
 
     }
 

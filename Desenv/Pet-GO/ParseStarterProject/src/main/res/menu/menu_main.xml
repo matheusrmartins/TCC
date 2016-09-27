@@ -9,7 +9,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context=".activity.MainActivity">
+      tools:context=".activity.MainActivity"
+
+      >
     <item android:id="@+id/action_configuracoes"
           android:title="@string/action_configuracoes"
           android:orderInCategory="100"
@@ -25,11 +27,13 @@
         android:orderInCategory ="150"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/action_compartilhar"
-        android:title="@string/action_compartilhar"
+    <item
+        android:id="@+id/action_compartilhar"
+        android:title="Publicar"
         android:orderInCategory="300"
-        android:icon="@drawable/ic_pets"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+
+        android:enabled="true"/>
 
     <item android:id="@+id/action_atualizar"
         android:title="Atualizar"

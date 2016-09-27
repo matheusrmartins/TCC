@@ -12,7 +12,6 @@ import android.text.style.ImageSpan;
 import android.view.ViewGroup;
 
 import com.parse.starter.R;
-import com.parse.starter.fragments.CampanhasFragment;
 import com.parse.starter.fragments.HomeFragment;
 import com.parse.starter.fragments.NotificacoesFragment;
 
@@ -25,8 +24,8 @@ import java.util.HashMap;
 public class TabsAdapter extends FragmentStatePagerAdapter {
 
     private Context context;
-    private String[] abas = new String[]{"HOME", "NOTIFICAÇÕES", "CAMPANHAS"};
-    private int[] icones = new int[]{R.drawable.ic_action_home, R.drawable.ic_notifications, R.drawable.ic_today};
+    private String[] abas = new String[]{"HOME", "NOTIFICAÇÕES"};
+    private int[] icones = new int[]{R.drawable.ic_action_home, R.drawable.ic_notifications};
     private int tamanhoIcone;
     private HashMap<Integer, Fragment> fragmentosUtilizados =  new HashMap<>();
 
@@ -49,9 +48,6 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
                 break;
             case 1:
                 fragment = new NotificacoesFragment();
-                break;
-            case 2:
-                fragment = new CampanhasFragment();
                 break;
         }
 

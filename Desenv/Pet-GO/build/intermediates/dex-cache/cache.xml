@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_04d9f0b642d73be8e78a9096c11437ee19c50fcc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="true"
         optimize="false"
         revision="23.0.2"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_e955549c71cc69e68a6a36e884a4f2354e940a53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_c982e53063a08d6ee62b7b0ffbc5e47076ec5538\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -36,6 +54,60 @@
         revision="23.0.2"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_04d9f0b642d73be8e78a9096c11437ee19c50fcc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_e955549c71cc69e68a6a36e884a4f2354e940a53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\parse-android-1.13.0_d508ff289f6f66f420dd68f5bd896b7c93e40466\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_39a3a7a209e23efdced1788531e283427b5dbbe7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.parse\parsefacebookutils-v4-android\1.10.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="771e1739a38be7573c55458d16ca2d2f9f546cf7">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.parse-parsefacebookutils-v4-android-1.10.3_e4fd4fb73c293cdb0d7ba12e1f25197c692ebbe3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.4.0_0790bde6ccc165f890d40df1125be1578a3c7ad6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_c5b6e24e7fcf49a273484b12e051067bdd7ccee5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -84,6 +156,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_7fc0a8ccd1de22f36ed36c4033d648a827908eb6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a195d0b7f49da552be32852cd715682c93a9d6c">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d140599d94559a85116559054077b9d930e8f3e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="true"
         optimize="false"
@@ -96,6 +186,24 @@
         jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="false"
+        revision="23.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_25b9e66eba4530be01e9a6ffa134b52d966619c8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_d789d38494a16120f03df3a01c90458623c3b213\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.2"
         sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_25b9e66eba4530be01e9a6ffa134b52d966619c8\classes.dex" />
@@ -120,9 +228,36 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="820605b42a2d3d9cb9e6c4cc7453fb4f802aedff">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.15.0_ac7e6a79209643f61445e293569ebca8da2a46dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Matheus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="false"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_e3a6a631f57cd53d1a2cd9f681a6cab0e3d6a592\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_96489d72c0272f033089e3c49908771649a6c33b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_e3a6a631f57cd53d1a2cd9f681a6cab0e3d6a592\classes.dex" />
@@ -156,12 +291,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_54e0ab827f013a8770d128d6a90d338085c72f75\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="false"
         revision="23.0.2"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_c982e53063a08d6ee62b7b0ffbc5e47076ec5538\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_a948a234363038d51c00a5d2efb6e307cb2df167\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="acd2f37e0cbeb979dc0db781820ee24608b65c98">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2b66861a6f76079634c9c5e6d4e0c3b637761c65\classes.dex" />
     </item>
 
 </items>

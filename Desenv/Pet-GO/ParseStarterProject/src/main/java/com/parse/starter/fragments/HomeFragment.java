@@ -11,12 +11,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.activity.EditarActivity;
 import com.parse.starter.activity.EditarPetActivity;
@@ -37,7 +39,6 @@ public class HomeFragment extends Fragment {
     private ArrayAdapter<ParseObject> adapter;
     private ParseQuery<ParseObject> query;
     private ParseObject parseObject;
-    private int position;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -90,6 +91,7 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+
 
     private void getPostagens(){
         query = ParseQuery.getQuery("Animal");
