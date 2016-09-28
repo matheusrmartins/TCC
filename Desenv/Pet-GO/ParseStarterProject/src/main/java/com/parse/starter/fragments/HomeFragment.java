@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -56,6 +57,9 @@ public class HomeFragment extends Fragment {
         adapter = new HomeAdapter(getActivity(), postagens);
         listView.setAdapter(adapter);
 
+
+
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -86,6 +90,8 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
 
         getPostagens();
 
@@ -120,6 +126,7 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
 
     public void atualizaPostagens(){
         getPostagens();

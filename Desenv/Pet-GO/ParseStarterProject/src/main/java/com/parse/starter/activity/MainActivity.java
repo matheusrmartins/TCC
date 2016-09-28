@@ -27,6 +27,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbarPrincipal);
 
+        listView = (ListView) findViewById(R.id.list_postagens_home);
 
         TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(), this);
         viewPager.setAdapter(tabsAdapter);
@@ -153,4 +155,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
 }

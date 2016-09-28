@@ -37,16 +37,19 @@
             android:layout_weight="17.76"/>
 
 
-        <RelativeLayout
+    <RelativeLayout
             android:gravity="center"
-            android:layout_width="140dp"
+            android:layout_width="1400dp"
+            android:descendantFocusability="blocksDescendants"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image_lista_postagem"
+            android:layout_below="@+id/txt_likes"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="25dp">
                 <ImageButton
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:focusable="false"
+                    android:descendantFocusability="blocksDescendants"
                     android:id="@+id/botao_like"
                     android:background="@drawable/round_button"
                     android:gravity="center_vertical|center_horizontal"
@@ -60,9 +63,11 @@
                     android:padding="@dimen/fab_margin"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:focusable="false"
                     android:background="@drawable/round_button_red"
                     android:gravity="center_vertical|center_horizontal"
                     android:layout_toRightOf="@id/botao_like"
+                    android:descendantFocusability="blocksDescendants"
                     android:src="@drawable/ic_favorite"
                     android:adjustViewBounds="true"
                     android:elevation="10dp"
@@ -95,6 +100,18 @@
                     android:layout_marginStart="12dp" />
 
         </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_likes"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_below="@+id/image_lista_postagem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"/>
 
 
 </RelativeLayout>
