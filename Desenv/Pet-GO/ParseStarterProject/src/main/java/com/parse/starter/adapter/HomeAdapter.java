@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +17,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.activity.EditarActivity;
@@ -27,6 +32,7 @@ import com.squareup.picasso.Picasso;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Matheus on 17/08/2016.
@@ -36,8 +42,15 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
     private Context context;
     private ArrayList<ParseObject> postagens;
-    ParseObject parseObject;
+    private ParseObject parseObject;
+    //private ParseQuery<ParseObject> query;
+    private boolean curtiu = false;
+    private String usuario_like = "";
+    private ParseUser parseUser;
 
+  //  protected static class RowViewHolder {
+    //    public ImageButton botao_like_holder;
+   // }
 
     public HomeAdapter(Context c, ArrayList<ParseObject> objects) {
         super(c, 0, objects);
@@ -64,6 +77,8 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
                 final ImageButton botao_like = (ImageButton) view.findViewById(R.id.botao_like);
                 botao_like.setTag(position);
+
+                parseUser = ParseUser.getCurrentUser();
 
                 //Importa o texto com o nome do animal
                 TextView nome = (TextView) view.findViewById(R.id.text_usuario);
@@ -93,21 +108,48 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                 TextView txt_likes = (TextView) view.findViewById(R.id.txt_likes);
                 txt_likes.setText(parseObject.get("Likes") + " pessoas curtiram");
 
-
                 botao_like.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onClick(final View v) {
                         final int posicao = (Integer) botao_like.getTag();
                         parseObject = postagens.get(posicao);
-                        parseObject.put("Likes", parseObject.getInt("Likes") + 1);
-                        parseObject.saveInBackground(new SaveCallback() {
-                            @Override
-                            public void done(ParseException e) {
-                                if (e == null)
-                                    notifyDataSetChanged();
+
+                        ParseQuery<ParseObject> query;
+                        query = ParseQuery.getQuery("Animal");
+                        query.getInBackground(parseObject.getObjectId(), new GetCallback<ParseObject>() {
+                            public void done(ParseObject object, ParseException e) {
+                                if (e == null) {
+                                    // object will be your game score
+                                    usuario_like = object.getString("usuario_like");
+                                    if (usuario_like == null){
+                                        usuario_like = "";
+                                    }
+                                    curtiu = usuario_like.contains(parseUser.getObjectId().toString());
+                                    if (!curtiu) {
+                                        parseObject.put("Likes", parseObject.getInt("Likes") + 1);
+                                        parseObject.put("usuario_like", parseObject.get("usuario_like") + parseUser.getObjectId() + ";");
+                                        parseObject.saveInBackground(new SaveCallback() {
+                                            @Override
+                                            public void done(ParseException e) {
+                                                if (e == null) {
+                                                    notifyDataSetChanged();
+                                                }
+                                            }
+                                        });
+                                    }
+                                    else{
+                                        Toast.makeText(context,"Você já curtiu " + parseObject.get("nome_animal"),Toast.LENGTH_SHORT).show();
+                                    }
+
+
+                                } else {
+                                    // something went wrong
+                                    Toast.makeText(context,"Erro inesperado",Toast.LENGTH_SHORT).show();
                                 }
+                            }
                         });
-                    }
+
+                }
                 });
 
                 ImageButton botao_favoritar = (ImageButton) view.findViewById(R.id.botao_favoritar);

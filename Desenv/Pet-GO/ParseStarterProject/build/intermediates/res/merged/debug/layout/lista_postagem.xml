@@ -39,7 +39,7 @@
 
     <RelativeLayout
             android:gravity="center"
-            android:layout_width="1400dp"
+            android:layout_width="140dp"
             android:descendantFocusability="blocksDescendants"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_likes"
