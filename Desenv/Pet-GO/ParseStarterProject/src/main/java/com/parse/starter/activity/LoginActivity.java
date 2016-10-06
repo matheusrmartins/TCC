@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
 
         db.close();
 
-        /*login.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        login.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(LoginActivity.this,  "OnSuccess", Toast.LENGTH_SHORT).show();
@@ -116,27 +116,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this,  "OnError", Toast.LENGTH_SHORT).show();
             }
 
-        });*/
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginActivity.this, mPermissions, new LogInCallback() {
-                    @Override
-                    public void done(ParseUser user, ParseException err) {
-                        if (user == null) {
-                            Toast.makeText(LoginActivity.this, "Uh oh. The user cancelled the Facebook login.", Toast.LENGTH_LONG).show();
-                        } else if (user.isNew()) {
-                            Toast.makeText(LoginActivity.this, "User signed up and logged in through Facebook!", Toast.LENGTH_LONG).show();
-                            getUserDetailsFromFB();
-                            verificarUsuarioLogado();
-                        } else {
-                            Toast.makeText(LoginActivity.this, "User logged in through Facebook!", Toast.LENGTH_LONG).show();
-                            getUserDetailsFromParse();
-                        }
-                    }
-                });
-            }
         });
 
 

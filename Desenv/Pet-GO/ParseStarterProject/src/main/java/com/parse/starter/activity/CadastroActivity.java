@@ -1,7 +1,10 @@
 package com.parse.starter.activity;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -159,6 +162,16 @@ public class CadastroActivity extends AppCompatActivity {
                 @Override
                 public void done(ParseException e) {
                     if (e == null) {
+                        SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+                        StringBuilder sqlClientes = new StringBuilder();
+                        sqlClientes.append("DELETE FROM usuario;");
+                        db.execSQL(sqlClientes.toString());
+
+                        ContentValues ctv = new ContentValues();
+                        ctv.put("email", texto_email.getText().toString());
+
+                        db.insert("usuario","id",ctv);
                         abrirLoginUsuario();
                     } else {
                         progressDialog.dismiss();

@@ -17,20 +17,25 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.starter.R;
-import com.parse.starter.adapter.EditarAdapter;
+import com.parse.starter.adapter.FavoritosAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.parse.ParseUser.getCurrentUser;
 
 
 public class FavoritosActivity extends AppCompatActivity {
@@ -40,60 +45,64 @@ public class FavoritosActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ListView listView;
     private ArrayList<ParseObject> postagens;
+    private ArrayList<ParseObject> favoritos;
+    private ArrayList<ParseUser> parseUsers;
     private ArrayAdapter<ParseObject> adapter;
     private ParseQuery<ParseObject> query;
+    private ParseQuery<ParseObject> query_aux;
     private ParseObject parseObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar);
+        setContentView(R.layout.activity_favoritos);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Meus pets");
+        toolbar.setTitle("Favoritos");
         toolbar.setTitleTextColor(R.color.Preto);
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left);
 
-        viewPager = (ViewPager) findViewById(R.id.view_pager_editar);
+        viewPager = (ViewPager) findViewById(R.id.view_pager_favoritos);
 
         setSupportActionBar(toolbar);
 
         postagens = new ArrayList<>();
-        listView = (ListView) findViewById(R.id.list_postagens_editar);
-        adapter = new EditarAdapter(FavoritosActivity.this, postagens);
+        listView = (ListView) findViewById(R.id.list_postagens_favoritos);
+        adapter = new FavoritosAdapter(FavoritosActivity.this, postagens);
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                position = listView.getPositionForView(view);
+                parseObject = postagens.get(position);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("nome_animal", parseObject.getString("nome_animal"));
+                bundle.putString("lista_genero", parseObject.getString("lista_genero"));
+                bundle.putString("lista_tipo", parseObject.getString("lista_tipo"));
+                bundle.putString("lista_raca", parseObject.getString("lista_raca"));
+                bundle.putString("lista_ano", parseObject.getString("lista_ano"));
+                bundle.putString("lista_mes", parseObject.getString("lista_mes"));
+                bundle.putString("castrado_checked", parseObject.getString("castrado"));
+                bundle.putString("lista_estado", parseObject.getString("lista_estado"));
+                bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
+                bundle.putString("descricao", parseObject.getString("descricao"));
+                bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
+                bundle.putString("vacinas", (parseObject.getString("vacinas").trim().equals("")) ?
+                        "" : parseObject.getString("vacinas"));
+                bundle.putString("objectId", parseObject.getObjectId());
+
+                adapter.notifyDataSetChanged();
+
+                Intent intent = new Intent(FavoritosActivity.this, PerfilAnimalActivity.class);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+            }
+        });
+
         getPostagens();
-    }
-
-    public void editarAnimal(View v){
-
-        ListView listview = (ListView) findViewById(R.id.list_postagens_editar);
-
-        final int position = listview.getPositionForView((View) v.getParent());
-
-        parseObject = postagens.get(position);
-
-        Bundle bundle = new Bundle();
-        bundle.putString("nome_animal", parseObject.getString("nome_animal"));
-        bundle.putString("lista_genero", parseObject.getString("lista_genero"));
-        bundle.putString("lista_tipo", parseObject.getString("lista_tipo"));
-        bundle.putString("lista_raca", parseObject.getString("lista_raca"));
-        bundle.putString("lista_ano", parseObject.getString("lista_ano"));
-        bundle.putString("lista_mes", parseObject.getString("lista_mes"));
-        bundle.putString("castrado_checked", parseObject.getString("castrado"));
-        bundle.putString("lista_estado", parseObject.getString("lista_estado"));
-        bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
-        bundle.putString("descricao", parseObject.getString("descricao"));
-        bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
-        bundle.putString("objectId", parseObject.getObjectId());
-
-        adapter.notifyDataSetChanged();
-
-        Intent intent = new Intent(FavoritosActivity.this, EditarPetActivity.class);
-        intent.putExtras(bundle);
-
-        startActivity(intent);
     }
 
     @Override
@@ -113,9 +122,9 @@ public class FavoritosActivity extends AppCompatActivity {
         getPostagens();
     }
 
-    public void excluirAnimal(View v){
+    public void removerFavoritos(View v){
 
-        ListView listview = (ListView) findViewById(R.id.list_postagens_editar);
+        ListView listview = (ListView) findViewById(R.id.list_postagens_favoritos);
 
         final int position = listview.getPositionForView((View) v.getParent());
 
@@ -125,7 +134,7 @@ public class FavoritosActivity extends AppCompatActivity {
                 FavoritosActivity.this);
         alertDialogBuilder.setTitle("Alerta");
         alertDialogBuilder
-                .setMessage("Tem certeza que deseja remover esse animal?")
+                .setMessage("Tem certeza que deseja remover esse animal dos favoritos?")
                 .setCancelable(false)
                 .setPositiveButton("Sim",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
@@ -134,11 +143,35 @@ public class FavoritosActivity extends AppCompatActivity {
                         progressDialog.setMessage("Removendo "+parseObject.get("nome_animal").toString()+"...");
                         progressDialog.show();
                         try {
-                            parseObject.delete();
-                            postagens.remove(position);
-                            adapter.notifyDataSetChanged();
-                        }catch (ParseException e){
-                            Toast.makeText(FavoritosActivity.this, e.getMessage()+e.getCode(), Toast.LENGTH_SHORT).show();
+                            ParseUser parseUser = new ParseUser();
+                            parseUser = ParseUser.getCurrentUser();
+                            ParseQuery<ParseObject> query;
+                            query = ParseQuery.getQuery("Favoritos");
+                            query.whereEqualTo("user_id", parseUser.getObjectId().toString());
+                            query.whereEqualTo("animal_id",parseObject.getObjectId().toString());
+                            query.findInBackground(new FindCallback<ParseObject>() {
+                                @Override
+                                public void done(List<ParseObject> objects, ParseException e) {
+                                    if (e == null) {
+                                        // object will be your game score
+                                        if (!objects.isEmpty()) {
+                                            for (ParseObject object : objects) {
+
+                                                object.deleteInBackground();
+                                                postagens.remove(position);
+                                                adapter.notifyDataSetChanged();
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        // something went wrong
+                                        Toast.makeText(FavoritosActivity.this,"Erro inesperado",Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+
+                        }catch (Exception e){
+                            Toast.makeText(FavoritosActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();
                     }
@@ -158,29 +191,26 @@ public class FavoritosActivity extends AppCompatActivity {
 
 
     private void getPostagens(){
-        query = ParseQuery.getQuery("Animal");
-        query.orderByDescending("createdAt");
-        query.whereEqualTo("object_id_usuario", ParseUser.getCurrentUser().getObjectId());
+        ParseUser parseUser = ParseUser.getCurrentUser();
+        query_aux = ParseQuery.getQuery("Favoritos");
+        query_aux.whereEqualTo("user_id", parseUser.getObjectId());
+        //query_aux.orderByAscending("data_favorito");
 
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Animal");
+        query.whereMatchesKeyInQuery("objectId","animal_id",query_aux);
+        query.orderByAscending("nome_animal");
         query.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null){
-
-                    if(objects.size() > 0){
-
-                        postagens.clear();
-                        for (ParseObject parseObject : objects){
-
-                            postagens.add(parseObject);
-
-                        }
-                        adapter.notifyDataSetChanged();
-
+            public void done(List<ParseObject> objectList, ParseException e) {
+                if (e == null) {
+                    postagens.clear();
+                    for (ParseObject parseObject : objectList) {
+                        postagens.add(parseObject);
                     }
-                }else{
+
+                    adapter.notifyDataSetChanged();
 
                 }
+
             }
         });
     }

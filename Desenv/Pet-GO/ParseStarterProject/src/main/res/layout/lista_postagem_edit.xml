@@ -11,8 +11,8 @@
 
         <TextView
             android:id="@+id/text_usuario"
-            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
+            android:textColor="@color/Preto"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_height="wrap_content"

@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbarPrincipal = (Toolbar) findViewById(R.id.toolbar_principal);
         toolbarPrincipal.setLogo(R.drawable.logo_escrita);
+        toolbarPrincipal.setTitle("");
         slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tab_main);
         viewPager = (ViewPager) findViewById(R.id.view_pager_main);
 
@@ -80,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.CorPrincipal));
         slidingTabLayout.setViewPager(viewPager);
-
-
     }
 
     @Override
@@ -128,6 +127,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_compartilhar:
                 Intent intent_cadastro_pet = new  Intent(MainActivity.this, CadastroPetActivity.class);
                 startActivity(intent_cadastro_pet);
+                return true;
+            case R.id.action_favoritos:
+                Intent intent_favoritos = new  Intent(MainActivity.this, FavoritosActivity.class);
+                startActivity(intent_favoritos);
                 return true;
             case R.id.action_atualizar:
                 try {

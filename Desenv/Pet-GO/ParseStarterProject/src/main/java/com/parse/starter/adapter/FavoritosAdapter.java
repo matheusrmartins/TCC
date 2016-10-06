@@ -40,7 +40,7 @@ public class FavoritosAdapter extends ArrayAdapter<ParseObject> {
 
         if(view == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.lista_postagem_edit, parent, false);
+            view = inflater.inflate(R.layout.lista_postagem_favoritos, parent, false);
         }
 
         if (postagens.size() > 0){
@@ -50,17 +50,16 @@ public class FavoritosAdapter extends ArrayAdapter<ParseObject> {
                 ParseObject parseObject = postagens.get(position);
 
                 //Importa o texto com o nome do animal
-                TextView objectid = (TextView) view.findViewById(R.id.text_usuario);
+                TextView objectid = (TextView) view.findViewById(R.id.text_animal);
                 objectid.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
 
                 //Importa a imagem do animal
-                ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_postagem);
+                ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_favoritos);
                 Picasso.with(context)
                         .load(parseObject.getParseFile("imagem").getUrl())
                         .fit()
                         .centerInside()
                         .into(imagemPostagem);
-                objectid.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
 
             }catch (Exception e){
                 Toast.makeText(context, "Não foi possível carregar as imagens", Toast.LENGTH_SHORT).show();

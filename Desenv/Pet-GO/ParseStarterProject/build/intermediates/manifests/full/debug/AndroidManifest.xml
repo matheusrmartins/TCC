@@ -71,6 +71,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.CadastroPetActivity" />
         </activity>
+        <activity android:name="com.parse.starter.activity.FavoritosActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.activity.MainActivity" />
+        </activity>
         <activity android:name="com.parse.starter.activity.EditarPetActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -60,7 +60,6 @@ public class EditarAdapter extends ArrayAdapter<ParseObject> {
                         .fit()
                         .centerInside()
                         .into(imagemPostagem);
-                objectid.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
 
             }catch (Exception e){
                 Toast.makeText(context, "Não foi possível carregar as imagens", Toast.LENGTH_SHORT).show();

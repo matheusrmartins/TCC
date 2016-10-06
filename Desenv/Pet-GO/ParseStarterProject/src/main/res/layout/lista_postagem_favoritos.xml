@@ -10,11 +10,11 @@
         android:weightSum="1">
 
         <TextView
-            android:id="@+id/text_usuario"
-            android:textColor="@android:color/white"
+            android:id="@+id/text_animal"
             android:layout_width="wrap_content"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textColor="@color/Preto"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:gravity="left"
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:id="@+id/image_lista_postagem"
+                android:id="@+id/image_lista_favoritos"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:scaleType="fitCenter"
@@ -40,28 +40,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:descendantFocusability="blocksDescendants"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/image_lista_postagem"
+                android:layout_toRightOf="@+id/image_lista_favoritos"
                 >
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Editar"
-                    android:id="@+id/botao_editar"
-                    android:background="@drawable/fundo_botao"
-                    android:onClick="editarAnimal"
-                    />
+
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Deletar"
+                    android:text="Remover"
+                    android:descendantFocusability="blocksDescendants"
                     android:background="@drawable/fundo_botao_vermelho"
-                    android:layout_below="@+id/botao_editar"
-                    android:layout_toRightOf="@id/image_lista_postagem"
-                    android:layout_marginTop="24dp"
-                    android:id="@+id/botao_deletar"
-                    android:onClick="excluirAnimal"/>
+                    android:layout_toRightOf="@id/image_lista_favoritos"
+                    android:id="@+id/botao_remover_favoritos"
+                    android:onClick="removerFavoritos"/>
             </TableLayout>
 
         </RelativeLayout>

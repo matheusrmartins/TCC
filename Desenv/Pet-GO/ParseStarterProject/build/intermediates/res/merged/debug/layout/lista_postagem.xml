@@ -18,7 +18,6 @@
 
     <TextView
         android:id="@+id/text_detalhes"
-        android:textColor="@color/Preto"
         android:layout_width="fill_parent"
         android:textSize="20sp"
         android:layout_below="@id/text_usuario"
@@ -105,7 +104,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txt_likes"
-        android:textColor="@android:color/black"
         android:gravity="center_horizontal"
         android:textSize="20sp"
         android:layout_below="@+id/image_lista_postagem"

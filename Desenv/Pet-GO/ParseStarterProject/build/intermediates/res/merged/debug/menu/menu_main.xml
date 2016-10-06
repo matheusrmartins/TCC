@@ -27,6 +27,11 @@
         android:orderInCategory ="150"
         app:showAsAction="never"/>
 
+    <item android:id="@+id/action_favoritos"
+        android:title="Favoritos"
+        android:orderInCategory ="170"
+        app:showAsAction="never"/>
+
     <item
         android:id="@+id/action_compartilhar"
         android:title="Publicar"

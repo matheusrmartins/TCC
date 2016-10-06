@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -31,7 +32,11 @@ import com.parse.starter.activity.PerfilAnimalActivity;
 import com.squareup.picasso.Picasso;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -48,9 +53,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
     private String usuario_like = "";
     private ParseUser parseUser;
 
-  //  protected static class RowViewHolder {
-    //    public ImageButton botao_like_holder;
-   // }
+
 
     public HomeAdapter(Context c, ArrayList<ParseObject> objects) {
         super(c, 0, objects);
@@ -77,6 +80,9 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
                 final ImageButton botao_like = (ImageButton) view.findViewById(R.id.botao_like);
                 botao_like.setTag(position);
+
+                final ImageButton botao_favoritar = (ImageButton) view.findViewById(R.id.botao_favoritar);
+                botao_favoritar.setTag(position);
 
                 parseUser = ParseUser.getCurrentUser();
 
@@ -152,8 +158,45 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                 }
                 });
 
-                ImageButton botao_favoritar = (ImageButton) view.findViewById(R.id.botao_favoritar);
-                botao_favoritar.setTag(position);
+                botao_favoritar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final int posicao = (Integer) botao_favoritar.getTag();
+                        parseObject = postagens.get(posicao);
+
+                        ParseQuery<ParseObject> query;
+                        query = ParseQuery.getQuery("Favoritos");
+                        query.whereEqualTo("user_id", parseUser.getObjectId());
+                        query.whereEqualTo("animal_id",parseObject.getObjectId());
+                        query.findInBackground(new FindCallback<ParseObject>() {
+                            @Override
+                            public void done(List<ParseObject> objects, ParseException e) {
+                                if (e == null) {
+                                    // object will be your game score
+                                    if (objects.isEmpty()) {
+                                        ParseObject parseObject_favoritos = new ParseObject("Favoritos");
+                                        parseObject_favoritos.put("data_favorito", new Date());
+                                        parseObject_favoritos.put("user_id", parseUser.getObjectId());
+                                        parseObject_favoritos.put("animal_id", parseObject.getObjectId());
+                                        parseObject_favoritos.saveInBackground(new SaveCallback() {
+                                            @Override
+                                            public void done(ParseException e) {
+                                                if (e == null) {
+                                                    notifyDataSetChanged();
+                                                    Toast.makeText(context,parseObject.getString("nome_animal") + " adicionado aos favoritos",Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+                                    }
+                                } else {
+                                    // something went wrong
+                                    Toast.makeText(context,"Erro inesperado",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                });
+
 
 
             }catch (Exception e){
