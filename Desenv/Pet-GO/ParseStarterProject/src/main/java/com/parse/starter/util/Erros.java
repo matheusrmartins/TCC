@@ -21,14 +21,27 @@ public class Erros {
                 return "O nome é obrigatório";
             case "APP-106":
                 return "O nome deve conter no máximo 30 caracteres";
+            case "APP-107":
+                return "O nome do animal é obrigatório";
+            case "APP-108":
+                return "A imagem do animal é obrigatória";
+            case "APP-109":
+                return "A idade é obrigatória";
+            case "APP-110":
+                return "O animal deve ter menos que 21 anos";
+            case "APP-111":
+                return "Digite um mês válido";
             case "PAR-202":
                 return "Esse usuário já está cadastrado.";
             case "PAR-203":
                 return "Esse e-mail já está cadastrado.";
             case "PAR-125":
                 return "Digite um e-mail válido.";
+            case "APP-300":
+                return "Erro. Verifique sua conexão com a internet";
             default:
                 return "Ocorreu um erro inesperado";
+
         }
     }
 }

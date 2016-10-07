@@ -102,6 +102,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\br.com.jansenfelipe\androidmask\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="95aefadb122067362595b093cd6538839e5a3dae">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\br.com.jansenfelipe-androidmask-1.0.1_8d03c59efa79e1344cdf9efce41c7c457bdd82fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
         jumboMode="true"
         optimize="false"
@@ -169,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="08364003431fefe5344761803eea6f42c6d04bb7">
+        sha1="9d6c847c1ad82f8c86999b95fb1c70c9543ce0ce">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d140599d94559a85116559054077b9d930e8f3e2\classes.dex" />
     </item>
     <item

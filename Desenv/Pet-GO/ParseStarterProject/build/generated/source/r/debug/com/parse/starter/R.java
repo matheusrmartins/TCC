@@ -2989,7 +2989,7 @@ containing a value of this type.
         public static final int action_configuracoes=0x7f060027;
         public static final int action_sair=0x7f060028;
         public static final int action_settings=0x7f060029;
-        public static final int app_name=0x7f06002a;
+        public static final int app_name_pet_go=0x7f06002a;
         public static final int appbar_scrolling_view_behavior=0x7f06002b;
         public static final int bottom_sheet_behavior=0x7f06002c;
         public static final int character_counter_pattern=0x7f06002d;

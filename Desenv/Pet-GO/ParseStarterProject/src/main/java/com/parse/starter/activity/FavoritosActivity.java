@@ -13,6 +13,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.Parse;
@@ -31,6 +33,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.starter.R;
 import com.parse.starter.adapter.FavoritosAdapter;
+import com.parse.starter.util.Erros;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,7 @@ import static com.parse.ParseUser.getCurrentUser;
 
 public class FavoritosActivity extends AppCompatActivity {
 
+    private boolean erro_internet;
     private Toolbar toolbar;
     private ProgressDialog progressDialog;
     private ViewPager viewPager;
@@ -65,6 +69,8 @@ public class FavoritosActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.view_pager_favoritos);
 
         setSupportActionBar(toolbar);
+
+        erro_internet = true;
 
         postagens = new ArrayList<>();
         listView = (ListView) findViewById(R.id.list_postagens_favoritos);
@@ -130,6 +136,8 @@ public class FavoritosActivity extends AppCompatActivity {
 
         parseObject = postagens.get(position);
 
+        progressDialog =  new ProgressDialog(FavoritosActivity.this);
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 FavoritosActivity.this);
         alertDialogBuilder.setTitle("Alerta");
@@ -138,42 +146,60 @@ public class FavoritosActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Sim",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
-                        progressDialog =  new ProgressDialog(FavoritosActivity.this);
                         progressDialog.setCancelable(false);
-                        progressDialog.setMessage("Removendo "+parseObject.get("nome_animal").toString()+"...");
+                        progressDialog.setMessage("Removendo animal...");
                         progressDialog.show();
-                        try {
-                            ParseUser parseUser = new ParseUser();
-                            parseUser = ParseUser.getCurrentUser();
-                            ParseQuery<ParseObject> query;
-                            query = ParseQuery.getQuery("Favoritos");
-                            query.whereEqualTo("user_id", parseUser.getObjectId().toString());
-                            query.whereEqualTo("animal_id",parseObject.getObjectId().toString());
-                            query.findInBackground(new FindCallback<ParseObject>() {
-                                @Override
-                                public void done(List<ParseObject> objects, ParseException e) {
-                                    if (e == null) {
-                                        // object will be your game score
-                                        if (!objects.isEmpty()) {
-                                            for (ParseObject object : objects) {
+                        Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            public void run() {
+                                progressDialog.dismiss();
+                                Erros erros = new Erros();
+                                Toast.makeText(FavoritosActivity.this, erros.retornaMensagem("APP-300"), Toast.LENGTH_SHORT).show();
+                                return;
+                            }}, 20000);
+                            try {
+                                ParseUser parseUser = new ParseUser();
+                                parseUser = ParseUser.getCurrentUser();
+                                ParseQuery<ParseObject> query;
+                                query = ParseQuery.getQuery("Favoritos");
+                                query.whereEqualTo("user_id", parseUser.getObjectId().toString());
+                                query.whereEqualTo("animal_id", parseObject.getObjectId().toString());
+                                query.findInBackground(new FindCallback<ParseObject>() {
+                                    @Override
+                                    public void done(List<ParseObject> objects, ParseException e) {
+                                        if (e == null) {
+                                            // object will be your game score
+                                            if (!objects.isEmpty()) {
+                                                for (ParseObject object : objects) {
 
-                                                object.deleteInBackground();
-                                                postagens.remove(position);
-                                                adapter.notifyDataSetChanged();
+                                                    object.deleteInBackground(new DeleteCallback() {
+                                                        @Override
+                                                        public void done(ParseException e) {
+                                                            if (e == null) {
+                                                                postagens.remove(position);
+                                                                adapter.notifyDataSetChanged();
+                                                                progressDialog.dismiss();
+                                                                Toast.makeText(FavoritosActivity.this, "Animal removido com sucesso", Toast.LENGTH_SHORT).show();
+                                                            } else {
+                                                                progressDialog.dismiss();
+                                                                Toast.makeText(FavoritosActivity.this, "Erro ao remover animal", Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        }
+                                                    });
+
+                                                }
                                             }
+                                        } else {
+                                            // something went wrong
+                                            Toast.makeText(FavoritosActivity.this, "Erro inesperado", Toast.LENGTH_SHORT).show();
                                         }
                                     }
-                                    else {
-                                        // something went wrong
-                                        Toast.makeText(FavoritosActivity.this,"Erro inesperado",Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                                });
 
-                        }catch (Exception e){
-                            Toast.makeText(FavoritosActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                        progressDialog.dismiss();
+                            } catch (Exception e) {
+                                Toast.makeText(FavoritosActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+
                     }
                 })
                 .setNegativeButton("Não",new DialogInterface.OnClickListener() {

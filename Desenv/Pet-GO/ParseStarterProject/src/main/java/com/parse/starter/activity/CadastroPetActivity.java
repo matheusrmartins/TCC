@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.IntegerRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -43,6 +44,7 @@ import java.util.Date;
 
 public class CadastroPetActivity extends AppCompatActivity {
 
+    private int estado_count_listener;
     private Toolbar toolbar;
     private ProgressDialog progressDialog;
     private Button botao_continuar;
@@ -96,6 +98,7 @@ public class CadastroPetActivity extends AppCompatActivity {
         lista_estado.setSelection(spinnerArrayAdapter.getPosition(usuario.getString("lista_estado")));
         lista_cidade.setText(usuario.getString("lista_cidade"));
 
+        estado_count_listener = 0;
 
         lista_estado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -130,7 +133,34 @@ public class CadastroPetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()));
+                int cod_erro;
+                String lista_ano_int, lista_mes_int;
+
+                lista_ano_int = lista_ano.getText().toString();
+                lista_mes_int = lista_mes.getText().toString();
+
+                if(lista_ano_int.length() == 0)
+                    lista_ano_int = "00";
+                else if(lista_ano_int.length() == 1)
+                    lista_ano_int = "0" + lista_ano_int;
+
+                if(lista_mes_int.length() == 0)
+                    lista_mes_int = "00";
+                else if(lista_mes_int.length() == 1)
+                    lista_mes_int = "0" + lista_mes_int;
+
+
+                cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
+                                            nome_animal.getText().toString().trim(),
+                                            lista_ano_int+lista_mes_int);
+
+                if (imagem_byteArray == null)
+                    cod_erro = 108;
+
+                if(Integer.valueOf(lista_ano_int) > 21)
+                    cod_erro = 110;
+                else if(Integer.valueOf(lista_mes_int) > 11)
+                    cod_erro = 111;
 
                 if (cod_erro == 0) {
                     castrado_checked = ((CheckBox) findViewById(R.id.castrado)).isChecked();
@@ -141,8 +171,8 @@ public class CadastroPetActivity extends AppCompatActivity {
                         bundle.putString("lista_genero", macho.isChecked() ? "Macho":"Fêmea");
                         bundle.putString("lista_tipo", cachorro.isChecked() ? "Cachorro":"Gato");
                         bundle.putString("lista_raca", lista_raca.getSelectedItem().toString());
-                        bundle.putString("lista_ano", lista_ano.getText().toString());
-                        bundle.putString("lista_mes", lista_mes.getText().toString());
+                        bundle.putString("lista_ano", lista_ano_int);
+                        bundle.putString("lista_mes", lista_mes_int);
                         bundle.putBoolean("castrado_checked", castrado_checked);
                         bundle.putString("lista_estado", lista_estado.getSelectedItem().toString());
                         bundle.putString("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
@@ -183,6 +213,7 @@ public class CadastroPetActivity extends AppCompatActivity {
     }
 
     private void alteraSpinnerCidade(){
+        estado_count_listener++;
         if (lista_estado.getSelectedItem().toString().equals("AC")) {
             cidades = getResources().getStringArray(R.array.lista_cidade_AC);
         }
@@ -268,7 +299,8 @@ public class CadastroPetActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cidades);
         lista_cidade.setAdapter(adapter);
         lista_cidade.setThreshold(1);
-        lista_cidade.setText(null);
+        if (estado_count_listener != 1)
+            lista_cidade.setText(null);
     }
 
     private Bitmap createScaledBitmapKeepingAspectRatio(Bitmap bitmap, int maxSide) {
@@ -285,10 +317,14 @@ public class CadastroPetActivity extends AppCompatActivity {
         return scaledGalleryPic;
     }
 
-    private final int verificaErro(int posicao_cidade){
+    private final int verificaErro(int posicao_cidade, String nome_animal, String idade){
 
         if(posicao_cidade == -1)
             return 104;
+        else if(nome_animal.equals(""))
+            return 107;
+        else if(idade.equals("0000"))
+            return 109;
         else
             return 0;
     }

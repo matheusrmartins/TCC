@@ -8,7 +8,7 @@
   -->
 <resources>
 
-    <string name="app_name">PetGO</string>
+    <string name="app_name_pet_go">PetGO</string>
 
     <string name="hello_world">Hello World!</string>
     <string name="action_configuracoes">Configurações</string>

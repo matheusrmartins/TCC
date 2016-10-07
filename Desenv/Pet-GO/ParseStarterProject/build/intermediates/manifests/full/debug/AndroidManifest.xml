@@ -24,7 +24,7 @@
         android:name="com.parse.starter.StarterApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo_figura"
-        android:label="@string/app_name"
+        android:label="@string/app_name_pet_go"
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.parse.APPLICATION_ID"
@@ -39,11 +39,11 @@
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name"
+            android:label="@string/app_name_pet_go"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.parse.starter.activity.LoginActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name_pet_go" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -17,12 +17,12 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 import com.parse.starter.R;
 import com.parse.starter.util.Erros;
+import br.com.jansenfelipe.androidmask.MaskEditTextChangedListener;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -54,6 +54,11 @@ public class CadastroActivity extends AppCompatActivity {
         lista_cidade    = (AutoCompleteTextView)  findViewById(R.id.lista_cidade);
         lista_estado    = (Spinner)  findViewById(R.id.spinner_lista_estado);
         telefone        = (EditText) findViewById(R.id.editText_telefone);
+
+        MaskEditTextChangedListener maskCNPJ = new MaskEditTextChangedListener("##.###.###/####-##", cnpj);
+        MaskEditTextChangedListener maskTELEFONE = new MaskEditTextChangedListener("(##) #####-####", telefone);
+        cnpj.addTextChangedListener(maskCNPJ);
+        telefone.addTextChangedListener(maskTELEFONE);
 
 
         lista_estado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -175,7 +180,8 @@ public class CadastroActivity extends AppCompatActivity {
                         abrirLoginUsuario();
                     } else {
                         progressDialog.dismiss();
-                        Toast.makeText(CadastroActivity.this, e.getMessage()+" Codigo : PAR-"+ e.getCode(), Toast.LENGTH_SHORT).show();
+                        Erros erros = new Erros();
+                        Toast.makeText(CadastroActivity.this, erros.retornaMensagem("PAR-"+ e.getCode()), Toast.LENGTH_SHORT).show();
                     }
                 }
             });

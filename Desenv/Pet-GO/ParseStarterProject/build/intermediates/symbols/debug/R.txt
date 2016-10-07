@@ -1075,7 +1075,7 @@ int string action_compartilhar 0x7f060026
 int string action_configuracoes 0x7f060027
 int string action_sair 0x7f060028
 int string action_settings 0x7f060029
-int string app_name 0x7f06002a
+int string app_name_pet_go 0x7f06002a
 int string appbar_scrolling_view_behavior 0x7f06002b
 int string bottom_sheet_behavior 0x7f06002c
 int string character_counter_pattern 0x7f06002d

@@ -66,7 +66,7 @@ public class EditarPetActivity extends AppCompatActivity {
     private byte[] imagem_byteArray;
     private ImageView imagemEditar;
     private ArrayAdapter<String> spinnerArrayAdapter;
-    private int count_listener_estado = 0;
+    private int estado_count_listener;
     private String[] cidades;
     private ArrayAdapter<String> adapter;
 
@@ -81,7 +81,7 @@ public class EditarPetActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left);
         setSupportActionBar(toolbar);
 
-        count_listener_estado = 0;
+        estado_count_listener = 0;
 
         botao_atualizar = (Button) findViewById(R.id.botao_atualizar);
         botao_foto = (Button) findViewById(R.id.botao_foto);
@@ -113,9 +113,9 @@ public class EditarPetActivity extends AppCompatActivity {
         lista_estado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                count_listener_estado++;
-                if (count_listener_estado > 1)
-                alteraSpinnerCidade();
+                estado_count_listener++;
+                if (estado_count_listener != 1)
+                    alteraSpinnerCidade();
             }
 
             @Override
@@ -142,7 +142,30 @@ public class EditarPetActivity extends AppCompatActivity {
                 progressDialog.setMessage("Atualizando animal...");
                 progressDialog.show();
 
-                int cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()));
+                int cod_erro;
+                String lista_ano_int, lista_mes_int;
+
+                lista_ano_int = lista_ano.getText().toString();
+                lista_mes_int = lista_mes.getText().toString();
+
+                if(lista_ano_int.length() == 0)
+                    lista_ano_int = "00";
+                else if(lista_ano_int.length() == 1)
+                    lista_ano_int = "0" + lista_ano_int;
+
+                if(lista_mes_int.length() == 0)
+                    lista_mes_int = "00";
+                else if(lista_mes_int.length() == 1)
+                    lista_mes_int = "0" + lista_mes_int;
+
+                cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
+                        nome_animal.getText().toString().trim(),
+                        lista_ano_int+lista_mes_int);
+
+                if(Integer.valueOf(lista_ano_int) > 21)
+                    cod_erro = 110;
+                else if(Integer.valueOf(lista_mes_int) > 11)
+                    cod_erro = 111;
 
                 if (cod_erro == 0) {
 
@@ -183,7 +206,8 @@ public class EditarPetActivity extends AppCompatActivity {
                                         if (e == null) {
                                             finish();
                                         } else {
-                                            Toast.makeText(EditarPetActivity.this, "Erro " + e.getMessage() + ". Código PAR-" + e.getCode(), Toast.LENGTH_SHORT).show();
+                                            Erros erros = new Erros();
+                                            Toast.makeText(EditarPetActivity.this,  erros.retornaMensagem("PAR-" + e.getCode()), Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 });
@@ -339,10 +363,14 @@ public class EditarPetActivity extends AppCompatActivity {
         lista_cidade.setText(null);
     }
 
-    private final int verificaErro(int posicao_cidade){
+    private final int verificaErro(int posicao_cidade, String nome_animal, String idade){
 
         if(posicao_cidade == -1)
             return 104;
+        else if(nome_animal.equals(""))
+            return 107;
+        else if(idade.equals("0000"))
+            return 109;
         else
             return 0;
     }

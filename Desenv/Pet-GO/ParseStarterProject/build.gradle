@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile 'com.facebook.android:facebook-android-sdk:4.15.0'
     compile 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
+    compile 'br.com.jansenfelipe:androidmask:1.0.1'
 }

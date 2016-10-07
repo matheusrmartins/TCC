@@ -92,12 +92,18 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
                 TextView detalhes = (TextView) view.findViewById(R.id.text_detalhes);
                 detalhes.setText((CharSequence) parseObject.get("lista_raca").toString()+
-                    ", "+ parseObject.get("lista_ano").toString());
+                    ", ");
 
-                detalhes.append((parseObject.get("lista_ano").equals("01")) ? " ano":" anos");
+                if(!parseObject.get("lista_ano").equals("00")) {
+                    detalhes.append((parseObject.get("lista_ano").equals("01")) ? parseObject.get("lista_ano").toString()+ " ano"
+                                                                                : parseObject.get("lista_ano").toString()+ " anos");
+                }
+
+                if ((!parseObject.get("lista_ano").equals("00")) && (!parseObject.get("lista_mes").equals("00")))
+                    detalhes.append(" e ");
 
                 if (!parseObject.get("lista_mes").equals("00")) {
-                    detalhes.append(" e " + parseObject.get("lista_mes").toString());
+                    detalhes.append(parseObject.get("lista_mes").toString());
                     detalhes.append((parseObject.get("lista_mes").equals("01")) ? " mês":" meses");
                 }
 
