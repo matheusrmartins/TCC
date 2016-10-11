@@ -33,6 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -73,6 +74,11 @@ public class EditarActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.view_pager_editar);
 
         setSupportActionBar(toolbar);
+
+        progressDialog =  new ProgressDialog(EditarActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Carregando animais...");
+        progressDialog.show();
 
         postagens = new ArrayList<>();
         listView = (ListView) findViewById(R.id.list_postagens_editar);
@@ -149,14 +155,22 @@ public class EditarActivity extends AppCompatActivity {
                         progressDialog.setCancelable(false);
                         progressDialog.setMessage("Removendo "+parseObject.get("nome_animal").toString()+"...");
                         progressDialog.show();
-                        try {
-                            parseObject.delete();
-                            postagens.remove(position);
-                            adapter.notifyDataSetChanged();
-                        }catch (ParseException e){
-                            Toast.makeText(EditarActivity.this, e.getMessage()+e.getCode(), Toast.LENGTH_SHORT).show();
-                        }
-                        progressDialog.dismiss();
+
+                            parseObject.deleteInBackground(new DeleteCallback() {
+                                @Override
+                                public void done(ParseException e) {
+                                    if (e == null) {
+                                        postagens.remove(position);
+                                        adapter.notifyDataSetChanged();
+                                        progressDialog.dismiss();
+                                    }
+                                    else {
+                                        Toast.makeText(EditarActivity.this, e.getMessage() + e.getCode(), Toast.LENGTH_SHORT).show();
+                                        progressDialog.dismiss();
+                                    }
+                                }
+                            });
+
                     }
                 })
                 .setNegativeButton("Não",new DialogInterface.OnClickListener() {
@@ -191,6 +205,8 @@ public class EditarActivity extends AppCompatActivity {
                             postagens.add(parseObject);
 
                         }
+
+                        progressDialog.dismiss();
                         adapter.notifyDataSetChanged();
 
                     }

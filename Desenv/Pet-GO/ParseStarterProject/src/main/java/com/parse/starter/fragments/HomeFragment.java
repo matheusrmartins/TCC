@@ -1,6 +1,7 @@
 package com.parse.starter.fragments;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -40,6 +42,7 @@ public class HomeFragment extends Fragment {
     private ArrayAdapter<ParseObject> adapter;
     private ParseQuery<ParseObject> query;
     private ParseObject parseObject;
+    public ProgressDialog progressDialog;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -52,10 +55,18 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        progressDialog =  new ProgressDialog(getContext());
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Carregando...");
+        progressDialog.show();
+
+
         postagens = new ArrayList<>();
         listView = (ListView) view.findViewById(R.id.list_postagens_home);
         adapter = new HomeAdapter(getActivity(), postagens);
         listView.setAdapter(adapter);
+
+
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -97,10 +108,10 @@ public class HomeFragment extends Fragment {
     }
 
 
+
     private void getPostagens(){
         query = ParseQuery.getQuery("Animal");
         query.orderByDescending("createdAt");
-
 
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -116,10 +127,12 @@ public class HomeFragment extends Fragment {
 
                         }
                         adapter.notifyDataSetChanged();
+                        progressDialog.dismiss();
 
                     }
                 }else{
-
+                    progressDialog.dismiss();
+                    Toast.makeText(getContext(), e.getMessage() + e.getCode(), Toast.LENGTH_LONG).show();
                 }
             }
         });

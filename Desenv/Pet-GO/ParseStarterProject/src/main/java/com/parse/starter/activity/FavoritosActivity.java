@@ -43,18 +43,15 @@ import static com.parse.ParseUser.getCurrentUser;
 
 public class FavoritosActivity extends AppCompatActivity {
 
-    private boolean erro_internet;
     private Toolbar toolbar;
     private ProgressDialog progressDialog;
     private ViewPager viewPager;
     private ListView listView;
     private ArrayList<ParseObject> postagens;
-    private ArrayList<ParseObject> favoritos;
-    private ArrayList<ParseUser> parseUsers;
     private ArrayAdapter<ParseObject> adapter;
-    private ParseQuery<ParseObject> query;
     private ParseQuery<ParseObject> query_aux;
     private ParseObject parseObject;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +67,10 @@ public class FavoritosActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        erro_internet = true;
+        progressDialog =  new ProgressDialog(FavoritosActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Carregando favoritos...");
+        progressDialog.show();
 
         postagens = new ArrayList<>();
         listView = (ListView) findViewById(R.id.list_postagens_favoritos);
@@ -111,22 +111,6 @@ public class FavoritosActivity extends AppCompatActivity {
         getPostagens();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        listView.setAdapter(adapter);
-
-        getPostagens();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        listView.setAdapter(adapter);
-
-        getPostagens();
-    }
 
     public void removerFavoritos(View v){
 
@@ -149,14 +133,6 @@ public class FavoritosActivity extends AppCompatActivity {
                         progressDialog.setCancelable(false);
                         progressDialog.setMessage("Removendo animal...");
                         progressDialog.show();
-                        Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            public void run() {
-                                progressDialog.dismiss();
-                                Erros erros = new Erros();
-                                Toast.makeText(FavoritosActivity.this, erros.retornaMensagem("APP-300"), Toast.LENGTH_SHORT).show();
-                                return;
-                            }}, 20000);
                             try {
                                 ParseUser parseUser = new ParseUser();
                                 parseUser = ParseUser.getCurrentUser();
@@ -233,6 +209,7 @@ public class FavoritosActivity extends AppCompatActivity {
                         postagens.add(parseObject);
                     }
 
+                    progressDialog.dismiss();
                     adapter.notifyDataSetChanged();
 
                 }

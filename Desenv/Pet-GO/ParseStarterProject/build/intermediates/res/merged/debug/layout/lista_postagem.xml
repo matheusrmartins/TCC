@@ -36,6 +36,8 @@
             android:layout_weight="17.76"/>
 
 
+
+
     <RelativeLayout
             android:gravity="center"
             android:layout_width="140dp"
@@ -43,7 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_likes"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="25dp">
+            android:layout_marginBottom="25dp"
+        android:id="@+id/relativeLayout2">
                 <ImageButton
                     android:layout_width="60dp"
                     android:layout_height="60dp"

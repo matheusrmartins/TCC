@@ -8,9 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,7 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
     private TextView idade;
     private TextView castrado;
     private TextView cidade_estado;
+    private TextView text_vacinas;
     private String[] vacinas;
 
     @Override
@@ -38,7 +42,9 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
         toolbar.setTitle(getIntent().getExtras().getString("nome_animal"));
         toolbar.setTitleTextColor(R.color.Preto);
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left);
+
         setSupportActionBar(toolbar);
+
 
         imagem = (ImageView) findViewById(R.id.imagem_perfil);
         Picasso.with(this)
@@ -58,9 +64,20 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
         raca.setText(getIntent().getExtras().getString("lista_raca"));
 
         idade = (TextView) findViewById(R.id.textView_idade);
-        idade.setText(getIntent().getExtras().getString("lista_ano") + " anos"+ (
-                      getIntent().getExtras().getString("lista_mes").equals("00") ? "" :
-                              " e " + getIntent().getExtras().getString("lista_mes") + " meses") + " de idade");
+        idade.setText("");
+
+        if (!getIntent().getExtras().getString("lista_ano").equals("00")) {
+            idade.append((getIntent().getExtras().getString("lista_ano").equals("01")) ? getIntent().getExtras().getString("lista_ano").toString() + " ano"
+                    : getIntent().getExtras().getString("lista_ano").toString() + " anos");
+        }
+
+        if ((!getIntent().getExtras().getString("lista_ano").equals("00")) && (!getIntent().getExtras().getString("lista_mes").equals("00")))
+            idade.append(" e ");
+
+        if (!getIntent().getExtras().getString("lista_mes").equals("00")) {
+            idade.append(getIntent().getExtras().getString("lista_mes").toString());
+            idade.append((getIntent().getExtras().getString("lista_mes").equals("01")) ? " mês" : " meses");
+        }
 
         castrado = (TextView) findViewById(R.id.textView_castrado);
         castrado.setText((getIntent().getExtras().getString("castrado_checked").equals("N"))?
@@ -71,15 +88,14 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
                               getIntent().getExtras().getString("lista_estado"));
 
         vacinas = getIntent().getExtras().getString("vacinas").split(";");
+
+        text_vacinas = (TextView) findViewById(R.id.textView_vacinas);
+
+        text_vacinas.setText("");
+
         if (vacinas.length > 0) {
             for (String vacina : vacinas) {
-                final LinearLayout attractedTo = (LinearLayout) findViewById(R.id.linear_layout3);
-                final TextView textView_vacina = new TextView(PerfilAnimalActivity.this);
-                textView_vacina.setText(vacina);
-                textView_vacina.setTextColor(Color.BLACK);
-                textView_vacina.setPadding(13,13,13,13);
-                textView_vacina.setTextSize(18);
-                attractedTo.addView(textView_vacina);
+                text_vacinas.append(vacina+"\n");
             }
         }
 

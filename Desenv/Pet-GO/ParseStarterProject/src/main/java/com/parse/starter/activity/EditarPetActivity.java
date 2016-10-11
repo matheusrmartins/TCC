@@ -69,6 +69,7 @@ public class EditarPetActivity extends AppCompatActivity {
     private int estado_count_listener;
     private String[] cidades;
     private ArrayAdapter<String> adapter;
+    private String lista_ano_int, lista_mes_int;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,7 +144,6 @@ public class EditarPetActivity extends AppCompatActivity {
                 progressDialog.show();
 
                 int cod_erro;
-                String lista_ano_int, lista_mes_int;
 
                 lista_ano_int = lista_ano.getText().toString();
                 lista_mes_int = lista_mes.getText().toString();
@@ -193,8 +193,8 @@ public class EditarPetActivity extends AppCompatActivity {
                                 object.put("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
                                 object.put("lista_estado", lista_estado.getSelectedItem().toString());
                                 object.put("lista_raca", lista_raca.getSelectedItem().toString());
-                                object.put("lista_ano", lista_ano.getText().toString());
-                                object.put("lista_mes", lista_mes.getText().toString());
+                                object.put("lista_ano", lista_ano_int);
+                                object.put("lista_mes", lista_mes_int);
                                 object.put("descricao", descricao.getText().toString());
                                 object.put("lista_genero", macho.isChecked() ? "Macho":"Fêmea");
                                 object.put("lista_tipo", cachorro.isChecked() ? "Cachorro":"Gato");
