@@ -57,6 +57,7 @@
                 android:value="com.parse.starter.activity.MainActivity" />
         </activity>
         <activity android:name="com.parse.starter.activity.CadastroActivity" />
+        <activity android:name="com.parse.starter.activity.ChatActivity" />
         <activity
             android:name="com.parse.starter.activity.CadastroPetActivity"
             android:label="@string/title_activity_cadastro_pet"

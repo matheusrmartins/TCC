@@ -70,6 +70,12 @@ public class FavoritosActivity extends AppCompatActivity {
         progressDialog =  new ProgressDialog(FavoritosActivity.this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Carregando favoritos...");
+        progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                onBackPressed();
+            }
+        });
         progressDialog.show();
 
         postagens = new ArrayList<>();
@@ -208,12 +214,11 @@ public class FavoritosActivity extends AppCompatActivity {
                     for (ParseObject parseObject : objectList) {
                         postagens.add(parseObject);
                     }
-
-                    progressDialog.dismiss();
                     adapter.notifyDataSetChanged();
 
                 }
 
+                progressDialog.dismiss();
             }
         });
     }

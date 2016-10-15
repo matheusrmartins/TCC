@@ -78,6 +78,12 @@ public class EditarActivity extends AppCompatActivity {
         progressDialog =  new ProgressDialog(EditarActivity.this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Carregando animais...");
+        progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                onBackPressed();
+            }
+        });
         progressDialog.show();
 
         postagens = new ArrayList<>();
@@ -205,14 +211,14 @@ public class EditarActivity extends AppCompatActivity {
                             postagens.add(parseObject);
 
                         }
-
-                        progressDialog.dismiss();
                         adapter.notifyDataSetChanged();
 
                     }
                 }else{
 
                 }
+
+                progressDialog.dismiss();
             }
         });
     }

@@ -1,7 +1,9 @@
 package com.parse.starter.fragments;
 
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +18,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -25,6 +28,7 @@ import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.activity.EditarActivity;
 import com.parse.starter.activity.EditarPetActivity;
+import com.parse.starter.activity.FavoritosActivity;
 import com.parse.starter.activity.MainActivity;
 import com.parse.starter.activity.PerfilAnimalActivity;
 import com.parse.starter.adapter.HomeAdapter;
@@ -41,6 +45,7 @@ public class HomeFragment extends Fragment {
     private ArrayList<ParseObject> postagens;
     private ArrayAdapter<ParseObject> adapter;
     private ParseQuery<ParseObject> query;
+    private boolean carregamento;
     private ParseObject parseObject;
     public ProgressDialog progressDialog;
 
@@ -55,9 +60,43 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        carregamento = false;
+
         progressDialog =  new ProgressDialog(getContext());
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Carregando...");
+        progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                            getContext());
+                    alertDialogBuilder.setTitle("Alerta");
+                    alertDialogBuilder
+                            .setMessage("Tem certeza que deseja fechar?")
+                            .setCancelable(true)
+                            .setPositiveButton("Sim",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    System.exit(0);
+                                }
+                            })
+                            .setNegativeButton("Não",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    if (!carregamento)
+                                        progressDialog.show();
+                                }
+                            });
+                    alertDialogBuilder.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            if (!carregamento)
+                                progressDialog.show();
+                        }
+                    });
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+                    alertDialog.show();
+            }
+        });
+
         progressDialog.show();
 
 
@@ -76,6 +115,7 @@ public class HomeFragment extends Fragment {
                 parseObject = postagens.get(position);
 
                 Bundle bundle = new Bundle();
+                bundle.putString("object_id_usuario", parseObject.getString("object_id_usuario"));
                 bundle.putString("nome_animal", parseObject.getString("nome_animal"));
                 bundle.putString("lista_genero", parseObject.getString("lista_genero"));
                 bundle.putString("lista_tipo", parseObject.getString("lista_tipo"));
@@ -90,8 +130,6 @@ public class HomeFragment extends Fragment {
                 bundle.putString("vacinas", (parseObject.getString("vacinas").trim().equals("")) ?
                                     "" : parseObject.getString("vacinas"));
                 bundle.putString("objectId", parseObject.getObjectId());
-
-                adapter.notifyDataSetChanged();
 
                 Intent intent = new Intent(getActivity(), PerfilAnimalActivity.class);
                 intent.putExtras(bundle);
@@ -127,6 +165,7 @@ public class HomeFragment extends Fragment {
 
                         }
                         adapter.notifyDataSetChanged();
+                        carregamento = true;
                         progressDialog.dismiss();
 
                     }

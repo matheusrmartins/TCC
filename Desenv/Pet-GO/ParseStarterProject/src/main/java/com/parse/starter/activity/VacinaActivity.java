@@ -1,6 +1,7 @@
 package com.parse.starter.activity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -16,6 +17,7 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
@@ -85,6 +87,13 @@ public class VacinaActivity extends AppCompatActivity {
                 progressDialog = new ProgressDialog(VacinaActivity.this);
                 progressDialog.setCancelable(false);
                 progressDialog.setMessage("Publicando animal...");
+                progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressDialog.dismiss();
+                    }
+                });
+
                 progressDialog.show();
 
                 String lista_vacinas = "";
@@ -129,7 +138,7 @@ public class VacinaActivity extends AppCompatActivity {
 
 
                 //Envia os objetos parse para o banco
-                ParseObject parseObject = new ParseObject("Animal");
+                final ParseObject parseObject = new ParseObject("Animal");
                 parseObject.put("object_id_usuario", ParseUser.getCurrentUser().getObjectId().toString());
                 parseObject.put("nome_animal", nome_animal);
                 parseObject.put("lista_genero", lista_genero);
@@ -150,6 +159,7 @@ public class VacinaActivity extends AppCompatActivity {
                     @Override
                     public void done(ParseException e) {
                         if (e == null){
+
                             progressDialog.dismiss();
 
                             Toast.makeText(VacinaActivity.this,  "Sucesso ao publicar animal" , Toast.LENGTH_SHORT).show();

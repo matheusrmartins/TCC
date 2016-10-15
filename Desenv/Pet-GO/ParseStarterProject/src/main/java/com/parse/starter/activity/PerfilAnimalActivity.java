@@ -1,24 +1,49 @@
 package com.parse.starter.activity;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.ContentProviderOperation;
+import android.content.ContentProviderResult;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.OperationApplicationException;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.provider.Contacts;
+import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.parse.starter.R;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PerfilAnimalActivity  extends AppCompatActivity {
 
@@ -32,6 +57,8 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
     private TextView cidade_estado;
     private TextView text_vacinas;
     private String[] vacinas;
+    private Button botao_chat;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,8 +126,18 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
             }
         }
 
+        botao_chat = (Button) findViewById(R.id.button_mensagem);
+        botao_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(PerfilAnimalActivity.this, ChatActivity.class);
+
+                startActivity(intent);
+
+
+            }
+        });
     }
-
 
 }

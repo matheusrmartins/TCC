@@ -36,6 +36,8 @@ import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 import com.parse.starter.R;
 
 import com.facebook.FacebookSdk;
@@ -56,21 +58,28 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private String email;
     private String nome;
-    private LoginButton login;
+    private LoginButton loginButton;
     private CallbackManager callbackManager;
-    List<String> mPermissions = Arrays.asList("public_profile", "email");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
         verificarUsuarioLogado();
+
+        verificaLoginFacebook();
 
         texto_usuario   = (EditText) findViewById(R.id.editText_user);
         texto_senha     = (EditText) findViewById(R.id.editText_password);
         botao_entrar    = (Button)   findViewById(R.id.button_entrar);
-        login = (LoginButton) findViewById(R.id.login_button);
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+
+        loginButton.setReadPermissions(Arrays.asList("public_profile","email"));
         callbackManager = CallbackManager.Factory.create();
 
         texto_usuario.setInputType(InputType.TYPE_TEXT_FLAG_AUTO_COMPLETE);
@@ -100,22 +109,55 @@ public class LoginActivity extends AppCompatActivity {
 
         db.close();
 
-        login.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
+
+       /* loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Toast.makeText(LoginActivity.this,  "OnSuccess", Toast.LENGTH_SHORT).show();
+                getUserDetailsFromFB();
+                abrirAreaPrincipal();
             }
 
             @Override
             public void onCancel() {
-                Toast.makeText(LoginActivity.this,  "OnCancel", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this,  "Operação cancelada", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(FacebookException error) {
-                Toast.makeText(LoginActivity.this,  "OnError", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this,  "Erro ao logar com o Facebook", Toast.LENGTH_SHORT).show();
             }
 
+        });*/
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginActivity.this, Arrays.asList("public_profile","email"), new LogInCallback() {
+                    @Override
+                    public void done(ParseUser user, ParseException err) {
+                        if (user == null) {
+                            Log.d("MyApp", "Uh oh. The user cancelled the Facebook login.");
+                        } else if (user.isNew()) {
+                            progressDialog = new ProgressDialog(LoginActivity.this);
+                            progressDialog.setCancelable(false);
+                            progressDialog.setMessage("Fazendo o login...");
+                            progressDialog.show();
+                            getUserDetailsFromFB();
+                            abrirAreaPrincipal();
+                            progressDialog.dismiss();
+                        } else {
+                            progressDialog = new ProgressDialog(LoginActivity.this);
+                            progressDialog.setCancelable(false);
+                            progressDialog.setMessage("Fazendo o login...");
+                            progressDialog.show();
+                            getUserDetailsFromParse();
+                            abrirAreaPrincipal();
+                            progressDialog.dismiss();
+                        }
+                    }
+                });
+            }
         });
 
 
@@ -157,37 +199,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void getUserDetailsFromParse() {
-        ParseUser parseUser = ParseUser.getCurrentUser();
-        try {
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Toast.makeText(LoginActivity.this, "Welcome back " + parseUser.getString("usuario"), Toast.LENGTH_SHORT).show();
-    }
-
-    private void getUserDetailsFromFB() {
-        Bundle parameters = new Bundle();
-        parameters.putString("fields", "email,name");
-        new GraphRequest(
-                AccessToken.getCurrentAccessToken(),
-                "/me",
-                parameters,
-                HttpMethod.GET,
-                new GraphRequest.Callback() {
-                    public void onCompleted(GraphResponse response) {
-                        try {
-                            email = response.getJSONObject().getString("email");
-                            nome = response.getJSONObject().getString("name");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-        ).executeAsync();
-    }
-
-
     private void verificarUsuarioLogado(){
         if(ParseUser.getCurrentUser() != null){
             abrirAreaPrincipal();
@@ -204,6 +215,47 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    private void getUserDetailsFromFB() {
+        final Bundle parameters = new Bundle();
+        parameters.putString("fields", "email,name");
+        new GraphRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/me",
+                parameters,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+         /* handle the result */
+                        try {
+                            email = response.getJSONObject().getString("email");
+                            nome = response.getJSONObject().getString("name");
+                            ParseUser parseUser = ParseUser.getCurrentUser();
+                            parseUser.setUsername(email);
+                            parseUser.setEmail(email);
+                            parseUser.put("nome", nome);
+                            parseUser.saveInBackground(new SaveCallback() {
+                                @Override
+                                public void done(ParseException e) {
+                                    Toast.makeText(LoginActivity.this, "New user:" + nome + " Signed up", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                            Log.i("Nome: ", nome);
+                            Log.i("Email: ", email);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).executeAsync();
+    }
+
+    private void getUserDetailsFromParse() {
+        ParseUser parseUser = ParseUser.getCurrentUser();
+
+        Toast.makeText(LoginActivity.this, "Welcome back " + parseUser.getString("nome"), Toast.LENGTH_SHORT).show();
+    }
+
+
 
     public void abrirCadastroUsuario(View view){
         Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
@@ -213,6 +265,13 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
+        ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void verificaLoginFacebook(){
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken != null){
+            abrirAreaPrincipal();
+        }
     }
 }

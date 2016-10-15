@@ -91,6 +91,7 @@ public class CadastroPetActivity extends AppCompatActivity {
         toolbar.setTitle("Publicar Pet");
         toolbar.setTitleTextColor(R.color.Preto);
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left);
+
         setSupportActionBar(toolbar);
 
         ParseUser usuario = ParseUser.getCurrentUser();

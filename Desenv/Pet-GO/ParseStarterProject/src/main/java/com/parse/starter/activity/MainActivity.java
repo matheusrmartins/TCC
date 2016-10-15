@@ -32,6 +32,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.facebook.login.LoginManager;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -156,8 +157,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void deslogarUsuario(){
         ParseUser.logOut();
+        LoginManager.getInstance().logOut();
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
