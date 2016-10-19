@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context="com.parse.starter.activity.ChatActivity">
 
@@ -29,6 +30,7 @@
         android:layout_alignParentBottom="true">
 
         <EditText
+            android:id="@+id/editText_mensagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Mensagem"
@@ -36,6 +38,7 @@
             android:textColor="@android:color/black"/>
 
         <ImageButton
+            android:id="@+id/botao_enviar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"

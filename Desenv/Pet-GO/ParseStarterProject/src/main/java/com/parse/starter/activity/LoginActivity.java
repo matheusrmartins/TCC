@@ -66,13 +66,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-
         FacebookSdk.sdkInitialize(getApplicationContext());
 
         verificarUsuarioLogado();
-
-        verificaLoginFacebook();
 
         texto_usuario   = (EditText) findViewById(R.id.editText_user);
         texto_senha     = (EditText) findViewById(R.id.editText_password);
@@ -111,24 +107,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-       /* loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                getUserDetailsFromFB();
-                abrirAreaPrincipal();
-            }
-
-            @Override
-            public void onCancel() {
-                Toast.makeText(LoginActivity.this,  "Operação cancelada", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Toast.makeText(LoginActivity.this,  "Erro ao logar com o Facebook", Toast.LENGTH_SHORT).show();
-            }
-
-        });*/
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,16 +121,28 @@ public class LoginActivity extends AppCompatActivity {
                             progressDialog.setCancelable(false);
                             progressDialog.setMessage("Fazendo o login...");
                             progressDialog.show();
+
                             getUserDetailsFromFB();
                             abrirAreaPrincipal();
+
+                            SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+                            StringBuilder sqlClientes = new StringBuilder();
+                            sqlClientes.append("DELETE FROM usuario;");
+                            db.execSQL(sqlClientes.toString());
+
                             progressDialog.dismiss();
                         } else {
                             progressDialog = new ProgressDialog(LoginActivity.this);
                             progressDialog.setCancelable(false);
                             progressDialog.setMessage("Fazendo o login...");
                             progressDialog.show();
-                            getUserDetailsFromParse();
                             abrirAreaPrincipal();
+
+                            SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+                            StringBuilder sqlClientes = new StringBuilder();
+                            sqlClientes.append("DELETE FROM usuario;");
+                            db.execSQL(sqlClientes.toString());
+
                             progressDialog.dismiss();
                         }
                     }
@@ -236,25 +226,16 @@ public class LoginActivity extends AppCompatActivity {
                             parseUser.saveInBackground(new SaveCallback() {
                                 @Override
                                 public void done(ParseException e) {
-                                    Toast.makeText(LoginActivity.this, "New user:" + nome + " Signed up", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Seja bem-vindo " + nome + "!", Toast.LENGTH_SHORT).show();
                                 }
                             });
-                            Log.i("Nome: ", nome);
-                            Log.i("Email: ", email);
                         } catch (JSONException e) {
-                            e.printStackTrace();
+                            Toast.makeText(LoginActivity.this, "Erro fazer o login com o Facebook", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
         ).executeAsync();
     }
-
-    private void getUserDetailsFromParse() {
-        ParseUser parseUser = ParseUser.getCurrentUser();
-
-        Toast.makeText(LoginActivity.this, "Welcome back " + parseUser.getString("nome"), Toast.LENGTH_SHORT).show();
-    }
-
 
 
     public void abrirCadastroUsuario(View view){
@@ -265,13 +246,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        progressDialog = new ProgressDialog(LoginActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Fazendo o login...");
+        progressDialog.show();
         ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void verificaLoginFacebook(){
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        if (accessToken != null){
-            abrirAreaPrincipal();
-        }
-    }
 }

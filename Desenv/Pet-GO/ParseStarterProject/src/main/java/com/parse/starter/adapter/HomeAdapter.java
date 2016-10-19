@@ -1,14 +1,20 @@
 package com.parse.starter.adapter;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +50,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+
+import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 /**
  * Created by Matheus on 17/08/2016.
@@ -137,82 +145,137 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
             botao_like.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View v) {
-                    final int posicao = (Integer) botao_like.getTag();
-                    parseObject = postagens.get(posicao);
 
-                    ParseQuery<ParseObject> query;
-                    query = ParseQuery.getQuery("Animal");
-                    query.getInBackground(parseObject.getObjectId(), new GetCallback<ParseObject>() {
-                        public void done(ParseObject object, ParseException e) {
-                            if (e == null) {
-                                // object will be your game score
-                                usuario_like = object.getString("usuario_like");
-                                if (usuario_like == null) {
-                                    usuario_like = "";
-                                }
-                                curtiu = usuario_like.contains(parseUser.getObjectId().toString());
-                                if (!curtiu) {
-                                    parseObject.put("Likes", parseObject.getInt("Likes") + 1);
-                                    parseObject.put("usuario_like", parseObject.get("usuario_like") + parseUser.getObjectId() + ";");
-                                    parseObject.saveInBackground(new SaveCallback() {
-                                        @Override
-                                        public void done(ParseException e) {
-                                            if (e == null) {
-                                                notifyDataSetChanged();
+                    SQLiteDatabase db = getContext().openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+                    StringBuilder sqlClientes = new StringBuilder();
+                    sqlClientes.append("CREATE TABLE IF NOT EXISTS like_pressed(");
+                    sqlClientes.append("_id INTEGER PRIMARY KEY, like INTEGER);");
+                    db.execSQL(sqlClientes.toString());
+
+                    Cursor cursor = db.rawQuery("SELECT * FROM like_pressed", null);
+
+                    if (cursor.getCount() > 0) {
+
+                        final int posicao = (Integer) botao_like.getTag();
+                        parseObject = postagens.get(posicao);
+
+                        ParseQuery<ParseObject> query;
+                        query = ParseQuery.getQuery("Animal");
+                        query.getInBackground(parseObject.getObjectId(), new GetCallback<ParseObject>() {
+                            public void done(ParseObject object, ParseException e) {
+                                if (e == null) {
+                                    // object will be your game score
+                                    usuario_like = object.getString("usuario_like");
+                                    if (usuario_like == null) {
+                                        usuario_like = "";
+                                    }
+                                    curtiu = usuario_like.contains(parseUser.getObjectId().toString());
+                                    if (!curtiu) {
+                                        parseObject.put("Likes", parseObject.getInt("Likes") + 1);
+                                        parseObject.put("usuario_like", parseObject.get("usuario_like") + parseUser.getObjectId() + ";");
+                                        parseObject.saveInBackground(new SaveCallback() {
+                                            @Override
+                                            public void done(ParseException e) {
+                                                if (e == null) {
+                                                    notifyDataSetChanged();
+                                                }
                                             }
-                                        }
-                                    });
+                                        });
+                                    } else {
+                                        Toast.makeText(context, "Você já curtiu " + parseObject.get("nome_animal"), Toast.LENGTH_SHORT).show();
+                                    }
+
+
                                 } else {
-                                    Toast.makeText(context, "Você já curtiu " + parseObject.get("nome_animal"), Toast.LENGTH_SHORT).show();
+                                    // something went wrong
+                                    Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                                 }
-
-
-                            } else {
-                                // something went wrong
-                                Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                             }
-                        }
-                    });
+                        });
+                    }
+                    else{
+                        ContentValues ctv = new ContentValues();
+                        ctv.put("like", 0);
+
+                        db.insert("like_pressed","id",ctv);
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                getContext());
+                        alertDialogBuilder.setTitle("Alerta");
+                        alertDialogBuilder
+                                .setMessage("Ao curtir um pet, você estará contribuindo para que ele apareça para mais pessoas!")
+                                .setCancelable(true)
+                                .setNeutralButton("OK",null);
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+                    }
 
                 }
             });
 
+
             botao_favoritar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final int posicao = (Integer) botao_favoritar.getTag();
-                    parseObject = postagens.get(posicao);
 
-                    ParseQuery<ParseObject> query;
-                    query = ParseQuery.getQuery("Favoritos");
-                    query.whereEqualTo("user_id", parseUser.getObjectId());
-                    query.whereEqualTo("animal_id", parseObject.getObjectId());
-                    query.findInBackground(new FindCallback<ParseObject>() {
-                        @Override
-                        public void done(List<ParseObject> objects, ParseException e) {
-                            if (e == null) {
-                                // object will be your game score
-                                if (objects.isEmpty()) {
-                                    ParseObject parseObject_favoritos = new ParseObject("Favoritos");
-                                    parseObject_favoritos.put("data_favorito", new Date());
-                                    parseObject_favoritos.put("user_id", parseUser.getObjectId());
-                                    parseObject_favoritos.put("animal_id", parseObject.getObjectId());
-                                    parseObject_favoritos.saveInBackground(new SaveCallback() {
-                                        @Override
-                                        public void done(ParseException e) {
-                                            if (e == null) {
-                                                notifyDataSetChanged();
-                                                Toast.makeText(context, parseObject.getString("nome_animal") + " adicionado aos favoritos", Toast.LENGTH_SHORT).show();
+                    SQLiteDatabase db = getContext().openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+                    StringBuilder sqlClientes = new StringBuilder();
+                    sqlClientes.append("CREATE TABLE IF NOT EXISTS favorit_pressed(");
+                    sqlClientes.append("_id INTEGER PRIMARY KEY, fav INTEGER);");
+                    db.execSQL(sqlClientes.toString());
+
+                    Cursor cursor = db.rawQuery("SELECT * FROM favorit_pressed", null);
+
+                    if (cursor.getCount() > 0) {
+                        final int posicao = (Integer) botao_favoritar.getTag();
+                        parseObject = postagens.get(posicao);
+
+                        ParseQuery<ParseObject> query;
+                        query = ParseQuery.getQuery("Favoritos");
+                        query.whereEqualTo("user_id", parseUser.getObjectId());
+                        query.whereEqualTo("animal_id", parseObject.getObjectId());
+                        query.findInBackground(new FindCallback<ParseObject>() {
+                            @Override
+                            public void done(List<ParseObject> objects, ParseException e) {
+                                if (e == null) {
+                                    // object will be your game score
+                                    if (objects.isEmpty()) {
+                                        ParseObject parseObject_favoritos = new ParseObject("Favoritos");
+                                        parseObject_favoritos.put("data_favorito", new Date());
+                                        parseObject_favoritos.put("user_id", parseUser.getObjectId());
+                                        parseObject_favoritos.put("animal_id", parseObject.getObjectId());
+                                        parseObject_favoritos.saveInBackground(new SaveCallback() {
+                                            @Override
+                                            public void done(ParseException e) {
+                                                if (e == null) {
+                                                    notifyDataSetChanged();
+                                                    Toast.makeText(context, parseObject.getString("nome_animal") + " adicionado aos favoritos", Toast.LENGTH_SHORT).show();
+                                                }
                                             }
-                                        }
-                                    });
+                                        });
+                                    }
+                                } else {
+                                    // something went wrong
+                                    Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                                 }
-                            } else {
-                                // something went wrong
-                                Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                             }
-                        }
-                    });
+                        });
+                    }else{
+                        ContentValues ctv = new ContentValues();
+                        ctv.put("fav", 0);
+
+                        db.insert("favorit_pressed","id",ctv);
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                getContext());
+                        alertDialogBuilder.setTitle("Alerta");
+                        alertDialogBuilder
+                                .setMessage("Ao favoritar um pet, ele fica salvo no menu \"Favoritos\" para acessa-lo sempre quando quiser!")
+                                .setCancelable(true)
+                                .setNeutralButton("OK",null);
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+                    }
                 }
             });
 

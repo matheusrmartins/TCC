@@ -64,7 +64,6 @@
                     android:layout_toLeftOf="@+id/button2"
                     android:layout_alignParentLeft="true"
                     android:drawableBottom="@drawable/ic_call"
-                    android:drawableTint="@color/Preto"
                     android:id="@+id/button_telefone" />
 
                 <Button

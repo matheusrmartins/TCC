@@ -153,6 +153,8 @@ public class VacinaActivity extends AppCompatActivity {
                 parseObject.put("castrado", ""+castrado);
                 parseObject.put("lista_tipo", lista_tipo);
                 parseObject.put("Likes", 0);
+                parseObject.put("usuario_nome", ParseUser.getCurrentUser().get("nome"));
+                parseObject.put("usuario_email", ParseUser.getCurrentUser().getEmail());
 
 
                 parseObject.saveInBackground(new SaveCallback() {

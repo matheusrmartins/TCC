@@ -130,6 +130,8 @@ public class HomeFragment extends Fragment {
                 bundle.putString("vacinas", (parseObject.getString("vacinas").trim().equals("")) ?
                                     "" : parseObject.getString("vacinas"));
                 bundle.putString("objectId", parseObject.getObjectId());
+                bundle.putString("usuario_nome", parseObject.getString("usuario_nome"));
+                bundle.putString("usuario_email", parseObject.getString("usuario_email"));
 
                 Intent intent = new Intent(getActivity(), PerfilAnimalActivity.class);
                 intent.putExtras(bundle);
