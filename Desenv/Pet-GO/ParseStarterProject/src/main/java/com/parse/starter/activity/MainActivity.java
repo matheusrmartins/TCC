@@ -125,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.show();
                 return true;
             case R.id.action_configuracoes:
+                Intent intent_filtro = new Intent(MainActivity.this, FiltroActivity.class);
+                startActivity(intent_filtro);
                 return true;
             case R.id.action_compartilhar:
                 Intent intent_cadastro_pet = new  Intent(MainActivity.this, CadastroPetActivity.class);

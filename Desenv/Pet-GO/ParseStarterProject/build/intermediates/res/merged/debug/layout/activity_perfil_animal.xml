@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-
     android:orientation="vertical"
     tools:context="com.parse.starter.activity.PerfilAnimalActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar_perfil_animal" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/relativeLayout">
-        <include layout="@layout/toolbar"
-            android:id="@+id/toolbar_perfil_animal" />
+
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"

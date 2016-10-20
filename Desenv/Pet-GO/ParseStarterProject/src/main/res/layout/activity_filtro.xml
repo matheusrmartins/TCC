@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_filtro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.parse.starter.activity.FiltroActivity"
+    android:orientation="vertical">
+
+
+
+    <include
+        android:id="@+id/toolbar_filtro"
+        layout="@layout/toolbar" />
+
+    <Switch
+        android:text="Switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3"
+        android:id="@+id/seekBar3" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar4" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:text="Ambos"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_tipo" />
+
+        <RadioButton
+            android:text="Cachorro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_cachorro" />
+
+        <RadioButton
+            android:text="Gato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_gato" />
+    </RadioGroup>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="Ambos"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton" />
+
+        <RadioButton
+            android:text="Macho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_macho" />
+
+        <RadioButton
+            android:text="Fêmea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_femea" />
+    </RadioGroup>
+
+    <Spinner
+        android:entries="@array/lista_raca_ambos_filtro"
+        android:layout_width="match_parent"
+        android:padding="13dp"
+        android:background="@drawable/fundo_caixa_texto"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_lista_raca_filtro"
+        android:layout_marginBottom="17dp"
+        android:dropDownWidth="match_parent"
+        android:layout_marginTop="17dp"
+        />
+
+    <Button
+        android:text="Salvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/botao_salvar" />
+
+</LinearLayout>

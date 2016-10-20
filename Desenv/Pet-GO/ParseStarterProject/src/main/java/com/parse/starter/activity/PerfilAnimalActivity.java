@@ -167,24 +167,41 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
                         Manifest.permission.CALL_PHONE)
                         != PackageManager.PERMISSION_GRANTED) {
 
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(PerfilAnimalActivity.this,
-                            Manifest.permission.CALL_PHONE)) {
+                              ActivityCompat.requestPermissions(PerfilAnimalActivity.this,
+                                new String[]{Manifest.permission.CALL_PHONE},
+                                101);
 
-                    } else {
-
-                        ActivityCompat.requestPermissions(PerfilAnimalActivity.this,
-                                new String[]{Manifest.permission.READ_CONTACTS},
-                                0);
-                    }
                 } else {
 
-                    Intent intentLigar = new Intent(Intent.ACTION_DIAL);
-                    intentLigar.setData(Uri.parse("tel:"+"13991076260"));
-                    startActivity(intentLigar);
+                    chamarLigacao("13991076260");
 
                 }
             }
         });
+
+
+    }
+
+    private void chamarLigacao(String telefone){
+        Intent intentLigar = new Intent(Intent.ACTION_DIAL);
+        intentLigar.setData(Uri.parse("tel:"+telefone));
+        startActivity(intentLigar);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 101:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //granted
+                    chamarLigacao("13991076260");
+                } else {
+                    //not granted
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 
 }

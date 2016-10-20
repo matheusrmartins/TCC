@@ -29,6 +29,7 @@ import com.parse.starter.R;
 import com.parse.starter.activity.EditarActivity;
 import com.parse.starter.activity.EditarPetActivity;
 import com.parse.starter.activity.FavoritosActivity;
+import com.parse.starter.activity.FiltroActivity;
 import com.parse.starter.activity.MainActivity;
 import com.parse.starter.activity.PerfilAnimalActivity;
 import com.parse.starter.adapter.HomeAdapter;
@@ -150,33 +151,60 @@ public class HomeFragment extends Fragment {
 
 
     private void getPostagens(){
-        query = ParseQuery.getQuery("Animal");
-        query.orderByDescending("createdAt");
 
-        query.findInBackground(new FindCallback<ParseObject>() {
+        ParseQuery<ParseUser> query_user = ParseUser.getQuery();
+        query_user.whereEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
+        query_user.findInBackground(new FindCallback<ParseUser>() {
             @Override
-            public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null){
+            public void done(List<ParseUser> objects, ParseException e) {
+                query = ParseQuery.getQuery("Animal");
+                ParseUser object = objects.get(0);
 
-                    if(objects.size() > 0){
+                // filtro de genero de animal
+                if (object.getInt("filtro_genero") == 1)
+                    query.whereEqualTo("lista_genero", "Fêmea");
+                else if (object.getInt("filtro_genero") == 2)
+                    query.whereEqualTo("lista_genero", "Macho");
 
-                        postagens.clear();
-                        for (ParseObject parseObject : objects){
+                // filtro de tipo de animal
+                if (object.getInt("filtro_tipo")== 1)
+                    query.whereEqualTo("lista_tipo", "Cachorro");
+                else if (object.getInt("filtro_tipo")== 2)
+                    query.whereEqualTo("lista_tipo", "Gato");
 
-                            postagens.add(parseObject);
+                //filtro de raça - enviar todos como padrão na criação de usuário.
+                if (!object.getString("filtro_raca").equals("Todos"))
+                    query.whereEqualTo("lista_raca",object.getString("filtro_raca"));
 
+                query.orderByDescending("createdAt");
+
+                query.findInBackground(new FindCallback<ParseObject>() {
+                    @Override
+                    public void done(List<ParseObject> objects, ParseException e) {
+                        if (e == null){
+
+                            if(objects.size() > 0){
+
+                                postagens.clear();
+                                for (ParseObject parseObject : objects){
+
+                                    postagens.add(parseObject);
+
+                                }
+                                adapter.notifyDataSetChanged();
+                                carregamento = true;
+                                progressDialog.dismiss();
+
+                            }
+                        }else{
+                            progressDialog.dismiss();
+                            Toast.makeText(getContext(), e.getMessage() + e.getCode(), Toast.LENGTH_LONG).show();
                         }
-                        adapter.notifyDataSetChanged();
-                        carregamento = true;
-                        progressDialog.dismiss();
-
                     }
-                }else{
-                    progressDialog.dismiss();
-                    Toast.makeText(getContext(), e.getMessage() + e.getCode(), Toast.LENGTH_LONG).show();
-                }
+                });
             }
         });
+
     }
 
 

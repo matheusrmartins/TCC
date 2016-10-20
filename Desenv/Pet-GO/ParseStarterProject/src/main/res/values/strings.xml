@@ -32,6 +32,22 @@
         <item>Pessoa Jurídica</item>
     </string-array>
 
+    <string-array name="lista_raca_ambos_filtro">
+        <item>Todos</item>
+    </string-array>
+
+    <string-array name="lista_raca_cachorro_filtro">
+        <item>Todos</item>
+        <item>Boxer</item>
+        <item>Fila</item>
+    </string-array>
+
+    <string-array name="lista_raca_gato_filtro">
+        <item>Todos</item>
+        <item>Siamês</item>
+        <item>Persa</item>
+    </string-array>
+
     <string-array name="lista_raca_cachorro">
         <item>Boxer</item>
         <item>Fila</item>
