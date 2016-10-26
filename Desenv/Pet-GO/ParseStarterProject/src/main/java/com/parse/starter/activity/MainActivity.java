@@ -8,59 +8,57 @@
  */
 package com.parse.starter.activity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
+import android.content.pm.PackageManager;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
-import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.facebook.login.LoginManager;
-import com.parse.Parse;
-import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseObject;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderApi;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.starter.R;
-import com.parse.starter.adapter.HomeAdapter;
 import com.parse.starter.adapter.TabsAdapter;
 import com.parse.starter.fragments.HomeFragment;
 import com.parse.starter.util.SlidingTabLayout;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
+         LocationListener {
 
     private Toolbar toolbarPrincipal;
     private SlidingTabLayout slidingTabLayout;
     private ViewPager viewPager;
     private ProgressDialog progressDialog;
     private ListView listView;
-    private ArrayList<ParseObject> postagens;
-    private ArrayAdapter<ParseObject> adapter;
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest locationRequest;
+    private FusedLocationProviderApi fusedLocationProviderApi;
+    private Location mLastLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +72,22 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.view_pager_main);
 
         setSupportActionBar(toolbarPrincipal);
+
+
+        if (ContextCompat.checkSelfPermission(MainActivity.this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    102);
+
+        } else {
+
+            //callConnection();
+            getLocation();
+
+        }
 
         listView = (ListView) findViewById(R.id.list_postagens_home);
 
@@ -165,4 +179,69 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    private void getLocation(){
+        locationRequest = LocationRequest.create();
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(5000);
+        fusedLocationProviderApi = LocationServices.FusedLocationApi;
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addApi(LocationServices.API)
+                .addConnectionCallbacks(this)
+                .build();
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.connect();
+        }
+    }
+
+
+    @Override
+    public void onConnected(Bundle arg0) {
+
+        fusedLocationProviderApi.requestLocationUpdates( mGoogleApiClient,  locationRequest, this);
+        mLastLocation = LocationServices.FusedLocationApi
+                .getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null) {
+            Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+            List<android.location.Address> addresses = null;
+            try {
+                addresses = geocoder.getFromLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if (addresses.size() > 0) {
+                String cidade = addresses.get(0).getAddressLine(1).substring(0, addresses.get(0).getAddressLine(1).length() - 5);
+                String estado = addresses.get(0).getAddressLine(1).substring(addresses.get(0).getAddressLine(1).length() - 2);
+                Toast.makeText(MainActivity.this, cidade + ", " + estado, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 102:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //granted
+                    getLocation();
+                } else {
+                    //not granted
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
 }
