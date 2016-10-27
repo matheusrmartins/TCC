@@ -211,6 +211,8 @@ public class HomeFragment extends Fragment {
                         carregamento = true;
                         progressDialog.dismiss();
 
+                    }else{
+                        progressDialog.dismiss();
                     }
                 } else {
                     progressDialog.dismiss();
