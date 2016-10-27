@@ -11,9 +11,12 @@ package com.parse.starter.activity;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
@@ -48,7 +51,7 @@ import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
-         LocationListener {
+        LocationListener {
 
     private Toolbar toolbarPrincipal;
     private SlidingTabLayout slidingTabLayout;
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private LocationRequest locationRequest;
     private FusedLocationProviderApi fusedLocationProviderApi;
     private Location mLastLocation;
+    private String cidade_usuario;
+    private String estado_usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,11 +89,31 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         } else {
 
-            //callConnection();
             getLocation();
 
         }
 
+        SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+        StringBuilder sqlClientes = new StringBuilder();
+        sqlClientes.append("CREATE TABLE IF NOT EXISTS usuario(");
+        sqlClientes.append("_id INTEGER PRIMARY KEY, email VARCHAR(50));");
+        db.execSQL("CREATE TABLE IF NOT EXISTS usuario(_id INTEGER PRIMARY KEY, object_id VARCHAR(50));");
+
+        db.execSQL("CREATE TABLE IF NOT EXISTS filtro_usuario(object_id VARCHAR(20) PRIMARY KEY, genero INTEGER, tipo INTEGER, " +
+                "raca VARCHAR(30));");
+
+        try {
+            String user_object_id = ParseUser.getCurrentUser().getObjectId();
+
+            Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
+
+            if (cursor.getCount() < 1){
+                db.execSQL("insert into filtro_usuario (object_id, genero, tipo, raca) values (\""+user_object_id+"\", 0, 0, \"Todos\");");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         listView = (ListView) findViewById(R.id.list_postagens_home);
 
         TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(), this);
@@ -206,14 +231,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             List<android.location.Address> addresses = null;
             try {
                 addresses = geocoder.getFromLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 1);
+                if (addresses.size() > 0) {
+                    cidade_usuario = addresses.get(0).getAddressLine(1).substring(0, addresses.get(0).getAddressLine(1).length() - 5);
+                    estado_usuario = addresses.get(0).getAddressLine(1).substring(addresses.get(0).getAddressLine(1).length() - 2);
+                }
             } catch (IOException e) {
-                e.printStackTrace();
+                Toast.makeText(MainActivity.this, "Erro ao buscar localização.", Toast.LENGTH_LONG).show();
             }
-            if (addresses.size() > 0) {
-                String cidade = addresses.get(0).getAddressLine(1).substring(0, addresses.get(0).getAddressLine(1).length() - 5);
-                String estado = addresses.get(0).getAddressLine(1).substring(addresses.get(0).getAddressLine(1).length() - 2);
-                Toast.makeText(MainActivity.this, cidade + ", " + estado, Toast.LENGTH_LONG).show();
-            }
+
         }
     }
 

@@ -1,5 +1,8 @@
 package com.parse.starter.activity;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +24,8 @@ import com.parse.SaveCallback;
 import com.parse.starter.R;
 
 import java.util.List;
+
+import static android.database.sqlite.SQLiteDatabase.openDatabase;
 
 public class FiltroActivity extends AppCompatActivity {
 
@@ -93,31 +98,28 @@ public class FiltroActivity extends AppCompatActivity {
                 else
                     filtro_tipo = 0;
 
+                try {
+
+                SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+                String user_object_id = ParseUser.getCurrentUser().getObjectId();
+
+                Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
 
 
-                ParseQuery<ParseUser> query = ParseUser.getQuery();
-                query.whereEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
-                query.findInBackground(new FindCallback<ParseUser>() {
-                    @Override
-                    public void done(List<ParseUser> objects, ParseException e) {
-                        ParseUser object = objects.get(0);
-                        object.put("filtro_genero",filtro_genero);
-                        object.put("filtro_tipo",filtro_tipo);
-                        object.put("filtro_raca",spinner_raca.getSelectedItem().toString());
-                        object.saveInBackground(new SaveCallback() {
-                            @Override
-                            public void done(ParseException e) {
-                                if (e == null)
-                                    Toast.makeText(FiltroActivity.this, "Feito", Toast.LENGTH_SHORT).show();
-                                else
-                                    Toast.makeText(FiltroActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                    if (cursor.getCount() > 0) {
+                        db.execSQL("update filtro_usuario set genero = " + filtro_genero + "," +
+                                " tipo = " + filtro_tipo + ", raca = \"" + spinner_raca.getSelectedItem().toString() + "\" " +
+                                " where object_id =  \""+ user_object_id + "\";");
+                        Toast.makeText(FiltroActivity.this, "Feito", Toast.LENGTH_SHORT).show();
                     }
-                });
+                }catch (Exception e) {
+                    Toast.makeText(FiltroActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
-            }
+    }
 
     private void alteraSpinnerRaca(){
         if (tipo == "Cachorro") {

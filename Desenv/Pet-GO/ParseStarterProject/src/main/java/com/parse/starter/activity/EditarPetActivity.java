@@ -413,7 +413,7 @@ public class EditarPetActivity extends AppCompatActivity {
                 progressDialog.dismiss();
             } catch (IOException e) {
                 progressDialog.dismiss();
-                Toast.makeText(EditarPetActivity.this, e.getMessage() + " Codigo: AND-" + e.hashCode(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditarPetActivity.this,  e.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
         }

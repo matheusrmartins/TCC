@@ -215,10 +215,13 @@ public class EditarActivity extends AppCompatActivity {
 
                     }
                 }else{
-
+                    progressDialog.dismiss();
+                    finish();
+                    Toast.makeText(getBaseContext(), "Erro ao carregar. Verifique a sua conexão com a internet.", Toast.LENGTH_LONG).show();
                 }
 
                 progressDialog.dismiss();
+
             }
         });
     }

@@ -3,8 +3,11 @@ package com.parse.starter.fragments;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.print.PrintHelper;
@@ -37,6 +40,9 @@ import com.parse.starter.adapter.HomeAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.Context.MODE_WORLD_WRITEABLE;
+import static android.database.sqlite.SQLiteDatabase.openDatabase;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -60,6 +66,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
 
         carregamento = false;
 
@@ -150,60 +158,67 @@ public class HomeFragment extends Fragment {
 
 
 
-    private void getPostagens(){
+    private void getPostagens() {
 
-        ParseQuery<ParseUser> query_user = ParseUser.getQuery();
-        query_user.whereEqualTo("objectId", ParseUser.getCurrentUser().getObjectId());
-        query_user.findInBackground(new FindCallback<ParseUser>() {
-            @Override
-            public void done(List<ParseUser> objects, ParseException e) {
-                query = ParseQuery.getQuery("Animal");
-                ParseUser object = objects.get(0);
+        query = ParseQuery.getQuery("Animal");
+        try {
 
+            SQLiteDatabase db = getContext().openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+            String user_object_id = ParseUser.getCurrentUser().getObjectId();
+
+            Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
+
+            if (cursor.getCount() > 0) {
+
+                cursor.moveToFirst();
                 // filtro de genero de animal
-                if (object.getInt("filtro_genero") == 1)
+                if (cursor.getInt(1) == 1)
                     query.whereEqualTo("lista_genero", "Fêmea");
-                else if (object.getInt("filtro_genero") == 2)
+                else if (cursor.getInt(1) == 2)
                     query.whereEqualTo("lista_genero", "Macho");
 
                 // filtro de tipo de animal
-                if (object.getInt("filtro_tipo")== 1)
+                if (cursor.getInt(2) == 1)
                     query.whereEqualTo("lista_tipo", "Cachorro");
-                else if (object.getInt("filtro_tipo")== 2)
+                else if (cursor.getInt(2) == 2)
                     query.whereEqualTo("lista_tipo", "Gato");
 
                 //filtro de raça - enviar todos como padrão na criação de usuário.
-                if (!object.getString("filtro_raca").equals("Todos"))
-                    query.whereEqualTo("lista_raca",object.getString("filtro_raca"));
+                if (!cursor.getString(3).equals("Todos"))
+                    query.whereEqualTo("lista_raca", cursor.getString(3));
+            }
+        } catch (Exception e) {
+            Toast.makeText(getContext(), "Erro ao aplicar filtros", Toast.LENGTH_LONG).show();
+        }
+        query.orderByDescending("createdAt");
 
-                query.orderByDescending("createdAt");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null) {
 
-                query.findInBackground(new FindCallback<ParseObject>() {
-                    @Override
-                    public void done(List<ParseObject> objects, ParseException e) {
-                        if (e == null){
+                    if (objects.size() > 0) {
 
-                            if(objects.size() > 0){
+                        postagens.clear();
+                        for (ParseObject parseObject : objects) {
 
-                                postagens.clear();
-                                for (ParseObject parseObject : objects){
+                            postagens.add(parseObject);
 
-                                    postagens.add(parseObject);
-
-                                }
-                                adapter.notifyDataSetChanged();
-                                carregamento = true;
-                                progressDialog.dismiss();
-
-                            }
-                        }else{
-                            progressDialog.dismiss();
-                            Toast.makeText(getContext(), e.getMessage() + e.getCode(), Toast.LENGTH_LONG).show();
                         }
+                        adapter.notifyDataSetChanged();
+                        carregamento = true;
+                        progressDialog.dismiss();
+
                     }
-                });
+                } else {
+                    progressDialog.dismiss();
+                    Toast.makeText(getContext(), e.getMessage() + e.getCode(), Toast.LENGTH_LONG).show();
+                }
+
             }
         });
+
 
     }
 
