@@ -43,6 +43,7 @@ import com.parse.ParseUser;
 import com.parse.starter.R;
 import com.parse.starter.adapter.TabsAdapter;
 import com.parse.starter.fragments.HomeFragment;
+import com.parse.starter.fragments.NotificacoesFragment;
 import com.parse.starter.util.SlidingTabLayout;
 
 import java.io.IOException;
@@ -180,6 +181,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     TabsAdapter adapterNovo = (TabsAdapter) viewPager.getAdapter();
                     HomeFragment homeFragment = (HomeFragment) adapterNovo.getFragment(0);
                     homeFragment.atualizaPostagens();
+                    NotificacoesFragment notificacoesFragment = (NotificacoesFragment) adapterNovo.getFragment(1);
+                    notificacoesFragment.atualizaConversas();
                 }
                 catch(Exception e){
                     Log.i("ERRO ", e.getMessage());

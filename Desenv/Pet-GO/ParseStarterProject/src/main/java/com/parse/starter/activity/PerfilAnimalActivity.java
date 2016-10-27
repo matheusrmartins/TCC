@@ -150,6 +150,7 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("nome_usuario", getIntent().getExtras().getString("usuario_nome"));
                 bundle.putString("email_usuario", getIntent().getExtras().getString("usuario_email"));
+                bundle.putString("object_id_usuario", getIntent().getExtras().getString("object_id_usuario"));
                 intent.putExtras(bundle);
                 startActivity(intent);
                 progressDialog.dismiss();

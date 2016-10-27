@@ -3,4 +3,5 @@
     <color name="ColorPrimary">#FFFFFF</color>
     <color name="CorPrincipal">#228B22</color>
     <color name="Preto">#000000</color>
+    <color name="Cinza_Suave">#d4d4d4</color>
 </resources>

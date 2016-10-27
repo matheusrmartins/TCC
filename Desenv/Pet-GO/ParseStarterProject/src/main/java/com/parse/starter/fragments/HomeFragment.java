@@ -191,6 +191,7 @@ public class HomeFragment extends Fragment {
         } catch (Exception e) {
             Toast.makeText(getContext(), "Erro ao aplicar filtros", Toast.LENGTH_LONG).show();
         }
+        query.whereNotEqualTo("object_id_usuario", ParseUser.getCurrentUser().getObjectId());
         query.orderByDescending("createdAt");
 
         query.findInBackground(new FindCallback<ParseObject>() {

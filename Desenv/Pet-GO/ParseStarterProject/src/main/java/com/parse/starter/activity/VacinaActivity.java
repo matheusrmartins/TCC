@@ -138,7 +138,7 @@ public class VacinaActivity extends AppCompatActivity {
 
 
                 //Envia os objetos parse para o banco
-                final ParseObject parseObject = new ParseObject("Animal");
+                ParseObject parseObject = new ParseObject("Animal");
                 parseObject.put("object_id_usuario", ParseUser.getCurrentUser().getObjectId().toString());
                 parseObject.put("nome_animal", nome_animal);
                 parseObject.put("lista_genero", lista_genero);

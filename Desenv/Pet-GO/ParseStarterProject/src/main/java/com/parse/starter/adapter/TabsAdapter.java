@@ -48,6 +48,7 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
                 break;
             case 1:
                 fragment = new NotificacoesFragment();
+                fragmentosUtilizados.put(position, fragment);
                 break;
         }
 

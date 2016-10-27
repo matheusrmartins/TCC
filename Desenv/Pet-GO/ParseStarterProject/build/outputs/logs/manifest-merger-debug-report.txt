@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:9:1-96:12
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:9:1-100:12
 	package
 		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:11:5-32
 		INJECTED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml
@@ -42,7 +42,7 @@ ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterPr
 	android:name
 		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:18:22-76
 application
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:20:5-94:19
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:20:5-98:19
 MERGED from [com.google.android.gms:play-services-location:9.6.1] C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.6.1\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-base:9.6.1] C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-basement:9.6.1] C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\AndroidManifest.xml:19:5-21:19
@@ -143,39 +143,39 @@ ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterPr
 	android:name
 		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:62:19-60
 activity#com.parse.starter.activity.ChatActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:63:9-59
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:63:9-67:20
 	android:name
 		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:63:19-56
 activity#com.parse.starter.activity.CadastroPetActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:64:9-72:20
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:68:9-76:20
 	android:label
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:66:13-64
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:70:13-64
 	android:parentActivityName
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:67:13-64
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:71:13-64
 	android:theme
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:68:13-44
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:72:13-44
 	android:name
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:65:13-57
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:69:13-57
 activity#com.parse.starter.activity.VacinaActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:73:9-77:20
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:77:9-81:20
 	android:name
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:73:19-58
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:77:19-58
 activity#com.parse.starter.activity.FavoritosActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:78:9-82:20
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:82:9-86:20
 	android:name
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:78:19-61
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:82:19-61
 activity#com.parse.starter.activity.EditarPetActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:83:9-87:20
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:87:9-91:20
 	android:name
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:83:19-61
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:87:19-61
 activity#com.parse.starter.activity.PerfilAnimalActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:88:9-92:20
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:92:9-96:20
 	android:name
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:88:19-64
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:92:19-64
 activity#com.parse.starter.activity.FiltroActivity
-ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:93:9-70
+ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:97:9-70
 	android:name
-		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:93:19-58
+		ADDED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml:97:19-58
 uses-sdk
 INJECTED from C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
