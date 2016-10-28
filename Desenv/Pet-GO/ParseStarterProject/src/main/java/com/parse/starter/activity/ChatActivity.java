@@ -29,6 +29,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -51,6 +53,7 @@ public class ChatActivity extends AppCompatActivity {
     private Conversa conversa;
     private String nome_usuario;
     private String textoMensagem;
+    private Timer autoUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,38 +87,6 @@ public class ChatActivity extends AppCompatActivity {
         arrayAdapter =  new MensagemAdapter(ChatActivity.this, array_mensagens);
         listView_mensagens.setAdapter(arrayAdapter);
 
-        array_mensagens.clear();
-
-        query_mensagens1 = ParseQuery.getQuery("Mensagem");
-        query_mensagens1.whereEqualTo("usuario_remetente", usuarioRementente);
-        query_mensagens1.whereEqualTo("usuario_destinatario", usuarioDestinatario);
-        query_mensagens2 = ParseQuery.getQuery("Mensagem");
-        query_mensagens2.whereEqualTo("usuario_remetente", usuarioDestinatario);
-        query_mensagens2.whereEqualTo("usuario_destinatario", usuarioRementente);
-
-        List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
-        queries.add(query_mensagens1);
-        queries.add(query_mensagens2);
-
-        query_mensagens = ParseQuery.or(queries);
-
-        query_mensagens.orderByAscending("createdAt");
-        query_mensagens.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null){
-                    for (ParseObject object : objects){
-                        Mensagem mensagem = new Mensagem();
-                        mensagem.setMensagem(object.getString("mensagem"));
-                        mensagem.setIdUsuario(object.getString("usuario_remetente"));
-                        array_mensagens.add(mensagem);
-                    }
-                    listView_mensagens.invalidateViews();
-                }else{
-
-                }
-            }
-        });
 
         botao_enviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -210,6 +181,22 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        autoUpdate = new Timer();
+        autoUpdate.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        getMensagem();
+                    }
+                });
+            }
+        }, 0, 5000); // updates each 40 secs
+    }
+
     private boolean salvarMensagemParse(final String usuarioRementente, final String usuarioDestinatario, final String textoMensagem) {
 
         try{
@@ -294,6 +281,41 @@ public class ChatActivity extends AppCompatActivity {
             return false;
         }
 
+    }
+
+    public void getMensagem(){
+        array_mensagens.clear();
+
+        query_mensagens1 = ParseQuery.getQuery("Mensagem");
+        query_mensagens1.whereEqualTo("usuario_remetente", usuarioRementente);
+        query_mensagens1.whereEqualTo("usuario_destinatario", usuarioDestinatario);
+        query_mensagens2 = ParseQuery.getQuery("Mensagem");
+        query_mensagens2.whereEqualTo("usuario_remetente", usuarioDestinatario);
+        query_mensagens2.whereEqualTo("usuario_destinatario", usuarioRementente);
+
+        List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
+        queries.add(query_mensagens1);
+        queries.add(query_mensagens2);
+
+        query_mensagens = ParseQuery.or(queries);
+
+        query_mensagens.orderByAscending("createdAt");
+        query_mensagens.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null){
+                    for (ParseObject object : objects){
+                        Mensagem mensagem = new Mensagem();
+                        mensagem.setMensagem(object.getString("mensagem"));
+                        mensagem.setIdUsuario(object.getString("usuario_remetente"));
+                        array_mensagens.add(mensagem);
+                    }
+                    listView_mensagens.invalidateViews();
+                }else{
+
+                }
+            }
+        });
     }
 
 }
