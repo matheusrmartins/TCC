@@ -50,53 +50,73 @@
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name_pet_go"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.parse.starter.activity.LoginActivity"
-            android:label="@string/app_name_pet_go" >
+            android:label="@string/app_name_pet_go"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.parse.starter.activity.MainActivity" />
-        <activity android:name="com.parse.starter.activity.EditarActivity" >
+        <activity
+            android:name="com.parse.starter.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.parse.starter.activity.EditarActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.MainActivity" />
         </activity>
-        <activity android:name="com.parse.starter.activity.CadastroActivity" />
-        <activity android:name="com.parse.starter.activity.ChatActivity" >
+        <activity
+            android:name="com.parse.starter.activity.CadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.parse.starter.activity.ChatActivity"
+            android:parentActivityName="com.parse.starter.activity.MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.activity.PerfilAnimalActivity" />
+                android:value=".activity.MainActivity" />
         </activity>
         <activity
             android:name="com.parse.starter.activity.CadastroPetActivity"
             android:label="@string/title_activity_cadastro_pet"
             android:parentActivityName="com.parse.starter.activity.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.MainActivity" />
         </activity>
-        <activity android:name="com.parse.starter.activity.VacinaActivity" >
+        <activity
+            android:name="com.parse.starter.activity.VacinaActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.CadastroPetActivity" />
         </activity>
-        <activity android:name="com.parse.starter.activity.FavoritosActivity" >
+        <activity
+            android:name="com.parse.starter.activity.FavoritosActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.MainActivity" />
         </activity>
-        <activity android:name="com.parse.starter.activity.EditarPetActivity" >
+        <activity
+            android:name="com.parse.starter.activity.EditarPetActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.EditarActivity" />
         </activity>
-        <activity android:name="com.parse.starter.activity.PerfilAnimalActivity" >
+        <activity
+            android:name="com.parse.starter.activity.PerfilAnimalActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.MainActivity" />

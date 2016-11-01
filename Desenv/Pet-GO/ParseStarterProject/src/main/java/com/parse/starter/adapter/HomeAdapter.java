@@ -172,9 +172,9 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                     }
                                     curtiu = usuario_like.contains(parseUser.getObjectId().toString());
                                     if (!curtiu) {
-                                        parseObject.put("Likes", parseObject.getInt("Likes") + 1);
+                                        parseObject.increment("Likes");
                                         parseObject.put("usuario_like", parseObject.get("usuario_like") + parseUser.getObjectId() + ";");
-                                        parseObject.saveInBackground(new SaveCallback() {
+                                        parseObject.pinInBackground(new SaveCallback() {
                                             @Override
                                             public void done(ParseException e) {
                                                 if (e == null) {

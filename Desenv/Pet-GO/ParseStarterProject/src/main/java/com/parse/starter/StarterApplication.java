@@ -28,6 +28,7 @@ public class StarterApplication extends Application {
             .applicationId("LdVxRPC6mx6I43ljmVC3YSZQPbRpOIuab4prY1Nl")
             .clientKey("s5iaDHvP96DNaECMNcP31cFaEnRLk6D3TnyZdaXU")
             .server("https://parseapi.back4app.com/")
+            .enableLocalDataStore()
     .build()
     );
 

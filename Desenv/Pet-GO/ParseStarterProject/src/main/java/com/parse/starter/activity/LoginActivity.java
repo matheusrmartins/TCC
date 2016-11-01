@@ -115,7 +115,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void done(ParseUser user, ParseException err) {
                         if (user == null) {
-                            Log.d("MyApp", "Uh oh. The user cancelled the Facebook login.");
+                            progressDialog.dismiss();
+                            Toast.makeText(LoginActivity.this,  "Erro ao fazer o login", Toast.LENGTH_SHORT).show();
                         } else if (user.isNew()) {
                             progressDialog = new ProgressDialog(LoginActivity.this);
                             progressDialog.setCancelable(false);
