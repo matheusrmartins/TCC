@@ -174,7 +174,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                     if (!curtiu) {
                                         parseObject.increment("Likes");
                                         parseObject.put("usuario_like", parseObject.get("usuario_like") + parseUser.getObjectId() + ";");
-                                        parseObject.pinInBackground(new SaveCallback() {
+                                        parseObject.saveInBackground(new SaveCallback() {
                                             @Override
                                             public void done(ParseException e) {
                                                 if (e == null) {

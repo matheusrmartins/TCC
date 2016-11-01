@@ -170,7 +170,7 @@ public class ChatActivity extends AppCompatActivity {
                             parseObject_conversa.put("nome_2", nome_usuario);
                             parseObject_conversa.put("ultima_mensagem", textoMensagem);
 
-                            parseObject_conversa.pinInBackground(new SaveCallback() {
+                            parseObject_conversa.saveInBackground(new SaveCallback() {
                                 @Override
                                 public void done(ParseException e) {
                                     if (e == null){
@@ -188,7 +188,7 @@ public class ChatActivity extends AppCompatActivity {
                         } else {
                             for (ParseObject object : objects) {
                               object.put("ultima_mensagem", textoMensagem);
-                              object.pinInBackground();
+                              object.saveInBackground();
                             }
                         }
                     }
@@ -206,6 +206,7 @@ public class ChatActivity extends AppCompatActivity {
 
     public void getMensagem(){
         array_mensagens.clear();
+
 
         query_mensagens1 = ParseQuery.getQuery("Mensagem");
         query_mensagens1.whereEqualTo("usuario_remetente", usuarioRementente);
