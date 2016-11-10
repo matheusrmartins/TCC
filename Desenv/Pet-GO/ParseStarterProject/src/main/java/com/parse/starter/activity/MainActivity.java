@@ -39,7 +39,9 @@ import com.google.android.gms.location.FusedLocationProviderApi;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.adapter.TabsAdapter;
 import com.parse.starter.fragments.HomeFragment;
@@ -235,8 +237,77 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             try {
                 addresses = geocoder.getFromLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 1);
                 if (addresses.size() > 0) {
-                    cidade_usuario = addresses.get(0).getAddressLine(1).substring(0, addresses.get(0).getAddressLine(1).length() - 5);
-                    estado_usuario = addresses.get(0).getAddressLine(1).substring(addresses.get(0).getAddressLine(1).length() - 2);
+                    cidade_usuario = addresses.get(0).getLocality().toUpperCase();
+                    estado_usuario = addresses.get(0).getAdminArea().replace("State of ","").toUpperCase();
+
+                    if (estado_usuario.equals("ACRE"))
+                        estado_usuario = "AC";
+                    else if (estado_usuario.equals("ALAGOAS"))
+                        estado_usuario = "AL";
+                    else if (estado_usuario.equals("AMAPÁ"))
+                        estado_usuario = "AP";
+                    else if (estado_usuario.equals("AMAZONAS"))
+                        estado_usuario = "AM";
+                    else if (estado_usuario.equals("BAHIA"))
+                        estado_usuario = "BA";
+                    else if (estado_usuario.equals("CEARÁ"))
+                        estado_usuario = "CE";
+                    else if (estado_usuario.equals("DISTRITO FEDERAL"))
+                        estado_usuario = "DF";
+                    else if (estado_usuario.equals("ESPÍRITO SANTO"))
+                        estado_usuario = "ES";
+                    else if (estado_usuario.equals("GOIÁS"))
+                        estado_usuario = "GO";
+                    else if (estado_usuario.equals("MARANHÃO"))
+                        estado_usuario = "MA";
+                    else if (estado_usuario.equals("MATO GROSSO"))
+                        estado_usuario = "MT";
+                    else if (estado_usuario.equals("MATO GROSSO DO SUL"))
+                        estado_usuario = "MS";
+                    else if (estado_usuario.equals("MINAS GERAIS"))
+                        estado_usuario = "MG";
+                    else if (estado_usuario.equals("PARÁ"))
+                        estado_usuario = "PA";
+                    else if (estado_usuario.equals("PARAÍBA"))
+                        estado_usuario = "PB";
+                    else if (estado_usuario.equals("PARANÁ"))
+                        estado_usuario = "PR";
+                    else if (estado_usuario.equals("PERNAMBUCO"))
+                        estado_usuario = "PE";
+                    else if (estado_usuario.equals("PIAUÍ"))
+                        estado_usuario = "PI";
+                    else if (estado_usuario.equals("RIO DE JANEIRO"))
+                        estado_usuario = "RJ";
+                    else if (estado_usuario.equals("RIO GRANDE DO NORTE"))
+                        estado_usuario = "RN";
+                    else if (estado_usuario.equals("RIO GRANDE DO SUL"))
+                        estado_usuario = "RS";
+                    else if (estado_usuario.equals("RONDÔNIA"))
+                        estado_usuario = "RO";
+                    else if (estado_usuario.equals("RORAIMA"))
+                        estado_usuario = "RR";
+                    else if (estado_usuario.equals("SANTA CATARINA"))
+                        estado_usuario = "SC";
+                    else if (estado_usuario.equals("SÃO PAULO"))
+                        estado_usuario = "SP";
+                    else if (estado_usuario.equals("SERGIPE"))
+                        estado_usuario = "SE";
+                    else if (estado_usuario.equals("TOCANTINS"))
+                        estado_usuario = "TO";
+
+
+                    ParseUser.getCurrentUser().put("lista_cidade", cidade_usuario);
+                    ParseUser.getCurrentUser().put("lista_estado", estado_usuario);
+                    ParseUser.getCurrentUser().saveEventually(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null){
+                                //Toast.makeText(MainActivity.this, "Localização atualizada para", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+
+
                 }
             } catch (IOException e) {
                 Toast.makeText(MainActivity.this, "Erro ao buscar localização.", Toast.LENGTH_LONG).show();

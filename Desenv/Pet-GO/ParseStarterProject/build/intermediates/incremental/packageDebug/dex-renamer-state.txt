@@ -1,0 +1,7 @@
+#Thu Nov 10 01:33:39 BRST 2016
+base.0=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2b66861a6f76079634c9c5e6d4e0c3b637761c65
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_d140599d94559a85116559054077b9d930e8f3e2\\classes.dex
+base.1=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_d140599d94559a85116559054077b9d930e8f3e2
+file.0=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2b66861a6f76079634c9c5e6d4e0c3b637761c65\\classes.dex

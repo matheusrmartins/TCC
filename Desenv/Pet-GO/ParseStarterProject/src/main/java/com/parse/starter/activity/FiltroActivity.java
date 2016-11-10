@@ -1,6 +1,7 @@
 package com.parse.starter.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -55,6 +56,35 @@ public class FiltroActivity extends AppCompatActivity {
 
         spinner_raca.setEnabled(false);
 
+        SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
+
+        String user_object_id = ParseUser.getCurrentUser().getObjectId();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
+
+        if (cursor.getCount() > 0) {
+
+            cursor.moveToFirst();
+            // filtro de genero de animal
+            if (cursor.getInt(1) == 1)
+                radio_femea.setChecked(true);
+
+            else if (cursor.getInt(1) == 2)
+                radio_macho.setChecked(true);
+
+            // filtro de tipo de animal
+            if (cursor.getInt(2) == 1){
+                radio_cachorro.setChecked(true);
+                tipo = "Cachorro";
+            }
+            else if (cursor.getInt(2) == 2) {
+                radio_gato.setChecked(true);
+                tipo = "Gato";
+            }
+
+            alteraSpinnerRaca(cursor.getString(3));
+
+
         radio_cachorro.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -64,7 +94,7 @@ public class FiltroActivity extends AppCompatActivity {
                     tipo = "Gato";
                 else
                     tipo =  "Ambos";
-                alteraSpinnerRaca();
+                alteraSpinnerRaca("Todos");
             }
         });
 
@@ -77,7 +107,7 @@ public class FiltroActivity extends AppCompatActivity {
                     tipo = "Gato";
                 else
                     tipo =  "Ambos";
-                alteraSpinnerRaca();
+                alteraSpinnerRaca("Todos");
             }
         });
 
@@ -111,17 +141,21 @@ public class FiltroActivity extends AppCompatActivity {
                         db.execSQL("update filtro_usuario set genero = " + filtro_genero + "," +
                                 " tipo = " + filtro_tipo + ", raca = \"" + spinner_raca.getSelectedItem().toString() + "\" " +
                                 " where object_id =  \""+ user_object_id + "\";");
-                        Toast.makeText(FiltroActivity.this, "Feito", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(FiltroActivity.this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
+                        finish();
+                        Intent intent = new Intent(FiltroActivity.this, MainActivity.class);
+                        startActivity(intent);
                     }
                 }catch (Exception e) {
-                    Toast.makeText(FiltroActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FiltroActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
 
             }
         });
+      }
     }
 
-    private void alteraSpinnerRaca(){
+    private void alteraSpinnerRaca(String flag){
         if (tipo == "Cachorro") {
             spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_cachorro_filtro));
             spinner_raca.setEnabled(true);
@@ -137,5 +171,7 @@ public class FiltroActivity extends AppCompatActivity {
 
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_raca.setAdapter(spinnerArrayAdapter);
+
+        spinner_raca.setSelection(spinnerArrayAdapter.getPosition(flag));
     }
 }

@@ -62,7 +62,6 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
     private Context context;
     private ArrayList<ParseObject> postagens;
     private ParseObject parseObject;
-    //private ParseQuery<ParseObject> query;
     private boolean curtiu = false;
     private String usuario_like = "";
     private ParseUser parseUser;
@@ -155,10 +154,24 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
                     Cursor cursor = db.rawQuery("SELECT * FROM like_pressed", null);
 
-                    if (cursor.getCount() > 0) {
+                    if (cursor.getCount() < 1) {
+                        ContentValues ctv = new ContentValues();
+                        ctv.put("like", 0);
 
-                        final int posicao = (Integer) botao_like.getTag();
-                        parseObject = postagens.get(posicao);
+                        db.insert("like_pressed","id",ctv);
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                getContext());
+                        alertDialogBuilder.setTitle("Alerta");
+                        alertDialogBuilder
+                                .setMessage("Ao curtir um pet, você estará contribuindo para que ele apareça para mais pessoas!")
+                                .setCancelable(true)
+                                .setNeutralButton("OK",null);
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+                    }
+
+                        //final int posicao = (Integer) botao_like.getTag();
+                        parseObject = postagens.get(position);
 
                         ParseQuery<ParseObject> query;
                         query = ParseQuery.getQuery("Animal");
@@ -174,10 +187,11 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                     if (!curtiu) {
                                         parseObject.increment("Likes");
                                         parseObject.put("usuario_like", parseObject.get("usuario_like") + parseUser.getObjectId() + ";");
-                                        parseObject.saveInBackground(new SaveCallback() {
+                                        parseObject.pinInBackground(new SaveCallback() {
                                             @Override
                                             public void done(ParseException e) {
                                                 if (e == null) {
+                                                    parseObject.saveEventually();
                                                     notifyDataSetChanged();
                                                 }
                                             }
@@ -193,22 +207,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                 }
                             }
                         });
-                    }
-                    else{
-                        ContentValues ctv = new ContentValues();
-                        ctv.put("like", 0);
 
-                        db.insert("like_pressed","id",ctv);
-                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                                getContext());
-                        alertDialogBuilder.setTitle("Alerta");
-                        alertDialogBuilder
-                                .setMessage("Ao curtir um pet, você estará contribuindo para que ele apareça para mais pessoas!")
-                                .setCancelable(true)
-                                .setNeutralButton("OK",null);
-                        AlertDialog alertDialog = alertDialogBuilder.create();
-                        alertDialog.show();
-                    }
 
                 }
             });
@@ -227,7 +226,21 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
                     Cursor cursor = db.rawQuery("SELECT * FROM favorit_pressed", null);
 
-                    if (cursor.getCount() > 0) {
+                    if (cursor.getCount() < 1) {
+                        ContentValues ctv = new ContentValues();
+                        ctv.put("fav", 0);
+
+                        db.insert("favorit_pressed","id",ctv);
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                getContext());
+                        alertDialogBuilder.setTitle("Alerta");
+                        alertDialogBuilder
+                                .setMessage("Ao favoritar um pet, ele fica salvo no menu \"Favoritos\" para acessa-lo sempre quando quiser!")
+                                .setCancelable(true)
+                                .setNeutralButton("OK",null);
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+                    }
                         final int posicao = (Integer) botao_favoritar.getTag();
                         parseObject = postagens.get(posicao);
 
@@ -261,21 +274,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                 }
                             }
                         });
-                    }else{
-                        ContentValues ctv = new ContentValues();
-                        ctv.put("fav", 0);
 
-                        db.insert("favorit_pressed","id",ctv);
-                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                                getContext());
-                        alertDialogBuilder.setTitle("Alerta");
-                        alertDialogBuilder
-                                .setMessage("Ao favoritar um pet, ele fica salvo no menu \"Favoritos\" para acessa-lo sempre quando quiser!")
-                                .setCancelable(true)
-                                .setNeutralButton("OK",null);
-                        AlertDialog alertDialog = alertDialogBuilder.create();
-                        alertDialog.show();
-                    }
                 }
             });
 
