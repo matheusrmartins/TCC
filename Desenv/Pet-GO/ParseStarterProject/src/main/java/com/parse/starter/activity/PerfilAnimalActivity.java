@@ -43,6 +43,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.starter.R;
+import com.parse.starter.util.Erros;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -62,6 +63,7 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
     private String[] vacinas;
     private Button botao_chat;
     private Button botao_telefone;
+    private String telefone_contato;
     private String object_id_usuario;
     private ProgressDialog progressDialog;
 
@@ -131,6 +133,13 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
             }
         }
 
+        try{
+            telefone_contato = getIntent().getExtras().getString("telefone").replace("(","").replace(")","").replace("-","").trim();
+        }catch (NullPointerException e){
+            telefone_contato = "";
+        }
+
+
         botao_chat = (Button) findViewById(R.id.button_mensagem);
         botao_chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,23 +173,32 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
         botao_telefone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(PerfilAnimalActivity.this,
-                        Manifest.permission.CALL_PHONE)
-                        != PackageManager.PERMISSION_GRANTED) {
-
-                              ActivityCompat.requestPermissions(PerfilAnimalActivity.this,
-                                new String[]{Manifest.permission.CALL_PHONE},
-                                101);
-
-                } else {
-
-                    chamarLigacao("13991076260");
-
+                if (telefone_contato.equals("")){
+                    Toast.makeText(PerfilAnimalActivity.this,"Telefone não informado",Toast.LENGTH_LONG).show();
+                }else{
+                    requestPermissionCall();
                 }
+
             }
         });
 
 
+    }
+
+    private void requestPermissionCall(){
+        if (ContextCompat.checkSelfPermission(PerfilAnimalActivity.this,
+                Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(PerfilAnimalActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    101);
+
+        } else {
+
+            chamarLigacao(telefone_contato);
+
+        }
     }
 
     private void chamarLigacao(String telefone){
@@ -195,9 +213,9 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
             case 101:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //granted
-                    chamarLigacao("13991076260");
+                    chamarLigacao(telefone_contato);
                 } else {
-                    //not granted
+                    requestPermissionCall();
                 }
                 break;
             default:

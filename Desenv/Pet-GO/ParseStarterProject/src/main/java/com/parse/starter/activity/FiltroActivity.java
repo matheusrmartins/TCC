@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -41,11 +42,18 @@ public class FiltroActivity extends AppCompatActivity {
     private ArrayAdapter<String> spinnerArrayAdapter;
     private String tipo;
     private String raca;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filtro);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar_filtro);
+        toolbar.setTitle("Configurações");
+        toolbar.setTitleTextColor(R.color.Preto);
+        toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left);
+        setSupportActionBar(toolbar);
 
         botao_salvar = (Button) findViewById(R.id.botao_salvar);
         radio_macho  = (RadioButton) findViewById(R.id.radioButton_macho);

@@ -121,7 +121,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.MainActivity" />
         </activity>
-        <activity android:name="com.parse.starter.activity.FiltroActivity" />
+        <activity android:name="com.parse.starter.activity.FiltroActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.activity.MainActivity" />
+        </activity>
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

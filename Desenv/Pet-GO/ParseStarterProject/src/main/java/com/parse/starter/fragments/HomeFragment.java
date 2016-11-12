@@ -135,6 +135,7 @@ public class HomeFragment extends Fragment {
                 bundle.putString("lista_estado", parseObject.getString("lista_estado"));
                 bundle.putString("lista_cidade", parseObject.getString("lista_cidade"));
                 bundle.putString("descricao", parseObject.getString("descricao"));
+                bundle.putString("telefone", parseObject.getString("telefone"));
                 bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
                 bundle.putString("vacinas", (parseObject.getString("vacinas").trim().equals("")) ?
                                     "" : parseObject.getString("vacinas"));

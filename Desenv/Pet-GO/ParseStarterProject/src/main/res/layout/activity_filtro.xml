@@ -8,7 +8,7 @@
     android:background="@drawable/fundo_degrade_aplicacao">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_filtro"
         layout="@layout/toolbar" />
 
     <RadioGroup

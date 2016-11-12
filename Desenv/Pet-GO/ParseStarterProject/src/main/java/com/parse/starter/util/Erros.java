@@ -31,6 +31,8 @@ public class Erros {
                 return "O animal deve ter menos que 21 anos";
             case "APP-111":
                 return "Digite um mês válido";
+            case "APP-112":
+                return "Digite um número de telefone válido";
             case "PAR-202":
                 return "Esse usuário já está cadastrado.";
             case "PAR-203":

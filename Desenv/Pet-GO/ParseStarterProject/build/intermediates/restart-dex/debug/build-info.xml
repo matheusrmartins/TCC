@@ -1,50 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    api-level="23"
-    density="xxhdpi"
+    api-level="22"
+    density="xhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="240702143958909"
+    timestamp="34755155631130"
     token="3550697998233825527"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1531" />
+        duration="11410" />
     <task
         name="instant-run-dex"
-        duration="1652" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="174" />
+        duration="5051" />
     <task
         name="verifier"
-        duration="20" />
+        duration="1094" />
 
     <artifact
-        location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="238417906435525"
+        timestamp="34755155631130"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="239641894580069"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="240702143958909"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

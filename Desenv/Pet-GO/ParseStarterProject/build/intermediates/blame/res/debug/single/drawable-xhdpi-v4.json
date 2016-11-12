@@ -108,12 +108,12 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal.9.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png",

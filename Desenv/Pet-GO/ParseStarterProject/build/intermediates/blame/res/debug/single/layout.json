@@ -244,12 +244,12 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",

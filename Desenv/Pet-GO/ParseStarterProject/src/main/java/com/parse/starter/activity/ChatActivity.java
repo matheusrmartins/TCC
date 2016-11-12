@@ -103,8 +103,9 @@ public class ChatActivity extends AppCompatActivity {
                     mensagem.setMensagem(textoMensagem);
                     mensagem.setIdUsuario(usuarioRementente);
                     array_mensagens.add(mensagem);
-                    listView_mensagens.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
+                    //listView_mensagens.scrollTo(0, listView_mensagens.getHeight());
                     listView_mensagens.setStackFromBottom(true);
+                    listView_mensagens.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
                     if(!salvarMensagemParse (usuarioRementente, usuarioDestinatario, textoMensagem));
                 }
 

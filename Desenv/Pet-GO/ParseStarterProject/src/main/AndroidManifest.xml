@@ -100,7 +100,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.FiltroActivity"></activity>
+        <activity android:name=".activity.FiltroActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

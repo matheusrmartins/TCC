@@ -42,6 +42,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import br.com.jansenfelipe.androidmask.MaskEditTextChangedListener;
+
 public class CadastroPetActivity extends AppCompatActivity {
 
     private int estado_count_listener;
@@ -65,6 +67,7 @@ public class CadastroPetActivity extends AppCompatActivity {
     private ArrayAdapter<String> spinnerArrayAdapter;
     private String[] cidades;
     private ArrayAdapter<String> adapter;
+    private EditText telefone_contato;
 
 
     @Override
@@ -85,6 +88,10 @@ public class CadastroPetActivity extends AppCompatActivity {
         descricao = (EditText) findViewById(R.id.editText_descricao);
         macho = (RadioButton) findViewById(R.id.radio_macho);
         cachorro = (RadioButton) findViewById(R.id.radio_cachorro);
+        telefone_contato = (EditText) findViewById(R.id.editText_telefone);
+
+        MaskEditTextChangedListener maskTELEFONE = new MaskEditTextChangedListener("(##) #####-####", telefone_contato);
+        telefone_contato.addTextChangedListener(maskTELEFONE);
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_cadastro_pet);
@@ -98,6 +105,8 @@ public class CadastroPetActivity extends AppCompatActivity {
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_estado));
         lista_estado.setSelection(spinnerArrayAdapter.getPosition(usuario.getString("lista_estado")));
         lista_cidade.setText(usuario.getString("lista_cidade"));
+
+        telefone_contato.setText(usuario.getString("telefone"));
 
         estado_count_listener = 0;
 
@@ -163,6 +172,9 @@ public class CadastroPetActivity extends AppCompatActivity {
                 else if(Integer.valueOf(lista_mes_int) > 11)
                     cod_erro = 111;
 
+                if ((telefone_contato.length() < 14) && (telefone_contato.length() > 0))
+                    cod_erro = 112;
+
                 if (cod_erro == 0) {
                     castrado_checked = ((CheckBox) findViewById(R.id.castrado)).isChecked();
 
@@ -177,6 +189,7 @@ public class CadastroPetActivity extends AppCompatActivity {
                         bundle.putBoolean("castrado_checked", castrado_checked);
                         bundle.putString("lista_estado", lista_estado.getSelectedItem().toString());
                         bundle.putString("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
+                        bundle.putString("telefone_contato", telefone_contato.getText().toString());
                         bundle.putString("descricao", descricao.getText().toString());
                         bundle.putByteArray("imagem", imagem_byteArray);
                         Intent intent = new Intent(CadastroPetActivity.this, VacinaActivity.class);
