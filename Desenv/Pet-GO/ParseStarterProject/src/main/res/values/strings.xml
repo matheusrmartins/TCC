@@ -27,80 +27,263 @@
         <item>Macho</item>
     </string-array>
 
-    <string-array name="tipo_usuario">
-        <item>Pessoa Física</item>
-        <item>Pessoa Jurídica</item>
-    </string-array>
-
     <string-array name="lista_raca_ambos_filtro">
         <item>Todos</item>
     </string-array>
 
     <string-array name="lista_raca_cachorro_filtro">
         <item>Todos</item>
+        <item>Afegão Hound</item>
+        <item>Affenpinscher</item>
+        <item>Airedale Terrier</item>
+        <item>Akita</item>
+        <item>American Staffordshire Terrier</item>
+        <item>Basenji</item>
+        <item>Basset Hound</item>
+        <item>Beagle</item>
+        <item>Beagle Harrier</item>
+        <item>Bearded Collie</item>
+        <item>Bedlington Terrier</item>
+        <item>Bichon Frisé</item>
+        <item>Bloodhound</item>
+        <item>Bobtail</item>
+        <item>Boiadeiro Australiano</item>
+        <item>Boiadeiro Bernês</item>
+        <item>Border Collie</item>
+        <item>Border Terrier</item>
+        <item>Borzoi</item>
+        <item>Boston Terrier</item>
         <item>Boxer</item>
-        <item>Fila</item>
+        <item>Buldogue Francês</item>
+        <item>Buldogue Inglês</item>
+        <item>Bull Terrier</item>
+        <item>Bulmastife</item>
+        <item>Cairn Terrier</item>
+        <item>Cane Corso</item>
+        <item>Cão de Água Português</item>
+        <item>Cão de Crista Chinês</item>
+        <item>Cavalier King Charles Spaniel</item>
+        <item>Chesapeake Bay Retriever</item>
+        <item>Chihuahua</item>
+        <item>Chow Chow</item>
+        <item>Cocker Spaniel Americano</item>
+        <item>Cocker Spaniel Inglês</item>
+        <item>Collie</item>
+        <item>Coton de Tuléar</item>
+        <item>Dachshund</item>
+        <item>Dálmata</item>
+        <item>Dandie Dinmont Terrier</item>
+        <item>Doberman</item>
+        <item>Dogo Argentino</item>
+        <item>Dogue Alemão</item>
+        <item>Fila Brasileiro</item>
+        <item>Fox Terrier (Pelo Duro e Pelo Liso)</item>
+        <item>Foxhound Inglês</item>
+        <item>Galgo Escocês</item>
+        <item>Galgo Irlandês</item>
+        <item>Golden Retriever</item>
+        <item>Grande Boiadeiro Suiço</item>
+        <item>Greyhound</item>
+        <item>Grifo da Bélgica</item>
+        <item>Husky Siberiano</item>
+        <item>Jack Russell Terrier</item>
+        <item>King Charles</item>
+        <item>Komondor</item>
+        <item>Labradoodle</item>
+        <item>Labrador Retriever</item>
+        <item>Lakeland Terrier</item>
+        <item>Leonberger</item>
+        <item>Lhasa Apso</item>
+        <item>Lulu da Pomerânia</item>
+        <item>Malamute do Alasca</item>
+        <item>Maltês</item>
+        <item>Mastife</item>
+        <item>Mastim Napolitano</item>
+        <item>Mastim Tibetano</item>
+        <item>Norfolk Terrier</item>
+        <item>Norwich Terrier</item>
+        <item>Papillon</item>
+        <item>Pastor Alemão</item>
+        <item>Pastor Australiano</item>
+        <item>Pinscher Miniatura</item>
+        <item>Poodle</item>
+        <item>Pug</item>
+        <item>Rottweiler</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Shih Tzu</item>
+        <item>Silky Terrier</item>
+        <item>Skye Terrier</item>
+        <item>Staffordshire Bull Terrier</item>
+        <item>Terra Nova</item>
+        <item>Terrier Escocês</item>
+        <item>Tosa</item>
+        <item>Weimaraner</item>
+        <item>Welsh Corgi (Cardigan)</item>
+        <item>Welsh Corgi (Pembroke)</item>
+        <item>West Highland White Terrier</item>
+        <item>Whippet</item>
+        <item>Xoloitzcuintli</item>
+        <item>Yorkshire Terrier</item>
     </string-array>
 
     <string-array name="lista_raca_gato_filtro">
         <item>Todos</item>
-        <item>Siamês</item>
+        <item>Abissínio</item>
+        <item>Americano de pelo curto</item>
+        <item>Angorá</item>
+        <item>Azul Russo</item>
+        <item>Brasileiro de pelo curto</item>
+        <item>Britânico de pelo curto</item>
+        <item>Burmês</item>
+        <item>Chartreux</item>
+        <item>Cornish Rex</item>
+        <item>Devon Rex</item>
+        <item>Europeu de pelo curto</item>
+        <item>Exótico</item>
+        <item>Gato-de-bengala</item>
+        <item>Himalaio</item>
+        <item>Maine Coon</item>
+        <item>Mau Egípicio</item>
+        <item>Munchkin</item>
+        <item>Norueguês da Floresta</item>
+        <item>Oriental</item>
         <item>Persa</item>
+        <item>Ragdoll</item>
+        <item>Sagrado da Birmânia</item>
+        <item>Savannah</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Scottish Fold</item>
+        <item>Siamês</item>
+        <item>Sphynx</item>
     </string-array>
 
     <string-array name="lista_raca_cachorro">
+        <item>Selecione a raça</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Afegão Hound</item>
+        <item>Affenpinscher</item>
+        <item>Airedale Terrier</item>
+        <item>Akita</item>
+        <item>American Staffordshire Terrier</item>
+        <item>Basenji</item>
+        <item>Basset Hound</item>
+        <item>Beagle</item>
+        <item>Beagle Harrier</item>
+        <item>Bearded Collie</item>
+        <item>Bedlington Terrier</item>
+        <item>Bichon Frisé</item>
+        <item>Bloodhound</item>
+        <item>Bobtail</item>
+        <item>Boiadeiro Australiano</item>
+        <item>Boiadeiro Bernês</item>
+        <item>Border Collie</item>
+        <item>Border Terrier</item>
+        <item>Borzoi</item>
+        <item>Boston Terrier</item>
         <item>Boxer</item>
-        <item>Fila</item>
+        <item>Buldogue Francês</item>
+        <item>Buldogue Inglês</item>
+        <item>Bull Terrier</item>
+        <item>Bulmastife</item>
+        <item>Cairn Terrier</item>
+        <item>Cane Corso</item>
+        <item>Cão de Água Português</item>
+        <item>Cão de Crista Chinês</item>
+        <item>Cavalier King Charles Spaniel</item>
+        <item>Chesapeake Bay Retriever</item>
+        <item>Chihuahua</item>
+        <item>Chow Chow</item>
+        <item>Cocker Spaniel Americano</item>
+        <item>Cocker Spaniel Inglês</item>
+        <item>Collie</item>
+        <item>Coton de Tuléar</item>
+        <item>Dachshund</item>
+        <item>Dálmata</item>
+        <item>Dandie Dinmont Terrier</item>
+        <item>Doberman</item>
+        <item>Dogo Argentino</item>
+        <item>Dogue Alemão</item>
+        <item>Fila Brasileiro</item>
+        <item>Fox Terrier (Pelo Duro e Pelo Liso)</item>
+        <item>Foxhound Inglês</item>
+        <item>Galgo Escocês</item>
+        <item>Galgo Irlandês</item>
+        <item>Golden Retriever</item>
+        <item>Grande Boiadeiro Suiço</item>
+        <item>Greyhound</item>
+        <item>Grifo da Bélgica</item>
+        <item>Husky Siberiano</item>
+        <item>Jack Russell Terrier</item>
+        <item>King Charles</item>
+        <item>Komondor</item>
+        <item>Labradoodle</item>
+        <item>Labrador Retriever</item>
+        <item>Lakeland Terrier</item>
+        <item>Leonberger</item>
+        <item>Lhasa Apso</item>
+        <item>Lulu da Pomerânia</item>
+        <item>Malamute do Alasca</item>
+        <item>Maltês</item>
+        <item>Mastife</item>
+        <item>Mastim Napolitano</item>
+        <item>Mastim Tibetano</item>
+        <item>Norfolk Terrier</item>
+        <item>Norwich Terrier</item>
+        <item>Papillon</item>
+        <item>Pastor Alemão</item>
+        <item>Pastor Australiano</item>
+        <item>Pinscher Miniatura</item>
+        <item>Poodle</item>
+        <item>Pug</item>
+        <item>Rottweiler</item>
+        <item>Shih Tzu</item>
+        <item>Silky Terrier</item>
+        <item>Skye Terrier</item>
+        <item>Staffordshire Bull Terrier</item>
+        <item>Terra Nova</item>
+        <item>Terrier Escocês</item>
+        <item>Tosa</item>
+        <item>Weimaraner</item>
+        <item>Welsh Corgi (Cardigan)</item>
+        <item>Welsh Corgi (Pembroke)</item>
+        <item>West Highland White Terrier</item>
+        <item>Whippet</item>
+        <item>Xoloitzcuintli</item>
+        <item>Yorkshire Terrier</item>
     </string-array>
 
     <string-array name="lista_raca_gato">
-        <item>Siamês</item>
+        <item>Selecione a raça</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Abissínio</item>
+        <item>Americano de pelo curto</item>
+        <item>Angorá</item>
+        <item>Azul Russo</item>
+        <item>Brasileiro de pelo curto</item>
+        <item>Britânico de pelo curto</item>
+        <item>Burmês</item>
+        <item>Chartreux</item>
+        <item>Cornish Rex</item>
+        <item>Devon Rex</item>
+        <item>Europeu de pelo curto</item>
+        <item>Exótico</item>
+        <item>Gato-de-bengala</item>
+        <item>Himalaio</item>
+        <item>Maine Coon</item>
+        <item>Mau Egípicio</item>
+        <item>Munchkin</item>
+        <item>Norueguês da Floresta</item>
+        <item>Oriental</item>
         <item>Persa</item>
+        <item>Ragdoll</item>
+        <item>Sagrado da Birmânia</item>
+        <item>Savannah</item>
+        <item>Scottish Fold</item>
+        <item>Siamês</item>
+        <item>Sphynx</item>
     </string-array>
 
-    <string-array name="lista_ano">
-        <item>00</item>
-        <item>01</item>
-        <item>02</item>
-        <item>03</item>
-        <item>04</item>
-        <item>05</item>
-        <item>06</item>
-        <item>07</item>
-        <item>08</item>
-        <item>09</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
-        <item>24</item>
-        <item>25</item>
-    </string-array>
 
-    <string-array name="lista_mes">
-        <item>00</item>
-        <item>01</item>
-        <item>02</item>
-        <item>03</item>
-        <item>04</item>
-        <item>05</item>
-        <item>06</item>
-        <item>07</item>
-        <item>08</item>
-        <item>09</item>
-        <item>10</item>
-        <item>11</item>
-    </string-array>
     <string-array name="lista_estado">
         <item>AC</item>
         <item>AL</item>

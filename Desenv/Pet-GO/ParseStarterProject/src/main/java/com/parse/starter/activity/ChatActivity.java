@@ -1,7 +1,14 @@
 package com.parse.starter.activity;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -72,6 +79,7 @@ public class ChatActivity extends AppCompatActivity {
         usuarioRementente = ParseUser.getCurrentUser().getObjectId();
 
         qtde_mensagens = 0;
+
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_chat);
         try {
@@ -264,6 +272,9 @@ public class ChatActivity extends AppCompatActivity {
                             mensagem.setIdUsuario(object.getString("usuario_remetente"));
                             array_mensagens.add(mensagem);
                         }
+                        if ((!objects.get(objects.size()-1).getString("usuario_remetente").equals(usuarioRementente)) && (atualizacao)) {
+                            geraNotificacao(nome_usuario, objects.get(objects.size() - 1).getString("mensagem"));
+                        }
                         listView_mensagens.invalidateViews();
                         arrayAdapter.notifyDataSetChanged();
 
@@ -274,6 +285,29 @@ public class ChatActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void geraNotificacao(String nome, String mensagem){
+        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        PendingIntent p = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setTicker("Pet GO");
+        builder.setContentTitle(nome);
+        builder.setContentText(mensagem);
+        builder.setSmallIcon(R.drawable.ic_pets);
+
+        Notification n = builder.build();
+        n.vibrate = new long[]{150,300,150,600};
+        nm.notify(R.drawable.ic_pets,n);
+
+        try{
+            Uri som = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            Ringtone toque = RingtoneManager.getRingtone(this, som);
+            toque.play();
+        }catch(Exception e){
+
+        }
     }
 
 }

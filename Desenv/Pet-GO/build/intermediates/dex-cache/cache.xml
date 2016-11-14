@@ -169,7 +169,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="c961983337638618043694f291214df3548c0003">
+        sha1="caa10882ef7b0b2f050d75e0877ea786c2e84602">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2b66861a6f76079634c9c5e6d4e0c3b637761c65\classes.dex" />
     </item>
     <item
@@ -214,7 +214,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="7bb7bfa79d781e856e921350478bada5e67a2126">
+        sha1="4f10eba231383ccadf62aa31fc0efc724f8ad1a0">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d140599d94559a85116559054077b9d930e8f3e2\classes.dex" />
     </item>
     <item

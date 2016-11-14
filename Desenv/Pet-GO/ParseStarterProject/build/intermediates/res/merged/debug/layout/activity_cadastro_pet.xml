@@ -40,7 +40,7 @@
         <EditText
             android:fontFamily="sans-serif"
             android:layout_width="match_parent"
-            android:inputType="textCapSentences"
+            android:inputType="textCapWords"
             android:layout_height="wrap_content"
             android:ems="10"
             android:textColor="@android:color/black"
@@ -115,7 +115,6 @@
             >
 
             <EditText
-                android:entries="@array/lista_ano"
                 android:id="@+id/lista_ano"
                 android:layout_width="70dp"
                 android:padding="13dp"
@@ -152,7 +151,6 @@
                 android:layout_marginStart="12dp" />
 
             <EditText
-                android:entries="@array/lista_mes"
                 android:layout_width="70dp"
                 android:padding="13dp"
                 android:inputType="number"

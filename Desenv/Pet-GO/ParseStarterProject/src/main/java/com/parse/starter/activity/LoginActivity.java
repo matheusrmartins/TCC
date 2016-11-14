@@ -1,5 +1,6 @@
 package com.parse.starter.activity;
 
+import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -34,8 +35,10 @@ import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
+import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.parse.PushService;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 import com.parse.starter.R;
@@ -221,8 +224,8 @@ public class LoginActivity extends AppCompatActivity {
                             email = response.getJSONObject().getString("email");
                             nome = response.getJSONObject().getString("name");
                             ParseUser parseUser = ParseUser.getCurrentUser();
-                            parseUser.setUsername(email);
-                            parseUser.setEmail(email);
+                            parseUser.put("user_facebook",email);
+                            parseUser.put("email_facebook",email);
                             parseUser.put("nome", nome);
                             parseUser.saveInBackground(new SaveCallback() {
                                 @Override

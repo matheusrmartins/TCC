@@ -1801,6 +1801,153 @@
         <item>VILA NOVA DO PIAUÍ</item>
         <item>WALL FERRAZ</item>
 
+    </string-array><string-array name="lista_cidade_RJ">
+        <item>ANGRA DOS REIS</item>
+        <item>APERIBÉ</item>
+        <item>ARARUAMA</item>
+        <item>AREAL</item>
+        <item>ARMAÇÃO DOS BÚZIOS</item>
+        <item>ARRAIAL DO CABO</item>
+        <item>BARRA DO PIRAÍ</item>
+        <item>BARRA MANSA</item>
+        <item>BELFORD ROXO</item>
+        <item>BOM JARDIM</item>
+        <item>BOM JESUS DO ITABAPOANA</item>
+        <item>CABO FRIO</item>
+        <item>CACHOEIRAS DE MACACU</item>
+        <item>CAMBUCI</item>
+        <item>CAMPOS DOS GOYTACAZES</item>
+        <item>CANTAGALO</item>
+        <item>CARAPEBUS</item>
+        <item>CARDOSO MOREIRA</item>
+        <item>CARMO</item>
+        <item>CASIMIRO DE ABREU</item>
+        <item>COMENDADOR LEVY GASPARIAN</item>
+        <item>CONCEIÇÃO DE MACABU</item>
+        <item>CORDEIRO</item>
+        <item>DUAS BARRAS</item>
+        <item>DUQUE DE CAXIAS</item>
+        <item>ENGENHEIRO PAULO DE FRONTIN</item>
+        <item>GUAPIMIRIM</item>
+        <item>IGUABA GRANDE</item>
+        <item>ITABORAÍ</item>
+        <item>ITAGUAÍ</item>
+        <item>ITALVA</item>
+        <item>ITAOCARA</item>
+        <item>ITAPERUNA</item>
+        <item>ITATIAIA</item>
+        <item>JAPERI</item>
+        <item>LAJE DO MURIAÉ</item>
+        <item>MACAÉ</item>
+        <item>MACUCO</item>
+        <item>MAGÉ</item>
+        <item>MANGARATIBA</item>
+        <item>MARICÁ</item>
+        <item>MENDES</item>
+        <item>MESQUITA</item>
+        <item>MIGUEL PEREIRA</item>
+        <item>MIRACEMA</item>
+        <item>NATIVIDADE</item>
+        <item>NILÓPOLIS</item>
+        <item>NITERÓI</item>
+        <item>NOVA FRIBURGO</item>
+        <item>NOVA IGUAÇU</item>
+        <item>PARACAMBI</item>
+        <item>PARAÍBA DO SUL</item>
+        <item>PARATY</item>
+        <item>PATY DO ALFERES</item>
+        <item>PETRÓPOLIS</item>
+        <item>PINHEIRAL</item>
+        <item>PIRAÍ</item>
+        <item>PORCIÚNCULA</item>
+        <item>PORTO REAL</item>
+        <item>QUATIS</item>
+        <item>QUEIMADOS</item>
+        <item>QUISSAMÃ</item>
+        <item>RESENDE</item>
+        <item>RIO BONITO</item>
+        <item>RIO CLARO</item>
+        <item>RIO DAS FLORES</item>
+        <item>RIO DAS OSTRAS</item>
+        <item>RIO DE JANEIRO</item>
+        <item>SANTA MARIA MADALENA</item>
+        <item>SANTO ANTÔNIO DE PÁDUA</item>
+        <item>SÃO FIDÉLIS</item>
+        <item>SÃO FRANCISCO DE ITABAPOANA</item>
+        <item>SÃO GONÇALO</item>
+        <item>SÃO JOÃO DA BARRA</item>
+        <item>SÃO JOÃO DE MERITI</item>
+        <item>SÃO JOSÉ DE UBÁ</item>
+        <item>SÃO JOSÉ DO VALE DO RIO PRETO</item>
+        <item>SÃO PEDRO DA ALDEIA</item>
+        <item>SÃO SEBASTIÃO DO ALTO</item>
+        <item>SAPUCAIA</item>
+        <item>SAQUAREMA</item>
+        <item>SEROPÉDICA</item>
+        <item>SILVA JARDIM</item>
+        <item>SUMIDOURO</item>
+        <item>TANGUÁ</item>
+        <item>TERESÓPOLIS</item>
+        <item>TRAJANO DE MORAES</item>
+        <item>TRÊS RIOS</item>
+        <item>VALENÇA</item>
+        <item>VARRE-SAI</item>
+        <item>VASSOURAS</item>
+        <item>VOLTA REDONDA</item>
+
+    </string-array><string-array name="lista_cidade_RO">
+        <item>ALTA FLORESTA DOESTE</item>
+        <item>ALTO ALEGRE DOS PARECIS</item>
+        <item>ALTO PARAÍSO</item>
+        <item>ALVORADA DOESTE</item>
+        <item>ARIQUEMES</item>
+        <item>BURITIS</item>
+        <item>CABIXI</item>
+        <item>CACAULÂNDIA</item>
+        <item>CACOAL</item>
+        <item>CAMPO NOVO DE RONDÔNIA</item>
+        <item>CANDEIAS DO JAMARI</item>
+        <item>CASTANHEIRAS</item>
+        <item>CEREJEIRAS</item>
+        <item>CHUPINGUAIA</item>
+        <item>COLORADO DO OESTE</item>
+        <item>CORUMBIARA</item>
+        <item>COSTA MARQUES</item>
+        <item>CUJUBIM</item>
+        <item>ESPIGÃO DOESTE</item>
+        <item>GOVERNADOR JORGE TEIXEIRA</item>
+        <item>GUAJARÁ-MIRIM</item>
+        <item>ITAPUÃ DO OESTE</item>
+        <item>JARU</item>
+        <item>JI-PARANÁ</item>
+        <item>MACHADINHO DOESTE</item>
+        <item>MINISTRO ANDREAZZA</item>
+        <item>MIRANTE DA SERRA</item>
+        <item>MONTE NEGRO</item>
+        <item>NOVA BRASILÂNDIA DOESTE</item>
+        <item>NOVA MAMORÉ</item>
+        <item>NOVA UNIÃO</item>
+        <item>NOVO HORIZONTE DO OESTE</item>
+        <item>OURO PRETO DO OESTE</item>
+        <item>PARECIS</item>
+        <item>PIMENTA BUENO</item>
+        <item>PIMENTEIRAS DO OESTE</item>
+        <item>PORTO VELHO</item>
+        <item>PRESIDENTE MÉDICI</item>
+        <item>PRIMAVERA DE RONDÔNIA</item>
+        <item>RIO CRESPO</item>
+        <item>ROLIM DE MOURA</item>
+        <item>SANTA LUZIA DOESTE</item>
+        <item>SÃO FELIPE DOESTE</item>
+        <item>SÃO FRANCISCO DO GUAPORÉ</item>
+        <item>SÃO MIGUEL DO GUAPORÉ</item>
+        <item>SERINGUEIRAS</item>
+        <item>TEIXEIRÓPOLIS</item>
+        <item>THEOBROMA</item>
+        <item>URUPÁ</item>
+        <item>VALE DO ANARI</item>
+        <item>VALE DO PARAÍSO</item>
+        <item>VILHENA</item>
     </string-array><string-array name="lista_cidade_TO">
         <item>ABREULÂNDIA</item>
         <item>AGUIARNÓPOLIS</item>
@@ -1941,6 +2088,673 @@
         <item>TUPIRATINS</item>
         <item>WANDERLÂNDIA</item>
         <item>XAMBIOÁ</item>
+
+    </string-array><string-array name="lista_cidade_RN">
+        <item>ACARI</item>
+        <item>AÇU</item>
+        <item>AFONSO BEZERRA</item>
+        <item>ÁGUA NOVA</item>
+        <item>ALEXANDRIA</item>
+        <item>ALMINO AFONSO</item>
+        <item>ALTO DO RODRIGUES</item>
+        <item>ANGICOS</item>
+        <item>ANTÔNIO MARTINS</item>
+        <item>APODI</item>
+        <item>AREIA BRANCA</item>
+        <item>ARÊS</item>
+        <item>AUGUSTO SEVERO</item>
+        <item>BAÍA FORMOSA</item>
+        <item>BARAÚNA</item>
+        <item>BARCELONA</item>
+        <item>BENTO FERNANDES</item>
+        <item>BODÓ</item>
+        <item>BOM JESUS</item>
+        <item>BREJINHO</item>
+        <item>CAIÇARA DO NORTE</item>
+        <item>CAIÇARA DO RIO DO VENTO</item>
+        <item>CAICÓ</item>
+        <item>CAMPO REDONDO</item>
+        <item>CANGUARETAMA</item>
+        <item>CARAÚBAS</item>
+        <item>CARNAÚBA DOS DANTAS</item>
+        <item>CARNAUBAIS</item>
+        <item>CEARÁ-MIRIM</item>
+        <item>CERRO CORÁ</item>
+        <item>CORONEL EZEQUIEL</item>
+        <item>CORONEL JOÃO PESSOA</item>
+        <item>CRUZETA</item>
+        <item>CURRAIS NOVOS</item>
+        <item>DOUTOR SEVERIANO</item>
+        <item>ENCANTO</item>
+        <item>EQUADOR</item>
+        <item>ESPÍRITO SANTO</item>
+        <item>EXTREMOZ</item>
+        <item>FELIPE GUERRA</item>
+        <item>FERNANDO PEDROZA</item>
+        <item>FLORÂNIA</item>
+        <item>FRANCISCO DANTAS</item>
+        <item>FRUTUOSO GOMES</item>
+        <item>GALINHOS</item>
+        <item>GOIANINHA</item>
+        <item>GOVERNADOR DIX-SEPT ROSADO</item>
+        <item>GROSSOS</item>
+        <item>GUAMARÉ</item>
+        <item>IELMO MARINHO</item>
+        <item>IPANGUAÇU</item>
+        <item>IPUEIRA</item>
+        <item>ITAJÁ</item>
+        <item>ITAÚ</item>
+        <item>JAÇANÃ</item>
+        <item>JANDAÍRA</item>
+        <item>JANDUÍS</item>
+        <item>JANUÁRIO CICCO</item>
+        <item>JAPI</item>
+        <item>JARDIM DE ANGICOS</item>
+        <item>JARDIM DE PIRANHAS</item>
+        <item>JARDIM DO SERIDÓ</item>
+        <item>JOÃO CÂMARA</item>
+        <item>JOÃO DIAS</item>
+        <item>JOSÉ DA PENHA</item>
+        <item>JUCURUTU</item>
+        <item>JUNDIÁ</item>
+        <item>LAGOA DANTA</item>
+        <item>LAGOA DE PEDRAS</item>
+        <item>LAGOA DE VELHOS</item>
+        <item>LAGOA NOVA</item>
+        <item>LAGOA SALGADA</item>
+        <item>LAJES</item>
+        <item>LAJES PINTADAS</item>
+        <item>LUCRÉCIA</item>
+        <item>LUÍS GOMES</item>
+        <item>MACAÍBA</item>
+        <item>MACAU</item>
+        <item>MAJOR SALES</item>
+        <item>MARCELINO VIEIRA</item>
+        <item>MARTINS</item>
+        <item>MAXARANGUAPE</item>
+        <item>MESSIAS TARGINO</item>
+        <item>MONTANHAS</item>
+        <item>MONTE ALEGRE</item>
+        <item>MONTE DAS GAMELEIRAS</item>
+        <item>MOSSORÓ</item>
+        <item>NATAL</item>
+        <item>NÍSIA FLORESTA</item>
+        <item>NOVA CRUZ</item>
+        <item>OLHO-DÁGUA DO BORGES</item>
+        <item>OURO BRANCO</item>
+        <item>PARANÁ</item>
+        <item>PARAÚ</item>
+        <item>PARAZINHO</item>
+        <item>PARELHAS</item>
+        <item>PARNAMIRIM</item>
+        <item>PASSA E FICA</item>
+        <item>PASSAGEM</item>
+        <item>PATU</item>
+        <item>PAU DOS FERROS</item>
+        <item>PEDRA GRANDE</item>
+        <item>PEDRA PRETA</item>
+        <item>PEDRO AVELINO</item>
+        <item>PEDRO VELHO</item>
+        <item>PENDÊNCIAS</item>
+        <item>PILÕES</item>
+        <item>POÇO BRANCO</item>
+        <item>PORTALEGRE</item>
+        <item>PORTO DO MANGUE</item>
+        <item>PRESIDENTE JUSCELINO</item>
+        <item>PUREZA</item>
+        <item>RAFAEL FERNANDES</item>
+        <item>RAFAEL GODEIRO</item>
+        <item>RIACHO DA CRUZ</item>
+        <item>RIACHO DE SANTANA</item>
+        <item>RIACHUELO</item>
+        <item>RIO DO FOGO</item>
+        <item>RODOLFO FERNANDES</item>
+        <item>RUY BARBOSA</item>
+        <item>SANTA CRUZ</item>
+        <item>SANTA MARIA</item>
+        <item>SANTANA DO MATOS</item>
+        <item>SANTANA DO SERIDÓ</item>
+        <item>SANTO ANTÔNIO</item>
+        <item>SÃO BENTO DO NORTE</item>
+        <item>SÃO BENTO DO TRAIRÍ</item>
+        <item>SÃO FERNANDO</item>
+        <item>SÃO FRANCISCO DO OESTE</item>
+        <item>SÃO GONÇALO DO AMARANTE</item>
+        <item>SÃO JOÃO DO SABUGI</item>
+        <item>SÃO JOSÉ DE MIPIBU</item>
+        <item>SÃO JOSÉ DO CAMPESTRE</item>
+        <item>SÃO JOSÉ DO SERIDÓ</item>
+        <item>SÃO MIGUEL</item>
+        <item>SÃO MIGUEL DO GOSTOSO</item>
+        <item>SÃO PAULO DO POTENGI</item>
+        <item>SÃO PEDRO</item>
+        <item>SÃO RAFAEL</item>
+        <item>SÃO TOMÉ</item>
+        <item>SÃO VICENTE</item>
+        <item>SENADOR ELÓI DE SOUZA</item>
+        <item>SENADOR GEORGINO AVELINO</item>
+        <item>SERRA DE SÃO BENTO</item>
+        <item>SERRA DO MEL</item>
+        <item>SERRA NEGRA DO NORTE</item>
+        <item>SERRINHA</item>
+        <item>SERRINHA DOS PINTOS</item>
+        <item>SEVERIANO MELO</item>
+        <item>SÍTIO NOVO</item>
+        <item>TABOLEIRO GRANDE</item>
+        <item>TAIPU</item>
+        <item>TANGARÁ</item>
+        <item>TENENTE ANANIAS</item>
+        <item>TENENTE LAURENTINO CRUZ</item>
+        <item>TIBAU</item>
+        <item>TIBAU DO SUL</item>
+        <item>TIMBAÚBA DOS BATISTAS</item>
+        <item>TOUROS</item>
+        <item>TRIUNFO POTIGUAR</item>
+        <item>UMARIZAL</item>
+        <item>UPANEMA</item>
+        <item>VÁRZEA</item>
+        <item>VENHA-VER</item>
+        <item>VERA CRUZ</item>
+        <item>VIÇOSA</item>
+        <item>VILA FLOR</item>
+
+    </string-array><string-array name="lista_cidade_RS">
+        <item>ACEGUÁ</item>
+        <item>ÁGUA SANTA</item>
+        <item>AGUDO</item>
+        <item>AJURICABA</item>
+        <item>ALECRIM</item>
+        <item>ALEGRETE</item>
+        <item>ALEGRIA</item>
+        <item>ALMIRANTE TAMANDARÉ DO SUL</item>
+        <item>ALPESTRE</item>
+        <item>ALTO ALEGRE</item>
+        <item>ALTO FELIZ</item>
+        <item>ALVORADA</item>
+        <item>AMARAL FERRADOR</item>
+        <item>AMETISTA DO SUL</item>
+        <item>ANDRÉ DA ROCHA</item>
+        <item>ANTA GORDA</item>
+        <item>ANTÔNIO PRADO</item>
+        <item>ARAMBARÉ</item>
+        <item>ARARICÁ</item>
+        <item>ARATIBA</item>
+        <item>ARROIO DO MEIO</item>
+        <item>ARROIO DO PADRE</item>
+        <item>ARROIO DO SAL</item>
+        <item>ARROIO DO TIGRE</item>
+        <item>ARROIO DOS RATOS</item>
+        <item>ARROIO GRANDE</item>
+        <item>ARVOREZINHA</item>
+        <item>AUGUSTO PESTANA</item>
+        <item>ÁUREA</item>
+        <item>BAGÉ</item>
+        <item>BALNEÁRIO PINHAL</item>
+        <item>BARÃO</item>
+        <item>BARÃO DE COTEGIPE</item>
+        <item>BARÃO DO TRIUNFO</item>
+        <item>BARRA DO GUARITA</item>
+        <item>BARRA DO QUARAÍ</item>
+        <item>BARRA DO RIBEIRO</item>
+        <item>BARRA DO RIO AZUL</item>
+        <item>BARRA FUNDA</item>
+        <item>BARRACÃO</item>
+        <item>BARROS CASSAL</item>
+        <item>BENJAMIN CONSTANT DO SUL</item>
+        <item>BENTO GONÇALVES</item>
+        <item>BOA VISTA DAS MISSÕES</item>
+        <item>BOA VISTA DO BURICÁ</item>
+        <item>BOA VISTA DO CADEADO</item>
+        <item>BOA VISTA DO INCRA</item>
+        <item>BOA VISTA DO SUL</item>
+        <item>BOM JESUS</item>
+        <item>BOM PRINCÍPIO</item>
+        <item>BOM PROGRESSO</item>
+        <item>BOM RETIRO DO SUL</item>
+        <item>BOQUEIRÃO DO LEÃO</item>
+        <item>BOSSOROCA</item>
+        <item>BOZANO</item>
+        <item>BRAGA</item>
+        <item>BROCHIER</item>
+        <item>BUTIÁ</item>
+        <item>CAÇAPAVA DO SUL</item>
+        <item>CACEQUI</item>
+        <item>CACHOEIRA DO SUL</item>
+        <item>CACHOEIRINHA</item>
+        <item>CACIQUE DOBLE</item>
+        <item>CAIBATÉ</item>
+        <item>CAIÇARA</item>
+        <item>CAMAQUÃ</item>
+        <item>CAMARGO</item>
+        <item>CAMBARÁ DO SUL</item>
+        <item>CAMPESTRE DA SERRA</item>
+        <item>CAMPINA DAS MISSÕES</item>
+        <item>CAMPINAS DO SUL</item>
+        <item>CAMPO BOM</item>
+        <item>CAMPO NOVO</item>
+        <item>CAMPOS BORGES</item>
+        <item>CANDELÁRIA</item>
+        <item>CÂNDIDO GODÓI</item>
+        <item>CANDIOTA</item>
+        <item>CANELA</item>
+        <item>CANGUÇU</item>
+        <item>CANOAS</item>
+        <item>CANUDOS DO VALE</item>
+        <item>CAPÃO BONITO DO SUL</item>
+        <item>CAPÃO DA CANOA</item>
+        <item>CAPÃO DO CIPÓ</item>
+        <item>CAPÃO DO LEÃO</item>
+        <item>CAPELA DE SANTANA</item>
+        <item>CAPITÃO</item>
+        <item>CAPIVARI DO SUL</item>
+        <item>CARAÁ</item>
+        <item>CARAZINHO</item>
+        <item>CARLOS BARBOSA</item>
+        <item>CARLOS GOMES</item>
+        <item>CASCA</item>
+        <item>CASEIROS</item>
+        <item>CATUÍPE</item>
+        <item>CAXIAS DO SUL</item>
+        <item>CENTENÁRIO</item>
+        <item>CERRITO</item>
+        <item>CERRO BRANCO</item>
+        <item>CERRO GRANDE</item>
+        <item>CERRO GRANDE DO SUL</item>
+        <item>CERRO LARGO</item>
+        <item>CHAPADA</item>
+        <item>CHARQUEADAS</item>
+        <item>CHARRUA</item>
+        <item>CHIAPETTA</item>
+        <item>CHUÍ</item>
+        <item>CHUVISCA</item>
+        <item>CIDREIRA</item>
+        <item>CIRÍACO</item>
+        <item>COLINAS</item>
+        <item>COLORADO</item>
+        <item>CONDOR</item>
+        <item>CONSTANTINA</item>
+        <item>COQUEIRO BAIXO</item>
+        <item>COQUEIROS DO SUL</item>
+        <item>CORONEL BARROS</item>
+        <item>CORONEL BICACO</item>
+        <item>CORONEL PILAR</item>
+        <item>COTIPORÃ</item>
+        <item>COXILHA</item>
+        <item>CRISSIUMAL</item>
+        <item>CRISTAL</item>
+        <item>CRISTAL DO SUL</item>
+        <item>CRUZ ALTA</item>
+        <item>CRUZALTENSE</item>
+        <item>CRUZEIRO DO SUL</item>
+        <item>DAVID CANABARRO</item>
+        <item>DERRUBADAS</item>
+        <item>DEZESSEIS DE NOVEMBRO</item>
+        <item>DILERMANDO DE AGUIAR</item>
+        <item>DOIS IRMÃOS</item>
+        <item>DOIS IRMÃOS DAS MISSÕES</item>
+        <item>DOIS LAJEADOS</item>
+        <item>DOM FELICIANO</item>
+        <item>DOM PEDRITO</item>
+        <item>DOM PEDRO DE ALCÂNTARA</item>
+        <item>DONA FRANCISCA</item>
+        <item>DOUTOR MAURÍCIO CARDOSO</item>
+        <item>DOUTOR RICARDO</item>
+        <item>ELDORADO DO SUL</item>
+        <item>ENCANTADO</item>
+        <item>ENCRUZILHADA DO SUL</item>
+        <item>ENGENHO VELHO</item>
+        <item>ENTRE RIOS DO SUL</item>
+        <item>ENTRE-IJUÍS</item>
+        <item>EREBANGO</item>
+        <item>ERECHIM</item>
+        <item>ERNESTINA</item>
+        <item>ERVAL GRANDE</item>
+        <item>ERVAL SECO</item>
+        <item>ESMERALDA</item>
+        <item>ESPERANÇA DO SUL</item>
+        <item>ESPUMOSO</item>
+        <item>ESTAÇÃO</item>
+        <item>ESTÂNCIA VELHA</item>
+        <item>ESTEIO</item>
+        <item>ESTRELA</item>
+        <item>ESTRELA VELHA</item>
+        <item>EUGÊNIO DE CASTRO</item>
+        <item>FAGUNDES VARELA</item>
+        <item>FARROUPILHA</item>
+        <item>FAXINAL DO SOTURNO</item>
+        <item>FAXINALZINHO</item>
+        <item>FAZENDA VILANOVA</item>
+        <item>FELIZ</item>
+        <item>FLORES DA CUNHA</item>
+        <item>FLORIANO PEIXOTO</item>
+        <item>FONTOURA XAVIER</item>
+        <item>FORMIGUEIRO</item>
+        <item>FORQUETINHA</item>
+        <item>FORTALEZA DOS VALOS</item>
+        <item>FREDERICO WESTPHALEN</item>
+        <item>GARIBALDI</item>
+        <item>GARRUCHOS</item>
+        <item>GAURAMA</item>
+        <item>GENERAL CÂMARA</item>
+        <item>GENTIL</item>
+        <item>GETÚLIO VARGAS</item>
+        <item>GIRUÁ</item>
+        <item>GLORINHA</item>
+        <item>GRAMADO</item>
+        <item>GRAMADO DOS LOUREIROS</item>
+        <item>GRAMADO XAVIER</item>
+        <item>GRAVATAÍ</item>
+        <item>GUABIJU</item>
+        <item>GUAÍBA</item>
+        <item>GUAPORÉ</item>
+        <item>GUARANI DAS MISSÕES</item>
+        <item>HARMONIA</item>
+        <item>HERVAL</item>
+        <item>HERVEIRAS</item>
+        <item>HORIZONTINA</item>
+        <item>HULHA NEGRA</item>
+        <item>HUMAITÁ</item>
+        <item>IBARAMA</item>
+        <item>IBIAÇÁ</item>
+        <item>IBIRAIARAS</item>
+        <item>IBIRAPUITÃ</item>
+        <item>IBIRUBÁ</item>
+        <item>IGREJINHA</item>
+        <item>IJUÍ</item>
+        <item>ILÓPOLIS</item>
+        <item>IMBÉ</item>
+        <item>IMIGRANTE</item>
+        <item>INDEPENDÊNCIA</item>
+        <item>INHACORÁ</item>
+        <item>IPÊ</item>
+        <item>IPIRANGA DO SUL</item>
+        <item>IRAÍ</item>
+        <item>ITAARA</item>
+        <item>ITACURUBI</item>
+        <item>ITAPUCA</item>
+        <item>ITAQUI</item>
+        <item>ITATI</item>
+        <item>ITATIBA DO SUL</item>
+        <item>IVORÁ</item>
+        <item>IVOTI</item>
+        <item>JABOTICABA</item>
+        <item>JACUIZINHO</item>
+        <item>JACUTINGA</item>
+        <item>JAGUARÃO</item>
+        <item>JAGUARI</item>
+        <item>JAQUIRANA</item>
+        <item>JARI</item>
+        <item>JÓIA</item>
+        <item>JÚLIO DE CASTILHOS</item>
+        <item>LAGOA BONITA DO SUL</item>
+        <item>LAGOA DOS TRÊS CANTOS</item>
+        <item>LAGOA VERMELHA</item>
+        <item>LAGOÃO</item>
+        <item>LAJEADO</item>
+        <item>LAJEADO DO BUGRE</item>
+        <item>LAVRAS DO SUL</item>
+        <item>LIBERATO SALZANO</item>
+        <item>LINDOLFO COLLOR</item>
+        <item>LINHA NOVA</item>
+        <item>MAÇAMBARÁ</item>
+        <item>MACHADINHO</item>
+        <item>MAMPITUBA</item>
+        <item>MANOEL VIANA</item>
+        <item>MAQUINÉ</item>
+        <item>MARATÁ</item>
+        <item>MARAU</item>
+        <item>MARCELINO RAMOS</item>
+        <item>MARIANA PIMENTEL</item>
+        <item>MARIANO MORO</item>
+        <item>MARQUES DE SOUZA</item>
+        <item>MATA</item>
+        <item>MATO CASTELHANO</item>
+        <item>MATO LEITÃO</item>
+        <item>MATO QUEIMADO</item>
+        <item>MAXIMILIANO DE ALMEIDA</item>
+        <item>MINAS DO LEÃO</item>
+        <item>MIRAGUAÍ</item>
+        <item>MONTAURI</item>
+        <item>MONTE ALEGRE DOS CAMPOS</item>
+        <item>MONTE BELO DO SUL</item>
+        <item>MONTENEGRO</item>
+        <item>MORMAÇO</item>
+        <item>MORRINHOS DO SUL</item>
+        <item>MORRO REDONDO</item>
+        <item>MORRO REUTER</item>
+        <item>MOSTARDAS</item>
+        <item>MUÇUM</item>
+        <item>MUITOS CAPÕES</item>
+        <item>MULITERNO</item>
+        <item>NÃO-ME-TOQUE</item>
+        <item>NICOLAU VERGUEIRO</item>
+        <item>NONOAI</item>
+        <item>NOVA ALVORADA</item>
+        <item>NOVA ARAÇÁ</item>
+        <item>NOVA BASSANO</item>
+        <item>NOVA BOA VISTA</item>
+        <item>NOVA BRÉSCIA</item>
+        <item>NOVA CANDELÁRIA</item>
+        <item>NOVA ESPERANÇA DO SUL</item>
+        <item>NOVA HARTZ</item>
+        <item>NOVA PÁDUA</item>
+        <item>NOVA PALMA</item>
+        <item>NOVA PETRÓPOLIS</item>
+        <item>NOVA PRATA</item>
+        <item>NOVA RAMADA</item>
+        <item>NOVA ROMA DO SUL</item>
+        <item>NOVA SANTA RITA</item>
+        <item>NOVO BARREIRO</item>
+        <item>NOVO CABRAIS</item>
+        <item>NOVO HAMBURGO</item>
+        <item>NOVO MACHADO</item>
+        <item>NOVO TIRADENTES</item>
+        <item>NOVO XINGU</item>
+        <item>OSÓRIO</item>
+        <item>PAIM FILHO</item>
+        <item>PALMARES DO SUL</item>
+        <item>PALMEIRA DAS MISSÕES</item>
+        <item>PALMITINHO</item>
+        <item>PANAMBI</item>
+        <item>PANTANO GRANDE</item>
+        <item>PARAÍ</item>
+        <item>PARAÍSO DO SUL</item>
+        <item>PARECI NOVO</item>
+        <item>PAROBÉ</item>
+        <item>PASSA SETE</item>
+        <item>PASSO DO SOBRADO</item>
+        <item>PASSO FUNDO</item>
+        <item>PAULO BENTO</item>
+        <item>PAVERAMA</item>
+        <item>PEDRAS ALTAS</item>
+        <item>PEDRO OSÓRIO</item>
+        <item>PEJUÇARA</item>
+        <item>PELOTAS</item>
+        <item>PICADA CAFÉ</item>
+        <item>PINHAL</item>
+        <item>PINHAL DA SERRA</item>
+        <item>PINHAL GRANDE</item>
+        <item>PINHEIRINHO DO VALE</item>
+        <item>PINHEIRO MACHADO</item>
+        <item>PIRAPÓ</item>
+        <item>PIRATINI</item>
+        <item>PLANALTO</item>
+        <item>POÇO DAS ANTAS</item>
+        <item>PONTÃO</item>
+        <item>PONTE PRETA</item>
+        <item>PORTÃO</item>
+        <item>PORTO ALEGRE</item>
+        <item>PORTO LUCENA</item>
+        <item>PORTO MAUÁ</item>
+        <item>PORTO VERA CRUZ</item>
+        <item>PORTO XAVIER</item>
+        <item>POUSO NOVO</item>
+        <item>PRESIDENTE LUCENA</item>
+        <item>PROGRESSO</item>
+        <item>PROTÁSIO ALVES</item>
+        <item>PUTINGA</item>
+        <item>QUARAÍ</item>
+        <item>QUATRO IRMÃOS</item>
+        <item>QUEVEDOS</item>
+        <item>QUINZE DE NOVEMBRO</item>
+        <item>REDENTORA</item>
+        <item>RELVADO</item>
+        <item>RESTINGA SECA</item>
+        <item>RIO DOS ÍNDIOS</item>
+        <item>RIO GRANDE</item>
+        <item>RIO PARDO</item>
+        <item>RIOZINHO</item>
+        <item>ROCA SALES</item>
+        <item>RODEIO BONITO</item>
+        <item>ROLADOR</item>
+        <item>ROLANTE</item>
+        <item>RONDA ALTA</item>
+        <item>RONDINHA</item>
+        <item>ROQUE GONZALES</item>
+        <item>ROSÁRIO DO SUL</item>
+        <item>SAGRADA FAMÍLIA</item>
+        <item>SALDANHA MARINHO</item>
+        <item>SALTO DO JACUÍ</item>
+        <item>SALVADOR DAS MISSÕES</item>
+        <item>SALVADOR DO SUL</item>
+        <item>SANANDUVA</item>
+        <item>SANTA BÁRBARA DO SUL</item>
+        <item>SANTA CECÍLIA DO SUL</item>
+        <item>SANTA CLARA DO SUL</item>
+        <item>SANTA CRUZ DO SUL</item>
+        <item>SANTA MARGARIDA DO SUL</item>
+        <item>SANTA MARIA</item>
+        <item>SANTA MARIA DO HERVAL</item>
+        <item>SANTA ROSA</item>
+        <item>SANTA TEREZA</item>
+        <item>SANTA VITÓRIA DO PALMAR</item>
+        <item>SANTANA DA BOA VISTA</item>
+        <item>SANTANA DO LIVRAMENTO</item>
+        <item>SANTIAGO</item>
+        <item>SANTO ÂNGELO</item>
+        <item>SANTO ANTÔNIO DA PATRULHA</item>
+        <item>SANTO ANTÔNIO DAS MISSÕES</item>
+        <item>SANTO ANTÔNIO DO PALMA</item>
+        <item>SANTO ANTÔNIO DO PLANALTO</item>
+        <item>SANTO AUGUSTO</item>
+        <item>SANTO CRISTO</item>
+        <item>SANTO EXPEDITO DO SUL</item>
+        <item>SÃO BORJA</item>
+        <item>SÃO DOMINGOS DO SUL</item>
+        <item>SÃO FRANCISCO DE ASSIS</item>
+        <item>SÃO FRANCISCO DE PAULA</item>
+        <item>SÃO GABRIEL</item>
+        <item>SÃO JERÔNIMO</item>
+        <item>SÃO JOÃO DA URTIGA</item>
+        <item>SÃO JOÃO DO POLÊSINE</item>
+        <item>SÃO JORGE</item>
+        <item>SÃO JOSÉ DAS MISSÕES</item>
+        <item>SÃO JOSÉ DO HERVAL</item>
+        <item>SÃO JOSÉ DO HORTÊNCIO</item>
+        <item>SÃO JOSÉ DO INHACORÁ</item>
+        <item>SÃO JOSÉ DO NORTE</item>
+        <item>SÃO JOSÉ DO OURO</item>
+        <item>SÃO JOSÉ DO SUL</item>
+        <item>SÃO JOSÉ DOS AUSENTES</item>
+        <item>SÃO LEOPOLDO</item>
+        <item>SÃO LOURENÇO DO SUL</item>
+        <item>SÃO LUIZ GONZAGA</item>
+        <item>SÃO MARCOS</item>
+        <item>SÃO MARTINHO</item>
+        <item>SÃO MARTINHO DA SERRA</item>
+        <item>SÃO MIGUEL DAS MISSÕES</item>
+        <item>SÃO NICOLAU</item>
+        <item>SÃO PAULO DAS MISSÕES</item>
+        <item>SÃO PEDRO DA SERRA</item>
+        <item>SÃO PEDRO DAS MISSÕES</item>
+        <item>SÃO PEDRO DO BUTIÁ</item>
+        <item>SÃO PEDRO DO SUL</item>
+        <item>SÃO SEBASTIÃO DO CAÍ</item>
+        <item>SÃO SEPÉ</item>
+        <item>SÃO VALENTIM</item>
+        <item>SÃO VALENTIM DO SUL</item>
+        <item>SÃO VALÉRIO DO SUL</item>
+        <item>SÃO VENDELINO</item>
+        <item>SÃO VICENTE DO SUL</item>
+        <item>SAPIRANGA</item>
+        <item>SAPUCAIA DO SUL</item>
+        <item>SARANDI</item>
+        <item>SEBERI</item>
+        <item>SEDE NOVA</item>
+        <item>SEGREDO</item>
+        <item>SELBACH</item>
+        <item>SENADOR SALGADO FILHO</item>
+        <item>SENTINELA DO SUL</item>
+        <item>SERAFINA CORRÊA</item>
+        <item>SÉRIO</item>
+        <item>SERTÃO</item>
+        <item>SERTÃO SANTANA</item>
+        <item>SETE DE SETEMBRO</item>
+        <item>SEVERIANO DE ALMEIDA</item>
+        <item>SILVEIRA MARTINS</item>
+        <item>SINIMBU</item>
+        <item>SOBRADINHO</item>
+        <item>SOLEDADE</item>
+        <item>TABAÍ</item>
+        <item>TAPEJARA</item>
+        <item>TAPERA</item>
+        <item>TAPES</item>
+        <item>TAQUARA</item>
+        <item>TAQUARI</item>
+        <item>TAQUARUÇU DO SUL</item>
+        <item>TAVARES</item>
+        <item>TENENTE PORTELA</item>
+        <item>TERRA DE AREIA</item>
+        <item>TEUTÔNIA</item>
+        <item>TIO HUGO</item>
+        <item>TIRADENTES DO SUL</item>
+        <item>TOROPI</item>
+        <item>TORRES</item>
+        <item>TRAMANDAÍ</item>
+        <item>TRAVESSEIRO</item>
+        <item>TRÊS ARROIOS</item>
+        <item>TRÊS CACHOEIRAS</item>
+        <item>TRÊS COROAS</item>
+        <item>TRÊS DE MAIO</item>
+        <item>TRÊS FORQUILHAS</item>
+        <item>TRÊS PALMEIRAS</item>
+        <item>TRÊS PASSOS</item>
+        <item>TRINDADE DO SUL</item>
+        <item>TRIUNFO</item>
+        <item>TUCUNDUVA</item>
+        <item>TUNAS</item>
+        <item>TUPANCI DO SUL</item>
+        <item>TUPANCIRETÃ</item>
+        <item>TUPANDI</item>
+        <item>TUPARENDI</item>
+        <item>TURUÇU</item>
+        <item>UBIRETAMA</item>
+        <item>UNIÃO DA SERRA</item>
+        <item>UNISTALDA</item>
+        <item>URUGUAIANA</item>
+        <item>VACARIA</item>
+        <item>VALE DO SOL</item>
+        <item>VALE REAL</item>
+        <item>VALE VERDE</item>
+        <item>VANINI</item>
+        <item>VENÂNCIO AIRES</item>
+        <item>VERA CRUZ</item>
+        <item>VERANÓPOLIS</item>
+        <item>VESPASIANO CORREA</item>
+        <item>VIADUTOS</item>
+        <item>VIAMÃO</item>
+        <item>VICENTE DUTRA</item>
+        <item>VICTOR GRAEFF</item>
+        <item>VILA FLORES</item>
+        <item>VILA LÂNGARO</item>
+        <item>VILA MARIA</item>
+        <item>VILA NOVA DO SUL</item>
+        <item>VISTA ALEGRE</item>
+        <item>VISTA ALEGRE DO PRATA</item>
+        <item>VISTA GAÚCHA</item>
+        <item>VITÓRIA DAS MISSÕES</item>
+        <item>WESTFALIA</item>
+        <item>XANGRI-LÁ</item>
 
     </string-array><string-array name="lista_cidade_DF">
         <item>BRASÍLIA</item>
@@ -2345,14 +3159,902 @@
         <item>WENCESLAU BRAZ</item>
         <item>XAMBRÊ</item>
 
+    </string-array><string-array name="lista_cidade_BA">
+        <item>ABAÍRA</item>
+        <item>ABARÉ</item>
+        <item>ACAJUTIBA</item>
+        <item>ADUSTINA</item>
+        <item>ÁGUA FRIA</item>
+        <item>AIQUARA</item>
+        <item>ALAGOINHAS</item>
+        <item>ALCOBAÇA</item>
+        <item>ALMADINA</item>
+        <item>AMARGOSA</item>
+        <item>AMÉLIA RODRIGUES</item>
+        <item>AMÉRICA DOURADA</item>
+        <item>ANAGÉ</item>
+        <item>ANDARAÍ</item>
+        <item>ANDORINHA</item>
+        <item>ANGICAL</item>
+        <item>ANGUERA</item>
+        <item>ANTAS</item>
+        <item>ANTÔNIO CARDOSO</item>
+        <item>ANTÔNIO GONÇALVES</item>
+        <item>APORÁ</item>
+        <item>APUAREMA</item>
+        <item>ARAÇAS</item>
+        <item>ARACATU</item>
+        <item>ARACI</item>
+        <item>ARAMARI</item>
+        <item>ARATACA</item>
+        <item>ARATUÍPE</item>
+        <item>AURELINO LEAL</item>
+        <item>BAIANÓPOLIS</item>
+        <item>BAIXA GRANDE</item>
+        <item>BANZAÊ</item>
+        <item>BARRA</item>
+        <item>BARRA DA ESTIVA</item>
+        <item>BARRA DO CHOÇA</item>
+        <item>BARRA DO MENDES</item>
+        <item>BARRA DO ROCHA</item>
+        <item>BARREIRAS</item>
+        <item>BARRO ALTO</item>
+        <item>BARRO PRETO</item>
+        <item>BARROCAS</item>
+        <item>BELMONTE</item>
+        <item>BELO CAMPO</item>
+        <item>BIRITINGA</item>
+        <item>BOA NOVA</item>
+        <item>BOA VISTA DO TUPIM</item>
+        <item>BOM JESUS DA LAPA</item>
+        <item>BOM JESUS DA SERRA</item>
+        <item>BONINAL</item>
+        <item>BONITO</item>
+        <item>BOQUIRA</item>
+        <item>BOTUPORÃ</item>
+        <item>BREJÕES</item>
+        <item>BREJOLÂNDIA</item>
+        <item>BROTAS DE MACAÚBAS</item>
+        <item>BRUMADO</item>
+        <item>BUERAREMA</item>
+        <item>BURITIRAMA</item>
+        <item>CAATIBA</item>
+        <item>CABACEIRAS DO PARAGUAÇU</item>
+        <item>CACHOEIRA</item>
+        <item>CACULÉ</item>
+        <item>CAÉM</item>
+        <item>CAETANOS</item>
+        <item>CAETITÉ</item>
+        <item>CAFARNAUM</item>
+        <item>CAIRU</item>
+        <item>CALDEIRÃO GRANDE</item>
+        <item>CAMACAN</item>
+        <item>CAMAÇARI</item>
+        <item>CAMAMU</item>
+        <item>CAMPO ALEGRE DE LOURDES</item>
+        <item>CAMPO FORMOSO</item>
+        <item>CANÁPOLIS</item>
+        <item>CANARANA</item>
+        <item>CANAVIEIRAS</item>
+        <item>CANDEAL</item>
+        <item>CANDEIAS</item>
+        <item>CANDIBA</item>
+        <item>CÂNDIDO SALES</item>
+        <item>CANSANÇÃO</item>
+        <item>CANUDOS</item>
+        <item>CAPELA DO ALTO ALEGRE</item>
+        <item>CAPIM GROSSO</item>
+        <item>CARAÍBAS</item>
+        <item>CARAVELAS</item>
+        <item>CARDEAL DA SILVA</item>
+        <item>CARINHANHA</item>
+        <item>CASA NOVA</item>
+        <item>CASTRO ALVES</item>
+        <item>CATOLÂNDIA</item>
+        <item>CATU</item>
+        <item>CATURAMA</item>
+        <item>CENTRAL</item>
+        <item>CHORROCHÓ</item>
+        <item>CÍCERO DANTAS</item>
+        <item>CIPÓ</item>
+        <item>COARACI</item>
+        <item>COCOS</item>
+        <item>CONCEIÇÃO DA FEIRA</item>
+        <item>CONCEIÇÃO DO ALMEIDA</item>
+        <item>CONCEIÇÃO DO COITÉ</item>
+        <item>CONCEIÇÃO DO JACUÍPE</item>
+        <item>CONDE</item>
+        <item>CONDEÚBA</item>
+        <item>CONTENDAS DO SINCORÁ</item>
+        <item>CORAÇÃO DE MARIA</item>
+        <item>CORDEIROS</item>
+        <item>CORIBE</item>
+        <item>CORONEL JOÃO SÁ</item>
+        <item>CORRENTINA</item>
+        <item>COTEGIPE</item>
+        <item>CRAVOLÂNDIA</item>
+        <item>CRISÓPOLIS</item>
+        <item>CRISTÓPOLIS</item>
+        <item>CRUZ DAS ALMAS</item>
+        <item>CURAÇÁ</item>
+        <item>DÁRIO MEIRA</item>
+        <item>DIAS DÁVILA</item>
+        <item>DOM BASÍLIO</item>
+        <item>DOM MACEDO COSTA</item>
+        <item>ELÍSIO MEDRADO</item>
+        <item>ENCRUZILHADA</item>
+        <item>ENTRE RIOS</item>
+        <item>ÉRICO CARDOSO</item>
+        <item>ESPLANADA</item>
+        <item>EUCLIDES DA CUNHA</item>
+        <item>EUNÁPOLIS</item>
+        <item>FÁTIMA</item>
+        <item>FEIRA DA MATA</item>
+        <item>FEIRA DE SANTANA</item>
+        <item>FILADÉLFIA</item>
+        <item>FIRMINO ALVES</item>
+        <item>FLORESTA AZUL</item>
+        <item>FORMOSA DO RIO PRETO</item>
+        <item>GANDU</item>
+        <item>GAVIÃO</item>
+        <item>GENTIO DO OURO</item>
+        <item>GLÓRIA</item>
+        <item>GONGOGI</item>
+        <item>GOVERNADOR MANGABEIRA</item>
+        <item>GUAJERU</item>
+        <item>GUANAMBI</item>
+        <item>GUARATINGA</item>
+        <item>HELIÓPOLIS</item>
+        <item>IAÇU</item>
+        <item>IBIASSUCÊ</item>
+        <item>IBICARAÍ</item>
+        <item>IBICOARA</item>
+        <item>IBICUÍ</item>
+        <item>IBIPEBA</item>
+        <item>IBIPITANGA</item>
+        <item>IBIQUERA</item>
+        <item>IBIRAPITANGA</item>
+        <item>IBIRAPUÃ</item>
+        <item>IBIRATAIA</item>
+        <item>IBITIARA</item>
+        <item>IBITITÁ</item>
+        <item>IBOTIRAMA</item>
+        <item>ICHU</item>
+        <item>IGAPORÃ</item>
+        <item>IGRAPIÚNA</item>
+        <item>IGUAÍ</item>
+        <item>ILHÉUS</item>
+        <item>INHAMBUPE</item>
+        <item>IPECAETÁ</item>
+        <item>IPIAÚ</item>
+        <item>IPIRÁ</item>
+        <item>IPUPIARA</item>
+        <item>IRAJUBA</item>
+        <item>IRAMAIA</item>
+        <item>IRAQUARA</item>
+        <item>IRARÁ</item>
+        <item>IRECÊ</item>
+        <item>ITABELA</item>
+        <item>ITABERABA</item>
+        <item>ITABUNA</item>
+        <item>ITACARÉ</item>
+        <item>ITAETÉ</item>
+        <item>ITAGI</item>
+        <item>ITAGIBÁ</item>
+        <item>ITAGIMIRIM</item>
+        <item>ITAGUAÇU DA BAHIA</item>
+        <item>ITAJU DO COLÔNIA</item>
+        <item>ITAJUÍPE</item>
+        <item>ITAMARAJU</item>
+        <item>ITAMARI</item>
+        <item>ITAMBÉ</item>
+        <item>ITANAGRA</item>
+        <item>ITANHÉM</item>
+        <item>ITAPARICA</item>
+        <item>ITAPÉ</item>
+        <item>ITAPEBI</item>
+        <item>ITAPETINGA</item>
+        <item>ITAPICURU</item>
+        <item>ITAPITANGA</item>
+        <item>ITAQUARA</item>
+        <item>ITARANTIM</item>
+        <item>ITATIM</item>
+        <item>ITIRUÇU</item>
+        <item>ITIÚBA</item>
+        <item>ITORORÓ</item>
+        <item>ITUAÇU</item>
+        <item>ITUBERÁ</item>
+        <item>IUIÚ</item>
+        <item>JABORANDI</item>
+        <item>JACARACI</item>
+        <item>JACOBINA</item>
+        <item>JAGUAQUARA</item>
+        <item>JAGUARARI</item>
+        <item>JAGUARIPE</item>
+        <item>JANDAÍRA</item>
+        <item>JEQUIÉ</item>
+        <item>JEREMOABO</item>
+        <item>JIQUIRIÇÁ</item>
+        <item>JITAÚNA</item>
+        <item>JOÃO DOURADO</item>
+        <item>JUAZEIRO</item>
+        <item>JUCURUÇU</item>
+        <item>JUSSARA</item>
+        <item>JUSSARI</item>
+        <item>JUSSIAPE</item>
+        <item>LAFAIETE COUTINHO</item>
+        <item>LAGOA REAL</item>
+        <item>LAJE</item>
+        <item>LAJEDÃO</item>
+        <item>LAJEDINHO</item>
+        <item>LAJEDO DO TABOCAL</item>
+        <item>LAMARÃO</item>
+        <item>LAPÃO</item>
+        <item>LAURO DE FREITAS</item>
+        <item>LENÇÓIS</item>
+        <item>LICÍNIO DE ALMEIDA</item>
+        <item>LIVRAMENTO DE NOSSA SENHORA</item>
+        <item>LUÍS EDUARDO MAGALHÃES</item>
+        <item>MACAJUBA</item>
+        <item>MACARANI</item>
+        <item>MACAÚBAS</item>
+        <item>MACURURÉ</item>
+        <item>MADRE DE DEUS</item>
+        <item>MAETINGA</item>
+        <item>MAIQUINIQUE</item>
+        <item>MAIRI</item>
+        <item>MALHADA</item>
+        <item>MALHADA DE PEDRAS</item>
+        <item>MANOEL VITORINO</item>
+        <item>MANSIDÃO</item>
+        <item>MARACÁS</item>
+        <item>MARAGOGIPE</item>
+        <item>MARAÚ</item>
+        <item>MARCIONÍLIO SOUZA</item>
+        <item>MASCOTE</item>
+        <item>MATA DE SÃO JOÃO</item>
+        <item>MATINA</item>
+        <item>MEDEIROS NETO</item>
+        <item>MIGUEL CALMON</item>
+        <item>MILAGRES</item>
+        <item>MIRANGABA</item>
+        <item>MIRANTE</item>
+        <item>MONTE SANTO</item>
+        <item>MORPARÁ</item>
+        <item>MORRO DO CHAPÉU</item>
+        <item>MORTUGABA</item>
+        <item>MUCUGÊ</item>
+        <item>MUCURI</item>
+        <item>MULUNGU DO MORRO</item>
+        <item>MUNDO NOVO</item>
+        <item>MUNIZ FERREIRA</item>
+        <item>MUQUÉM DE SÃO FRANCISCO</item>
+        <item>MURITIBA</item>
+        <item>MUTUÍPE</item>
+        <item>NAZARÉ</item>
+        <item>NILO PEÇANHA</item>
+        <item>NORDESTINA</item>
+        <item>NOVA CANAÃ</item>
+        <item>NOVA FÁTIMA</item>
+        <item>NOVA IBIÁ</item>
+        <item>NOVA ITARANA</item>
+        <item>NOVA REDENÇÃO</item>
+        <item>NOVA SOURE</item>
+        <item>NOVA VIÇOSA</item>
+        <item>NOVO HORIZONTE</item>
+        <item>NOVO TRIUNFO</item>
+        <item>OLINDINA</item>
+        <item>OLIVEIRA DOS BREJINHOS</item>
+        <item>OURIÇANGAS</item>
+        <item>OUROLÂNDIA</item>
+        <item>PALMAS DE MONTE ALTO</item>
+        <item>PALMEIRAS</item>
+        <item>PARAMIRIM</item>
+        <item>PARATINGA</item>
+        <item>PARIPIRANGA</item>
+        <item>PAU BRASIL</item>
+        <item>PAULO AFONSO</item>
+        <item>PÉ DE SERRA</item>
+        <item>PEDRÃO</item>
+        <item>PEDRO ALEXANDRE</item>
+        <item>PIATÃ</item>
+        <item>PILÃO ARCADO</item>
+        <item>PINDAÍ</item>
+        <item>PINDOBAÇU</item>
+        <item>PINTADAS</item>
+        <item>PIRAÍ DO NORTE</item>
+        <item>PIRIPÁ</item>
+        <item>PIRITIBA</item>
+        <item>PLANALTINO</item>
+        <item>PLANALTO</item>
+        <item>POÇÕES</item>
+        <item>POJUCA</item>
+        <item>PONTO NOVO</item>
+        <item>PORTO SEGURO</item>
+        <item>POTIRAGUÁ</item>
+        <item>PRADO</item>
+        <item>PRESIDENTE DUTRA</item>
+        <item>PRESIDENTE JÂNIO QUADROS</item>
+        <item>PRESIDENTE TANCREDO NEVES</item>
+        <item>QUEIMADAS</item>
+        <item>QUIJINGUE</item>
+        <item>QUIXABEIRA</item>
+        <item>RAFAEL JAMBEIRO</item>
+        <item>REMANSO</item>
+        <item>RETIROLÂNDIA</item>
+        <item>RIACHÃO DAS NEVES</item>
+        <item>RIACHÃO DO JACUÍPE</item>
+        <item>RIACHO DE SANTANA</item>
+        <item>RIBEIRA DO AMPARO</item>
+        <item>RIBEIRA DO POMBAL</item>
+        <item>RIBEIRÃO DO LARGO</item>
+        <item>RIO DE CONTAS</item>
+        <item>RIO DO ANTÔNIO</item>
+        <item>RIO DO PIRES</item>
+        <item>RIO REAL</item>
+        <item>RODELAS</item>
+        <item>RUY BARBOSA</item>
+        <item>SALINAS DA MARGARIDA</item>
+        <item>SALVADOR</item>
+        <item>SANTA BÁRBARA</item>
+        <item>SANTA BRÍGIDA</item>
+        <item>SANTA CRUZ CABRÁLIA</item>
+        <item>SANTA CRUZ DA VITÓRIA</item>
+        <item>SANTA INÊS</item>
+        <item>SANTA LUZIA</item>
+        <item>SANTA MARIA DA VITÓRIA</item>
+        <item>SANTA RITA DE CÁSSIA</item>
+        <item>SANTA TERESINHA</item>
+        <item>SANTALUZ</item>
+        <item>SANTANA</item>
+        <item>SANTANÓPOLIS</item>
+        <item>SANTO AMARO</item>
+        <item>SANTO ANTÔNIO DE JESUS</item>
+        <item>SANTO ESTÊVÃO</item>
+        <item>SÃO DESIDÉRIO</item>
+        <item>SÃO DOMINGOS</item>
+        <item>SÃO FELIPE</item>
+        <item>SÃO FÉLIX</item>
+        <item>SÃO FÉLIX DO CORIBE</item>
+        <item>SÃO FRANCISCO DO CONDE</item>
+        <item>SÃO GABRIEL</item>
+        <item>SÃO GONÇALO DOS CAMPOS</item>
+        <item>SÃO JOSÉ DA VITÓRIA</item>
+        <item>SÃO JOSÉ DO JACUÍPE</item>
+        <item>SÃO MIGUEL DAS MATAS</item>
+        <item>SÃO SEBASTIÃO DO PASSÉ</item>
+        <item>SAPEAÇU</item>
+        <item>SÁTIRO DIAS</item>
+        <item>SAUBARA</item>
+        <item>SAÚDE</item>
+        <item>SEABRA</item>
+        <item>SEBASTIÃO LARANJEIRAS</item>
+        <item>SENHOR DO BONFIM</item>
+        <item>SENTO SÉ</item>
+        <item>SERRA DO RAMALHO</item>
+        <item>SERRA DOURADA</item>
+        <item>SERRA PRETA</item>
+        <item>SERRINHA</item>
+        <item>SERROLÂNDIA</item>
+        <item>SIMÕES FILHO</item>
+        <item>SÍTIO DO MATO</item>
+        <item>SÍTIO DO QUINTO</item>
+        <item>SOBRADINHO</item>
+        <item>SOUTO SOARES</item>
+        <item>TABOCAS DO BREJO VELHO</item>
+        <item>TANHAÇU</item>
+        <item>TANQUE NOVO</item>
+        <item>TANQUINHO</item>
+        <item>TAPEROÁ</item>
+        <item>TAPIRAMUTÁ</item>
+        <item>TEIXEIRA DE FREITAS</item>
+        <item>TEODORO SAMPAIO</item>
+        <item>TEOFILÂNDIA</item>
+        <item>TEOLÂNDIA</item>
+        <item>TERRA NOVA</item>
+        <item>TREMEDAL</item>
+        <item>TUCANO</item>
+        <item>UAUÁ</item>
+        <item>UBAÍRA</item>
+        <item>UBAITABA</item>
+        <item>UBATÃ</item>
+        <item>UIBAÍ</item>
+        <item>UMBURANAS</item>
+        <item>UNA</item>
+        <item>URANDI</item>
+        <item>URUÇUCA</item>
+        <item>UTINGA</item>
+        <item>VALENÇA</item>
+        <item>VALENTE</item>
+        <item>VÁRZEA DA ROÇA</item>
+        <item>VÁRZEA DO POÇO</item>
+        <item>VÁRZEA NOVA</item>
+        <item>VARZEDO</item>
+        <item>VERA CRUZ</item>
+        <item>VEREDA</item>
+        <item>VITÓRIA DA CONQUISTA</item>
+        <item>WAGNER</item>
+        <item>WANDERLEY</item>
+        <item>WENCESLAU GUIMARÃES</item>
+        <item>XIQUE-XIQUE</item>
+    </string-array><string name="action_configuracoes">Configurações</string><string name="facebook_app_id">328769967482649</string><string-array name="lista_cidade_RR">
+        <item>ALTO ALEGRE</item>
+        <item>AMAJARI</item>
+        <item>BOA VISTA</item>
+        <item>BONFIM</item>
+        <item>CANTÁ</item>
+        <item>CARACARAÍ</item>
+        <item>CAROEBE</item>
+        <item>IRACEMA</item>
+        <item>MUCAJAÍ</item>
+        <item>NORMANDIA</item>
+        <item>PACARAIMA</item>
+        <item>RORAINÓPOLIS</item>
+        <item>SÃO JOÃO DA BALIZA</item>
+        <item>SÃO LUIZ</item>
+        <item>UIRAMUTÃ</item>
     </string-array><string name="title_activity_cadastro_pet">CadastroPetActivity</string><string-array name="lista_raca_gato_filtro">
         <item>Todos</item>
-        <item>Siamês</item>
+        <item>Abissínio</item>
+        <item>Americano de pelo curto</item>
+        <item>Angorá</item>
+        <item>Azul Russo</item>
+        <item>Brasileiro de pelo curto</item>
+        <item>Britânico de pelo curto</item>
+        <item>Burmês</item>
+        <item>Chartreux</item>
+        <item>Cornish Rex</item>
+        <item>Devon Rex</item>
+        <item>Europeu de pelo curto</item>
+        <item>Exótico</item>
+        <item>Gato-de-bengala</item>
+        <item>Himalaio</item>
+        <item>Maine Coon</item>
+        <item>Mau Egípicio</item>
+        <item>Munchkin</item>
+        <item>Norueguês da Floresta</item>
+        <item>Oriental</item>
         <item>Persa</item>
+        <item>Ragdoll</item>
+        <item>Sagrado da Birmânia</item>
+        <item>Savannah</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Scottish Fold</item>
+        <item>Siamês</item>
+        <item>Sphynx</item>
+    </string-array><string name="title_activity_selec__vacina_">Selec_Vacina_Activity</string><string-array name="lista_estado">
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
     </string-array><string-array name="tipo_animal">
         <item>Cachorro</item>
         <item>Gato</item>
-    </string-array><string name="action_sair">Sair</string><string-array name="lista_cidade_MA">
+    </string-array><string name="app_name_pet_go">PetGO</string><string name="action_sair">Sair</string><string-array name="lista_cidade_SE">
+        <item>AMPARO DE SÃO FRANCISCO</item>
+        <item>AQUIDABÃ</item>
+        <item>ARACAJU</item>
+        <item>ARAUÁ</item>
+        <item>AREIA BRANCA</item>
+        <item>BARRA DOS COQUEIROS</item>
+        <item>BOQUIM</item>
+        <item>BREJO GRANDE</item>
+        <item>CAMPO DO BRITO</item>
+        <item>CANHOBA</item>
+        <item>CANINDÉ DE SÃO FRANCISCO</item>
+        <item>CAPELA</item>
+        <item>CARIRA</item>
+        <item>CARMÓPOLIS</item>
+        <item>CEDRO DE SÃO JOÃO</item>
+        <item>CRISTINÁPOLIS</item>
+        <item>CUMBE</item>
+        <item>DIVINA PASTORA</item>
+        <item>ESTÂNCIA</item>
+        <item>FEIRA NOVA</item>
+        <item>FREI PAULO</item>
+        <item>GARARU</item>
+        <item>GENERAL MAYNARD</item>
+        <item>GRACHO CARDOSO</item>
+        <item>ILHA DAS FLORES</item>
+        <item>INDIAROBA</item>
+        <item>ITABAIANA</item>
+        <item>ITABAIANINHA</item>
+        <item>ITABI</item>
+        <item>ITAPORANGA DAJUDA</item>
+        <item>JAPARATUBA</item>
+        <item>JAPOATÃ</item>
+        <item>LAGARTO</item>
+        <item>LARANJEIRAS</item>
+        <item>MACAMBIRA</item>
+        <item>MALHADA DOS BOIS</item>
+        <item>MALHADOR</item>
+        <item>MARUIM</item>
+        <item>MOITA BONITA</item>
+        <item>MONTE ALEGRE DE SERGIPE</item>
+        <item>MURIBECA</item>
+        <item>NEÓPOLIS</item>
+        <item>NOSSA SENHORA APARECIDA</item>
+        <item>NOSSA SENHORA DA GLÓRIA</item>
+        <item>NOSSA SENHORA DAS DORES</item>
+        <item>NOSSA SENHORA DE LOURDES</item>
+        <item>NOSSA SENHORA DO SOCORRO</item>
+        <item>PACATUBA</item>
+        <item>PEDRA MOLE</item>
+        <item>PEDRINHAS</item>
+        <item>PINHÃO</item>
+        <item>PIRAMBU</item>
+        <item>POÇO REDONDO</item>
+        <item>POÇO VERDE</item>
+        <item>PORTO DA FOLHA</item>
+        <item>PROPRIÁ</item>
+        <item>RIACHÃO DO DANTAS</item>
+        <item>RIACHUELO</item>
+        <item>RIBEIRÓPOLIS</item>
+        <item>ROSÁRIO DO CATETE</item>
+        <item>SALGADO</item>
+        <item>SANTA LUZIA DO ITANHY</item>
+        <item>SANTA ROSA DE LIMA</item>
+        <item>SANTANA DO SÃO FRANCISCO</item>
+        <item>SANTO AMARO DAS BROTAS</item>
+        <item>SÃO CRISTÓVÃO</item>
+        <item>SÃO DOMINGOS</item>
+        <item>SÃO FRANCISCO</item>
+        <item>SÃO MIGUEL DO ALEIXO</item>
+        <item>SIMÃO DIAS</item>
+        <item>SIRIRI</item>
+        <item>TELHA</item>
+        <item>TOBIAS BARRETO</item>
+        <item>TOMAR DO GERU</item>
+        <item>UMBAÚBA</item>
+
+    </string-array><string-array name="lista_raca_gato">
+        <item>Selecione a raça</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Abissínio</item>
+        <item>Americano de pelo curto</item>
+        <item>Angorá</item>
+        <item>Azul Russo</item>
+        <item>Brasileiro de pelo curto</item>
+        <item>Britânico de pelo curto</item>
+        <item>Burmês</item>
+        <item>Chartreux</item>
+        <item>Cornish Rex</item>
+        <item>Devon Rex</item>
+        <item>Europeu de pelo curto</item>
+        <item>Exótico</item>
+        <item>Gato-de-bengala</item>
+        <item>Himalaio</item>
+        <item>Maine Coon</item>
+        <item>Mau Egípicio</item>
+        <item>Munchkin</item>
+        <item>Norueguês da Floresta</item>
+        <item>Oriental</item>
+        <item>Persa</item>
+        <item>Ragdoll</item>
+        <item>Sagrado da Birmânia</item>
+        <item>Savannah</item>
+        <item>Scottish Fold</item>
+        <item>Siamês</item>
+        <item>Sphynx</item>
+    </string-array><string-array name="lista_cidade_SC">
+        <item>ABDON BATISTA</item>
+        <item>ABELARDO LUZ</item>
+        <item>AGROLÂNDIA</item>
+        <item>AGRONÔMICA</item>
+        <item>ÁGUA DOCE</item>
+        <item>ÁGUAS DE CHAPECÓ</item>
+        <item>ÁGUAS FRIAS</item>
+        <item>ÁGUAS MORNAS</item>
+        <item>ALFREDO WAGNER</item>
+        <item>ALTO BELA VISTA</item>
+        <item>ANCHIETA</item>
+        <item>ANGELINA</item>
+        <item>ANITA GARIBALDI</item>
+        <item>ANITÁPOLIS</item>
+        <item>ANTÔNIO CARLOS</item>
+        <item>APIÚNA</item>
+        <item>ARABUTÃ</item>
+        <item>ARAQUARI</item>
+        <item>ARARANGUÁ</item>
+        <item>ARMAZÉM</item>
+        <item>ARROIO TRINTA</item>
+        <item>ARVOREDO</item>
+        <item>ASCURRA</item>
+        <item>ATALANTA</item>
+        <item>AURORA</item>
+        <item>BALNEÁRIO ARROIO DO SILVA</item>
+        <item>BALNEÁRIO BARRA DO SUL</item>
+        <item>BALNEÁRIO CAMBORIÚ</item>
+        <item>BALNEÁRIO GAIVOTA</item>
+        <item>BALNEÁRIO PIÇARRAS</item>
+        <item>BANDEIRANTE</item>
+        <item>BARRA BONITA</item>
+        <item>BARRA VELHA</item>
+        <item>BELA VISTA DO TOLDO</item>
+        <item>BELMONTE</item>
+        <item>BENEDITO NOVO</item>
+        <item>BIGUAÇU</item>
+        <item>BLUMENAU</item>
+        <item>BOCAINA DO SUL</item>
+        <item>BOM JARDIM DA SERRA</item>
+        <item>BOM JESUS</item>
+        <item>BOM JESUS DO OESTE</item>
+        <item>BOM RETIRO</item>
+        <item>BOMBINHAS</item>
+        <item>BOTUVERÁ</item>
+        <item>BRAÇO DO NORTE</item>
+        <item>BRAÇO DO TROMBUDO</item>
+        <item>BRUNÓPOLIS</item>
+        <item>BRUSQUE</item>
+        <item>CAÇADOR</item>
+        <item>CAIBI</item>
+        <item>CALMON</item>
+        <item>CAMBORIÚ</item>
+        <item>CAMPO ALEGRE</item>
+        <item>CAMPO BELO DO SUL</item>
+        <item>CAMPO ERÊ</item>
+        <item>CAMPOS NOVOS</item>
+        <item>CANELINHA</item>
+        <item>CANOINHAS</item>
+        <item>CAPÃO ALTO</item>
+        <item>CAPINZAL</item>
+        <item>CAPIVARI DE BAIXO</item>
+        <item>CATANDUVAS</item>
+        <item>CAXAMBU DO SUL</item>
+        <item>CELSO RAMOS</item>
+        <item>CERRO NEGRO</item>
+        <item>CHAPADÃO DO LAGEADO</item>
+        <item>CHAPECÓ</item>
+        <item>COCAL DO SUL</item>
+        <item>CONCÓRDIA</item>
+        <item>CORDILHEIRA ALTA</item>
+        <item>CORONEL FREITAS</item>
+        <item>CORONEL MARTINS</item>
+        <item>CORREIA PINTO</item>
+        <item>CORUPÁ</item>
+        <item>CRICIÚMA</item>
+        <item>CUNHA PORÃ</item>
+        <item>CUNHATAÍ</item>
+        <item>CURITIBANOS</item>
+        <item>DESCANSO</item>
+        <item>DIONÍSIO CERQUEIRA</item>
+        <item>DONA EMMA</item>
+        <item>DOUTOR PEDRINHO</item>
+        <item>ENTRE RIOS</item>
+        <item>ERMO</item>
+        <item>ERVAL VELHO</item>
+        <item>FAXINAL DOS GUEDES</item>
+        <item>FLOR DO SERTÃO</item>
+        <item>FLORIANÓPOLIS</item>
+        <item>FORMOSA DO SUL</item>
+        <item>FORQUILHINHA</item>
+        <item>FRAIBURGO</item>
+        <item>FREI ROGÉRIO</item>
+        <item>GALVÃO</item>
+        <item>GAROPABA</item>
+        <item>GARUVA</item>
+        <item>GASPAR</item>
+        <item>GOVERNADOR CELSO RAMOS</item>
+        <item>GRÃO PARÁ</item>
+        <item>GRAVATAL</item>
+        <item>GUABIRUBA</item>
+        <item>GUARACIABA</item>
+        <item>GUARAMIRIM</item>
+        <item>GUARUJÁ DO SUL</item>
+        <item>GUATAMBÚ</item>
+        <item>HERVAL DOESTE</item>
+        <item>IBIAM</item>
+        <item>IBICARÉ</item>
+        <item>IBIRAMA</item>
+        <item>IÇARA</item>
+        <item>ILHOTA</item>
+        <item>IMARUÍ</item>
+        <item>IMBITUBA</item>
+        <item>IMBUIA</item>
+        <item>INDAIAL</item>
+        <item>IOMERÊ</item>
+        <item>IPIRA</item>
+        <item>IPORÃ DO OESTE</item>
+        <item>IPUAÇU</item>
+        <item>IPUMIRIM</item>
+        <item>IRACEMINHA</item>
+        <item>IRANI</item>
+        <item>IRATI</item>
+        <item>IRINEÓPOLIS</item>
+        <item>ITÁ</item>
+        <item>ITAIÓPOLIS</item>
+        <item>ITAJAÍ</item>
+        <item>ITAPEMA</item>
+        <item>ITAPIRANGA</item>
+        <item>ITAPOÁ</item>
+        <item>ITUPORANGA</item>
+        <item>JABORÁ</item>
+        <item>JACINTO MACHADO</item>
+        <item>JAGUARUNA</item>
+        <item>JARAGUÁ DO SUL</item>
+        <item>JARDINÓPOLIS</item>
+        <item>JOAÇABA</item>
+        <item>JOINVILLE</item>
+        <item>JOSÉ BOITEUX</item>
+        <item>JUPIÁ</item>
+        <item>LACERDÓPOLIS</item>
+        <item>LAGES</item>
+        <item>LAGUNA</item>
+        <item>LAJEADO GRANDE</item>
+        <item>LAURENTINO</item>
+        <item>LAURO MULLER</item>
+        <item>LEBON RÉGIS</item>
+        <item>LEOBERTO LEAL</item>
+        <item>LINDÓIA DO SUL</item>
+        <item>LONTRAS</item>
+        <item>LUIZ ALVES</item>
+        <item>LUZERNA</item>
+        <item>MACIEIRA</item>
+        <item>MAFRA</item>
+        <item>MAJOR GERCINO</item>
+        <item>MAJOR VIEIRA</item>
+        <item>MARACAJÁ</item>
+        <item>MARAVILHA</item>
+        <item>MAREMA</item>
+        <item>MASSARANDUBA</item>
+        <item>MATOS COSTA</item>
+        <item>MELEIRO</item>
+        <item>MIRIM DOCE</item>
+        <item>MODELO</item>
+        <item>MONDAÍ</item>
+        <item>MONTE CARLO</item>
+        <item>MONTE CASTELO</item>
+        <item>MORRO DA FUMAÇA</item>
+        <item>MORRO GRANDE</item>
+        <item>NAVEGANTES</item>
+        <item>NOVA ERECHIM</item>
+        <item>NOVA ITABERABA</item>
+        <item>NOVA TRENTO</item>
+        <item>NOVA VENEZA</item>
+        <item>NOVO HORIZONTE</item>
+        <item>ORLEANS</item>
+        <item>OTACÍLIO COSTA</item>
+        <item>OURO</item>
+        <item>OURO VERDE</item>
+        <item>PAIAL</item>
+        <item>PAINEL</item>
+        <item>PALHOÇA</item>
+        <item>PALMA SOLA</item>
+        <item>PALMEIRA</item>
+        <item>PALMITOS</item>
+        <item>PAPANDUVA</item>
+        <item>PARAÍSO</item>
+        <item>PASSO DE TORRES</item>
+        <item>PASSOS MAIA</item>
+        <item>PAULO LOPES</item>
+        <item>PEDRAS GRANDES</item>
+        <item>PENHA</item>
+        <item>PERITIBA</item>
+        <item>PETROLÂNDIA</item>
+        <item>PINHALZINHO</item>
+        <item>PINHEIRO PRETO</item>
+        <item>PIRATUBA</item>
+        <item>PLANALTO ALEGRE</item>
+        <item>POMERODE</item>
+        <item>PONTE ALTA</item>
+        <item>PONTE ALTA DO NORTE</item>
+        <item>PONTE SERRADA</item>
+        <item>PORTO BELO</item>
+        <item>PORTO UNIÃO</item>
+        <item>POUSO REDONDO</item>
+        <item>PRAIA GRANDE</item>
+        <item>PRESIDENTE CASTELLO BRANCO</item>
+        <item>PRESIDENTE GETÚLIO</item>
+        <item>PRESIDENTE NEREU</item>
+        <item>PRINCESA</item>
+        <item>QUILOMBO</item>
+        <item>RANCHO QUEIMADO</item>
+        <item>RIO DAS ANTAS</item>
+        <item>RIO DO CAMPO</item>
+        <item>RIO DO OESTE</item>
+        <item>RIO DO SUL</item>
+        <item>RIO DOS CEDROS</item>
+        <item>RIO FORTUNA</item>
+        <item>RIO NEGRINHO</item>
+        <item>RIO RUFINO</item>
+        <item>RIQUEZA</item>
+        <item>RODEIO</item>
+        <item>ROMELÂNDIA</item>
+        <item>SALETE</item>
+        <item>SALTINHO</item>
+        <item>SALTO VELOSO</item>
+        <item>SANGÃO</item>
+        <item>SANTA CECÍLIA</item>
+        <item>SANTA HELENA</item>
+        <item>SANTA ROSA DE LIMA</item>
+        <item>SANTA ROSA DO SUL</item>
+        <item>SANTA TEREZINHA</item>
+        <item>SANTA TEREZINHA DO PROGRESSO</item>
+        <item>SANTIAGO DO SUL</item>
+        <item>SANTO AMARO DA IMPERATRIZ</item>
+        <item>SÃO BENTO DO SUL</item>
+        <item>SÃO BERNARDINO</item>
+        <item>SÃO BONIFÁCIO</item>
+        <item>SÃO CARLOS</item>
+        <item>SÃO CRISTOVÃO DO SUL</item>
+        <item>SÃO DOMINGOS</item>
+        <item>SÃO FRANCISCO DO SUL</item>
+        <item>SÃO JOÃO BATISTA</item>
+        <item>SÃO JOÃO DO ITAPERIÚ</item>
+        <item>SÃO JOÃO DO OESTE</item>
+        <item>SÃO JOÃO DO SUL</item>
+        <item>SÃO JOAQUIM</item>
+        <item>SÃO JOSÉ</item>
+        <item>SÃO JOSÉ DO CEDRO</item>
+        <item>SÃO JOSÉ DO CERRITO</item>
+        <item>SÃO LOURENÇO DO OESTE</item>
+        <item>SÃO LUDGERO</item>
+        <item>SÃO MARTINHO</item>
+        <item>SÃO MIGUEL DA BOA VISTA</item>
+        <item>SÃO MIGUEL DO OESTE</item>
+        <item>SÃO PEDRO DE ALCÂNTARA</item>
+        <item>SAUDADES</item>
+        <item>SCHROEDER</item>
+        <item>SEARA</item>
+        <item>SERRA ALTA</item>
+        <item>SIDERÓPOLIS</item>
+        <item>SOMBRIO</item>
+        <item>SUL BRASIL</item>
+        <item>TAIÓ</item>
+        <item>TANGARÁ</item>
+        <item>TIGRINHOS</item>
+        <item>TIJUCAS</item>
+        <item>TIMBÉ DO SUL</item>
+        <item>TIMBÓ</item>
+        <item>TIMBÓ GRANDE</item>
+        <item>TRÊS BARRAS</item>
+        <item>TREVISO</item>
+        <item>TREZE DE MAIO</item>
+        <item>TREZE TÍLIAS</item>
+        <item>TROMBUDO CENTRAL</item>
+        <item>TUBARÃO</item>
+        <item>TUNÁPOLIS</item>
+        <item>TURVO</item>
+        <item>UNIÃO DO OESTE</item>
+        <item>URUBICI</item>
+        <item>URUPEMA</item>
+        <item>URUSSANGA</item>
+        <item>VARGEÃO</item>
+        <item>VARGEM</item>
+        <item>VARGEM BONITA</item>
+        <item>VIDAL RAMOS</item>
+        <item>VIDEIRA</item>
+        <item>VITOR MEIRELES</item>
+        <item>WITMARSUM</item>
+        <item>XANXERÊ</item>
+        <item>XAVANTINA</item>
+        <item>XAXIM</item>
+        <item>ZORTÉA</item>
+
+    </string-array><string-array name="lista_cidade_MA">
         <item>AÇAILÂNDIA</item>
         <item>AFONSO CUNHA</item>
         <item>ÁGUA DOCE DO MARANHÃO</item>
@@ -2571,7 +4273,7 @@
         <item>VITORINO FREIRE</item>
         <item>ZÉ DOCA</item>
 
-    </string-array><string-array name="lista_cidade_MG">
+    </string-array><string name="hello_world">Hello World!</string><string-array name="lista_cidade_MG">
         <item>ABADIA DOS DOURADOS</item>
         <item>ABAETÉ</item>
         <item>ABRE CAMPO</item>
@@ -3426,2217 +5128,7 @@
         <item>VOLTA GRANDE</item>
         <item>WENCESLAU BRAZ</item>
 
-    </string-array><string-array name="genero_animal">
-        <item>Fêmea</item>
-        <item>Macho</item>
-    </string-array><string-array name="lista_mes">
-        <item>00</item>
-        <item>01</item>
-        <item>02</item>
-        <item>03</item>
-        <item>04</item>
-        <item>05</item>
-        <item>06</item>
-        <item>07</item>
-        <item>08</item>
-        <item>09</item>
-        <item>10</item>
-        <item>11</item>
-    </string-array><string-array name="lista_cidade_AC">
-        <item>ACRELÂNDIA</item>
-        <item>ASSIS BRASIL</item>
-        <item>BRASILÉIA</item>
-        <item>BUJARI</item>
-        <item>CAPIXABA</item>
-        <item>CRUZEIRO DO SUL</item>
-        <item>EPITACIOLÂNDIA</item>
-        <item>FEIJÓ</item>
-        <item>JORDÃO</item>
-        <item>MÂNCIO LIMA</item>
-        <item>MANOEL URBANO</item>
-        <item>MARECHAL THAUMATURGO</item>
-        <item>PLÁCIDO DE CASTRO</item>
-        <item>PORTO ACRE</item>
-        <item>PORTO WALTER</item>
-        <item>RIO BRANCO</item>
-        <item>RODRIGUES ALVES</item>
-        <item>SANTA ROSA DO PURUS</item>
-        <item>SENA MADUREIRA</item>
-        <item>SENADOR GUIOMARD</item>
-        <item>TARAUACÁ</item>
-        <item>XAPURI</item>
-    </string-array><string name="title_activity_main2">Main2Activity</string><string-array name="lista_cidade_MS">
-        <item>ÁGUA CLARA</item>
-        <item>ALCINÓPOLIS</item>
-        <item>AMAMBAI</item>
-        <item>ANASTÁCIO</item>
-        <item>ANAURILÂNDIA</item>
-        <item>ANGÉLICA</item>
-        <item>ANTÔNIO JOÃO</item>
-        <item>APARECIDA DO TABOADO</item>
-        <item>AQUIDAUANA</item>
-        <item>ARAL MOREIRA</item>
-        <item>BANDEIRANTES</item>
-        <item>BATAGUASSU</item>
-        <item>BATAYPORÃ</item>
-        <item>BELA VISTA</item>
-        <item>BODOQUENA</item>
-        <item>BONITO</item>
-        <item>BRASILÂNDIA</item>
-        <item>CAARAPÓ</item>
-        <item>CAMAPUÃ</item>
-        <item>CAMPO GRANDE</item>
-        <item>CARACOL</item>
-        <item>CASSILÂNDIA</item>
-        <item>CHAPADÃO DO SUL</item>
-        <item>CORGUINHO</item>
-        <item>CORONEL SAPUCAIA</item>
-        <item>CORUMBÁ</item>
-        <item>COSTA RICA</item>
-        <item>COXIM</item>
-        <item>DEODÁPOLIS</item>
-        <item>DOIS IRMÃOS DO BURITI</item>
-        <item>DOURADINA</item>
-        <item>DOURADOS</item>
-        <item>ELDORADO</item>
-        <item>FÁTIMA DO SUL</item>
-        <item>FIGUEIRÃO</item>
-        <item>GLÓRIA DE DOURADOS</item>
-        <item>GUIA LOPES DA LAGUNA</item>
-        <item>IGUATEMI</item>
-        <item>INOCÊNCIA</item>
-        <item>ITAPORÃ</item>
-        <item>ITAQUIRAÍ</item>
-        <item>IVINHEMA</item>
-        <item>JAPORÃ</item>
-        <item>JARAGUARI</item>
-        <item>JARDIM</item>
-        <item>JATEÍ</item>
-        <item>JUTI</item>
-        <item>LADÁRIO</item>
-        <item>LAGUNA CARAPÃ</item>
-        <item>MARACAJU</item>
-        <item>MIRANDA</item>
-        <item>MUNDO NOVO</item>
-        <item>NAVIRAÍ</item>
-        <item>NIOAQUE</item>
-        <item>NOVA ALVORADA DO SUL</item>
-        <item>NOVA ANDRADINA</item>
-        <item>NOVO HORIZONTE DO SUL</item>
-        <item>PARANAÍBA</item>
-        <item>PARANHOS</item>
-        <item>PEDRO GOMES</item>
-        <item>PONTA PORÃ</item>
-        <item>PORTO MURTINHO</item>
-        <item>RIBAS DO RIO PARDO</item>
-        <item>RIO BRILHANTE</item>
-        <item>RIO NEGRO</item>
-        <item>RIO VERDE DE MATO GROSSO</item>
-        <item>ROCHEDO</item>
-        <item>SANTA RITA DO PARDO</item>
-        <item>SÃO GABRIEL DO OESTE</item>
-        <item>SELVÍRIA</item>
-        <item>SETE QUEDAS</item>
-        <item>SIDROLÂNDIA</item>
-        <item>SONORA</item>
-        <item>TACURU</item>
-        <item>TAQUARUSSU</item>
-        <item>TERENOS</item>
-        <item>TRÊS LAGOAS</item>
-        <item>VICENTINA</item>
-
-    </string-array><string-array name="lista_raca_cachorro">
-        <item>Boxer</item>
-        <item>Fila</item>
-    </string-array><string-array name="lista_ano">
-        <item>00</item>
-        <item>01</item>
-        <item>02</item>
-        <item>03</item>
-        <item>04</item>
-        <item>05</item>
-        <item>06</item>
-        <item>07</item>
-        <item>08</item>
-        <item>09</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
-        <item>24</item>
-        <item>25</item>
-    </string-array><string-array name="lista_cidade_MT">
-        <item>ACORIZAL</item>
-        <item>ÁGUA BOA</item>
-        <item>ALTA FLORESTA</item>
-        <item>ALTO ARAGUAIA</item>
-        <item>ALTO BOA VISTA</item>
-        <item>ALTO GARÇAS</item>
-        <item>ALTO PARAGUAI</item>
-        <item>ALTO TAQUARI</item>
-        <item>APIACÁS</item>
-        <item>ARAGUAIANA</item>
-        <item>ARAGUAINHA</item>
-        <item>ARAPUTANGA</item>
-        <item>ARENÁPOLIS</item>
-        <item>ARIPUANÃ</item>
-        <item>BARÃO DE MELGAÇO</item>
-        <item>BARRA DO BUGRES</item>
-        <item>BARRA DO GARÇAS</item>
-        <item>BOM JESUS DO ARAGUAIA</item>
-        <item>BRASNORTE</item>
-        <item>CÁCERES</item>
-        <item>CAMPINÁPOLIS</item>
-        <item>CAMPO NOVO DO PARECIS</item>
-        <item>CAMPO VERDE</item>
-        <item>CAMPOS DE JÚLIO</item>
-        <item>CANABRAVA DO NORTE</item>
-        <item>CANARANA</item>
-        <item>CARLINDA</item>
-        <item>CASTANHEIRA</item>
-        <item>CHAPADA DOS GUIMARÃES</item>
-        <item>CLÁUDIA</item>
-        <item>COCALINHO</item>
-        <item>COLÍDER</item>
-        <item>COLNIZA</item>
-        <item>COMODORO</item>
-        <item>CONFRESA</item>
-        <item>CONQUISTA DOESTE</item>
-        <item>COTRIGUAÇU</item>
-        <item>CUIABÁ</item>
-        <item>CURVELÂNDIA</item>
-        <item>DENISE</item>
-        <item>DIAMANTINO</item>
-        <item>DOM AQUINO</item>
-        <item>FELIZ NATAL</item>
-        <item>FIGUEIRÓPOLIS DOESTE</item>
-        <item>GAÚCHA DO NORTE</item>
-        <item>GENERAL CARNEIRO</item>
-        <item>GLÓRIA DOESTE</item>
-        <item>GUARANTÃ DO NORTE</item>
-        <item>GUIRATINGA</item>
-        <item>INDIAVAÍ</item>
-        <item>IPIRANGA DO NORTE</item>
-        <item>ITANHANGÁ</item>
-        <item>ITAÚBA</item>
-        <item>ITIQUIRA</item>
-        <item>JACIARA</item>
-        <item>JANGADA</item>
-        <item>JAURU</item>
-        <item>JUARA</item>
-        <item>JUÍNA</item>
-        <item>JURUENA</item>
-        <item>JUSCIMEIRA</item>
-        <item>LAMBARI DOESTE</item>
-        <item>LUCAS DO RIO VERDE</item>
-        <item>LUCIARA</item>
-        <item>MARCELÂNDIA</item>
-        <item>MATUPÁ</item>
-        <item>MIRASSOL DOESTE</item>
-        <item>NOBRES</item>
-        <item>NORTELÂNDIA</item>
-        <item>NOSSA SENHORA DO LIVRAMENTO</item>
-        <item>NOVA BANDEIRANTES</item>
-        <item>NOVA BRASILÂNDIA</item>
-        <item>NOVA CANAÃ DO NORTE</item>
-        <item>NOVA GUARITA</item>
-        <item>NOVA LACERDA</item>
-        <item>NOVA MARILÂNDIA</item>
-        <item>NOVA MARINGÁ</item>
-        <item>NOVA MONTE VERDE</item>
-        <item>NOVA MUTUM</item>
-        <item>NOVA NAZARÉ</item>
-        <item>NOVA OLÍMPIA</item>
-        <item>NOVA SANTA HELENA</item>
-        <item>NOVA UBIRATÃ</item>
-        <item>NOVA XAVANTINA</item>
-        <item>NOVO HORIZONTE DO NORTE</item>
-        <item>NOVO MUNDO</item>
-        <item>NOVO SANTO ANTÔNIO</item>
-        <item>NOVO SÃO JOAQUIM</item>
-        <item>PARANAÍTA</item>
-        <item>PARANATINGA</item>
-        <item>PEDRA PRETA</item>
-        <item>PEIXOTO DE AZEVEDO</item>
-        <item>PLANALTO DA SERRA</item>
-        <item>POCONÉ</item>
-        <item>PONTAL DO ARAGUAIA</item>
-        <item>PONTE BRANCA</item>
-        <item>PONTES E LACERDA</item>
-        <item>PORTO ALEGRE DO NORTE</item>
-        <item>PORTO DOS GAÚCHOS</item>
-        <item>PORTO ESPERIDIÃO</item>
-        <item>PORTO ESTRELA</item>
-        <item>POXORÉO</item>
-        <item>PRIMAVERA DO LESTE</item>
-        <item>QUERÊNCIA</item>
-        <item>RESERVA DO CABAÇAL</item>
-        <item>RIBEIRÃO CASCALHEIRA</item>
-        <item>RIBEIRÃOZINHO</item>
-        <item>RIO BRANCO</item>
-        <item>RONDOLÂNDIA</item>
-        <item>RONDONÓPOLIS</item>
-        <item>ROSÁRIO OESTE</item>
-        <item>SALTO DO CÉU</item>
-        <item>SANTA CARMEM</item>
-        <item>SANTA CRUZ DO XINGU</item>
-        <item>SANTA RITA DO TRIVELATO</item>
-        <item>SANTA TEREZINHA</item>
-        <item>SANTO AFONSO</item>
-        <item>SANTO ANTÔNIO DO LESTE</item>
-        <item>SANTO ANTÔNIO DO LEVERGER</item>
-        <item>SÃO FÉLIX DO ARAGUAIA</item>
-        <item>SÃO JOSÉ DO POVO</item>
-        <item>SÃO JOSÉ DO RIO CLARO</item>
-        <item>SÃO JOSÉ DO XINGU</item>
-        <item>SÃO JOSÉ DOS QUATRO MARCOS</item>
-        <item>SÃO PEDRO DA CIPA</item>
-        <item>SAPEZAL</item>
-        <item>SERRA NOVA DOURADA</item>
-        <item>SINOP</item>
-        <item>SORRISO</item>
-        <item>TABAPORÃ</item>
-        <item>TANGARÁ DA SERRA</item>
-        <item>TAPURAH</item>
-        <item>TERRA NOVA DO NORTE</item>
-        <item>TESOURO</item>
-        <item>TORIXORÉU</item>
-        <item>UNIÃO DO SUL</item>
-        <item>VALE DE SÃO DOMINGOS</item>
-        <item>VÁRZEA GRANDE</item>
-        <item>VERA</item>
-        <item>VILA BELA DA SANTÍSSIMA TRINDADE</item>
-        <item>VILA RICA</item>
-
-    </string-array><string name="hello_blank_fragment">Hello blank fragment</string><string-array name="lista_cidade_ES">
-        <item>AFONSO CLÁUDIO</item>
-        <item>ÁGUA DOCE DO NORTE</item>
-        <item>ÁGUIA BRANCA</item>
-        <item>ALEGRE</item>
-        <item>ALFREDO CHAVES</item>
-        <item>ALTO RIO NOVO</item>
-        <item>ANCHIETA</item>
-        <item>APIACÁ</item>
-        <item>ARACRUZ</item>
-        <item>ATILIO VIVACQUA</item>
-        <item>BAIXO GUANDU</item>
-        <item>BARRA DE SÃO FRANCISCO</item>
-        <item>BOA ESPERANÇA</item>
-        <item>BOM JESUS DO NORTE</item>
-        <item>BREJETUBA</item>
-        <item>CACHOEIRO DE ITAPEMIRIM</item>
-        <item>CARIACICA</item>
-        <item>CASTELO</item>
-        <item>COLATINA</item>
-        <item>CONCEIÇÃO DA BARRA</item>
-        <item>CONCEIÇÃO DO CASTELO</item>
-        <item>DIVINO DE SÃO LOURENÇO</item>
-        <item>DOMINGOS MARTINS</item>
-        <item>DORES DO RIO PRETO</item>
-        <item>ECOPORANGA</item>
-        <item>FUNDÃO</item>
-        <item>GOVERNADOR LINDENBERG</item>
-        <item>GUAÇUÍ</item>
-        <item>GUARAPARI</item>
-        <item>IBATIBA</item>
-        <item>IBIRAÇU</item>
-        <item>IBITIRAMA</item>
-        <item>ICONHA</item>
-        <item>IRUPI</item>
-        <item>ITAGUAÇU</item>
-        <item>ITAPEMIRIM</item>
-        <item>ITARANA</item>
-        <item>IÚNA</item>
-        <item>JAGUARÉ</item>
-        <item>JERÔNIMO MONTEIRO</item>
-        <item>JOÃO NEIVA</item>
-        <item>LARANJA DA TERRA</item>
-        <item>LINHARES</item>
-        <item>MANTENÓPOLIS</item>
-        <item>MARATAÍZES</item>
-        <item>MARECHAL FLORIANO</item>
-        <item>MARILÂNDIA</item>
-        <item>MIMOSO DO SUL</item>
-        <item>MONTANHA</item>
-        <item>MUCURICI</item>
-        <item>MUNIZ FREIRE</item>
-        <item>MUQUI</item>
-        <item>NOVA VENÉCIA</item>
-        <item>PANCAS</item>
-        <item>PEDRO CANÁRIO</item>
-        <item>PINHEIROS</item>
-        <item>PIÚMA</item>
-        <item>PONTO BELO</item>
-        <item>PRESIDENTE KENNEDY</item>
-        <item>RIO BANANAL</item>
-        <item>RIO NOVO DO SUL</item>
-        <item>SANTA LEOPOLDINA</item>
-        <item>SANTA MARIA DE JETIBÁ</item>
-        <item>SANTA TERESA</item>
-        <item>SÃO DOMINGOS DO NORTE</item>
-        <item>SÃO GABRIEL DA PALHA</item>
-        <item>SÃO JOSÉ DO CALÇADO</item>
-        <item>SÃO MATEUS</item>
-        <item>SÃO ROQUE DO CANAÃ</item>
-        <item>SERRA</item>
-        <item>SOORETAMA</item>
-        <item>VARGEM ALTA</item>
-        <item>VENDA NOVA DO IMIGRANTE</item>
-        <item>VIANA</item>
-        <item>VILA PAVÃO</item>
-        <item>VILA VALÉRIO</item>
-        <item>VILA VELHA</item>
-        <item>VITÓRIA</item>
-
-    </string-array><string-array name="lista_cidade_AL">
-        <item>ÁGUA BRANCA</item>
-        <item>ANADIA</item>
-        <item>ARAPIRACA</item>
-        <item>ATALAIA</item>
-        <item>BARRA DE SANTO ANTÔNIO</item>
-        <item>BARRA DE SÃO MIGUEL</item>
-        <item>BATALHA</item>
-        <item>BELÉM</item>
-        <item>BELO MONTE</item>
-        <item>BOCA DA MATA</item>
-        <item>BRANQUINHA</item>
-        <item>CACIMBINHAS</item>
-        <item>CAJUEIRO</item>
-        <item>CAMPESTRE</item>
-        <item>CAMPO ALEGRE</item>
-        <item>CAMPO GRANDE</item>
-        <item>CANAPI</item>
-        <item>CAPELA</item>
-        <item>CARNEIROS</item>
-        <item>CHÃ PRETA</item>
-        <item>COITÉ DO NÓIA</item>
-        <item>COLÔNIA LEOPOLDINA</item>
-        <item>COQUEIRO SECO</item>
-        <item>CORURIPE</item>
-        <item>CRAÍBAS</item>
-        <item>DELMIRO GOUVEIA</item>
-        <item>DOIS RIACHOS</item>
-        <item>ESTRELA DE ALAGOAS</item>
-        <item>FEIRA GRANDE</item>
-        <item>FELIZ DESERTO</item>
-        <item>FLEXEIRAS</item>
-        <item>GIRAU DO PONCIANO</item>
-        <item>IBATEGUARA</item>
-        <item>IGACI</item>
-        <item>IGREJA NOVA</item>
-        <item>INHAPI</item>
-        <item>JACARÉ DOS HOMENS</item>
-        <item>JACUÍPE</item>
-        <item>JAPARATINGA</item>
-        <item>JARAMATAIA</item>
-        <item>JEQUIÁ DA PRAIA</item>
-        <item>JOAQUIM GOMES</item>
-        <item>JUNDIÁ</item>
-        <item>JUNQUEIRO</item>
-        <item>LAGOA DA CANOA</item>
-        <item>LIMOEIRO DE ANADIA</item>
-        <item>MACEIÓ</item>
-        <item>MAJOR ISIDORO</item>
-        <item>MAR VERMELHO</item>
-        <item>MARAGOGI</item>
-        <item>MARAVILHA</item>
-        <item>MARECHAL DEODORO</item>
-        <item>MARIBONDO</item>
-        <item>MATA GRANDE</item>
-        <item>MATRIZ DE CAMARAGIBE</item>
-        <item>MESSIAS</item>
-        <item>MINADOR DO NEGRÃO</item>
-        <item>MONTEIRÓPOLIS</item>
-        <item>MURICI</item>
-        <item>NOVO LINO</item>
-        <item>OLHO DÁGUA DAS FLORES</item>
-        <item>OLHO DÁGUA DO CASADO</item>
-        <item>OLHO DÁGUA GRANDE</item>
-        <item>OLIVENÇA</item>
-        <item>OURO BRANCO</item>
-        <item>PALESTINA</item>
-        <item>PALMEIRA DOS ÍNDIOS</item>
-        <item>PÃO DE AÇÚCAR</item>
-        <item>PARICONHA</item>
-        <item>PARIPUEIRA</item>
-        <item>PASSO DE CAMARAGIBE</item>
-        <item>PAULO JACINTO</item>
-        <item>PENEDO</item>
-        <item>PIAÇABUÇU</item>
-        <item>PILAR</item>
-        <item>PINDOBA</item>
-        <item>PIRANHAS</item>
-        <item>POÇO DAS TRINCHEIRAS</item>
-        <item>PORTO CALVO</item>
-        <item>PORTO DE PEDRAS</item>
-        <item>PORTO REAL DO COLÉGIO</item>
-        <item>QUEBRANGULO</item>
-        <item>RIO LARGO</item>
-        <item>ROTEIRO</item>
-        <item>SANTA LUZIA DO NORTE</item>
-        <item>SANTANA DO IPANEMA</item>
-        <item>SANTANA DO MUNDAÚ</item>
-        <item>SÃO BRÁS</item>
-        <item>SÃO JOSÉ DA LAJE</item>
-        <item>SÃO JOSÉ DA TAPERA</item>
-        <item>SÃO LUÍS DO QUITUNDE</item>
-        <item>SÃO MIGUEL DOS CAMPOS</item>
-        <item>SÃO MIGUEL DOS MILAGRES</item>
-        <item>SÃO SEBASTIÃO</item>
-        <item>SATUBA</item>
-        <item>SENADOR RUI PALMEIRA</item>
-        <item>TANQUE DARCA</item>
-        <item>TAQUARANA</item>
-        <item>TEOTÔNIO VILELA</item>
-        <item>TRAIPU</item>
-        <item>UNIÃO DOS PALMARES</item>
-        <item>VIÇOSA</item>
-
-    </string-array><string-array name="lista_cidade_AM">
-        <item>ALVARÃES</item>
-        <item>AMATURÁ</item>
-        <item>ANAMÃ</item>
-        <item>ANORI</item>
-        <item>APUÍ</item>
-        <item>ATALAIA DO NORTE</item>
-        <item>AUTAZES</item>
-        <item>BARCELOS</item>
-        <item>BARREIRINHA</item>
-        <item>BENJAMIN CONSTANT</item>
-        <item>BERURI</item>
-        <item>BOA VISTA DO RAMOS</item>
-        <item>BOCA DO ACRE</item>
-        <item>BORBA</item>
-        <item>CAAPIRANGA</item>
-        <item>CANUTAMA</item>
-        <item>CARAUARI</item>
-        <item>CAREIRO</item>
-        <item>CAREIRO DA VÁRZEA</item>
-        <item>COARI</item>
-        <item>CODAJÁS</item>
-        <item>EIRUNEPÉ</item>
-        <item>ENVIRA</item>
-        <item>FONTE BOA</item>
-        <item>GUAJARÁ</item>
-        <item>HUMAITÁ</item>
-        <item>IPIXUNA</item>
-        <item>IRANDUBA</item>
-        <item>ITACOATIARA</item>
-        <item>ITAMARATI</item>
-        <item>ITAPIRANGA</item>
-        <item>JAPURÁ</item>
-        <item>JURUÁ</item>
-        <item>JUTAÍ</item>
-        <item>LÁBREA</item>
-        <item>MANACAPURU</item>
-        <item>MANAQUIRI</item>
-        <item>MANAUS</item>
-        <item>MANICORÉ</item>
-        <item>MARAÃ</item>
-        <item>MAUÉS</item>
-        <item>NHAMUNDÁ</item>
-        <item>NOVA OLINDA DO NORTE</item>
-        <item>NOVO AIRÃO</item>
-        <item>NOVO ARIPUANÃ</item>
-        <item>PARINTINS</item>
-        <item>PAUINI</item>
-        <item>PRESIDENTE FIGUEIREDO</item>
-        <item>RIO PRETO DA EVA</item>
-        <item>SANTA ISABEL DO RIO NEGRO</item>
-        <item>SANTO ANTÔNIO DO IÇÁ</item>
-        <item>SÃO GABRIEL DA CACHOEIRA</item>
-        <item>SÃO PAULO DE OLIVENÇA</item>
-        <item>SÃO SEBASTIÃO DO UATUMÃ</item>
-        <item>SILVES</item>
-        <item>TABATINGA</item>
-        <item>TAPAUÁ</item>
-        <item>TEFÉ</item>
-        <item>TONANTINS</item>
-        <item>UARINI</item>
-        <item>URUCARÁ</item>
-        <item>URUCURITUBA</item>
-    </string-array><string-array name="lista_cidade_AP">
-        <item>AMAPÁ</item>
-        <item>CALÇOENE</item>
-        <item>CUTIAS</item>
-        <item>FERREIRA GOMES</item>
-        <item>ITAUBAL</item>
-        <item>LARANJAL DO JARI</item>
-        <item>MACAPÁ</item>
-        <item>MAZAGÃO</item>
-        <item>OIAPOQUE</item>
-        <item>PEDRA BRANCA DO AMAPARI</item>
-        <item>PORTO GRANDE</item>
-        <item>PRACUÚBA</item>
-        <item>SANTANA</item>
-        <item>SERRA DO NAVIO</item>
-        <item>TARTARUGALZINHO</item>
-        <item>VITÓRIA DO JARI</item>
-    </string-array><string name="title_activity_selec_vacina">SelecVacinaActivity</string><string-array name="tipo_usuario">
-        <item>Pessoa Física</item>
-        <item>Pessoa Jurídica</item>
-    </string-array><string-array name="lista_cidade_RJ">
-        <item>ANGRA DOS REIS</item>
-        <item>APERIBÉ</item>
-        <item>ARARUAMA</item>
-        <item>AREAL</item>
-        <item>ARMAÇÃO DOS BÚZIOS</item>
-        <item>ARRAIAL DO CABO</item>
-        <item>BARRA DO PIRAÍ</item>
-        <item>BARRA MANSA</item>
-        <item>BELFORD ROXO</item>
-        <item>BOM JARDIM</item>
-        <item>BOM JESUS DO ITABAPOANA</item>
-        <item>CABO FRIO</item>
-        <item>CACHOEIRAS DE MACACU</item>
-        <item>CAMBUCI</item>
-        <item>CAMPOS DOS GOYTACAZES</item>
-        <item>CANTAGALO</item>
-        <item>CARAPEBUS</item>
-        <item>CARDOSO MOREIRA</item>
-        <item>CARMO</item>
-        <item>CASIMIRO DE ABREU</item>
-        <item>COMENDADOR LEVY GASPARIAN</item>
-        <item>CONCEIÇÃO DE MACABU</item>
-        <item>CORDEIRO</item>
-        <item>DUAS BARRAS</item>
-        <item>DUQUE DE CAXIAS</item>
-        <item>ENGENHEIRO PAULO DE FRONTIN</item>
-        <item>GUAPIMIRIM</item>
-        <item>IGUABA GRANDE</item>
-        <item>ITABORAÍ</item>
-        <item>ITAGUAÍ</item>
-        <item>ITALVA</item>
-        <item>ITAOCARA</item>
-        <item>ITAPERUNA</item>
-        <item>ITATIAIA</item>
-        <item>JAPERI</item>
-        <item>LAJE DO MURIAÉ</item>
-        <item>MACAÉ</item>
-        <item>MACUCO</item>
-        <item>MAGÉ</item>
-        <item>MANGARATIBA</item>
-        <item>MARICÁ</item>
-        <item>MENDES</item>
-        <item>MESQUITA</item>
-        <item>MIGUEL PEREIRA</item>
-        <item>MIRACEMA</item>
-        <item>NATIVIDADE</item>
-        <item>NILÓPOLIS</item>
-        <item>NITERÓI</item>
-        <item>NOVA FRIBURGO</item>
-        <item>NOVA IGUAÇU</item>
-        <item>PARACAMBI</item>
-        <item>PARAÍBA DO SUL</item>
-        <item>PARATY</item>
-        <item>PATY DO ALFERES</item>
-        <item>PETRÓPOLIS</item>
-        <item>PINHEIRAL</item>
-        <item>PIRAÍ</item>
-        <item>PORCIÚNCULA</item>
-        <item>PORTO REAL</item>
-        <item>QUATIS</item>
-        <item>QUEIMADOS</item>
-        <item>QUISSAMÃ</item>
-        <item>RESENDE</item>
-        <item>RIO BONITO</item>
-        <item>RIO CLARO</item>
-        <item>RIO DAS FLORES</item>
-        <item>RIO DAS OSTRAS</item>
-        <item>RIO DE JANEIRO</item>
-        <item>SANTA MARIA MADALENA</item>
-        <item>SANTO ANTÔNIO DE PÁDUA</item>
-        <item>SÃO FIDÉLIS</item>
-        <item>SÃO FRANCISCO DE ITABAPOANA</item>
-        <item>SÃO GONÇALO</item>
-        <item>SÃO JOÃO DA BARRA</item>
-        <item>SÃO JOÃO DE MERITI</item>
-        <item>SÃO JOSÉ DE UBÁ</item>
-        <item>SÃO JOSÉ DO VALE DO RIO PRETO</item>
-        <item>SÃO PEDRO DA ALDEIA</item>
-        <item>SÃO SEBASTIÃO DO ALTO</item>
-        <item>SAPUCAIA</item>
-        <item>SAQUAREMA</item>
-        <item>SEROPÉDICA</item>
-        <item>SILVA JARDIM</item>
-        <item>SUMIDOURO</item>
-        <item>TANGUÁ</item>
-        <item>TERESÓPOLIS</item>
-        <item>TRAJANO DE MORAES</item>
-        <item>TRÊS RIOS</item>
-        <item>VALENÇA</item>
-        <item>VARRE-SAI</item>
-        <item>VASSOURAS</item>
-        <item>VOLTA REDONDA</item>
-
-    </string-array><string-array name="lista_cidade_RO">
-        <item>ALTA FLORESTA DOESTE</item>
-        <item>ALTO ALEGRE DOS PARECIS</item>
-        <item>ALTO PARAÍSO</item>
-        <item>ALVORADA DOESTE</item>
-        <item>ARIQUEMES</item>
-        <item>BURITIS</item>
-        <item>CABIXI</item>
-        <item>CACAULÂNDIA</item>
-        <item>CACOAL</item>
-        <item>CAMPO NOVO DE RONDÔNIA</item>
-        <item>CANDEIAS DO JAMARI</item>
-        <item>CASTANHEIRAS</item>
-        <item>CEREJEIRAS</item>
-        <item>CHUPINGUAIA</item>
-        <item>COLORADO DO OESTE</item>
-        <item>CORUMBIARA</item>
-        <item>COSTA MARQUES</item>
-        <item>CUJUBIM</item>
-        <item>ESPIGÃO DOESTE</item>
-        <item>GOVERNADOR JORGE TEIXEIRA</item>
-        <item>GUAJARÁ-MIRIM</item>
-        <item>ITAPUÃ DO OESTE</item>
-        <item>JARU</item>
-        <item>JI-PARANÁ</item>
-        <item>MACHADINHO DOESTE</item>
-        <item>MINISTRO ANDREAZZA</item>
-        <item>MIRANTE DA SERRA</item>
-        <item>MONTE NEGRO</item>
-        <item>NOVA BRASILÂNDIA DOESTE</item>
-        <item>NOVA MAMORÉ</item>
-        <item>NOVA UNIÃO</item>
-        <item>NOVO HORIZONTE DO OESTE</item>
-        <item>OURO PRETO DO OESTE</item>
-        <item>PARECIS</item>
-        <item>PIMENTA BUENO</item>
-        <item>PIMENTEIRAS DO OESTE</item>
-        <item>PORTO VELHO</item>
-        <item>PRESIDENTE MÉDICI</item>
-        <item>PRIMAVERA DE RONDÔNIA</item>
-        <item>RIO CRESPO</item>
-        <item>ROLIM DE MOURA</item>
-        <item>SANTA LUZIA DOESTE</item>
-        <item>SÃO FELIPE DOESTE</item>
-        <item>SÃO FRANCISCO DO GUAPORÉ</item>
-        <item>SÃO MIGUEL DO GUAPORÉ</item>
-        <item>SERINGUEIRAS</item>
-        <item>TEIXEIRÓPOLIS</item>
-        <item>THEOBROMA</item>
-        <item>URUPÁ</item>
-        <item>VALE DO ANARI</item>
-        <item>VALE DO PARAÍSO</item>
-        <item>VILHENA</item>
-    </string-array><string-array name="lista_cidade_RN">
-        <item>ACARI</item>
-        <item>AÇU</item>
-        <item>AFONSO BEZERRA</item>
-        <item>ÁGUA NOVA</item>
-        <item>ALEXANDRIA</item>
-        <item>ALMINO AFONSO</item>
-        <item>ALTO DO RODRIGUES</item>
-        <item>ANGICOS</item>
-        <item>ANTÔNIO MARTINS</item>
-        <item>APODI</item>
-        <item>AREIA BRANCA</item>
-        <item>ARÊS</item>
-        <item>AUGUSTO SEVERO</item>
-        <item>BAÍA FORMOSA</item>
-        <item>BARAÚNA</item>
-        <item>BARCELONA</item>
-        <item>BENTO FERNANDES</item>
-        <item>BODÓ</item>
-        <item>BOM JESUS</item>
-        <item>BREJINHO</item>
-        <item>CAIÇARA DO NORTE</item>
-        <item>CAIÇARA DO RIO DO VENTO</item>
-        <item>CAICÓ</item>
-        <item>CAMPO REDONDO</item>
-        <item>CANGUARETAMA</item>
-        <item>CARAÚBAS</item>
-        <item>CARNAÚBA DOS DANTAS</item>
-        <item>CARNAUBAIS</item>
-        <item>CEARÁ-MIRIM</item>
-        <item>CERRO CORÁ</item>
-        <item>CORONEL EZEQUIEL</item>
-        <item>CORONEL JOÃO PESSOA</item>
-        <item>CRUZETA</item>
-        <item>CURRAIS NOVOS</item>
-        <item>DOUTOR SEVERIANO</item>
-        <item>ENCANTO</item>
-        <item>EQUADOR</item>
-        <item>ESPÍRITO SANTO</item>
-        <item>EXTREMOZ</item>
-        <item>FELIPE GUERRA</item>
-        <item>FERNANDO PEDROZA</item>
-        <item>FLORÂNIA</item>
-        <item>FRANCISCO DANTAS</item>
-        <item>FRUTUOSO GOMES</item>
-        <item>GALINHOS</item>
-        <item>GOIANINHA</item>
-        <item>GOVERNADOR DIX-SEPT ROSADO</item>
-        <item>GROSSOS</item>
-        <item>GUAMARÉ</item>
-        <item>IELMO MARINHO</item>
-        <item>IPANGUAÇU</item>
-        <item>IPUEIRA</item>
-        <item>ITAJÁ</item>
-        <item>ITAÚ</item>
-        <item>JAÇANÃ</item>
-        <item>JANDAÍRA</item>
-        <item>JANDUÍS</item>
-        <item>JANUÁRIO CICCO</item>
-        <item>JAPI</item>
-        <item>JARDIM DE ANGICOS</item>
-        <item>JARDIM DE PIRANHAS</item>
-        <item>JARDIM DO SERIDÓ</item>
-        <item>JOÃO CÂMARA</item>
-        <item>JOÃO DIAS</item>
-        <item>JOSÉ DA PENHA</item>
-        <item>JUCURUTU</item>
-        <item>JUNDIÁ</item>
-        <item>LAGOA DANTA</item>
-        <item>LAGOA DE PEDRAS</item>
-        <item>LAGOA DE VELHOS</item>
-        <item>LAGOA NOVA</item>
-        <item>LAGOA SALGADA</item>
-        <item>LAJES</item>
-        <item>LAJES PINTADAS</item>
-        <item>LUCRÉCIA</item>
-        <item>LUÍS GOMES</item>
-        <item>MACAÍBA</item>
-        <item>MACAU</item>
-        <item>MAJOR SALES</item>
-        <item>MARCELINO VIEIRA</item>
-        <item>MARTINS</item>
-        <item>MAXARANGUAPE</item>
-        <item>MESSIAS TARGINO</item>
-        <item>MONTANHAS</item>
-        <item>MONTE ALEGRE</item>
-        <item>MONTE DAS GAMELEIRAS</item>
-        <item>MOSSORÓ</item>
-        <item>NATAL</item>
-        <item>NÍSIA FLORESTA</item>
-        <item>NOVA CRUZ</item>
-        <item>OLHO-DÁGUA DO BORGES</item>
-        <item>OURO BRANCO</item>
-        <item>PARANÁ</item>
-        <item>PARAÚ</item>
-        <item>PARAZINHO</item>
-        <item>PARELHAS</item>
-        <item>PARNAMIRIM</item>
-        <item>PASSA E FICA</item>
-        <item>PASSAGEM</item>
-        <item>PATU</item>
-        <item>PAU DOS FERROS</item>
-        <item>PEDRA GRANDE</item>
-        <item>PEDRA PRETA</item>
-        <item>PEDRO AVELINO</item>
-        <item>PEDRO VELHO</item>
-        <item>PENDÊNCIAS</item>
-        <item>PILÕES</item>
-        <item>POÇO BRANCO</item>
-        <item>PORTALEGRE</item>
-        <item>PORTO DO MANGUE</item>
-        <item>PRESIDENTE JUSCELINO</item>
-        <item>PUREZA</item>
-        <item>RAFAEL FERNANDES</item>
-        <item>RAFAEL GODEIRO</item>
-        <item>RIACHO DA CRUZ</item>
-        <item>RIACHO DE SANTANA</item>
-        <item>RIACHUELO</item>
-        <item>RIO DO FOGO</item>
-        <item>RODOLFO FERNANDES</item>
-        <item>RUY BARBOSA</item>
-        <item>SANTA CRUZ</item>
-        <item>SANTA MARIA</item>
-        <item>SANTANA DO MATOS</item>
-        <item>SANTANA DO SERIDÓ</item>
-        <item>SANTO ANTÔNIO</item>
-        <item>SÃO BENTO DO NORTE</item>
-        <item>SÃO BENTO DO TRAIRÍ</item>
-        <item>SÃO FERNANDO</item>
-        <item>SÃO FRANCISCO DO OESTE</item>
-        <item>SÃO GONÇALO DO AMARANTE</item>
-        <item>SÃO JOÃO DO SABUGI</item>
-        <item>SÃO JOSÉ DE MIPIBU</item>
-        <item>SÃO JOSÉ DO CAMPESTRE</item>
-        <item>SÃO JOSÉ DO SERIDÓ</item>
-        <item>SÃO MIGUEL</item>
-        <item>SÃO MIGUEL DO GOSTOSO</item>
-        <item>SÃO PAULO DO POTENGI</item>
-        <item>SÃO PEDRO</item>
-        <item>SÃO RAFAEL</item>
-        <item>SÃO TOMÉ</item>
-        <item>SÃO VICENTE</item>
-        <item>SENADOR ELÓI DE SOUZA</item>
-        <item>SENADOR GEORGINO AVELINO</item>
-        <item>SERRA DE SÃO BENTO</item>
-        <item>SERRA DO MEL</item>
-        <item>SERRA NEGRA DO NORTE</item>
-        <item>SERRINHA</item>
-        <item>SERRINHA DOS PINTOS</item>
-        <item>SEVERIANO MELO</item>
-        <item>SÍTIO NOVO</item>
-        <item>TABOLEIRO GRANDE</item>
-        <item>TAIPU</item>
-        <item>TANGARÁ</item>
-        <item>TENENTE ANANIAS</item>
-        <item>TENENTE LAURENTINO CRUZ</item>
-        <item>TIBAU</item>
-        <item>TIBAU DO SUL</item>
-        <item>TIMBAÚBA DOS BATISTAS</item>
-        <item>TOUROS</item>
-        <item>TRIUNFO POTIGUAR</item>
-        <item>UMARIZAL</item>
-        <item>UPANEMA</item>
-        <item>VÁRZEA</item>
-        <item>VENHA-VER</item>
-        <item>VERA CRUZ</item>
-        <item>VIÇOSA</item>
-        <item>VILA FLOR</item>
-
-    </string-array><string-array name="lista_cidade_RS">
-        <item>ACEGUÁ</item>
-        <item>ÁGUA SANTA</item>
-        <item>AGUDO</item>
-        <item>AJURICABA</item>
-        <item>ALECRIM</item>
-        <item>ALEGRETE</item>
-        <item>ALEGRIA</item>
-        <item>ALMIRANTE TAMANDARÉ DO SUL</item>
-        <item>ALPESTRE</item>
-        <item>ALTO ALEGRE</item>
-        <item>ALTO FELIZ</item>
-        <item>ALVORADA</item>
-        <item>AMARAL FERRADOR</item>
-        <item>AMETISTA DO SUL</item>
-        <item>ANDRÉ DA ROCHA</item>
-        <item>ANTA GORDA</item>
-        <item>ANTÔNIO PRADO</item>
-        <item>ARAMBARÉ</item>
-        <item>ARARICÁ</item>
-        <item>ARATIBA</item>
-        <item>ARROIO DO MEIO</item>
-        <item>ARROIO DO PADRE</item>
-        <item>ARROIO DO SAL</item>
-        <item>ARROIO DO TIGRE</item>
-        <item>ARROIO DOS RATOS</item>
-        <item>ARROIO GRANDE</item>
-        <item>ARVOREZINHA</item>
-        <item>AUGUSTO PESTANA</item>
-        <item>ÁUREA</item>
-        <item>BAGÉ</item>
-        <item>BALNEÁRIO PINHAL</item>
-        <item>BARÃO</item>
-        <item>BARÃO DE COTEGIPE</item>
-        <item>BARÃO DO TRIUNFO</item>
-        <item>BARRA DO GUARITA</item>
-        <item>BARRA DO QUARAÍ</item>
-        <item>BARRA DO RIBEIRO</item>
-        <item>BARRA DO RIO AZUL</item>
-        <item>BARRA FUNDA</item>
-        <item>BARRACÃO</item>
-        <item>BARROS CASSAL</item>
-        <item>BENJAMIN CONSTANT DO SUL</item>
-        <item>BENTO GONÇALVES</item>
-        <item>BOA VISTA DAS MISSÕES</item>
-        <item>BOA VISTA DO BURICÁ</item>
-        <item>BOA VISTA DO CADEADO</item>
-        <item>BOA VISTA DO INCRA</item>
-        <item>BOA VISTA DO SUL</item>
-        <item>BOM JESUS</item>
-        <item>BOM PRINCÍPIO</item>
-        <item>BOM PROGRESSO</item>
-        <item>BOM RETIRO DO SUL</item>
-        <item>BOQUEIRÃO DO LEÃO</item>
-        <item>BOSSOROCA</item>
-        <item>BOZANO</item>
-        <item>BRAGA</item>
-        <item>BROCHIER</item>
-        <item>BUTIÁ</item>
-        <item>CAÇAPAVA DO SUL</item>
-        <item>CACEQUI</item>
-        <item>CACHOEIRA DO SUL</item>
-        <item>CACHOEIRINHA</item>
-        <item>CACIQUE DOBLE</item>
-        <item>CAIBATÉ</item>
-        <item>CAIÇARA</item>
-        <item>CAMAQUÃ</item>
-        <item>CAMARGO</item>
-        <item>CAMBARÁ DO SUL</item>
-        <item>CAMPESTRE DA SERRA</item>
-        <item>CAMPINA DAS MISSÕES</item>
-        <item>CAMPINAS DO SUL</item>
-        <item>CAMPO BOM</item>
-        <item>CAMPO NOVO</item>
-        <item>CAMPOS BORGES</item>
-        <item>CANDELÁRIA</item>
-        <item>CÂNDIDO GODÓI</item>
-        <item>CANDIOTA</item>
-        <item>CANELA</item>
-        <item>CANGUÇU</item>
-        <item>CANOAS</item>
-        <item>CANUDOS DO VALE</item>
-        <item>CAPÃO BONITO DO SUL</item>
-        <item>CAPÃO DA CANOA</item>
-        <item>CAPÃO DO CIPÓ</item>
-        <item>CAPÃO DO LEÃO</item>
-        <item>CAPELA DE SANTANA</item>
-        <item>CAPITÃO</item>
-        <item>CAPIVARI DO SUL</item>
-        <item>CARAÁ</item>
-        <item>CARAZINHO</item>
-        <item>CARLOS BARBOSA</item>
-        <item>CARLOS GOMES</item>
-        <item>CASCA</item>
-        <item>CASEIROS</item>
-        <item>CATUÍPE</item>
-        <item>CAXIAS DO SUL</item>
-        <item>CENTENÁRIO</item>
-        <item>CERRITO</item>
-        <item>CERRO BRANCO</item>
-        <item>CERRO GRANDE</item>
-        <item>CERRO GRANDE DO SUL</item>
-        <item>CERRO LARGO</item>
-        <item>CHAPADA</item>
-        <item>CHARQUEADAS</item>
-        <item>CHARRUA</item>
-        <item>CHIAPETTA</item>
-        <item>CHUÍ</item>
-        <item>CHUVISCA</item>
-        <item>CIDREIRA</item>
-        <item>CIRÍACO</item>
-        <item>COLINAS</item>
-        <item>COLORADO</item>
-        <item>CONDOR</item>
-        <item>CONSTANTINA</item>
-        <item>COQUEIRO BAIXO</item>
-        <item>COQUEIROS DO SUL</item>
-        <item>CORONEL BARROS</item>
-        <item>CORONEL BICACO</item>
-        <item>CORONEL PILAR</item>
-        <item>COTIPORÃ</item>
-        <item>COXILHA</item>
-        <item>CRISSIUMAL</item>
-        <item>CRISTAL</item>
-        <item>CRISTAL DO SUL</item>
-        <item>CRUZ ALTA</item>
-        <item>CRUZALTENSE</item>
-        <item>CRUZEIRO DO SUL</item>
-        <item>DAVID CANABARRO</item>
-        <item>DERRUBADAS</item>
-        <item>DEZESSEIS DE NOVEMBRO</item>
-        <item>DILERMANDO DE AGUIAR</item>
-        <item>DOIS IRMÃOS</item>
-        <item>DOIS IRMÃOS DAS MISSÕES</item>
-        <item>DOIS LAJEADOS</item>
-        <item>DOM FELICIANO</item>
-        <item>DOM PEDRITO</item>
-        <item>DOM PEDRO DE ALCÂNTARA</item>
-        <item>DONA FRANCISCA</item>
-        <item>DOUTOR MAURÍCIO CARDOSO</item>
-        <item>DOUTOR RICARDO</item>
-        <item>ELDORADO DO SUL</item>
-        <item>ENCANTADO</item>
-        <item>ENCRUZILHADA DO SUL</item>
-        <item>ENGENHO VELHO</item>
-        <item>ENTRE RIOS DO SUL</item>
-        <item>ENTRE-IJUÍS</item>
-        <item>EREBANGO</item>
-        <item>ERECHIM</item>
-        <item>ERNESTINA</item>
-        <item>ERVAL GRANDE</item>
-        <item>ERVAL SECO</item>
-        <item>ESMERALDA</item>
-        <item>ESPERANÇA DO SUL</item>
-        <item>ESPUMOSO</item>
-        <item>ESTAÇÃO</item>
-        <item>ESTÂNCIA VELHA</item>
-        <item>ESTEIO</item>
-        <item>ESTRELA</item>
-        <item>ESTRELA VELHA</item>
-        <item>EUGÊNIO DE CASTRO</item>
-        <item>FAGUNDES VARELA</item>
-        <item>FARROUPILHA</item>
-        <item>FAXINAL DO SOTURNO</item>
-        <item>FAXINALZINHO</item>
-        <item>FAZENDA VILANOVA</item>
-        <item>FELIZ</item>
-        <item>FLORES DA CUNHA</item>
-        <item>FLORIANO PEIXOTO</item>
-        <item>FONTOURA XAVIER</item>
-        <item>FORMIGUEIRO</item>
-        <item>FORQUETINHA</item>
-        <item>FORTALEZA DOS VALOS</item>
-        <item>FREDERICO WESTPHALEN</item>
-        <item>GARIBALDI</item>
-        <item>GARRUCHOS</item>
-        <item>GAURAMA</item>
-        <item>GENERAL CÂMARA</item>
-        <item>GENTIL</item>
-        <item>GETÚLIO VARGAS</item>
-        <item>GIRUÁ</item>
-        <item>GLORINHA</item>
-        <item>GRAMADO</item>
-        <item>GRAMADO DOS LOUREIROS</item>
-        <item>GRAMADO XAVIER</item>
-        <item>GRAVATAÍ</item>
-        <item>GUABIJU</item>
-        <item>GUAÍBA</item>
-        <item>GUAPORÉ</item>
-        <item>GUARANI DAS MISSÕES</item>
-        <item>HARMONIA</item>
-        <item>HERVAL</item>
-        <item>HERVEIRAS</item>
-        <item>HORIZONTINA</item>
-        <item>HULHA NEGRA</item>
-        <item>HUMAITÁ</item>
-        <item>IBARAMA</item>
-        <item>IBIAÇÁ</item>
-        <item>IBIRAIARAS</item>
-        <item>IBIRAPUITÃ</item>
-        <item>IBIRUBÁ</item>
-        <item>IGREJINHA</item>
-        <item>IJUÍ</item>
-        <item>ILÓPOLIS</item>
-        <item>IMBÉ</item>
-        <item>IMIGRANTE</item>
-        <item>INDEPENDÊNCIA</item>
-        <item>INHACORÁ</item>
-        <item>IPÊ</item>
-        <item>IPIRANGA DO SUL</item>
-        <item>IRAÍ</item>
-        <item>ITAARA</item>
-        <item>ITACURUBI</item>
-        <item>ITAPUCA</item>
-        <item>ITAQUI</item>
-        <item>ITATI</item>
-        <item>ITATIBA DO SUL</item>
-        <item>IVORÁ</item>
-        <item>IVOTI</item>
-        <item>JABOTICABA</item>
-        <item>JACUIZINHO</item>
-        <item>JACUTINGA</item>
-        <item>JAGUARÃO</item>
-        <item>JAGUARI</item>
-        <item>JAQUIRANA</item>
-        <item>JARI</item>
-        <item>JÓIA</item>
-        <item>JÚLIO DE CASTILHOS</item>
-        <item>LAGOA BONITA DO SUL</item>
-        <item>LAGOA DOS TRÊS CANTOS</item>
-        <item>LAGOA VERMELHA</item>
-        <item>LAGOÃO</item>
-        <item>LAJEADO</item>
-        <item>LAJEADO DO BUGRE</item>
-        <item>LAVRAS DO SUL</item>
-        <item>LIBERATO SALZANO</item>
-        <item>LINDOLFO COLLOR</item>
-        <item>LINHA NOVA</item>
-        <item>MAÇAMBARÁ</item>
-        <item>MACHADINHO</item>
-        <item>MAMPITUBA</item>
-        <item>MANOEL VIANA</item>
-        <item>MAQUINÉ</item>
-        <item>MARATÁ</item>
-        <item>MARAU</item>
-        <item>MARCELINO RAMOS</item>
-        <item>MARIANA PIMENTEL</item>
-        <item>MARIANO MORO</item>
-        <item>MARQUES DE SOUZA</item>
-        <item>MATA</item>
-        <item>MATO CASTELHANO</item>
-        <item>MATO LEITÃO</item>
-        <item>MATO QUEIMADO</item>
-        <item>MAXIMILIANO DE ALMEIDA</item>
-        <item>MINAS DO LEÃO</item>
-        <item>MIRAGUAÍ</item>
-        <item>MONTAURI</item>
-        <item>MONTE ALEGRE DOS CAMPOS</item>
-        <item>MONTE BELO DO SUL</item>
-        <item>MONTENEGRO</item>
-        <item>MORMAÇO</item>
-        <item>MORRINHOS DO SUL</item>
-        <item>MORRO REDONDO</item>
-        <item>MORRO REUTER</item>
-        <item>MOSTARDAS</item>
-        <item>MUÇUM</item>
-        <item>MUITOS CAPÕES</item>
-        <item>MULITERNO</item>
-        <item>NÃO-ME-TOQUE</item>
-        <item>NICOLAU VERGUEIRO</item>
-        <item>NONOAI</item>
-        <item>NOVA ALVORADA</item>
-        <item>NOVA ARAÇÁ</item>
-        <item>NOVA BASSANO</item>
-        <item>NOVA BOA VISTA</item>
-        <item>NOVA BRÉSCIA</item>
-        <item>NOVA CANDELÁRIA</item>
-        <item>NOVA ESPERANÇA DO SUL</item>
-        <item>NOVA HARTZ</item>
-        <item>NOVA PÁDUA</item>
-        <item>NOVA PALMA</item>
-        <item>NOVA PETRÓPOLIS</item>
-        <item>NOVA PRATA</item>
-        <item>NOVA RAMADA</item>
-        <item>NOVA ROMA DO SUL</item>
-        <item>NOVA SANTA RITA</item>
-        <item>NOVO BARREIRO</item>
-        <item>NOVO CABRAIS</item>
-        <item>NOVO HAMBURGO</item>
-        <item>NOVO MACHADO</item>
-        <item>NOVO TIRADENTES</item>
-        <item>NOVO XINGU</item>
-        <item>OSÓRIO</item>
-        <item>PAIM FILHO</item>
-        <item>PALMARES DO SUL</item>
-        <item>PALMEIRA DAS MISSÕES</item>
-        <item>PALMITINHO</item>
-        <item>PANAMBI</item>
-        <item>PANTANO GRANDE</item>
-        <item>PARAÍ</item>
-        <item>PARAÍSO DO SUL</item>
-        <item>PARECI NOVO</item>
-        <item>PAROBÉ</item>
-        <item>PASSA SETE</item>
-        <item>PASSO DO SOBRADO</item>
-        <item>PASSO FUNDO</item>
-        <item>PAULO BENTO</item>
-        <item>PAVERAMA</item>
-        <item>PEDRAS ALTAS</item>
-        <item>PEDRO OSÓRIO</item>
-        <item>PEJUÇARA</item>
-        <item>PELOTAS</item>
-        <item>PICADA CAFÉ</item>
-        <item>PINHAL</item>
-        <item>PINHAL DA SERRA</item>
-        <item>PINHAL GRANDE</item>
-        <item>PINHEIRINHO DO VALE</item>
-        <item>PINHEIRO MACHADO</item>
-        <item>PIRAPÓ</item>
-        <item>PIRATINI</item>
-        <item>PLANALTO</item>
-        <item>POÇO DAS ANTAS</item>
-        <item>PONTÃO</item>
-        <item>PONTE PRETA</item>
-        <item>PORTÃO</item>
-        <item>PORTO ALEGRE</item>
-        <item>PORTO LUCENA</item>
-        <item>PORTO MAUÁ</item>
-        <item>PORTO VERA CRUZ</item>
-        <item>PORTO XAVIER</item>
-        <item>POUSO NOVO</item>
-        <item>PRESIDENTE LUCENA</item>
-        <item>PROGRESSO</item>
-        <item>PROTÁSIO ALVES</item>
-        <item>PUTINGA</item>
-        <item>QUARAÍ</item>
-        <item>QUATRO IRMÃOS</item>
-        <item>QUEVEDOS</item>
-        <item>QUINZE DE NOVEMBRO</item>
-        <item>REDENTORA</item>
-        <item>RELVADO</item>
-        <item>RESTINGA SECA</item>
-        <item>RIO DOS ÍNDIOS</item>
-        <item>RIO GRANDE</item>
-        <item>RIO PARDO</item>
-        <item>RIOZINHO</item>
-        <item>ROCA SALES</item>
-        <item>RODEIO BONITO</item>
-        <item>ROLADOR</item>
-        <item>ROLANTE</item>
-        <item>RONDA ALTA</item>
-        <item>RONDINHA</item>
-        <item>ROQUE GONZALES</item>
-        <item>ROSÁRIO DO SUL</item>
-        <item>SAGRADA FAMÍLIA</item>
-        <item>SALDANHA MARINHO</item>
-        <item>SALTO DO JACUÍ</item>
-        <item>SALVADOR DAS MISSÕES</item>
-        <item>SALVADOR DO SUL</item>
-        <item>SANANDUVA</item>
-        <item>SANTA BÁRBARA DO SUL</item>
-        <item>SANTA CECÍLIA DO SUL</item>
-        <item>SANTA CLARA DO SUL</item>
-        <item>SANTA CRUZ DO SUL</item>
-        <item>SANTA MARGARIDA DO SUL</item>
-        <item>SANTA MARIA</item>
-        <item>SANTA MARIA DO HERVAL</item>
-        <item>SANTA ROSA</item>
-        <item>SANTA TEREZA</item>
-        <item>SANTA VITÓRIA DO PALMAR</item>
-        <item>SANTANA DA BOA VISTA</item>
-        <item>SANTANA DO LIVRAMENTO</item>
-        <item>SANTIAGO</item>
-        <item>SANTO ÂNGELO</item>
-        <item>SANTO ANTÔNIO DA PATRULHA</item>
-        <item>SANTO ANTÔNIO DAS MISSÕES</item>
-        <item>SANTO ANTÔNIO DO PALMA</item>
-        <item>SANTO ANTÔNIO DO PLANALTO</item>
-        <item>SANTO AUGUSTO</item>
-        <item>SANTO CRISTO</item>
-        <item>SANTO EXPEDITO DO SUL</item>
-        <item>SÃO BORJA</item>
-        <item>SÃO DOMINGOS DO SUL</item>
-        <item>SÃO FRANCISCO DE ASSIS</item>
-        <item>SÃO FRANCISCO DE PAULA</item>
-        <item>SÃO GABRIEL</item>
-        <item>SÃO JERÔNIMO</item>
-        <item>SÃO JOÃO DA URTIGA</item>
-        <item>SÃO JOÃO DO POLÊSINE</item>
-        <item>SÃO JORGE</item>
-        <item>SÃO JOSÉ DAS MISSÕES</item>
-        <item>SÃO JOSÉ DO HERVAL</item>
-        <item>SÃO JOSÉ DO HORTÊNCIO</item>
-        <item>SÃO JOSÉ DO INHACORÁ</item>
-        <item>SÃO JOSÉ DO NORTE</item>
-        <item>SÃO JOSÉ DO OURO</item>
-        <item>SÃO JOSÉ DO SUL</item>
-        <item>SÃO JOSÉ DOS AUSENTES</item>
-        <item>SÃO LEOPOLDO</item>
-        <item>SÃO LOURENÇO DO SUL</item>
-        <item>SÃO LUIZ GONZAGA</item>
-        <item>SÃO MARCOS</item>
-        <item>SÃO MARTINHO</item>
-        <item>SÃO MARTINHO DA SERRA</item>
-        <item>SÃO MIGUEL DAS MISSÕES</item>
-        <item>SÃO NICOLAU</item>
-        <item>SÃO PAULO DAS MISSÕES</item>
-        <item>SÃO PEDRO DA SERRA</item>
-        <item>SÃO PEDRO DAS MISSÕES</item>
-        <item>SÃO PEDRO DO BUTIÁ</item>
-        <item>SÃO PEDRO DO SUL</item>
-        <item>SÃO SEBASTIÃO DO CAÍ</item>
-        <item>SÃO SEPÉ</item>
-        <item>SÃO VALENTIM</item>
-        <item>SÃO VALENTIM DO SUL</item>
-        <item>SÃO VALÉRIO DO SUL</item>
-        <item>SÃO VENDELINO</item>
-        <item>SÃO VICENTE DO SUL</item>
-        <item>SAPIRANGA</item>
-        <item>SAPUCAIA DO SUL</item>
-        <item>SARANDI</item>
-        <item>SEBERI</item>
-        <item>SEDE NOVA</item>
-        <item>SEGREDO</item>
-        <item>SELBACH</item>
-        <item>SENADOR SALGADO FILHO</item>
-        <item>SENTINELA DO SUL</item>
-        <item>SERAFINA CORRÊA</item>
-        <item>SÉRIO</item>
-        <item>SERTÃO</item>
-        <item>SERTÃO SANTANA</item>
-        <item>SETE DE SETEMBRO</item>
-        <item>SEVERIANO DE ALMEIDA</item>
-        <item>SILVEIRA MARTINS</item>
-        <item>SINIMBU</item>
-        <item>SOBRADINHO</item>
-        <item>SOLEDADE</item>
-        <item>TABAÍ</item>
-        <item>TAPEJARA</item>
-        <item>TAPERA</item>
-        <item>TAPES</item>
-        <item>TAQUARA</item>
-        <item>TAQUARI</item>
-        <item>TAQUARUÇU DO SUL</item>
-        <item>TAVARES</item>
-        <item>TENENTE PORTELA</item>
-        <item>TERRA DE AREIA</item>
-        <item>TEUTÔNIA</item>
-        <item>TIO HUGO</item>
-        <item>TIRADENTES DO SUL</item>
-        <item>TOROPI</item>
-        <item>TORRES</item>
-        <item>TRAMANDAÍ</item>
-        <item>TRAVESSEIRO</item>
-        <item>TRÊS ARROIOS</item>
-        <item>TRÊS CACHOEIRAS</item>
-        <item>TRÊS COROAS</item>
-        <item>TRÊS DE MAIO</item>
-        <item>TRÊS FORQUILHAS</item>
-        <item>TRÊS PALMEIRAS</item>
-        <item>TRÊS PASSOS</item>
-        <item>TRINDADE DO SUL</item>
-        <item>TRIUNFO</item>
-        <item>TUCUNDUVA</item>
-        <item>TUNAS</item>
-        <item>TUPANCI DO SUL</item>
-        <item>TUPANCIRETÃ</item>
-        <item>TUPANDI</item>
-        <item>TUPARENDI</item>
-        <item>TURUÇU</item>
-        <item>UBIRETAMA</item>
-        <item>UNIÃO DA SERRA</item>
-        <item>UNISTALDA</item>
-        <item>URUGUAIANA</item>
-        <item>VACARIA</item>
-        <item>VALE DO SOL</item>
-        <item>VALE REAL</item>
-        <item>VALE VERDE</item>
-        <item>VANINI</item>
-        <item>VENÂNCIO AIRES</item>
-        <item>VERA CRUZ</item>
-        <item>VERANÓPOLIS</item>
-        <item>VESPASIANO CORREA</item>
-        <item>VIADUTOS</item>
-        <item>VIAMÃO</item>
-        <item>VICENTE DUTRA</item>
-        <item>VICTOR GRAEFF</item>
-        <item>VILA FLORES</item>
-        <item>VILA LÂNGARO</item>
-        <item>VILA MARIA</item>
-        <item>VILA NOVA DO SUL</item>
-        <item>VISTA ALEGRE</item>
-        <item>VISTA ALEGRE DO PRATA</item>
-        <item>VISTA GAÚCHA</item>
-        <item>VITÓRIA DAS MISSÕES</item>
-        <item>WESTFALIA</item>
-        <item>XANGRI-LÁ</item>
-
-    </string-array><string-array name="lista_cidade_BA">
-        <item>ABAÍRA</item>
-        <item>ABARÉ</item>
-        <item>ACAJUTIBA</item>
-        <item>ADUSTINA</item>
-        <item>ÁGUA FRIA</item>
-        <item>AIQUARA</item>
-        <item>ALAGOINHAS</item>
-        <item>ALCOBAÇA</item>
-        <item>ALMADINA</item>
-        <item>AMARGOSA</item>
-        <item>AMÉLIA RODRIGUES</item>
-        <item>AMÉRICA DOURADA</item>
-        <item>ANAGÉ</item>
-        <item>ANDARAÍ</item>
-        <item>ANDORINHA</item>
-        <item>ANGICAL</item>
-        <item>ANGUERA</item>
-        <item>ANTAS</item>
-        <item>ANTÔNIO CARDOSO</item>
-        <item>ANTÔNIO GONÇALVES</item>
-        <item>APORÁ</item>
-        <item>APUAREMA</item>
-        <item>ARAÇAS</item>
-        <item>ARACATU</item>
-        <item>ARACI</item>
-        <item>ARAMARI</item>
-        <item>ARATACA</item>
-        <item>ARATUÍPE</item>
-        <item>AURELINO LEAL</item>
-        <item>BAIANÓPOLIS</item>
-        <item>BAIXA GRANDE</item>
-        <item>BANZAÊ</item>
-        <item>BARRA</item>
-        <item>BARRA DA ESTIVA</item>
-        <item>BARRA DO CHOÇA</item>
-        <item>BARRA DO MENDES</item>
-        <item>BARRA DO ROCHA</item>
-        <item>BARREIRAS</item>
-        <item>BARRO ALTO</item>
-        <item>BARRO PRETO</item>
-        <item>BARROCAS</item>
-        <item>BELMONTE</item>
-        <item>BELO CAMPO</item>
-        <item>BIRITINGA</item>
-        <item>BOA NOVA</item>
-        <item>BOA VISTA DO TUPIM</item>
-        <item>BOM JESUS DA LAPA</item>
-        <item>BOM JESUS DA SERRA</item>
-        <item>BONINAL</item>
-        <item>BONITO</item>
-        <item>BOQUIRA</item>
-        <item>BOTUPORÃ</item>
-        <item>BREJÕES</item>
-        <item>BREJOLÂNDIA</item>
-        <item>BROTAS DE MACAÚBAS</item>
-        <item>BRUMADO</item>
-        <item>BUERAREMA</item>
-        <item>BURITIRAMA</item>
-        <item>CAATIBA</item>
-        <item>CABACEIRAS DO PARAGUAÇU</item>
-        <item>CACHOEIRA</item>
-        <item>CACULÉ</item>
-        <item>CAÉM</item>
-        <item>CAETANOS</item>
-        <item>CAETITÉ</item>
-        <item>CAFARNAUM</item>
-        <item>CAIRU</item>
-        <item>CALDEIRÃO GRANDE</item>
-        <item>CAMACAN</item>
-        <item>CAMAÇARI</item>
-        <item>CAMAMU</item>
-        <item>CAMPO ALEGRE DE LOURDES</item>
-        <item>CAMPO FORMOSO</item>
-        <item>CANÁPOLIS</item>
-        <item>CANARANA</item>
-        <item>CANAVIEIRAS</item>
-        <item>CANDEAL</item>
-        <item>CANDEIAS</item>
-        <item>CANDIBA</item>
-        <item>CÂNDIDO SALES</item>
-        <item>CANSANÇÃO</item>
-        <item>CANUDOS</item>
-        <item>CAPELA DO ALTO ALEGRE</item>
-        <item>CAPIM GROSSO</item>
-        <item>CARAÍBAS</item>
-        <item>CARAVELAS</item>
-        <item>CARDEAL DA SILVA</item>
-        <item>CARINHANHA</item>
-        <item>CASA NOVA</item>
-        <item>CASTRO ALVES</item>
-        <item>CATOLÂNDIA</item>
-        <item>CATU</item>
-        <item>CATURAMA</item>
-        <item>CENTRAL</item>
-        <item>CHORROCHÓ</item>
-        <item>CÍCERO DANTAS</item>
-        <item>CIPÓ</item>
-        <item>COARACI</item>
-        <item>COCOS</item>
-        <item>CONCEIÇÃO DA FEIRA</item>
-        <item>CONCEIÇÃO DO ALMEIDA</item>
-        <item>CONCEIÇÃO DO COITÉ</item>
-        <item>CONCEIÇÃO DO JACUÍPE</item>
-        <item>CONDE</item>
-        <item>CONDEÚBA</item>
-        <item>CONTENDAS DO SINCORÁ</item>
-        <item>CORAÇÃO DE MARIA</item>
-        <item>CORDEIROS</item>
-        <item>CORIBE</item>
-        <item>CORONEL JOÃO SÁ</item>
-        <item>CORRENTINA</item>
-        <item>COTEGIPE</item>
-        <item>CRAVOLÂNDIA</item>
-        <item>CRISÓPOLIS</item>
-        <item>CRISTÓPOLIS</item>
-        <item>CRUZ DAS ALMAS</item>
-        <item>CURAÇÁ</item>
-        <item>DÁRIO MEIRA</item>
-        <item>DIAS DÁVILA</item>
-        <item>DOM BASÍLIO</item>
-        <item>DOM MACEDO COSTA</item>
-        <item>ELÍSIO MEDRADO</item>
-        <item>ENCRUZILHADA</item>
-        <item>ENTRE RIOS</item>
-        <item>ÉRICO CARDOSO</item>
-        <item>ESPLANADA</item>
-        <item>EUCLIDES DA CUNHA</item>
-        <item>EUNÁPOLIS</item>
-        <item>FÁTIMA</item>
-        <item>FEIRA DA MATA</item>
-        <item>FEIRA DE SANTANA</item>
-        <item>FILADÉLFIA</item>
-        <item>FIRMINO ALVES</item>
-        <item>FLORESTA AZUL</item>
-        <item>FORMOSA DO RIO PRETO</item>
-        <item>GANDU</item>
-        <item>GAVIÃO</item>
-        <item>GENTIO DO OURO</item>
-        <item>GLÓRIA</item>
-        <item>GONGOGI</item>
-        <item>GOVERNADOR MANGABEIRA</item>
-        <item>GUAJERU</item>
-        <item>GUANAMBI</item>
-        <item>GUARATINGA</item>
-        <item>HELIÓPOLIS</item>
-        <item>IAÇU</item>
-        <item>IBIASSUCÊ</item>
-        <item>IBICARAÍ</item>
-        <item>IBICOARA</item>
-        <item>IBICUÍ</item>
-        <item>IBIPEBA</item>
-        <item>IBIPITANGA</item>
-        <item>IBIQUERA</item>
-        <item>IBIRAPITANGA</item>
-        <item>IBIRAPUÃ</item>
-        <item>IBIRATAIA</item>
-        <item>IBITIARA</item>
-        <item>IBITITÁ</item>
-        <item>IBOTIRAMA</item>
-        <item>ICHU</item>
-        <item>IGAPORÃ</item>
-        <item>IGRAPIÚNA</item>
-        <item>IGUAÍ</item>
-        <item>ILHÉUS</item>
-        <item>INHAMBUPE</item>
-        <item>IPECAETÁ</item>
-        <item>IPIAÚ</item>
-        <item>IPIRÁ</item>
-        <item>IPUPIARA</item>
-        <item>IRAJUBA</item>
-        <item>IRAMAIA</item>
-        <item>IRAQUARA</item>
-        <item>IRARÁ</item>
-        <item>IRECÊ</item>
-        <item>ITABELA</item>
-        <item>ITABERABA</item>
-        <item>ITABUNA</item>
-        <item>ITACARÉ</item>
-        <item>ITAETÉ</item>
-        <item>ITAGI</item>
-        <item>ITAGIBÁ</item>
-        <item>ITAGIMIRIM</item>
-        <item>ITAGUAÇU DA BAHIA</item>
-        <item>ITAJU DO COLÔNIA</item>
-        <item>ITAJUÍPE</item>
-        <item>ITAMARAJU</item>
-        <item>ITAMARI</item>
-        <item>ITAMBÉ</item>
-        <item>ITANAGRA</item>
-        <item>ITANHÉM</item>
-        <item>ITAPARICA</item>
-        <item>ITAPÉ</item>
-        <item>ITAPEBI</item>
-        <item>ITAPETINGA</item>
-        <item>ITAPICURU</item>
-        <item>ITAPITANGA</item>
-        <item>ITAQUARA</item>
-        <item>ITARANTIM</item>
-        <item>ITATIM</item>
-        <item>ITIRUÇU</item>
-        <item>ITIÚBA</item>
-        <item>ITORORÓ</item>
-        <item>ITUAÇU</item>
-        <item>ITUBERÁ</item>
-        <item>IUIÚ</item>
-        <item>JABORANDI</item>
-        <item>JACARACI</item>
-        <item>JACOBINA</item>
-        <item>JAGUAQUARA</item>
-        <item>JAGUARARI</item>
-        <item>JAGUARIPE</item>
-        <item>JANDAÍRA</item>
-        <item>JEQUIÉ</item>
-        <item>JEREMOABO</item>
-        <item>JIQUIRIÇÁ</item>
-        <item>JITAÚNA</item>
-        <item>JOÃO DOURADO</item>
-        <item>JUAZEIRO</item>
-        <item>JUCURUÇU</item>
-        <item>JUSSARA</item>
-        <item>JUSSARI</item>
-        <item>JUSSIAPE</item>
-        <item>LAFAIETE COUTINHO</item>
-        <item>LAGOA REAL</item>
-        <item>LAJE</item>
-        <item>LAJEDÃO</item>
-        <item>LAJEDINHO</item>
-        <item>LAJEDO DO TABOCAL</item>
-        <item>LAMARÃO</item>
-        <item>LAPÃO</item>
-        <item>LAURO DE FREITAS</item>
-        <item>LENÇÓIS</item>
-        <item>LICÍNIO DE ALMEIDA</item>
-        <item>LIVRAMENTO DE NOSSA SENHORA</item>
-        <item>LUÍS EDUARDO MAGALHÃES</item>
-        <item>MACAJUBA</item>
-        <item>MACARANI</item>
-        <item>MACAÚBAS</item>
-        <item>MACURURÉ</item>
-        <item>MADRE DE DEUS</item>
-        <item>MAETINGA</item>
-        <item>MAIQUINIQUE</item>
-        <item>MAIRI</item>
-        <item>MALHADA</item>
-        <item>MALHADA DE PEDRAS</item>
-        <item>MANOEL VITORINO</item>
-        <item>MANSIDÃO</item>
-        <item>MARACÁS</item>
-        <item>MARAGOGIPE</item>
-        <item>MARAÚ</item>
-        <item>MARCIONÍLIO SOUZA</item>
-        <item>MASCOTE</item>
-        <item>MATA DE SÃO JOÃO</item>
-        <item>MATINA</item>
-        <item>MEDEIROS NETO</item>
-        <item>MIGUEL CALMON</item>
-        <item>MILAGRES</item>
-        <item>MIRANGABA</item>
-        <item>MIRANTE</item>
-        <item>MONTE SANTO</item>
-        <item>MORPARÁ</item>
-        <item>MORRO DO CHAPÉU</item>
-        <item>MORTUGABA</item>
-        <item>MUCUGÊ</item>
-        <item>MUCURI</item>
-        <item>MULUNGU DO MORRO</item>
-        <item>MUNDO NOVO</item>
-        <item>MUNIZ FERREIRA</item>
-        <item>MUQUÉM DE SÃO FRANCISCO</item>
-        <item>MURITIBA</item>
-        <item>MUTUÍPE</item>
-        <item>NAZARÉ</item>
-        <item>NILO PEÇANHA</item>
-        <item>NORDESTINA</item>
-        <item>NOVA CANAÃ</item>
-        <item>NOVA FÁTIMA</item>
-        <item>NOVA IBIÁ</item>
-        <item>NOVA ITARANA</item>
-        <item>NOVA REDENÇÃO</item>
-        <item>NOVA SOURE</item>
-        <item>NOVA VIÇOSA</item>
-        <item>NOVO HORIZONTE</item>
-        <item>NOVO TRIUNFO</item>
-        <item>OLINDINA</item>
-        <item>OLIVEIRA DOS BREJINHOS</item>
-        <item>OURIÇANGAS</item>
-        <item>OUROLÂNDIA</item>
-        <item>PALMAS DE MONTE ALTO</item>
-        <item>PALMEIRAS</item>
-        <item>PARAMIRIM</item>
-        <item>PARATINGA</item>
-        <item>PARIPIRANGA</item>
-        <item>PAU BRASIL</item>
-        <item>PAULO AFONSO</item>
-        <item>PÉ DE SERRA</item>
-        <item>PEDRÃO</item>
-        <item>PEDRO ALEXANDRE</item>
-        <item>PIATÃ</item>
-        <item>PILÃO ARCADO</item>
-        <item>PINDAÍ</item>
-        <item>PINDOBAÇU</item>
-        <item>PINTADAS</item>
-        <item>PIRAÍ DO NORTE</item>
-        <item>PIRIPÁ</item>
-        <item>PIRITIBA</item>
-        <item>PLANALTINO</item>
-        <item>PLANALTO</item>
-        <item>POÇÕES</item>
-        <item>POJUCA</item>
-        <item>PONTO NOVO</item>
-        <item>PORTO SEGURO</item>
-        <item>POTIRAGUÁ</item>
-        <item>PRADO</item>
-        <item>PRESIDENTE DUTRA</item>
-        <item>PRESIDENTE JÂNIO QUADROS</item>
-        <item>PRESIDENTE TANCREDO NEVES</item>
-        <item>QUEIMADAS</item>
-        <item>QUIJINGUE</item>
-        <item>QUIXABEIRA</item>
-        <item>RAFAEL JAMBEIRO</item>
-        <item>REMANSO</item>
-        <item>RETIROLÂNDIA</item>
-        <item>RIACHÃO DAS NEVES</item>
-        <item>RIACHÃO DO JACUÍPE</item>
-        <item>RIACHO DE SANTANA</item>
-        <item>RIBEIRA DO AMPARO</item>
-        <item>RIBEIRA DO POMBAL</item>
-        <item>RIBEIRÃO DO LARGO</item>
-        <item>RIO DE CONTAS</item>
-        <item>RIO DO ANTÔNIO</item>
-        <item>RIO DO PIRES</item>
-        <item>RIO REAL</item>
-        <item>RODELAS</item>
-        <item>RUY BARBOSA</item>
-        <item>SALINAS DA MARGARIDA</item>
-        <item>SALVADOR</item>
-        <item>SANTA BÁRBARA</item>
-        <item>SANTA BRÍGIDA</item>
-        <item>SANTA CRUZ CABRÁLIA</item>
-        <item>SANTA CRUZ DA VITÓRIA</item>
-        <item>SANTA INÊS</item>
-        <item>SANTA LUZIA</item>
-        <item>SANTA MARIA DA VITÓRIA</item>
-        <item>SANTA RITA DE CÁSSIA</item>
-        <item>SANTA TERESINHA</item>
-        <item>SANTALUZ</item>
-        <item>SANTANA</item>
-        <item>SANTANÓPOLIS</item>
-        <item>SANTO AMARO</item>
-        <item>SANTO ANTÔNIO DE JESUS</item>
-        <item>SANTO ESTÊVÃO</item>
-        <item>SÃO DESIDÉRIO</item>
-        <item>SÃO DOMINGOS</item>
-        <item>SÃO FELIPE</item>
-        <item>SÃO FÉLIX</item>
-        <item>SÃO FÉLIX DO CORIBE</item>
-        <item>SÃO FRANCISCO DO CONDE</item>
-        <item>SÃO GABRIEL</item>
-        <item>SÃO GONÇALO DOS CAMPOS</item>
-        <item>SÃO JOSÉ DA VITÓRIA</item>
-        <item>SÃO JOSÉ DO JACUÍPE</item>
-        <item>SÃO MIGUEL DAS MATAS</item>
-        <item>SÃO SEBASTIÃO DO PASSÉ</item>
-        <item>SAPEAÇU</item>
-        <item>SÁTIRO DIAS</item>
-        <item>SAUBARA</item>
-        <item>SAÚDE</item>
-        <item>SEABRA</item>
-        <item>SEBASTIÃO LARANJEIRAS</item>
-        <item>SENHOR DO BONFIM</item>
-        <item>SENTO SÉ</item>
-        <item>SERRA DO RAMALHO</item>
-        <item>SERRA DOURADA</item>
-        <item>SERRA PRETA</item>
-        <item>SERRINHA</item>
-        <item>SERROLÂNDIA</item>
-        <item>SIMÕES FILHO</item>
-        <item>SÍTIO DO MATO</item>
-        <item>SÍTIO DO QUINTO</item>
-        <item>SOBRADINHO</item>
-        <item>SOUTO SOARES</item>
-        <item>TABOCAS DO BREJO VELHO</item>
-        <item>TANHAÇU</item>
-        <item>TANQUE NOVO</item>
-        <item>TANQUINHO</item>
-        <item>TAPEROÁ</item>
-        <item>TAPIRAMUTÁ</item>
-        <item>TEIXEIRA DE FREITAS</item>
-        <item>TEODORO SAMPAIO</item>
-        <item>TEOFILÂNDIA</item>
-        <item>TEOLÂNDIA</item>
-        <item>TERRA NOVA</item>
-        <item>TREMEDAL</item>
-        <item>TUCANO</item>
-        <item>UAUÁ</item>
-        <item>UBAÍRA</item>
-        <item>UBAITABA</item>
-        <item>UBATÃ</item>
-        <item>UIBAÍ</item>
-        <item>UMBURANAS</item>
-        <item>UNA</item>
-        <item>URANDI</item>
-        <item>URUÇUCA</item>
-        <item>UTINGA</item>
-        <item>VALENÇA</item>
-        <item>VALENTE</item>
-        <item>VÁRZEA DA ROÇA</item>
-        <item>VÁRZEA DO POÇO</item>
-        <item>VÁRZEA NOVA</item>
-        <item>VARZEDO</item>
-        <item>VERA CRUZ</item>
-        <item>VEREDA</item>
-        <item>VITÓRIA DA CONQUISTA</item>
-        <item>WAGNER</item>
-        <item>WANDERLEY</item>
-        <item>WENCESLAU GUIMARÃES</item>
-        <item>XIQUE-XIQUE</item>
-    </string-array><string name="action_configuracoes">Configurações</string><string name="facebook_app_id">328769967482649</string><string-array name="lista_cidade_RR">
-        <item>ALTO ALEGRE</item>
-        <item>AMAJARI</item>
-        <item>BOA VISTA</item>
-        <item>BONFIM</item>
-        <item>CANTÁ</item>
-        <item>CARACARAÍ</item>
-        <item>CAROEBE</item>
-        <item>IRACEMA</item>
-        <item>MUCAJAÍ</item>
-        <item>NORMANDIA</item>
-        <item>PACARAIMA</item>
-        <item>RORAINÓPOLIS</item>
-        <item>SÃO JOÃO DA BALIZA</item>
-        <item>SÃO LUIZ</item>
-        <item>UIRAMUTÃ</item>
-    </string-array><string name="title_activity_selec__vacina_">Selec_Vacina_Activity</string><string-array name="lista_estado">
-        <item>AC</item>
-        <item>AL</item>
-        <item>AP</item>
-        <item>AM</item>
-        <item>BA</item>
-        <item>CE</item>
-        <item>DF</item>
-        <item>ES</item>
-        <item>GO</item>
-        <item>MA</item>
-        <item>MT</item>
-        <item>MS</item>
-        <item>MG</item>
-        <item>PA</item>
-        <item>PB</item>
-        <item>PR</item>
-        <item>PE</item>
-        <item>PI</item>
-        <item>RJ</item>
-        <item>RN</item>
-        <item>RS</item>
-        <item>RO</item>
-        <item>RR</item>
-        <item>SC</item>
-        <item>SP</item>
-        <item>SE</item>
-        <item>TO</item>
-    </string-array><string name="app_name_pet_go">PetGO</string><string-array name="lista_cidade_SE">
-        <item>AMPARO DE SÃO FRANCISCO</item>
-        <item>AQUIDABÃ</item>
-        <item>ARACAJU</item>
-        <item>ARAUÁ</item>
-        <item>AREIA BRANCA</item>
-        <item>BARRA DOS COQUEIROS</item>
-        <item>BOQUIM</item>
-        <item>BREJO GRANDE</item>
-        <item>CAMPO DO BRITO</item>
-        <item>CANHOBA</item>
-        <item>CANINDÉ DE SÃO FRANCISCO</item>
-        <item>CAPELA</item>
-        <item>CARIRA</item>
-        <item>CARMÓPOLIS</item>
-        <item>CEDRO DE SÃO JOÃO</item>
-        <item>CRISTINÁPOLIS</item>
-        <item>CUMBE</item>
-        <item>DIVINA PASTORA</item>
-        <item>ESTÂNCIA</item>
-        <item>FEIRA NOVA</item>
-        <item>FREI PAULO</item>
-        <item>GARARU</item>
-        <item>GENERAL MAYNARD</item>
-        <item>GRACHO CARDOSO</item>
-        <item>ILHA DAS FLORES</item>
-        <item>INDIAROBA</item>
-        <item>ITABAIANA</item>
-        <item>ITABAIANINHA</item>
-        <item>ITABI</item>
-        <item>ITAPORANGA DAJUDA</item>
-        <item>JAPARATUBA</item>
-        <item>JAPOATÃ</item>
-        <item>LAGARTO</item>
-        <item>LARANJEIRAS</item>
-        <item>MACAMBIRA</item>
-        <item>MALHADA DOS BOIS</item>
-        <item>MALHADOR</item>
-        <item>MARUIM</item>
-        <item>MOITA BONITA</item>
-        <item>MONTE ALEGRE DE SERGIPE</item>
-        <item>MURIBECA</item>
-        <item>NEÓPOLIS</item>
-        <item>NOSSA SENHORA APARECIDA</item>
-        <item>NOSSA SENHORA DA GLÓRIA</item>
-        <item>NOSSA SENHORA DAS DORES</item>
-        <item>NOSSA SENHORA DE LOURDES</item>
-        <item>NOSSA SENHORA DO SOCORRO</item>
-        <item>PACATUBA</item>
-        <item>PEDRA MOLE</item>
-        <item>PEDRINHAS</item>
-        <item>PINHÃO</item>
-        <item>PIRAMBU</item>
-        <item>POÇO REDONDO</item>
-        <item>POÇO VERDE</item>
-        <item>PORTO DA FOLHA</item>
-        <item>PROPRIÁ</item>
-        <item>RIACHÃO DO DANTAS</item>
-        <item>RIACHUELO</item>
-        <item>RIBEIRÓPOLIS</item>
-        <item>ROSÁRIO DO CATETE</item>
-        <item>SALGADO</item>
-        <item>SANTA LUZIA DO ITANHY</item>
-        <item>SANTA ROSA DE LIMA</item>
-        <item>SANTANA DO SÃO FRANCISCO</item>
-        <item>SANTO AMARO DAS BROTAS</item>
-        <item>SÃO CRISTÓVÃO</item>
-        <item>SÃO DOMINGOS</item>
-        <item>SÃO FRANCISCO</item>
-        <item>SÃO MIGUEL DO ALEIXO</item>
-        <item>SIMÃO DIAS</item>
-        <item>SIRIRI</item>
-        <item>TELHA</item>
-        <item>TOBIAS BARRETO</item>
-        <item>TOMAR DO GERU</item>
-        <item>UMBAÚBA</item>
-
-    </string-array><string-array name="lista_raca_gato">
-        <item>Siamês</item>
-        <item>Persa</item>
-    </string-array><string-array name="lista_cidade_SC">
-        <item>ABDON BATISTA</item>
-        <item>ABELARDO LUZ</item>
-        <item>AGROLÂNDIA</item>
-        <item>AGRONÔMICA</item>
-        <item>ÁGUA DOCE</item>
-        <item>ÁGUAS DE CHAPECÓ</item>
-        <item>ÁGUAS FRIAS</item>
-        <item>ÁGUAS MORNAS</item>
-        <item>ALFREDO WAGNER</item>
-        <item>ALTO BELA VISTA</item>
-        <item>ANCHIETA</item>
-        <item>ANGELINA</item>
-        <item>ANITA GARIBALDI</item>
-        <item>ANITÁPOLIS</item>
-        <item>ANTÔNIO CARLOS</item>
-        <item>APIÚNA</item>
-        <item>ARABUTÃ</item>
-        <item>ARAQUARI</item>
-        <item>ARARANGUÁ</item>
-        <item>ARMAZÉM</item>
-        <item>ARROIO TRINTA</item>
-        <item>ARVOREDO</item>
-        <item>ASCURRA</item>
-        <item>ATALANTA</item>
-        <item>AURORA</item>
-        <item>BALNEÁRIO ARROIO DO SILVA</item>
-        <item>BALNEÁRIO BARRA DO SUL</item>
-        <item>BALNEÁRIO CAMBORIÚ</item>
-        <item>BALNEÁRIO GAIVOTA</item>
-        <item>BALNEÁRIO PIÇARRAS</item>
-        <item>BANDEIRANTE</item>
-        <item>BARRA BONITA</item>
-        <item>BARRA VELHA</item>
-        <item>BELA VISTA DO TOLDO</item>
-        <item>BELMONTE</item>
-        <item>BENEDITO NOVO</item>
-        <item>BIGUAÇU</item>
-        <item>BLUMENAU</item>
-        <item>BOCAINA DO SUL</item>
-        <item>BOM JARDIM DA SERRA</item>
-        <item>BOM JESUS</item>
-        <item>BOM JESUS DO OESTE</item>
-        <item>BOM RETIRO</item>
-        <item>BOMBINHAS</item>
-        <item>BOTUVERÁ</item>
-        <item>BRAÇO DO NORTE</item>
-        <item>BRAÇO DO TROMBUDO</item>
-        <item>BRUNÓPOLIS</item>
-        <item>BRUSQUE</item>
-        <item>CAÇADOR</item>
-        <item>CAIBI</item>
-        <item>CALMON</item>
-        <item>CAMBORIÚ</item>
-        <item>CAMPO ALEGRE</item>
-        <item>CAMPO BELO DO SUL</item>
-        <item>CAMPO ERÊ</item>
-        <item>CAMPOS NOVOS</item>
-        <item>CANELINHA</item>
-        <item>CANOINHAS</item>
-        <item>CAPÃO ALTO</item>
-        <item>CAPINZAL</item>
-        <item>CAPIVARI DE BAIXO</item>
-        <item>CATANDUVAS</item>
-        <item>CAXAMBU DO SUL</item>
-        <item>CELSO RAMOS</item>
-        <item>CERRO NEGRO</item>
-        <item>CHAPADÃO DO LAGEADO</item>
-        <item>CHAPECÓ</item>
-        <item>COCAL DO SUL</item>
-        <item>CONCÓRDIA</item>
-        <item>CORDILHEIRA ALTA</item>
-        <item>CORONEL FREITAS</item>
-        <item>CORONEL MARTINS</item>
-        <item>CORREIA PINTO</item>
-        <item>CORUPÁ</item>
-        <item>CRICIÚMA</item>
-        <item>CUNHA PORÃ</item>
-        <item>CUNHATAÍ</item>
-        <item>CURITIBANOS</item>
-        <item>DESCANSO</item>
-        <item>DIONÍSIO CERQUEIRA</item>
-        <item>DONA EMMA</item>
-        <item>DOUTOR PEDRINHO</item>
-        <item>ENTRE RIOS</item>
-        <item>ERMO</item>
-        <item>ERVAL VELHO</item>
-        <item>FAXINAL DOS GUEDES</item>
-        <item>FLOR DO SERTÃO</item>
-        <item>FLORIANÓPOLIS</item>
-        <item>FORMOSA DO SUL</item>
-        <item>FORQUILHINHA</item>
-        <item>FRAIBURGO</item>
-        <item>FREI ROGÉRIO</item>
-        <item>GALVÃO</item>
-        <item>GAROPABA</item>
-        <item>GARUVA</item>
-        <item>GASPAR</item>
-        <item>GOVERNADOR CELSO RAMOS</item>
-        <item>GRÃO PARÁ</item>
-        <item>GRAVATAL</item>
-        <item>GUABIRUBA</item>
-        <item>GUARACIABA</item>
-        <item>GUARAMIRIM</item>
-        <item>GUARUJÁ DO SUL</item>
-        <item>GUATAMBÚ</item>
-        <item>HERVAL DOESTE</item>
-        <item>IBIAM</item>
-        <item>IBICARÉ</item>
-        <item>IBIRAMA</item>
-        <item>IÇARA</item>
-        <item>ILHOTA</item>
-        <item>IMARUÍ</item>
-        <item>IMBITUBA</item>
-        <item>IMBUIA</item>
-        <item>INDAIAL</item>
-        <item>IOMERÊ</item>
-        <item>IPIRA</item>
-        <item>IPORÃ DO OESTE</item>
-        <item>IPUAÇU</item>
-        <item>IPUMIRIM</item>
-        <item>IRACEMINHA</item>
-        <item>IRANI</item>
-        <item>IRATI</item>
-        <item>IRINEÓPOLIS</item>
-        <item>ITÁ</item>
-        <item>ITAIÓPOLIS</item>
-        <item>ITAJAÍ</item>
-        <item>ITAPEMA</item>
-        <item>ITAPIRANGA</item>
-        <item>ITAPOÁ</item>
-        <item>ITUPORANGA</item>
-        <item>JABORÁ</item>
-        <item>JACINTO MACHADO</item>
-        <item>JAGUARUNA</item>
-        <item>JARAGUÁ DO SUL</item>
-        <item>JARDINÓPOLIS</item>
-        <item>JOAÇABA</item>
-        <item>JOINVILLE</item>
-        <item>JOSÉ BOITEUX</item>
-        <item>JUPIÁ</item>
-        <item>LACERDÓPOLIS</item>
-        <item>LAGES</item>
-        <item>LAGUNA</item>
-        <item>LAJEADO GRANDE</item>
-        <item>LAURENTINO</item>
-        <item>LAURO MULLER</item>
-        <item>LEBON RÉGIS</item>
-        <item>LEOBERTO LEAL</item>
-        <item>LINDÓIA DO SUL</item>
-        <item>LONTRAS</item>
-        <item>LUIZ ALVES</item>
-        <item>LUZERNA</item>
-        <item>MACIEIRA</item>
-        <item>MAFRA</item>
-        <item>MAJOR GERCINO</item>
-        <item>MAJOR VIEIRA</item>
-        <item>MARACAJÁ</item>
-        <item>MARAVILHA</item>
-        <item>MAREMA</item>
-        <item>MASSARANDUBA</item>
-        <item>MATOS COSTA</item>
-        <item>MELEIRO</item>
-        <item>MIRIM DOCE</item>
-        <item>MODELO</item>
-        <item>MONDAÍ</item>
-        <item>MONTE CARLO</item>
-        <item>MONTE CASTELO</item>
-        <item>MORRO DA FUMAÇA</item>
-        <item>MORRO GRANDE</item>
-        <item>NAVEGANTES</item>
-        <item>NOVA ERECHIM</item>
-        <item>NOVA ITABERABA</item>
-        <item>NOVA TRENTO</item>
-        <item>NOVA VENEZA</item>
-        <item>NOVO HORIZONTE</item>
-        <item>ORLEANS</item>
-        <item>OTACÍLIO COSTA</item>
-        <item>OURO</item>
-        <item>OURO VERDE</item>
-        <item>PAIAL</item>
-        <item>PAINEL</item>
-        <item>PALHOÇA</item>
-        <item>PALMA SOLA</item>
-        <item>PALMEIRA</item>
-        <item>PALMITOS</item>
-        <item>PAPANDUVA</item>
-        <item>PARAÍSO</item>
-        <item>PASSO DE TORRES</item>
-        <item>PASSOS MAIA</item>
-        <item>PAULO LOPES</item>
-        <item>PEDRAS GRANDES</item>
-        <item>PENHA</item>
-        <item>PERITIBA</item>
-        <item>PETROLÂNDIA</item>
-        <item>PINHALZINHO</item>
-        <item>PINHEIRO PRETO</item>
-        <item>PIRATUBA</item>
-        <item>PLANALTO ALEGRE</item>
-        <item>POMERODE</item>
-        <item>PONTE ALTA</item>
-        <item>PONTE ALTA DO NORTE</item>
-        <item>PONTE SERRADA</item>
-        <item>PORTO BELO</item>
-        <item>PORTO UNIÃO</item>
-        <item>POUSO REDONDO</item>
-        <item>PRAIA GRANDE</item>
-        <item>PRESIDENTE CASTELLO BRANCO</item>
-        <item>PRESIDENTE GETÚLIO</item>
-        <item>PRESIDENTE NEREU</item>
-        <item>PRINCESA</item>
-        <item>QUILOMBO</item>
-        <item>RANCHO QUEIMADO</item>
-        <item>RIO DAS ANTAS</item>
-        <item>RIO DO CAMPO</item>
-        <item>RIO DO OESTE</item>
-        <item>RIO DO SUL</item>
-        <item>RIO DOS CEDROS</item>
-        <item>RIO FORTUNA</item>
-        <item>RIO NEGRINHO</item>
-        <item>RIO RUFINO</item>
-        <item>RIQUEZA</item>
-        <item>RODEIO</item>
-        <item>ROMELÂNDIA</item>
-        <item>SALETE</item>
-        <item>SALTINHO</item>
-        <item>SALTO VELOSO</item>
-        <item>SANGÃO</item>
-        <item>SANTA CECÍLIA</item>
-        <item>SANTA HELENA</item>
-        <item>SANTA ROSA DE LIMA</item>
-        <item>SANTA ROSA DO SUL</item>
-        <item>SANTA TEREZINHA</item>
-        <item>SANTA TEREZINHA DO PROGRESSO</item>
-        <item>SANTIAGO DO SUL</item>
-        <item>SANTO AMARO DA IMPERATRIZ</item>
-        <item>SÃO BENTO DO SUL</item>
-        <item>SÃO BERNARDINO</item>
-        <item>SÃO BONIFÁCIO</item>
-        <item>SÃO CARLOS</item>
-        <item>SÃO CRISTOVÃO DO SUL</item>
-        <item>SÃO DOMINGOS</item>
-        <item>SÃO FRANCISCO DO SUL</item>
-        <item>SÃO JOÃO BATISTA</item>
-        <item>SÃO JOÃO DO ITAPERIÚ</item>
-        <item>SÃO JOÃO DO OESTE</item>
-        <item>SÃO JOÃO DO SUL</item>
-        <item>SÃO JOAQUIM</item>
-        <item>SÃO JOSÉ</item>
-        <item>SÃO JOSÉ DO CEDRO</item>
-        <item>SÃO JOSÉ DO CERRITO</item>
-        <item>SÃO LOURENÇO DO OESTE</item>
-        <item>SÃO LUDGERO</item>
-        <item>SÃO MARTINHO</item>
-        <item>SÃO MIGUEL DA BOA VISTA</item>
-        <item>SÃO MIGUEL DO OESTE</item>
-        <item>SÃO PEDRO DE ALCÂNTARA</item>
-        <item>SAUDADES</item>
-        <item>SCHROEDER</item>
-        <item>SEARA</item>
-        <item>SERRA ALTA</item>
-        <item>SIDERÓPOLIS</item>
-        <item>SOMBRIO</item>
-        <item>SUL BRASIL</item>
-        <item>TAIÓ</item>
-        <item>TANGARÁ</item>
-        <item>TIGRINHOS</item>
-        <item>TIJUCAS</item>
-        <item>TIMBÉ DO SUL</item>
-        <item>TIMBÓ</item>
-        <item>TIMBÓ GRANDE</item>
-        <item>TRÊS BARRAS</item>
-        <item>TREVISO</item>
-        <item>TREZE DE MAIO</item>
-        <item>TREZE TÍLIAS</item>
-        <item>TROMBUDO CENTRAL</item>
-        <item>TUBARÃO</item>
-        <item>TUNÁPOLIS</item>
-        <item>TURVO</item>
-        <item>UNIÃO DO OESTE</item>
-        <item>URUBICI</item>
-        <item>URUPEMA</item>
-        <item>URUSSANGA</item>
-        <item>VARGEÃO</item>
-        <item>VARGEM</item>
-        <item>VARGEM BONITA</item>
-        <item>VIDAL RAMOS</item>
-        <item>VIDEIRA</item>
-        <item>VITOR MEIRELES</item>
-        <item>WITMARSUM</item>
-        <item>XANXERÊ</item>
-        <item>XAVANTINA</item>
-        <item>XAXIM</item>
-        <item>ZORTÉA</item>
-
-    </string-array><string name="hello_world">Hello World!</string><string-array name="lista_cidade_SP">
+    </string-array><string-array name="lista_cidade_SP">
         <item>ADAMANTINA</item>
         <item>ADOLFO</item>
         <item>AGUAÍ</item>
@@ -6283,7 +5775,33 @@
         <item>VOTUPORANGA</item>
         <item>ZACARIAS</item>
 
-    </string-array><string name="action_settings">Settings</string><string-array name="lista_cidade_CE">
+    </string-array><string name="action_settings">Settings</string><string-array name="genero_animal">
+        <item>Fêmea</item>
+        <item>Macho</item>
+    </string-array><string-array name="lista_cidade_AC">
+        <item>ACRELÂNDIA</item>
+        <item>ASSIS BRASIL</item>
+        <item>BRASILÉIA</item>
+        <item>BUJARI</item>
+        <item>CAPIXABA</item>
+        <item>CRUZEIRO DO SUL</item>
+        <item>EPITACIOLÂNDIA</item>
+        <item>FEIJÓ</item>
+        <item>JORDÃO</item>
+        <item>MÂNCIO LIMA</item>
+        <item>MANOEL URBANO</item>
+        <item>MARECHAL THAUMATURGO</item>
+        <item>PLÁCIDO DE CASTRO</item>
+        <item>PORTO ACRE</item>
+        <item>PORTO WALTER</item>
+        <item>RIO BRANCO</item>
+        <item>RODRIGUES ALVES</item>
+        <item>SANTA ROSA DO PURUS</item>
+        <item>SENA MADUREIRA</item>
+        <item>SENADOR GUIOMARD</item>
+        <item>TARAUACÁ</item>
+        <item>XAPURI</item>
+    </string-array><string-array name="lista_cidade_CE">
         <item>ABAIARA</item>
         <item>ACARAPE</item>
         <item>ACARAÚ</item>
@@ -6468,6 +5986,322 @@
         <item>VARJOTA</item>
         <item>VÁRZEA ALEGRE</item>
         <item>VIÇOSA DO CEARÁ</item>
+
+    </string-array><string name="title_activity_main2">Main2Activity</string><string-array name="lista_cidade_MS">
+        <item>ÁGUA CLARA</item>
+        <item>ALCINÓPOLIS</item>
+        <item>AMAMBAI</item>
+        <item>ANASTÁCIO</item>
+        <item>ANAURILÂNDIA</item>
+        <item>ANGÉLICA</item>
+        <item>ANTÔNIO JOÃO</item>
+        <item>APARECIDA DO TABOADO</item>
+        <item>AQUIDAUANA</item>
+        <item>ARAL MOREIRA</item>
+        <item>BANDEIRANTES</item>
+        <item>BATAGUASSU</item>
+        <item>BATAYPORÃ</item>
+        <item>BELA VISTA</item>
+        <item>BODOQUENA</item>
+        <item>BONITO</item>
+        <item>BRASILÂNDIA</item>
+        <item>CAARAPÓ</item>
+        <item>CAMAPUÃ</item>
+        <item>CAMPO GRANDE</item>
+        <item>CARACOL</item>
+        <item>CASSILÂNDIA</item>
+        <item>CHAPADÃO DO SUL</item>
+        <item>CORGUINHO</item>
+        <item>CORONEL SAPUCAIA</item>
+        <item>CORUMBÁ</item>
+        <item>COSTA RICA</item>
+        <item>COXIM</item>
+        <item>DEODÁPOLIS</item>
+        <item>DOIS IRMÃOS DO BURITI</item>
+        <item>DOURADINA</item>
+        <item>DOURADOS</item>
+        <item>ELDORADO</item>
+        <item>FÁTIMA DO SUL</item>
+        <item>FIGUEIRÃO</item>
+        <item>GLÓRIA DE DOURADOS</item>
+        <item>GUIA LOPES DA LAGUNA</item>
+        <item>IGUATEMI</item>
+        <item>INOCÊNCIA</item>
+        <item>ITAPORÃ</item>
+        <item>ITAQUIRAÍ</item>
+        <item>IVINHEMA</item>
+        <item>JAPORÃ</item>
+        <item>JARAGUARI</item>
+        <item>JARDIM</item>
+        <item>JATEÍ</item>
+        <item>JUTI</item>
+        <item>LADÁRIO</item>
+        <item>LAGUNA CARAPÃ</item>
+        <item>MARACAJU</item>
+        <item>MIRANDA</item>
+        <item>MUNDO NOVO</item>
+        <item>NAVIRAÍ</item>
+        <item>NIOAQUE</item>
+        <item>NOVA ALVORADA DO SUL</item>
+        <item>NOVA ANDRADINA</item>
+        <item>NOVO HORIZONTE DO SUL</item>
+        <item>PARANAÍBA</item>
+        <item>PARANHOS</item>
+        <item>PEDRO GOMES</item>
+        <item>PONTA PORÃ</item>
+        <item>PORTO MURTINHO</item>
+        <item>RIBAS DO RIO PARDO</item>
+        <item>RIO BRILHANTE</item>
+        <item>RIO NEGRO</item>
+        <item>RIO VERDE DE MATO GROSSO</item>
+        <item>ROCHEDO</item>
+        <item>SANTA RITA DO PARDO</item>
+        <item>SÃO GABRIEL DO OESTE</item>
+        <item>SELVÍRIA</item>
+        <item>SETE QUEDAS</item>
+        <item>SIDROLÂNDIA</item>
+        <item>SONORA</item>
+        <item>TACURU</item>
+        <item>TAQUARUSSU</item>
+        <item>TERENOS</item>
+        <item>TRÊS LAGOAS</item>
+        <item>VICENTINA</item>
+
+    </string-array><string-array name="lista_raca_cachorro">
+        <item>Selecione a raça</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Afegão Hound</item>
+        <item>Affenpinscher</item>
+        <item>Airedale Terrier</item>
+        <item>Akita</item>
+        <item>American Staffordshire Terrier</item>
+        <item>Basenji</item>
+        <item>Basset Hound</item>
+        <item>Beagle</item>
+        <item>Beagle Harrier</item>
+        <item>Bearded Collie</item>
+        <item>Bedlington Terrier</item>
+        <item>Bichon Frisé</item>
+        <item>Bloodhound</item>
+        <item>Bobtail</item>
+        <item>Boiadeiro Australiano</item>
+        <item>Boiadeiro Bernês</item>
+        <item>Border Collie</item>
+        <item>Border Terrier</item>
+        <item>Borzoi</item>
+        <item>Boston Terrier</item>
+        <item>Boxer</item>
+        <item>Buldogue Francês</item>
+        <item>Buldogue Inglês</item>
+        <item>Bull Terrier</item>
+        <item>Bulmastife</item>
+        <item>Cairn Terrier</item>
+        <item>Cane Corso</item>
+        <item>Cão de Água Português</item>
+        <item>Cão de Crista Chinês</item>
+        <item>Cavalier King Charles Spaniel</item>
+        <item>Chesapeake Bay Retriever</item>
+        <item>Chihuahua</item>
+        <item>Chow Chow</item>
+        <item>Cocker Spaniel Americano</item>
+        <item>Cocker Spaniel Inglês</item>
+        <item>Collie</item>
+        <item>Coton de Tuléar</item>
+        <item>Dachshund</item>
+        <item>Dálmata</item>
+        <item>Dandie Dinmont Terrier</item>
+        <item>Doberman</item>
+        <item>Dogo Argentino</item>
+        <item>Dogue Alemão</item>
+        <item>Fila Brasileiro</item>
+        <item>Fox Terrier (Pelo Duro e Pelo Liso)</item>
+        <item>Foxhound Inglês</item>
+        <item>Galgo Escocês</item>
+        <item>Galgo Irlandês</item>
+        <item>Golden Retriever</item>
+        <item>Grande Boiadeiro Suiço</item>
+        <item>Greyhound</item>
+        <item>Grifo da Bélgica</item>
+        <item>Husky Siberiano</item>
+        <item>Jack Russell Terrier</item>
+        <item>King Charles</item>
+        <item>Komondor</item>
+        <item>Labradoodle</item>
+        <item>Labrador Retriever</item>
+        <item>Lakeland Terrier</item>
+        <item>Leonberger</item>
+        <item>Lhasa Apso</item>
+        <item>Lulu da Pomerânia</item>
+        <item>Malamute do Alasca</item>
+        <item>Maltês</item>
+        <item>Mastife</item>
+        <item>Mastim Napolitano</item>
+        <item>Mastim Tibetano</item>
+        <item>Norfolk Terrier</item>
+        <item>Norwich Terrier</item>
+        <item>Papillon</item>
+        <item>Pastor Alemão</item>
+        <item>Pastor Australiano</item>
+        <item>Pinscher Miniatura</item>
+        <item>Poodle</item>
+        <item>Pug</item>
+        <item>Rottweiler</item>
+        <item>Shih Tzu</item>
+        <item>Silky Terrier</item>
+        <item>Skye Terrier</item>
+        <item>Staffordshire Bull Terrier</item>
+        <item>Terra Nova</item>
+        <item>Terrier Escocês</item>
+        <item>Tosa</item>
+        <item>Weimaraner</item>
+        <item>Welsh Corgi (Cardigan)</item>
+        <item>Welsh Corgi (Pembroke)</item>
+        <item>West Highland White Terrier</item>
+        <item>Whippet</item>
+        <item>Xoloitzcuintli</item>
+        <item>Yorkshire Terrier</item>
+    </string-array><string-array name="lista_cidade_MT">
+        <item>ACORIZAL</item>
+        <item>ÁGUA BOA</item>
+        <item>ALTA FLORESTA</item>
+        <item>ALTO ARAGUAIA</item>
+        <item>ALTO BOA VISTA</item>
+        <item>ALTO GARÇAS</item>
+        <item>ALTO PARAGUAI</item>
+        <item>ALTO TAQUARI</item>
+        <item>APIACÁS</item>
+        <item>ARAGUAIANA</item>
+        <item>ARAGUAINHA</item>
+        <item>ARAPUTANGA</item>
+        <item>ARENÁPOLIS</item>
+        <item>ARIPUANÃ</item>
+        <item>BARÃO DE MELGAÇO</item>
+        <item>BARRA DO BUGRES</item>
+        <item>BARRA DO GARÇAS</item>
+        <item>BOM JESUS DO ARAGUAIA</item>
+        <item>BRASNORTE</item>
+        <item>CÁCERES</item>
+        <item>CAMPINÁPOLIS</item>
+        <item>CAMPO NOVO DO PARECIS</item>
+        <item>CAMPO VERDE</item>
+        <item>CAMPOS DE JÚLIO</item>
+        <item>CANABRAVA DO NORTE</item>
+        <item>CANARANA</item>
+        <item>CARLINDA</item>
+        <item>CASTANHEIRA</item>
+        <item>CHAPADA DOS GUIMARÃES</item>
+        <item>CLÁUDIA</item>
+        <item>COCALINHO</item>
+        <item>COLÍDER</item>
+        <item>COLNIZA</item>
+        <item>COMODORO</item>
+        <item>CONFRESA</item>
+        <item>CONQUISTA DOESTE</item>
+        <item>COTRIGUAÇU</item>
+        <item>CUIABÁ</item>
+        <item>CURVELÂNDIA</item>
+        <item>DENISE</item>
+        <item>DIAMANTINO</item>
+        <item>DOM AQUINO</item>
+        <item>FELIZ NATAL</item>
+        <item>FIGUEIRÓPOLIS DOESTE</item>
+        <item>GAÚCHA DO NORTE</item>
+        <item>GENERAL CARNEIRO</item>
+        <item>GLÓRIA DOESTE</item>
+        <item>GUARANTÃ DO NORTE</item>
+        <item>GUIRATINGA</item>
+        <item>INDIAVAÍ</item>
+        <item>IPIRANGA DO NORTE</item>
+        <item>ITANHANGÁ</item>
+        <item>ITAÚBA</item>
+        <item>ITIQUIRA</item>
+        <item>JACIARA</item>
+        <item>JANGADA</item>
+        <item>JAURU</item>
+        <item>JUARA</item>
+        <item>JUÍNA</item>
+        <item>JURUENA</item>
+        <item>JUSCIMEIRA</item>
+        <item>LAMBARI DOESTE</item>
+        <item>LUCAS DO RIO VERDE</item>
+        <item>LUCIARA</item>
+        <item>MARCELÂNDIA</item>
+        <item>MATUPÁ</item>
+        <item>MIRASSOL DOESTE</item>
+        <item>NOBRES</item>
+        <item>NORTELÂNDIA</item>
+        <item>NOSSA SENHORA DO LIVRAMENTO</item>
+        <item>NOVA BANDEIRANTES</item>
+        <item>NOVA BRASILÂNDIA</item>
+        <item>NOVA CANAÃ DO NORTE</item>
+        <item>NOVA GUARITA</item>
+        <item>NOVA LACERDA</item>
+        <item>NOVA MARILÂNDIA</item>
+        <item>NOVA MARINGÁ</item>
+        <item>NOVA MONTE VERDE</item>
+        <item>NOVA MUTUM</item>
+        <item>NOVA NAZARÉ</item>
+        <item>NOVA OLÍMPIA</item>
+        <item>NOVA SANTA HELENA</item>
+        <item>NOVA UBIRATÃ</item>
+        <item>NOVA XAVANTINA</item>
+        <item>NOVO HORIZONTE DO NORTE</item>
+        <item>NOVO MUNDO</item>
+        <item>NOVO SANTO ANTÔNIO</item>
+        <item>NOVO SÃO JOAQUIM</item>
+        <item>PARANAÍTA</item>
+        <item>PARANATINGA</item>
+        <item>PEDRA PRETA</item>
+        <item>PEIXOTO DE AZEVEDO</item>
+        <item>PLANALTO DA SERRA</item>
+        <item>POCONÉ</item>
+        <item>PONTAL DO ARAGUAIA</item>
+        <item>PONTE BRANCA</item>
+        <item>PONTES E LACERDA</item>
+        <item>PORTO ALEGRE DO NORTE</item>
+        <item>PORTO DOS GAÚCHOS</item>
+        <item>PORTO ESPERIDIÃO</item>
+        <item>PORTO ESTRELA</item>
+        <item>POXORÉO</item>
+        <item>PRIMAVERA DO LESTE</item>
+        <item>QUERÊNCIA</item>
+        <item>RESERVA DO CABAÇAL</item>
+        <item>RIBEIRÃO CASCALHEIRA</item>
+        <item>RIBEIRÃOZINHO</item>
+        <item>RIO BRANCO</item>
+        <item>RONDOLÂNDIA</item>
+        <item>RONDONÓPOLIS</item>
+        <item>ROSÁRIO OESTE</item>
+        <item>SALTO DO CÉU</item>
+        <item>SANTA CARMEM</item>
+        <item>SANTA CRUZ DO XINGU</item>
+        <item>SANTA RITA DO TRIVELATO</item>
+        <item>SANTA TEREZINHA</item>
+        <item>SANTO AFONSO</item>
+        <item>SANTO ANTÔNIO DO LESTE</item>
+        <item>SANTO ANTÔNIO DO LEVERGER</item>
+        <item>SÃO FÉLIX DO ARAGUAIA</item>
+        <item>SÃO JOSÉ DO POVO</item>
+        <item>SÃO JOSÉ DO RIO CLARO</item>
+        <item>SÃO JOSÉ DO XINGU</item>
+        <item>SÃO JOSÉ DOS QUATRO MARCOS</item>
+        <item>SÃO PEDRO DA CIPA</item>
+        <item>SAPEZAL</item>
+        <item>SERRA NOVA DOURADA</item>
+        <item>SINOP</item>
+        <item>SORRISO</item>
+        <item>TABAPORÃ</item>
+        <item>TANGARÁ DA SERRA</item>
+        <item>TAPURAH</item>
+        <item>TERRA NOVA DO NORTE</item>
+        <item>TESOURO</item>
+        <item>TORIXORÉU</item>
+        <item>UNIÃO DO SUL</item>
+        <item>VALE DE SÃO DOMINGOS</item>
+        <item>VÁRZEA GRANDE</item>
+        <item>VERA</item>
+        <item>VILA BELA DA SANTÍSSIMA TRINDADE</item>
+        <item>VILA RICA</item>
 
     </string-array><string-array name="lista_cidade_GO">
         <item>ABADIA DE GOIÁS</item>
@@ -6717,6 +6551,253 @@
         <item>VILA BOA</item>
         <item>VILA PROPÍCIO</item>
 
+    </string-array><string name="hello_blank_fragment">Hello blank fragment</string><string-array name="lista_cidade_ES">
+        <item>AFONSO CLÁUDIO</item>
+        <item>ÁGUA DOCE DO NORTE</item>
+        <item>ÁGUIA BRANCA</item>
+        <item>ALEGRE</item>
+        <item>ALFREDO CHAVES</item>
+        <item>ALTO RIO NOVO</item>
+        <item>ANCHIETA</item>
+        <item>APIACÁ</item>
+        <item>ARACRUZ</item>
+        <item>ATILIO VIVACQUA</item>
+        <item>BAIXO GUANDU</item>
+        <item>BARRA DE SÃO FRANCISCO</item>
+        <item>BOA ESPERANÇA</item>
+        <item>BOM JESUS DO NORTE</item>
+        <item>BREJETUBA</item>
+        <item>CACHOEIRO DE ITAPEMIRIM</item>
+        <item>CARIACICA</item>
+        <item>CASTELO</item>
+        <item>COLATINA</item>
+        <item>CONCEIÇÃO DA BARRA</item>
+        <item>CONCEIÇÃO DO CASTELO</item>
+        <item>DIVINO DE SÃO LOURENÇO</item>
+        <item>DOMINGOS MARTINS</item>
+        <item>DORES DO RIO PRETO</item>
+        <item>ECOPORANGA</item>
+        <item>FUNDÃO</item>
+        <item>GOVERNADOR LINDENBERG</item>
+        <item>GUAÇUÍ</item>
+        <item>GUARAPARI</item>
+        <item>IBATIBA</item>
+        <item>IBIRAÇU</item>
+        <item>IBITIRAMA</item>
+        <item>ICONHA</item>
+        <item>IRUPI</item>
+        <item>ITAGUAÇU</item>
+        <item>ITAPEMIRIM</item>
+        <item>ITARANA</item>
+        <item>IÚNA</item>
+        <item>JAGUARÉ</item>
+        <item>JERÔNIMO MONTEIRO</item>
+        <item>JOÃO NEIVA</item>
+        <item>LARANJA DA TERRA</item>
+        <item>LINHARES</item>
+        <item>MANTENÓPOLIS</item>
+        <item>MARATAÍZES</item>
+        <item>MARECHAL FLORIANO</item>
+        <item>MARILÂNDIA</item>
+        <item>MIMOSO DO SUL</item>
+        <item>MONTANHA</item>
+        <item>MUCURICI</item>
+        <item>MUNIZ FREIRE</item>
+        <item>MUQUI</item>
+        <item>NOVA VENÉCIA</item>
+        <item>PANCAS</item>
+        <item>PEDRO CANÁRIO</item>
+        <item>PINHEIROS</item>
+        <item>PIÚMA</item>
+        <item>PONTO BELO</item>
+        <item>PRESIDENTE KENNEDY</item>
+        <item>RIO BANANAL</item>
+        <item>RIO NOVO DO SUL</item>
+        <item>SANTA LEOPOLDINA</item>
+        <item>SANTA MARIA DE JETIBÁ</item>
+        <item>SANTA TERESA</item>
+        <item>SÃO DOMINGOS DO NORTE</item>
+        <item>SÃO GABRIEL DA PALHA</item>
+        <item>SÃO JOSÉ DO CALÇADO</item>
+        <item>SÃO MATEUS</item>
+        <item>SÃO ROQUE DO CANAÃ</item>
+        <item>SERRA</item>
+        <item>SOORETAMA</item>
+        <item>VARGEM ALTA</item>
+        <item>VENDA NOVA DO IMIGRANTE</item>
+        <item>VIANA</item>
+        <item>VILA PAVÃO</item>
+        <item>VILA VALÉRIO</item>
+        <item>VILA VELHA</item>
+        <item>VITÓRIA</item>
+
+    </string-array><string-array name="lista_cidade_AL">
+        <item>ÁGUA BRANCA</item>
+        <item>ANADIA</item>
+        <item>ARAPIRACA</item>
+        <item>ATALAIA</item>
+        <item>BARRA DE SANTO ANTÔNIO</item>
+        <item>BARRA DE SÃO MIGUEL</item>
+        <item>BATALHA</item>
+        <item>BELÉM</item>
+        <item>BELO MONTE</item>
+        <item>BOCA DA MATA</item>
+        <item>BRANQUINHA</item>
+        <item>CACIMBINHAS</item>
+        <item>CAJUEIRO</item>
+        <item>CAMPESTRE</item>
+        <item>CAMPO ALEGRE</item>
+        <item>CAMPO GRANDE</item>
+        <item>CANAPI</item>
+        <item>CAPELA</item>
+        <item>CARNEIROS</item>
+        <item>CHÃ PRETA</item>
+        <item>COITÉ DO NÓIA</item>
+        <item>COLÔNIA LEOPOLDINA</item>
+        <item>COQUEIRO SECO</item>
+        <item>CORURIPE</item>
+        <item>CRAÍBAS</item>
+        <item>DELMIRO GOUVEIA</item>
+        <item>DOIS RIACHOS</item>
+        <item>ESTRELA DE ALAGOAS</item>
+        <item>FEIRA GRANDE</item>
+        <item>FELIZ DESERTO</item>
+        <item>FLEXEIRAS</item>
+        <item>GIRAU DO PONCIANO</item>
+        <item>IBATEGUARA</item>
+        <item>IGACI</item>
+        <item>IGREJA NOVA</item>
+        <item>INHAPI</item>
+        <item>JACARÉ DOS HOMENS</item>
+        <item>JACUÍPE</item>
+        <item>JAPARATINGA</item>
+        <item>JARAMATAIA</item>
+        <item>JEQUIÁ DA PRAIA</item>
+        <item>JOAQUIM GOMES</item>
+        <item>JUNDIÁ</item>
+        <item>JUNQUEIRO</item>
+        <item>LAGOA DA CANOA</item>
+        <item>LIMOEIRO DE ANADIA</item>
+        <item>MACEIÓ</item>
+        <item>MAJOR ISIDORO</item>
+        <item>MAR VERMELHO</item>
+        <item>MARAGOGI</item>
+        <item>MARAVILHA</item>
+        <item>MARECHAL DEODORO</item>
+        <item>MARIBONDO</item>
+        <item>MATA GRANDE</item>
+        <item>MATRIZ DE CAMARAGIBE</item>
+        <item>MESSIAS</item>
+        <item>MINADOR DO NEGRÃO</item>
+        <item>MONTEIRÓPOLIS</item>
+        <item>MURICI</item>
+        <item>NOVO LINO</item>
+        <item>OLHO DÁGUA DAS FLORES</item>
+        <item>OLHO DÁGUA DO CASADO</item>
+        <item>OLHO DÁGUA GRANDE</item>
+        <item>OLIVENÇA</item>
+        <item>OURO BRANCO</item>
+        <item>PALESTINA</item>
+        <item>PALMEIRA DOS ÍNDIOS</item>
+        <item>PÃO DE AÇÚCAR</item>
+        <item>PARICONHA</item>
+        <item>PARIPUEIRA</item>
+        <item>PASSO DE CAMARAGIBE</item>
+        <item>PAULO JACINTO</item>
+        <item>PENEDO</item>
+        <item>PIAÇABUÇU</item>
+        <item>PILAR</item>
+        <item>PINDOBA</item>
+        <item>PIRANHAS</item>
+        <item>POÇO DAS TRINCHEIRAS</item>
+        <item>PORTO CALVO</item>
+        <item>PORTO DE PEDRAS</item>
+        <item>PORTO REAL DO COLÉGIO</item>
+        <item>QUEBRANGULO</item>
+        <item>RIO LARGO</item>
+        <item>ROTEIRO</item>
+        <item>SANTA LUZIA DO NORTE</item>
+        <item>SANTANA DO IPANEMA</item>
+        <item>SANTANA DO MUNDAÚ</item>
+        <item>SÃO BRÁS</item>
+        <item>SÃO JOSÉ DA LAJE</item>
+        <item>SÃO JOSÉ DA TAPERA</item>
+        <item>SÃO LUÍS DO QUITUNDE</item>
+        <item>SÃO MIGUEL DOS CAMPOS</item>
+        <item>SÃO MIGUEL DOS MILAGRES</item>
+        <item>SÃO SEBASTIÃO</item>
+        <item>SATUBA</item>
+        <item>SENADOR RUI PALMEIRA</item>
+        <item>TANQUE DARCA</item>
+        <item>TAQUARANA</item>
+        <item>TEOTÔNIO VILELA</item>
+        <item>TRAIPU</item>
+        <item>UNIÃO DOS PALMARES</item>
+        <item>VIÇOSA</item>
+
+    </string-array><string-array name="lista_cidade_AM">
+        <item>ALVARÃES</item>
+        <item>AMATURÁ</item>
+        <item>ANAMÃ</item>
+        <item>ANORI</item>
+        <item>APUÍ</item>
+        <item>ATALAIA DO NORTE</item>
+        <item>AUTAZES</item>
+        <item>BARCELOS</item>
+        <item>BARREIRINHA</item>
+        <item>BENJAMIN CONSTANT</item>
+        <item>BERURI</item>
+        <item>BOA VISTA DO RAMOS</item>
+        <item>BOCA DO ACRE</item>
+        <item>BORBA</item>
+        <item>CAAPIRANGA</item>
+        <item>CANUTAMA</item>
+        <item>CARAUARI</item>
+        <item>CAREIRO</item>
+        <item>CAREIRO DA VÁRZEA</item>
+        <item>COARI</item>
+        <item>CODAJÁS</item>
+        <item>EIRUNEPÉ</item>
+        <item>ENVIRA</item>
+        <item>FONTE BOA</item>
+        <item>GUAJARÁ</item>
+        <item>HUMAITÁ</item>
+        <item>IPIXUNA</item>
+        <item>IRANDUBA</item>
+        <item>ITACOATIARA</item>
+        <item>ITAMARATI</item>
+        <item>ITAPIRANGA</item>
+        <item>JAPURÁ</item>
+        <item>JURUÁ</item>
+        <item>JUTAÍ</item>
+        <item>LÁBREA</item>
+        <item>MANACAPURU</item>
+        <item>MANAQUIRI</item>
+        <item>MANAUS</item>
+        <item>MANICORÉ</item>
+        <item>MARAÃ</item>
+        <item>MAUÉS</item>
+        <item>NHAMUNDÁ</item>
+        <item>NOVA OLINDA DO NORTE</item>
+        <item>NOVO AIRÃO</item>
+        <item>NOVO ARIPUANÃ</item>
+        <item>PARINTINS</item>
+        <item>PAUINI</item>
+        <item>PRESIDENTE FIGUEIREDO</item>
+        <item>RIO PRETO DA EVA</item>
+        <item>SANTA ISABEL DO RIO NEGRO</item>
+        <item>SANTO ANTÔNIO DO IÇÁ</item>
+        <item>SÃO GABRIEL DA CACHOEIRA</item>
+        <item>SÃO PAULO DE OLIVENÇA</item>
+        <item>SÃO SEBASTIÃO DO UATUMÃ</item>
+        <item>SILVES</item>
+        <item>TABATINGA</item>
+        <item>TAPAUÁ</item>
+        <item>TEFÉ</item>
+        <item>TONANTINS</item>
+        <item>UARINI</item>
+        <item>URUCARÁ</item>
+        <item>URUCURITUBA</item>
     </string-array><string-array name="lista_cidade_PA">
         <item>ABAETETUBA</item>
         <item>ABEL FIGUEIREDO</item>
@@ -7086,7 +7167,24 @@
         <item>VISTA SERRANA</item>
         <item>ZABELÊ</item>
 
-    </string-array><string-array name="lista_cidade_PE">
+    </string-array><string-array name="lista_cidade_AP">
+        <item>AMAPÁ</item>
+        <item>CALÇOENE</item>
+        <item>CUTIAS</item>
+        <item>FERREIRA GOMES</item>
+        <item>ITAUBAL</item>
+        <item>LARANJAL DO JARI</item>
+        <item>MACAPÁ</item>
+        <item>MAZAGÃO</item>
+        <item>OIAPOQUE</item>
+        <item>PEDRA BRANCA DO AMAPARI</item>
+        <item>PORTO GRANDE</item>
+        <item>PRACUÚBA</item>
+        <item>SANTANA</item>
+        <item>SERRA DO NAVIO</item>
+        <item>TARTARUGALZINHO</item>
+        <item>VITÓRIA DO JARI</item>
+    </string-array><string name="title_activity_selec_vacina">SelecVacinaActivity</string><string-array name="lista_cidade_PE">
         <item>ABREU E LIMA</item>
         <item>AFOGADOS DA INGAZEIRA</item>
         <item>AFRÂNIO</item>
@@ -7277,9 +7375,102 @@
         <item>Todos</item>
     </string-array><string-array name="lista_raca_cachorro_filtro">
         <item>Todos</item>
+        <item>Afegão Hound</item>
+        <item>Affenpinscher</item>
+        <item>Airedale Terrier</item>
+        <item>Akita</item>
+        <item>American Staffordshire Terrier</item>
+        <item>Basenji</item>
+        <item>Basset Hound</item>
+        <item>Beagle</item>
+        <item>Beagle Harrier</item>
+        <item>Bearded Collie</item>
+        <item>Bedlington Terrier</item>
+        <item>Bichon Frisé</item>
+        <item>Bloodhound</item>
+        <item>Bobtail</item>
+        <item>Boiadeiro Australiano</item>
+        <item>Boiadeiro Bernês</item>
+        <item>Border Collie</item>
+        <item>Border Terrier</item>
+        <item>Borzoi</item>
+        <item>Boston Terrier</item>
         <item>Boxer</item>
-        <item>Fila</item>
-    </string-array></file><file path="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item>Buldogue Francês</item>
+        <item>Buldogue Inglês</item>
+        <item>Bull Terrier</item>
+        <item>Bulmastife</item>
+        <item>Cairn Terrier</item>
+        <item>Cane Corso</item>
+        <item>Cão de Água Português</item>
+        <item>Cão de Crista Chinês</item>
+        <item>Cavalier King Charles Spaniel</item>
+        <item>Chesapeake Bay Retriever</item>
+        <item>Chihuahua</item>
+        <item>Chow Chow</item>
+        <item>Cocker Spaniel Americano</item>
+        <item>Cocker Spaniel Inglês</item>
+        <item>Collie</item>
+        <item>Coton de Tuléar</item>
+        <item>Dachshund</item>
+        <item>Dálmata</item>
+        <item>Dandie Dinmont Terrier</item>
+        <item>Doberman</item>
+        <item>Dogo Argentino</item>
+        <item>Dogue Alemão</item>
+        <item>Fila Brasileiro</item>
+        <item>Fox Terrier (Pelo Duro e Pelo Liso)</item>
+        <item>Foxhound Inglês</item>
+        <item>Galgo Escocês</item>
+        <item>Galgo Irlandês</item>
+        <item>Golden Retriever</item>
+        <item>Grande Boiadeiro Suiço</item>
+        <item>Greyhound</item>
+        <item>Grifo da Bélgica</item>
+        <item>Husky Siberiano</item>
+        <item>Jack Russell Terrier</item>
+        <item>King Charles</item>
+        <item>Komondor</item>
+        <item>Labradoodle</item>
+        <item>Labrador Retriever</item>
+        <item>Lakeland Terrier</item>
+        <item>Leonberger</item>
+        <item>Lhasa Apso</item>
+        <item>Lulu da Pomerânia</item>
+        <item>Malamute do Alasca</item>
+        <item>Maltês</item>
+        <item>Mastife</item>
+        <item>Mastim Napolitano</item>
+        <item>Mastim Tibetano</item>
+        <item>Norfolk Terrier</item>
+        <item>Norwich Terrier</item>
+        <item>Papillon</item>
+        <item>Pastor Alemão</item>
+        <item>Pastor Australiano</item>
+        <item>Pinscher Miniatura</item>
+        <item>Poodle</item>
+        <item>Pug</item>
+        <item>Rottweiler</item>
+        <item>Sem Raça Definida (SRD)</item>
+        <item>Shih Tzu</item>
+        <item>Silky Terrier</item>
+        <item>Skye Terrier</item>
+        <item>Staffordshire Bull Terrier</item>
+        <item>Terra Nova</item>
+        <item>Terrier Escocês</item>
+        <item>Tosa</item>
+        <item>Weimaraner</item>
+        <item>Welsh Corgi (Cardigan)</item>
+        <item>Welsh Corgi (Pembroke)</item>
+        <item>West Highland White Terrier</item>
+        <item>Whippet</item>
+        <item>Xoloitzcuintli</item>
+        <item>Yorkshire Terrier</item>
+    </string-array></file><file path="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\src\main\res\values\styles.xml" qualifiers=""><style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:textColorSecondary">@android:color/black</item>

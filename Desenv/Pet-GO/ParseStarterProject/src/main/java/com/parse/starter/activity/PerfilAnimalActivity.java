@@ -88,7 +88,9 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
                 .into(imagem);
 
         descricao = (TextView) findViewById(R.id.textView_descricao);
-        descricao.setText(getIntent().getExtras().getString("descricao"));
+        descricao.setText(getIntent().getExtras().getString("descricao").trim().equals("") ?
+                            "Sem descrição." :
+                            getIntent().getExtras().getString("descricao").trim());
 
         tipo_genero = (TextView) findViewById(R.id.textView_tipo_genero);
         tipo_genero.setText(getIntent().getExtras().getString("lista_tipo") + " " +
@@ -115,10 +117,10 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
 
         castrado = (TextView) findViewById(R.id.textView_castrado);
         castrado.setText((getIntent().getExtras().getString("castrado_checked").equals("N"))?
-                          "Não castrado":"Castrado");
+                          "Não":"Sim");
 
         cidade_estado = (TextView) findViewById(R.id.textView_cidade_estado);
-        cidade_estado.setText("De " + getIntent().getExtras().getString("lista_cidade") + ", "+
+        cidade_estado.setText(getIntent().getExtras().getString("lista_cidade") + ", "+
                               getIntent().getExtras().getString("lista_estado"));
 
         vacinas = getIntent().getExtras().getString("vacinas").split(";");
@@ -131,7 +133,11 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
             for (String vacina : vacinas) {
                 text_vacinas.append(vacina+"\n");
             }
+
         }
+
+        if (text_vacinas.getText().toString().trim().equals(""))
+            text_vacinas.setText("Não possui.");
 
         try{
             telefone_contato = getIntent().getExtras().getString("telefone").replace("(","").replace(")","").replace("-","").trim();
@@ -141,6 +147,7 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
 
 
         botao_chat = (Button) findViewById(R.id.button_mensagem);
+        botao_chat.setBackgroundResource(R.drawable.fundo_botao);
         botao_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,6 +177,7 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
 
 
         botao_telefone = (Button) findViewById(R.id.button_telefone);
+        botao_telefone.setBackgroundResource(R.drawable.fundo_botao);
         botao_telefone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

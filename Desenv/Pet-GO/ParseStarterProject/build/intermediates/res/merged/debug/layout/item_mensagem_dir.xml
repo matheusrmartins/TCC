@@ -11,6 +11,7 @@
         android:textColor="@android:color/white"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
+        android:layout_marginLeft="70dp"
         android:padding="8dp"
         android:id="@+id/tv_mensagem"/>
 

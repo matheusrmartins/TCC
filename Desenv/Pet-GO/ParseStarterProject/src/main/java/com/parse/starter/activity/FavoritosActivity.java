@@ -210,12 +210,30 @@ public class FavoritosActivity extends AppCompatActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> objectList, ParseException e) {
                 if (e == null) {
-                    postagens.clear();
-                    for (ParseObject parseObject : objectList) {
-                        postagens.add(parseObject);
+                    if (objectList.size() > 0){
+                        postagens.clear();
+                        for (ParseObject parseObject : objectList) {
+                            postagens.add(parseObject);
+                        }
+                        adapter.notifyDataSetChanged();
+                    }else{
+                        progressDialog.dismiss();
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                FavoritosActivity.this);
+                        alertDialogBuilder.setTitle("Alerta");
+                        alertDialogBuilder
+                                .setMessage("Você não marcou nenhum animal como favorito")
+                                .setCancelable(true)
+                                .setNeutralButton("OK",new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,int id) {
+                                        finish();
+                                        Intent intent = new Intent(FavoritosActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                    }
+                                });
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
                     }
-                    adapter.notifyDataSetChanged();
-
                 }
 
                 progressDialog.dismiss();

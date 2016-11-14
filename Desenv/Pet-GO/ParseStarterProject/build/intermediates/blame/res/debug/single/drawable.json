@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\round_button_red.xml",
-        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable\\round_button_red.xml"
-    },
-    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\round_button_red.xml",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable\\round_button_red.xml"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_selector.xml",
@@ -144,12 +144,12 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
-        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
-        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_login_silver_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_header_background.xml",

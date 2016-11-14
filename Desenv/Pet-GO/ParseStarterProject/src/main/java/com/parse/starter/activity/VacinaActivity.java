@@ -87,9 +87,6 @@ public class VacinaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                ShareLinkContent content = new ShareLinkContent.Builder()
-                        .setContentUrl(Uri.parse("https://developers.facebook.com"))
-                        .build();
 
 
                 progressDialog = new ProgressDialog(VacinaActivity.this);

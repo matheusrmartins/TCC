@@ -160,7 +160,8 @@ public class EditarPetActivity extends AppCompatActivity {
 
                 cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
                         nome_animal.getText().toString().trim(),
-                        lista_ano_int+lista_mes_int);
+                        lista_ano_int+lista_mes_int,
+                        lista_raca.getSelectedItemPosition());
 
                 if(Integer.valueOf(lista_ano_int) > 21)
                     cod_erro = 110;
@@ -239,7 +240,6 @@ public class EditarPetActivity extends AppCompatActivity {
             femea.setChecked(true);
         spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_raca_cachorro));
         lista_raca.setSelection(spinnerArrayAdapter.getPosition(getIntent().getExtras().getString("lista_raca")));
-        spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lista_ano));
         lista_ano.setText(getIntent().getExtras().getString("lista_ano"));
         lista_mes.setText(getIntent().getExtras().getString("lista_mes"));
         if (getIntent().getExtras().getString("castrado_checked").equals("S"))
@@ -363,7 +363,7 @@ public class EditarPetActivity extends AppCompatActivity {
         lista_cidade.setText(null);
     }
 
-    private final int verificaErro(int posicao_cidade, String nome_animal, String idade){
+    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position){
 
         if(posicao_cidade == -1)
             return 104;
@@ -371,6 +371,8 @@ public class EditarPetActivity extends AppCompatActivity {
             return 107;
         else if(idade.equals("0000"))
             return 109;
+        else if (raca_position == 0)
+            return 113;
         else
             return 0;
     }

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_cadastro"
@@ -16,48 +14,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:gravity="center_vertical|center_horizontal"
     android:background="@drawable/fundo_degrade"
+    android:orientation="vertical"
     tools:context="com.parse.starter.activity.CadastroActivity">
 
 
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner_tipo_usuario"
-            android:layout_above="@+id/relativeLayout3"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/fundo_caixa_texto"
-            android:entries="@array/tipo_usuario"
-            android:layout_marginBottom="20dp"
-            android:padding="13dp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:visibility="invisible"
-            android:layout_marginBottom="20dp"
-            android:padding="13dp"
-            android:hint="Digite o CNPJ"
-            android:background="@drawable/fundo_caixa_texto"
-            android:id="@+id/editText_cnpj"
-            android:layout_below="@+id/spinner_tipo_usuario"
-            android:layout_gravity="center_horizontal" />
 
     <EditText
         android:fontFamily="sans-serif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:id="@+id/editText_email"
         android:hint="Digite o seu e-mail"
-        android:layout_below="@+id/editText_cnpj"
         android:background="@drawable/fundo_caixa_texto"
         android:padding="13dp"
         android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName|textCapWords"
+        android:ems="10"
+        android:id="@+id/editText_nome"
+        android:textColor="@android:color/black"
+        android:hint="Digite o seu nome"
+        android:background="@drawable/fundo_caixa_texto"
+        android:layout_marginTop="20dp"
+        android:padding="13dp"
+        android:layout_below="@+id/editText_password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:fontFamily="sans-serif"
@@ -65,10 +52,25 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:layout_marginTop="20dp"
         android:id="@+id/editText_password"
         android:hint="Digite a sua senha"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="13dp"
+        android:layout_below="@+id/editText_email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:fontFamily="sans-serif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editText_password_retype"
+        android:hint="Digite novamente a sua senha"
         android:background="@drawable/fundo_caixa_texto"
         android:padding="13dp"
         android:layout_below="@+id/editText_email"
@@ -88,58 +90,6 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText_nome"
-        android:hint="Digite o seu nome"
-        android:background="@drawable/fundo_caixa_texto"
-        android:layout_marginTop="20dp"
-        android:padding="13dp"
-        android:layout_below="@+id/editText_password"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:entries="@array/lista_estado"
-        android:layout_width="100dp"
-        android:padding="13dp"
-        android:background="@drawable/fundo_caixa_texto"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_lista_estado"
-        android:dropDownWidth="match_parent"
-        android:layout_below="@+id/editText_nome"
-        android:layout_marginTop="17dp"
-        />
+</LinearLayout>
 
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:padding="13dp"
-        android:background="@drawable/fundo_caixa_texto"
-        android:layout_height="wrap_content"
-        android:id="@+id/lista_cidade"
-        android:dropDownWidth="match_parent"
-        android:layout_below="@+id/spinner_lista_estado"
-        android:layout_marginTop="17dp"
-        android:hint="Digite a sua cidade"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="13dp"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText_telefone"
-        android:background="@drawable/fundo_caixa_texto"
-        android:layout_below="@+id/lista_cidade"
-        android:hint="Digite seu telefone"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentLeft="true" />
-
-
-</RelativeLayout>
-
-</ScrollView>

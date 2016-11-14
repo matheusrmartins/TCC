@@ -90,6 +90,8 @@ public class NotificacoesFragment extends Fragment {
 
         conversas.clear();
 
+        query_conversas.orderByDescending("updatedAt");
+
         query_conversas.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {

@@ -213,6 +213,23 @@ public class EditarActivity extends AppCompatActivity {
                         }
                         adapter.notifyDataSetChanged();
 
+                    }else{
+                        progressDialog.dismiss();
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                EditarActivity.this);
+                        alertDialogBuilder.setTitle("Alerta");
+                        alertDialogBuilder
+                                .setMessage("Você não possui nenhum pet")
+                                .setCancelable(true)
+                                .setNeutralButton("OK",new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,int id) {
+                                        finish();
+                                        Intent intent = new Intent(EditarActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                    }
+                                });
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
                     }
                 }else{
                     progressDialog.dismiss();

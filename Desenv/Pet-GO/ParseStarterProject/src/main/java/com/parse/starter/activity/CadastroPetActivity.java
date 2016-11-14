@@ -162,7 +162,8 @@ public class CadastroPetActivity extends AppCompatActivity {
 
                 cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
                                             nome_animal.getText().toString().trim(),
-                                            lista_ano_int+lista_mes_int);
+                                            lista_ano_int+lista_mes_int,
+                                            lista_raca.getSelectedItemPosition());
 
                 if (imagem_byteArray == null)
                     cod_erro = 108;
@@ -331,7 +332,7 @@ public class CadastroPetActivity extends AppCompatActivity {
         return scaledGalleryPic;
     }
 
-    private final int verificaErro(int posicao_cidade, String nome_animal, String idade){
+    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position){
 
         if(posicao_cidade == -1)
             return 104;
@@ -339,6 +340,8 @@ public class CadastroPetActivity extends AppCompatActivity {
             return 107;
         else if(idade.equals("0000"))
             return 109;
+        else if (raca_position == 0)
+            return 113;
         else
             return 0;
     }

@@ -36,6 +36,7 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
 import com.parse.starter.activity.EditarActivity;
+import com.parse.starter.activity.FavoritosActivity;
 import com.parse.starter.activity.MainActivity;
 import com.parse.starter.activity.PerfilAnimalActivity;
 import com.parse.starter.fragments.HomeFragment;
@@ -65,7 +66,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
     private boolean curtiu = false;
     private String usuario_like = "";
     private ParseUser parseUser;
-
+    private ProgressDialog progressDialog;
 
 
     public HomeAdapter(Context c, ArrayList<ParseObject> objects) {
@@ -90,8 +91,6 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
             try {
 
                 final ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_postagem);
-
-
 
                 //Cria um objeto parse para cada postagem
             parseObject = postagens.get(position);
@@ -145,6 +144,11 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                 @Override
                 public void onClick(final View v) {
 
+                    progressDialog =  new ProgressDialog(getContext());
+                    progressDialog.setCancelable(false);
+                    progressDialog.setMessage("Enviando curtida...");
+                    progressDialog.show();
+
                     SQLiteDatabase db = getContext().openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
 
                     StringBuilder sqlClientes = new StringBuilder();
@@ -164,7 +168,7 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                         alertDialogBuilder.setTitle("Alerta");
                         alertDialogBuilder
                                 .setMessage("Ao curtir um pet, você estará contribuindo para que ele apareça para mais pessoas!")
-                                .setCancelable(true)
+                                .setCancelable(false)
                                 .setNeutralButton("OK",null);
                         AlertDialog alertDialog = alertDialogBuilder.create();
                         alertDialog.show();
@@ -193,16 +197,22 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                                 if (e == null) {
                                                     parseObject.saveEventually();
                                                     notifyDataSetChanged();
+                                                    progressDialog.dismiss();
+                                                }else{
+                                                    progressDialog.dismiss();
+                                                    Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
                                     } else {
+                                        progressDialog.dismiss();
                                         Toast.makeText(context, "Você já curtiu " + parseObject.get("nome_animal"), Toast.LENGTH_SHORT).show();
                                     }
 
 
                                 } else {
                                     // something went wrong
+                                    progressDialog.dismiss();
                                     Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                                 }
                             }
@@ -216,6 +226,12 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
             botao_favoritar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    progressDialog =  new ProgressDialog(getContext());
+                    progressDialog.setCancelable(false);
+                    progressDialog.setMessage("Adicionando aos favoritos...");
+                    progressDialog.show();
+
 
                     SQLiteDatabase db = getContext().openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
 
@@ -262,14 +278,21 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                                             @Override
                                             public void done(ParseException e) {
                                                 if (e == null) {
+                                                    progressDialog.dismiss();
                                                     notifyDataSetChanged();
                                                     Toast.makeText(context, parseObject.getString("nome_animal") + " adicionado aos favoritos", Toast.LENGTH_SHORT).show();
+                                                }else{
+                                                    progressDialog.dismiss();
                                                 }
                                             }
                                         });
+                                    }else{
+                                        progressDialog.dismiss();
+                                        Toast.makeText(context, parseObject.getString("nome_animal") + " já está na sua lista de favoritos", Toast.LENGTH_SHORT).show();
                                     }
                                 } else {
                                     // something went wrong
+                                    progressDialog.dismiss();
                                     Toast.makeText(context, "Erro inesperado", Toast.LENGTH_SHORT).show();
                                 }
                             }
