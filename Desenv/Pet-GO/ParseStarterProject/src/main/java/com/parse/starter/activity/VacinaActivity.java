@@ -1,10 +1,13 @@
 package com.parse.starter.activity;
 
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.tv.TvInputService;
+import android.net.Uri;
 import android.support.annotation.BoolRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +20,7 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.facebook.share.model.ShareLinkContent;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -24,7 +28,6 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -84,6 +87,11 @@ public class VacinaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                ShareLinkContent content = new ShareLinkContent.Builder()
+                        .setContentUrl(Uri.parse("https://developers.facebook.com"))
+                        .build();
+
+
                 progressDialog = new ProgressDialog(VacinaActivity.this);
                 progressDialog.setCancelable(false);
                 progressDialog.setMessage("Publicando animal...");
@@ -98,7 +106,7 @@ public class VacinaActivity extends AppCompatActivity {
 
                 String lista_vacinas = "";
 
-                String nome_animal = getIntent().getExtras().getString("nome_animal");
+                final String nome_animal = getIntent().getExtras().getString("nome_animal");
                 String lista_genero = getIntent().getExtras().getString("lista_genero");
                 String lista_raca = getIntent().getExtras().getString("lista_raca");
                 String lista_ano = getIntent().getExtras().getString("lista_ano");
@@ -107,7 +115,7 @@ public class VacinaActivity extends AppCompatActivity {
                 String lista_cidade = getIntent().getExtras().getString("lista_cidade");
                 String telefone_contato = getIntent().getExtras().getString("telefone_contato");
                 String lista_tipo = getIntent().getExtras().getString("lista_tipo");
-                String descricao = getIntent().getExtras().getString("descricao");
+                final String descricao = getIntent().getExtras().getString("descricao");
                 Boolean castrado_checked = getIntent().getExtras().getBoolean("castrado_checked");
                 byte[] imagem = getIntent().getExtras().getByteArray("imagem");
 
@@ -143,7 +151,7 @@ public class VacinaActivity extends AppCompatActivity {
                 }
 
                 //Envia os objetos parse para o banco
-                ParseObject parseObject = new ParseObject("Animal");
+                final ParseObject parseObject = new ParseObject("Animal");
                 parseObject.put("object_id_usuario", ParseUser.getCurrentUser().getObjectId().toString());
                 parseObject.put("nome_animal", nome_animal);
                 parseObject.put("lista_genero", lista_genero);

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +34,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -53,6 +56,8 @@ public class ChatActivity extends AppCompatActivity {
     private boolean retorno;
     private String nome_usuario;
     private String textoMensagem;
+    private Timer autoUpdate;
+    private int qtde_mensagens;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,8 @@ public class ChatActivity extends AppCompatActivity {
 
         //Remetente
         usuarioRementente = ParseUser.getCurrentUser().getObjectId();
+
+        qtde_mensagens = 0;
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_chat);
         try {
@@ -86,7 +93,8 @@ public class ChatActivity extends AppCompatActivity {
         arrayAdapter =  new MensagemAdapter(ChatActivity.this, array_mensagens);
         listView_mensagens.setAdapter(arrayAdapter);
 
-        getMensagem();
+        getMensagem(false);
+
 
 
         botao_enviar.setOnClickListener(new View.OnClickListener() {
@@ -103,10 +111,10 @@ public class ChatActivity extends AppCompatActivity {
                     mensagem.setMensagem(textoMensagem);
                     mensagem.setIdUsuario(usuarioRementente);
                     array_mensagens.add(mensagem);
-                    //listView_mensagens.scrollTo(0, listView_mensagens.getHeight());
-                    listView_mensagens.setStackFromBottom(true);
-                    listView_mensagens.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
-                    if(!salvarMensagemParse (usuarioRementente, usuarioDestinatario, textoMensagem));
+                    qtde_mensagens++;
+                    arrayAdapter.notifyDataSetChanged();
+                    if(salvarMensagemParse (usuarioRementente, usuarioDestinatario, textoMensagem));
+                    criarConversa();
                 }
 
             }
@@ -146,56 +154,6 @@ public class ChatActivity extends AppCompatActivity {
                 }
             });
 
-            query_conversas1 = ParseQuery.getQuery("Conversa");
-            query_conversas1.whereEqualTo("usuario_1", usuarioRementente);
-            query_conversas1.whereEqualTo("usuario_2", usuarioDestinatario);
-            query_conversas2 = ParseQuery.getQuery("Conversa");
-            query_conversas2.whereEqualTo("usuario_1", usuarioDestinatario);
-            query_conversas2.whereEqualTo("usuario_2", usuarioRementente);
-
-            List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
-            queries.add(query_conversas1);
-            queries.add(query_conversas2);
-
-            query_conversas = ParseQuery.or(queries);
-
-            query_conversas.findInBackground(new FindCallback<ParseObject>() {
-                @Override
-                public void done(List<ParseObject> objects, ParseException e) {
-                    if (e==  null) {
-                        if (objects.size() < 1) {
-                            ParseObject parseObject_conversa = new ParseObject("Conversa");
-                            parseObject_conversa.put("usuario_1", usuarioRementente);
-                            parseObject_conversa.put("usuario_2", usuarioDestinatario);
-                            parseObject_conversa.put("nome_1", ParseUser.getCurrentUser().get("nome"));
-                            parseObject_conversa.put("nome_2", nome_usuario);
-                            parseObject_conversa.put("ultima_mensagem", textoMensagem);
-
-                            parseObject_conversa.saveInBackground(new SaveCallback() {
-                                @Override
-                                public void done(ParseException e) {
-                                    if (e == null){
-
-                                        retorno = true;
-
-                                    }
-                                    else{
-
-                                        retorno = false;
-
-                                    }
-                                }
-                            });
-                        } else {
-                            for (ParseObject object : objects) {
-                              object.put("ultima_mensagem", textoMensagem);
-                              object.saveInBackground();
-                            }
-                        }
-                    }
-                }
-            });
-
             return retorno;
 
         }catch (Exception e){
@@ -205,9 +163,77 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
-    public void getMensagem(){
-        array_mensagens.clear();
+    @Override
+    public void onResume() {
+        super.onResume();
+        autoUpdate = new Timer();
+        autoUpdate.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        getMensagem(true);
+                    }
+                });
+            }
+        }, 0, 5000);
+    }
 
+    public void criarConversa(){
+        query_conversas1 = ParseQuery.getQuery("Conversa");
+        query_conversas1.whereEqualTo("usuario_1", usuarioRementente);
+        query_conversas1.whereEqualTo("usuario_2", usuarioDestinatario);
+        query_conversas2 = ParseQuery.getQuery("Conversa");
+        query_conversas2.whereEqualTo("usuario_1", usuarioDestinatario);
+        query_conversas2.whereEqualTo("usuario_2", usuarioRementente);
+
+        List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
+        queries.add(query_conversas1);
+        queries.add(query_conversas2);
+
+        query_conversas = ParseQuery.or(queries);
+
+        query_conversas.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e==  null) {
+                    if (objects.size() < 1) {
+                        final ParseObject parseObject_conversa = new ParseObject("Conversa");
+                        parseObject_conversa.put("usuario_1", usuarioRementente);
+                        parseObject_conversa.put("usuario_2", usuarioDestinatario);
+                        parseObject_conversa.put("nome_1", ParseUser.getCurrentUser().get("nome"));
+                        parseObject_conversa.put("nome_2", nome_usuario);
+                        parseObject_conversa.put("ultima_mensagem", textoMensagem);
+
+                        parseObject_conversa.pinInBackground(new SaveCallback() {
+                            @Override
+                            public void done(ParseException e) {
+                                if (e == null){
+
+                                    retorno = true;
+                                    parseObject_conversa.saveEventually();
+
+                                }
+                                else{
+
+                                    retorno = false;
+
+                                }
+                            }
+                        });
+                    } else {
+                        for (ParseObject object : objects) {
+                            object.put("ultima_mensagem", textoMensagem);
+                            object.pinInBackground();
+                            object.saveEventually();
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    public void getMensagem(final boolean atualizacao){
 
         query_mensagens1 = ParseQuery.getQuery("Mensagem");
         query_mensagens1.whereEqualTo("usuario_remetente", usuarioRementente);
@@ -227,15 +253,24 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null){
-                    for (ParseObject object : objects){
-                        Mensagem mensagem = new Mensagem();
-                        mensagem.setMensagem(object.getString("mensagem"));
-                        mensagem.setIdUsuario(object.getString("usuario_remetente"));
-                        array_mensagens.add(mensagem);
-                    }
-                    listView_mensagens.invalidateViews();
-                }else{
 
+                    if (qtde_mensagens != objects.size()) {
+
+                        array_mensagens.clear();
+
+                        for (ParseObject object : objects) {
+                            Mensagem mensagem = new Mensagem();
+                            mensagem.setMensagem(object.getString("mensagem"));
+                            mensagem.setIdUsuario(object.getString("usuario_remetente"));
+                            array_mensagens.add(mensagem);
+                        }
+                        listView_mensagens.invalidateViews();
+                        arrayAdapter.notifyDataSetChanged();
+
+                        qtde_mensagens = objects.size();
+                    }
+                }else{
+                    //Toast.makeText()
                 }
             }
         });

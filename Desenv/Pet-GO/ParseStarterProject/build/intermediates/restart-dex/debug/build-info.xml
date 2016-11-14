@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    api-level="22"
-    density="xhdpi"
+    abi="x86"
+    api-level="23"
+    density="xxhdpi"
     format="8"
-    plugin-version="2.2.0"
-    timestamp="34755155631130"
+    plugin-version="2.2.2"
+    timestamp="192170475856454"
     token="3550697998233825527"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="11410" />
+        duration="21276" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="5051" />
+        duration="12573" />
     <task
         name="verifier"
-        duration="1094" />
+        duration="6830" />
 
     <artifact
         location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="34755155631130"
+        timestamp="192170475856454"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"

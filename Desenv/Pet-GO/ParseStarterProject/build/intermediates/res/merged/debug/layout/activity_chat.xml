@@ -42,6 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Mensagem"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines ="4"
+            android:maxLength ="500"
+            android:scrollHorizontally="false"
             android:textColor="@android:color/black"/>
 
         <ImageButton

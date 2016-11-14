@@ -99,6 +99,7 @@ public class NotificacoesFragment extends Fragment {
                         conversa.setObject_id_usuario(object.getString("usuario_1").equals(usuario) ? object.getString("usuario_2") : object.getString("usuario_1"));
                         conversa.setNome_usuario(object.getString("usuario_1").equals(usuario) ? object.getString("nome_2") : object.getString("nome_1"));
                         conversa.setMensagem(object.getString("ultima_mensagem"));
+
                         conversas.add(conversa);
                     }
                     listView_conversas.invalidateViews();

@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:textColor="#FFABABAB"
         android:textSize="18sp"
+        android:singleLine="true"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:paddingTop="1dp"
