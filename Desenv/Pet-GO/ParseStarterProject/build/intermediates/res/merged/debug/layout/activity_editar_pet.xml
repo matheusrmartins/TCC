@@ -15,7 +15,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -23,14 +22,13 @@
     <include layout="@layout/toolbar"
         android:id="@+id/toolbar_editar_pet" />
 
-    </LinearLayout>
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/linear_layout1">
+        android:layout_below="@+id/toolbar_editar_pet">
 
 
         <LinearLayout
@@ -61,10 +59,10 @@
                 <EditText
                     android:fontFamily="sans-serif"
                     android:layout_width="match_parent"
-                    android:inputType="textCapSentences"
+                    android:inputType="textPersonName|textCapWords"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:id="@+id/editText_nome_animal"
                     android:hint="Digite o nome do animal"
                     android:background="@drawable/fundo_caixa_texto"

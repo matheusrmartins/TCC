@@ -51,14 +51,18 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name="com.parse.starter.activity.LoginActivity"
-            android:label="@string/app_name_pet_go"
+            android:name="com.parse.starter.activity.MarcaActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.parse.starter.activity.LoginActivity"
+            android:label="@string/app_name_pet_go"
+            android:screenOrientation="portrait" >
         </activity>
 
         <provider

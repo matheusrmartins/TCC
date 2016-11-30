@@ -13,7 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +45,10 @@ public class FiltroActivity extends AppCompatActivity {
     private String tipo;
     private String raca;
     private Toolbar toolbar;
+    private Switch localizacao;
+    private SeekBar raio;
+    private int filtro_localizacao = 1;
+    private TextView textView_raio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +67,9 @@ public class FiltroActivity extends AppCompatActivity {
         radio_cachorro = (RadioButton) findViewById(R.id.radioButton_cachorro);
         radio_gato  = (RadioButton) findViewById(R.id.radioButton_gato);
         spinner_raca = (Spinner) findViewById(R.id.spinner_lista_raca_filtro);
+        localizacao = (Switch) findViewById(R.id.switch_localizacao);
+        raio = (SeekBar) findViewById(R.id.seekBar);
+        textView_raio = (TextView) findViewById(R.id.textView_raio);
 
         spinner_raca.setEnabled(false);
 
@@ -89,6 +98,28 @@ public class FiltroActivity extends AppCompatActivity {
                 radio_gato.setChecked(true);
                 tipo = "Gato";
             }
+
+            if (cursor.getInt(4) == 1) {
+                localizacao.setChecked(true);
+                raio.setEnabled(true);
+            }
+            else {
+                localizacao.setChecked(false);
+                raio.setEnabled(false);
+            }
+
+            raio.setProgress(Integer.parseInt(String.valueOf(cursor.getDouble(5)).replace(".0","")));
+            textView_raio.setText(String.valueOf(cursor.getDouble(5)).replace(".0",""));
+
+            localizacao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (localizacao.isChecked())
+                        raio.setEnabled(true);
+                    else
+                        raio.setEnabled(false);
+                }
+            });
 
             alteraSpinnerRaca(cursor.getString(3));
 
@@ -119,6 +150,27 @@ public class FiltroActivity extends AppCompatActivity {
             }
         });
 
+            raio.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress,
+                                              boolean fromUser) {
+                    // TODO Auto-generated method stub
+                    textView_raio.setText(String.valueOf(progress));
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                    // TODO Auto-generated method stub
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                    // TODO Auto-generated method stub
+                }
+            });
+        }
+
         botao_salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,6 +188,11 @@ public class FiltroActivity extends AppCompatActivity {
                 else
                     filtro_tipo = 0;
 
+                if (localizacao.isChecked())
+                    filtro_localizacao = 1;
+                else
+                    filtro_localizacao = 0;
+
                 try {
 
                 SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
@@ -147,7 +204,8 @@ public class FiltroActivity extends AppCompatActivity {
 
                     if (cursor.getCount() > 0) {
                         db.execSQL("update filtro_usuario set genero = " + filtro_genero + "," +
-                                " tipo = " + filtro_tipo + ", raca = \"" + spinner_raca.getSelectedItem().toString() + "\" " +
+                                " tipo = " + filtro_tipo + ", raca = \"" + spinner_raca.getSelectedItem().toString() + "\"," +
+                                " localizacao = "+ filtro_localizacao + ", raio = "+ textView_raio.getText().toString() + ".0" +
                                 " where object_id =  \""+ user_object_id + "\";");
                         Toast.makeText(FiltroActivity.this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
                         finish();
@@ -160,8 +218,8 @@ public class FiltroActivity extends AppCompatActivity {
 
             }
         });
-      }
     }
+
 
     private void alteraSpinnerRaca(String flag){
         if (tipo == "Cachorro") {

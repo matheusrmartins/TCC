@@ -118,8 +118,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void done(ParseUser user, ParseException err) {
                         if (user == null) {
-                            progressDialog.dismiss();
                             Toast.makeText(LoginActivity.this,  "Erro ao fazer o login", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
                         } else if (user.isNew()) {
                             progressDialog = new ProgressDialog(LoginActivity.this);
                             progressDialog.setCancelable(false);

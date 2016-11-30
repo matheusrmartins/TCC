@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.location.Address;
+import android.location.Geocoder;
 import android.media.tv.TvInputService;
 import android.net.Uri;
 import android.support.annotation.BoolRes;
@@ -28,10 +30,13 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.starter.R;
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class VacinaActivity extends AppCompatActivity {
 
@@ -110,6 +115,19 @@ public class VacinaActivity extends AppCompatActivity {
                 String lista_mes = getIntent().getExtras().getString("lista_mes");
                 String lista_estado = getIntent().getExtras().getString("lista_estado");
                 String lista_cidade = getIntent().getExtras().getString("lista_cidade");
+
+                Geocoder gc = new Geocoder(VacinaActivity.this, new Locale("pt", "BR"));
+                List<Address> addresses= null;
+                Double latitude = 0.0;
+                Double longitude = 0.0;
+                try {
+                    addresses = gc.getFromLocationName(lista_cidade.toUpperCase()+" "+lista_estado, 1);
+                     latitude = addresses.get(0).getLatitude();
+                     longitude = addresses.get(0).getLongitude();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
                 String telefone_contato = getIntent().getExtras().getString("telefone_contato");
                 String lista_tipo = getIntent().getExtras().getString("lista_tipo");
                 final String descricao = getIntent().getExtras().getString("descricao");
@@ -157,6 +175,8 @@ public class VacinaActivity extends AppCompatActivity {
                 parseObject.put("lista_mes", lista_mes);
                 parseObject.put("lista_estado", lista_estado);
                 parseObject.put("lista_cidade", lista_cidade);
+                parseObject.put("Latitude", latitude);
+                parseObject.put("Longitude", longitude);
                 parseObject.put("telefone", telefone_contato);
                 parseObject.put("descricao", descricao);
                 parseObject.put("imagem", parseFile);

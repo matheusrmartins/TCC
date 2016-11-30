@@ -53,20 +53,14 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
-        LocationListener {
+public class MainActivity extends AppCompatActivity  {
 
     private Toolbar toolbarPrincipal;
     private SlidingTabLayout slidingTabLayout;
     private ViewPager viewPager;
     private ProgressDialog progressDialog;
     private ListView listView;
-    private GoogleApiClient mGoogleApiClient;
-    private LocationRequest locationRequest;
-    private FusedLocationProviderApi fusedLocationProviderApi;
-    private Location mLastLocation;
-    private String cidade_usuario;
-    private String estado_usuario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,21 +75,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         setSupportActionBar(toolbarPrincipal);
 
-
-        if (ContextCompat.checkSelfPermission(MainActivity.this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(MainActivity.this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    102);
-
-        } else {
-
-            getLocation();
-
-        }
-
         SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
 
         StringBuilder sqlClientes = new StringBuilder();
@@ -104,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         db.execSQL("CREATE TABLE IF NOT EXISTS usuario(_id INTEGER PRIMARY KEY, object_id VARCHAR(50));");
 
         db.execSQL("CREATE TABLE IF NOT EXISTS filtro_usuario(object_id VARCHAR(20) PRIMARY KEY, genero INTEGER, tipo INTEGER, " +
-                "raca VARCHAR(30));");
+                "raca VARCHAR(30), localizacao INTEGER, raio DOUBLE);");
 
         try {
             String user_object_id = ParseUser.getCurrentUser().getObjectId();
@@ -112,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
 
             if (cursor.getCount() < 1){
-                db.execSQL("insert into filtro_usuario (object_id, genero, tipo, raca) values (\""+user_object_id+"\", 0, 0, \"Todos\");");
+                db.execSQL("insert into filtro_usuario (object_id, genero, tipo, raca, localizacao, raio) values (\""+user_object_id+"\", 0, 0, \"Todos\", 1, 150.0);");
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -209,144 +188,4 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         finish();
     }
 
-    private void getLocation(){
-        locationRequest = LocationRequest.create();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(10000);
-        locationRequest.setFastestInterval(5000);
-        fusedLocationProviderApi = LocationServices.FusedLocationApi;
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addApi(LocationServices.API)
-                .addConnectionCallbacks(this)
-                .build();
-        if (mGoogleApiClient != null) {
-            mGoogleApiClient.connect();
-        }
-    }
-
-
-    @Override
-    public void onConnected(Bundle arg0) {
-
-        fusedLocationProviderApi.requestLocationUpdates( mGoogleApiClient,  locationRequest, this);
-        mLastLocation = LocationServices.FusedLocationApi
-                .getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
-            Geocoder geocoder = new Geocoder(this, Locale.getDefault());
-            List<android.location.Address> addresses = null;
-            try {
-                addresses = geocoder.getFromLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 1);
-                if (addresses.size() > 0) {
-
-                    if (addresses.get(0).getCountryCode().equals("BR")) {
-
-                        cidade_usuario = addresses.get(0).getLocality().toUpperCase();
-                        estado_usuario = addresses.get(0).getAdminArea().replace("State of ", "").toUpperCase();
-
-
-                        if (estado_usuario.equals("ACRE"))
-                            estado_usuario = "AC";
-                        else if (estado_usuario.equals("ALAGOAS"))
-                            estado_usuario = "AL";
-                        else if (estado_usuario.equals("AMAPÁ"))
-                            estado_usuario = "AP";
-                        else if (estado_usuario.equals("AMAZONAS"))
-                            estado_usuario = "AM";
-                        else if (estado_usuario.equals("BAHIA"))
-                            estado_usuario = "BA";
-                        else if (estado_usuario.equals("CEARÁ"))
-                            estado_usuario = "CE";
-                        else if (estado_usuario.equals("DISTRITO FEDERAL"))
-                            estado_usuario = "DF";
-                        else if (estado_usuario.equals("ESPÍRITO SANTO"))
-                            estado_usuario = "ES";
-                        else if (estado_usuario.equals("GOIÁS"))
-                            estado_usuario = "GO";
-                        else if (estado_usuario.equals("MARANHÃO"))
-                            estado_usuario = "MA";
-                        else if (estado_usuario.equals("MATO GROSSO"))
-                            estado_usuario = "MT";
-                        else if (estado_usuario.equals("MATO GROSSO DO SUL"))
-                            estado_usuario = "MS";
-                        else if (estado_usuario.equals("MINAS GERAIS"))
-                            estado_usuario = "MG";
-                        else if (estado_usuario.equals("PARÁ"))
-                            estado_usuario = "PA";
-                        else if (estado_usuario.equals("PARAÍBA"))
-                            estado_usuario = "PB";
-                        else if (estado_usuario.equals("PARANÁ"))
-                            estado_usuario = "PR";
-                        else if (estado_usuario.equals("PERNAMBUCO"))
-                            estado_usuario = "PE";
-                        else if (estado_usuario.equals("PIAUÍ"))
-                            estado_usuario = "PI";
-                        else if (estado_usuario.equals("RIO DE JANEIRO"))
-                            estado_usuario = "RJ";
-                        else if (estado_usuario.equals("RIO GRANDE DO NORTE"))
-                            estado_usuario = "RN";
-                        else if (estado_usuario.equals("RIO GRANDE DO SUL"))
-                            estado_usuario = "RS";
-                        else if (estado_usuario.equals("RONDÔNIA"))
-                            estado_usuario = "RO";
-                        else if (estado_usuario.equals("RORAIMA"))
-                            estado_usuario = "RR";
-                        else if (estado_usuario.equals("SANTA CATARINA"))
-                            estado_usuario = "SC";
-                        else if (estado_usuario.equals("SÃO PAULO"))
-                            estado_usuario = "SP";
-                        else if (estado_usuario.equals("SERGIPE"))
-                            estado_usuario = "SE";
-                        else if (estado_usuario.equals("TOCANTINS"))
-                            estado_usuario = "TO";
-                        else
-                            estado_usuario = "SP";
-
-
-                        ParseUser.getCurrentUser().put("lista_cidade", cidade_usuario);
-                        ParseUser.getCurrentUser().put("lista_estado", estado_usuario);
-                        ParseUser.getCurrentUser().saveEventually(new SaveCallback() {
-                            @Override
-                            public void done(ParseException e) {
-                                if (e == null) {
-                                    //Toast.makeText(MainActivity.this, "Localização atualizada para", Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
-
-                    }
-                }
-            } catch (IOException e) {
-                Toast.makeText(MainActivity.this, "Erro ao buscar localização.", Toast.LENGTH_LONG).show();
-            }
-
-        }
-    }
-
-
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-    }
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case 102:
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //granted
-                    getLocation();
-                } else {
-                    //not granted
-                }
-                break;
-            default:
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-    }
 }

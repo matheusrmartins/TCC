@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.parse.starter.activity.FiltroActivity"
     android:orientation="vertical"
-    android:background="@drawable/fundo_degrade_aplicacao">
+    android:background="@drawable/fundo_degrade_aplicacao"
+    android:weightSum="1">
 
     <include
         android:id="@+id/toolbar_filtro"
@@ -45,16 +46,16 @@
             android:id="@+id/radioButton" />
 
         <RadioButton
-            android:text="Macho"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton_macho" />
-
-        <RadioButton
             android:text="Fêmea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton_femea" />
+
+        <RadioButton
+            android:text="Macho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_macho" />
     </RadioGroup>
 
     <Spinner
@@ -68,6 +69,26 @@
         android:dropDownWidth="match_parent"
         android:layout_marginTop="17dp"
         />
+
+    <Switch
+        android:text="Localizar animais próximos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_localizacao"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:max="300"
+        android:layout_weight="0.08" />
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_raio" />
 
     <Button
         android:text="Salvar"

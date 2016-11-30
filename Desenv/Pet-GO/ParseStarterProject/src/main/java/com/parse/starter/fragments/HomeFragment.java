@@ -1,15 +1,22 @@
 package com.parse.starter.fragments;
 
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.print.PrintHelper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +28,11 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderApi;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -37,8 +49,10 @@ import com.parse.starter.activity.MainActivity;
 import com.parse.starter.activity.PerfilAnimalActivity;
 import com.parse.starter.adapter.HomeAdapter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import static android.content.Context.MODE_WORLD_WRITEABLE;
 import static android.database.sqlite.SQLiteDatabase.openDatabase;
@@ -46,7 +60,8 @@ import static android.database.sqlite.SQLiteDatabase.openDatabase;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks,
+        LocationListener {
 
     private ListView listView;
     private ArrayList<ParseObject> postagens;
@@ -55,6 +70,13 @@ public class HomeFragment extends Fragment {
     private boolean carregamento;
     private ParseObject parseObject;
     public ProgressDialog progressDialog;
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest locationRequest;
+    private FusedLocationProviderApi fusedLocationProviderApi;
+    private Location mLastLocation;
+    private String cidade_usuario;
+    private String estado_usuario;
+    private Cursor cursor;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -66,8 +88,10 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-
+        postagens = new ArrayList<>();
+        listView = (ListView) view.findViewById(R.id.list_postagens_home);
+        adapter = new HomeAdapter(getActivity(), postagens);
+        listView.setAdapter(adapter);
 
         carregamento = false;
 
@@ -77,42 +101,36 @@ public class HomeFragment extends Fragment {
         progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                            getContext());
-                    alertDialogBuilder.setTitle("Alerta");
-                    alertDialogBuilder
-                            .setMessage("Tem certeza que deseja fechar?")
-                            .setCancelable(true)
-                            .setPositiveButton("Sim",new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,int id) {
-                                    System.exit(0);
-                                }
-                            })
-                            .setNegativeButton("Não",new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,int id) {
-                                    if (!carregamento)
-                                        progressDialog.show();
-                                }
-                            });
-                    alertDialogBuilder.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                        @Override
-                        public void onCancel(DialogInterface dialog) {
-                            if (!carregamento)
-                                progressDialog.show();
-                        }
-                    });
-                    AlertDialog alertDialog = alertDialogBuilder.create();
-                    alertDialog.show();
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        getContext());
+                alertDialogBuilder.setTitle("Alerta");
+                alertDialogBuilder
+                        .setMessage("Tem certeza que deseja fechar?")
+                        .setCancelable(true)
+                        .setPositiveButton("Sim",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                System.exit(0);
+                            }
+                        })
+                        .setNegativeButton("Não",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                if (!carregamento)
+                                    progressDialog.show();
+                            }
+                        });
+                alertDialogBuilder.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        if (!carregamento)
+                            progressDialog.show();
+                    }
+                });
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
             }
         });
 
         progressDialog.show();
-
-
-        postagens = new ArrayList<>();
-        listView = (ListView) view.findViewById(R.id.list_postagens_home);
-        adapter = new HomeAdapter(getActivity(), postagens);
-        listView.setAdapter(adapter);
 
 
 
@@ -138,7 +156,7 @@ public class HomeFragment extends Fragment {
                 bundle.putString("telefone", parseObject.getString("telefone"));
                 bundle.putString("imagem", parseObject.getParseFile("imagem").getUrl());
                 bundle.putString("vacinas", (parseObject.getString("vacinas").trim().equals("")) ?
-                                    "" : parseObject.getString("vacinas"));
+                        "" : parseObject.getString("vacinas"));
                 bundle.putString("objectId", parseObject.getObjectId());
                 bundle.putString("usuario_nome", parseObject.getString("usuario_nome"));
                 bundle.putString("usuario_email", parseObject.getString("usuario_email"));
@@ -151,28 +169,44 @@ public class HomeFragment extends Fragment {
         });
 
 
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
 
-        getPostagens();
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    102);
+
+        } else {
+
+            getPostagens(1);
+
+        }
 
         return view;
     }
 
 
 
-    private void getPostagens() {
+    private void getPostagens(int permissao) {
 
         query = ParseQuery.getQuery("Animal");
         try {
+
+            if (permissao == 1)
+                getLocation();
+
 
             SQLiteDatabase db = getContext().openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
 
             String user_object_id = ParseUser.getCurrentUser().getObjectId();
 
-            Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
+            cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
 
             if (cursor.getCount() > 0) {
 
                 cursor.moveToFirst();
+
                 // filtro de genero de animal
                 if (cursor.getInt(1) == 1)
                     query.whereEqualTo("lista_genero", "Fêmea");
@@ -188,11 +222,11 @@ public class HomeFragment extends Fragment {
                 //filtro de raça - enviar todos como padrão na criação de usuário.
                 if (!cursor.getString(3).equals("Todos"))
                     query.whereEqualTo("lista_raca", cursor.getString(3));
+
             }
         } catch (Exception e) {
             Toast.makeText(getContext(), "Erro ao aplicar filtros", Toast.LENGTH_LONG).show();
         }
-        query.whereNotEqualTo("object_id_usuario", ParseUser.getCurrentUser().getObjectId());
         query.orderByDescending("createdAt");
 
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -204,8 +238,27 @@ public class HomeFragment extends Fragment {
 
                         postagens.clear();
                         for (ParseObject parseObject : objects) {
+                            try {
+                                if (cursor.getInt(4)== 1){
+                                    Location loc2 = new Location(LocationManager.GPS_PROVIDER);
+                                    loc2.setLatitude(parseObject.getDouble("Latitude"));
+                                    loc2.setLongitude(parseObject.getDouble("Longitude"));
 
-                            postagens.add(parseObject);
+                                    Location loc1 = new Location(LocationManager.GPS_PROVIDER);
+                                    loc1.setLatitude(mLastLocation.getLatitude());
+                                    loc1.setLongitude(mLastLocation.getLongitude());
+
+                                    double radius = cursor.getDouble(5) * 1000; // Raio em metros.
+                                    double distance = loc1.distanceTo(loc2); // recebe distância entre os dois pontos.
+                                    if (distance < radius)  // verifica se tá dentro do raio estipulado.
+                                        postagens.add(parseObject);
+                                } else{
+                                    postagens.add(parseObject);
+                                }
+                            }catch (Exception f){
+                                postagens.add(parseObject);
+                            }
+
 
                         }
                         adapter.notifyDataSetChanged();
@@ -228,7 +281,152 @@ public class HomeFragment extends Fragment {
 
 
     public void atualizaPostagens(){
-        getPostagens();
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    102);
+
+        } else {
+
+            getPostagens(1);
+
+        }
+    }
+
+    private void getLocation(){
+        locationRequest = LocationRequest.create();
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(5000);
+        fusedLocationProviderApi = LocationServices.FusedLocationApi;
+        mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
+                .addApi(LocationServices.API)
+                .addConnectionCallbacks(this)
+                .build();
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.connect();
+        }
+    }
+
+    @Override
+    public void onConnected(Bundle arg0) {
+
+        fusedLocationProviderApi.requestLocationUpdates( mGoogleApiClient,  locationRequest, this);
+        mLastLocation = LocationServices.FusedLocationApi
+                .getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null) {
+            Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
+            List<android.location.Address> addresses = null;
+
+            try {
+                addresses = geocoder.getFromLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude(), 1);
+                if (addresses.size() > 0) {
+
+                    if (addresses.get(0).getCountryCode().equals("BR")) {
+
+                        cidade_usuario = addresses.get(0).getLocality().toUpperCase();
+                        estado_usuario = addresses.get(0).getAdminArea().replace("State of ", "").toUpperCase();
+
+
+                        if (estado_usuario.equals("ACRE"))
+                            estado_usuario = "AC";
+                        else if (estado_usuario.equals("ALAGOAS"))
+                            estado_usuario = "AL";
+                        else if (estado_usuario.equals("AMAPÁ"))
+                            estado_usuario = "AP";
+                        else if (estado_usuario.equals("AMAZONAS"))
+                            estado_usuario = "AM";
+                        else if (estado_usuario.equals("BAHIA"))
+                            estado_usuario = "BA";
+                        else if (estado_usuario.equals("CEARÁ"))
+                            estado_usuario = "CE";
+                        else if (estado_usuario.equals("DISTRITO FEDERAL"))
+                            estado_usuario = "DF";
+                        else if (estado_usuario.equals("ESPÍRITO SANTO"))
+                            estado_usuario = "ES";
+                        else if (estado_usuario.equals("GOIÁS"))
+                            estado_usuario = "GO";
+                        else if (estado_usuario.equals("MARANHÃO"))
+                            estado_usuario = "MA";
+                        else if (estado_usuario.equals("MATO GROSSO"))
+                            estado_usuario = "MT";
+                        else if (estado_usuario.equals("MATO GROSSO DO SUL"))
+                            estado_usuario = "MS";
+                        else if (estado_usuario.equals("MINAS GERAIS"))
+                            estado_usuario = "MG";
+                        else if (estado_usuario.equals("PARÁ"))
+                            estado_usuario = "PA";
+                        else if (estado_usuario.equals("PARAÍBA"))
+                            estado_usuario = "PB";
+                        else if (estado_usuario.equals("PARANÁ"))
+                            estado_usuario = "PR";
+                        else if (estado_usuario.equals("PERNAMBUCO"))
+                            estado_usuario = "PE";
+                        else if (estado_usuario.equals("PIAUÍ"))
+                            estado_usuario = "PI";
+                        else if (estado_usuario.equals("RIO DE JANEIRO"))
+                            estado_usuario = "RJ";
+                        else if (estado_usuario.equals("RIO GRANDE DO NORTE"))
+                            estado_usuario = "RN";
+                        else if (estado_usuario.equals("RIO GRANDE DO SUL"))
+                            estado_usuario = "RS";
+                        else if (estado_usuario.equals("RONDÔNIA"))
+                            estado_usuario = "RO";
+                        else if (estado_usuario.equals("RORAIMA"))
+                            estado_usuario = "RR";
+                        else if (estado_usuario.equals("SANTA CATARINA"))
+                            estado_usuario = "SC";
+                        else if (estado_usuario.equals("SÃO PAULO"))
+                            estado_usuario = "SP";
+                        else if (estado_usuario.equals("SERGIPE"))
+                            estado_usuario = "SE";
+                        else if (estado_usuario.equals("TOCANTINS"))
+                            estado_usuario = "TO";
+                        else
+                            estado_usuario = "SP";
+
+
+                        ParseUser.getCurrentUser().put("lista_cidade", cidade_usuario);
+                        ParseUser.getCurrentUser().put("lista_estado", estado_usuario);
+                        ParseUser.getCurrentUser().saveEventually();
+                    }
+                }
+            } catch (IOException e) {
+                Toast.makeText(getActivity(), "Erro ao buscar localização.", Toast.LENGTH_LONG).show();
+            }
+
+        }
+    }
+
+
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 102:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //granted
+                    getPostagens(1);
+                } else {
+                    getPostagens(0);
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 
 }

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.ParseException;
 import android.net.Uri;
 import android.os.Bundle;
@@ -41,6 +43,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class EditarPetActivity extends AppCompatActivity {
 
@@ -193,6 +196,20 @@ public class EditarPetActivity extends AppCompatActivity {
 
                                 object.put("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
                                 object.put("lista_estado", lista_estado.getSelectedItem().toString());
+                                Geocoder gc = new Geocoder(EditarPetActivity.this, new Locale("pt", "BR"));
+                                List<Address> addresses= null;
+                                Double latitude = 0.0;
+                                Double longitude = 0.0;
+                                try {
+                                    addresses = gc.getFromLocationName(lista_cidade.getText().toString().toUpperCase().trim()+" "+
+                                            lista_estado.getSelectedItem().toString(), 1);
+                                    latitude = addresses.get(0).getLatitude();
+                                    longitude = addresses.get(0).getLongitude();
+                                } catch (IOException f) {
+                                    f.printStackTrace();
+                                }
+                                object.put("Latitude", latitude);
+                                object.put("Longitude", longitude);
                                 object.put("lista_raca", lista_raca.getSelectedItem().toString());
                                 object.put("lista_ano", lista_ano_int);
                                 object.put("lista_mes", lista_mes_int);

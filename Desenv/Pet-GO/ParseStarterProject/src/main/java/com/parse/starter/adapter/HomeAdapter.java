@@ -132,8 +132,9 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
                 detalhes.append((parseObject.get("lista_mes").equals("01")) ? " mês" : " meses");
             }
 
-
-
+            TextView cidade = (TextView) view.findViewById(R.id.text_cidade);
+            cidade.setText((CharSequence) parseObject.get("lista_cidade").toString().toUpperCase()+", "+
+                    parseObject.get("lista_estado").toString().toUpperCase());
 
             nome.setText((CharSequence) parseObject.get("nome_animal").toString().toUpperCase());
 
