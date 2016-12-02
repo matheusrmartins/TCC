@@ -169,7 +169,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="caa10882ef7b0b2f050d75e0877ea786c2e84602">
+        sha1="3111ee6ea82dad5e4fe49ecde79abe8d5dff6368">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2b66861a6f76079634c9c5e6d4e0c3b637761c65\classes.dex" />
     </item>
     <item
@@ -214,7 +214,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="941868a027b8084771c723c4c90fbe344d31067e">
+        sha1="fea440bc8996f5637d9f965a1496c45adacec1b5">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d140599d94559a85116559054077b9d930e8f3e2\classes.dex" />
     </item>
     <item
@@ -225,6 +225,15 @@
         revision="23.0.2"
         sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.6.1_5afdc3f36b5ccfa6ea9ff27bc18205e396640889\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\exploded-aar\io.apptik.widget\multislider\1.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="884d91b75a47666f29f1c8fde21fe2ced8fb1932">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\io.apptik.widget-multislider-1.2_e5c05c011d40c50f6e2a193c3d34f01b4032193b\classes.dex" />
     </item>
     <item
         is-multidex="true"

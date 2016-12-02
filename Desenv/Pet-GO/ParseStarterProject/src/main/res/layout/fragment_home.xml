@@ -5,7 +5,12 @@
     tools:context="com.parse.starter.fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/textView_erro" />
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

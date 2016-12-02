@@ -5,44 +5,30 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="176168615769703"
+    timestamp="383448910445957"
     token="3550697998233825527"
-    verifier="COMPATIBLE" >
+    verifier="BINARY_MANIFEST_FILE_CHANGE" >
 
     <task
         name="javac"
-        duration="1451" />
+        duration="3203" />
     <task
         name="instant-run-dex"
-        duration="1518" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="371" />
+        duration="572" />
     <task
         name="verifier"
-        duration="158" />
+        duration="139" />
 
     <artifact
-        location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="175227970905491"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
-            type="MAIN" />
-    </build>
-    <build
-        timestamp="176036960754182"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="224647154414471"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="383448910445957"
+        verifier="BINARY_MANIFEST_FILE_CHANGE" >
         <artifact
             location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
             type="MAIN" />

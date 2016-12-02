@@ -164,7 +164,8 @@ public class EditarPetActivity extends AppCompatActivity {
                 cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
                         nome_animal.getText().toString().trim(),
                         lista_ano_int+lista_mes_int,
-                        lista_raca.getSelectedItemPosition());
+                        lista_raca.getSelectedItemPosition(),
+                        lista_estado.getSelectedItemPosition());
 
                 if(Integer.valueOf(lista_ano_int) > 21)
                     cod_erro = 110;
@@ -271,6 +272,7 @@ public class EditarPetActivity extends AppCompatActivity {
         imagemEditar = (ImageView) findViewById(R.id.image_editar);
         Picasso.with(this)
                 .load(getIntent().getExtras().getString("imagem"))
+                .placeholder(R.drawable.progress_animation)
                 .fit()
                 .centerInside()
                 .into(imagemEditar);
@@ -373,14 +375,25 @@ public class EditarPetActivity extends AppCompatActivity {
         else if (lista_estado.getSelectedItem().toString().equals("TO")){
             cidades = getResources().getStringArray(R.array.lista_cidade_TO);
         }
+        else{
+            lista_cidade.setText("");
+            lista_cidade.setClickable(false);
+            cidades = null;
+        }
 
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cidades);
-        lista_cidade.setAdapter(adapter);
-        lista_cidade.setThreshold(1);
+
+        if (lista_estado.getSelectedItemPosition() > 0) {
+            adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, cidades);
+            lista_cidade.setAdapter(adapter);
+            lista_cidade.setThreshold(1);
+        }else{
+            lista_cidade.setAdapter(null);
+        }
+
         lista_cidade.setText(null);
     }
 
-    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position){
+    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position, int posicao_estado){
 
         if(posicao_cidade == -1)
             return 104;
@@ -390,6 +403,8 @@ public class EditarPetActivity extends AppCompatActivity {
             return 109;
         else if (raca_position == 0)
             return 113;
+        else if (posicao_estado == 0)
+            return 114;
         else
             return 0;
     }

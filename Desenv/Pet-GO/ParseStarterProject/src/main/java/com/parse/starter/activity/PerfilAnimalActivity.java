@@ -83,6 +83,7 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
         imagem = (ImageView) findViewById(R.id.imagem_perfil);
         Picasso.with(this)
                 .load(getIntent().getExtras().getString("imagem"))
+                .placeholder(R.drawable.progress_animation)
                 .fit()
                 .centerInside()
                 .into(imagem);
@@ -162,17 +163,22 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
                     }
                 });
                 progressDialog.show();
-                Intent intent = new Intent(PerfilAnimalActivity.this, ChatActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("nome_usuario", getIntent().getExtras().getString("usuario_nome"));
-                bundle.putString("email_usuario", getIntent().getExtras().getString("usuario_email"));
-                bundle.putString("object_id_usuario", getIntent().getExtras().getString("object_id_usuario"));
-                intent.putExtras(bundle);
-                startActivity(intent);
+                if (!getIntent().getExtras().getString("object_id_usuario").equals(ParseUser.getCurrentUser().getObjectId())) {
+                    Intent intent = new Intent(PerfilAnimalActivity.this, ChatActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("nome_usuario", getIntent().getExtras().getString("usuario_nome"));
+                    bundle.putString("email_usuario", getIntent().getExtras().getString("usuario_email"));
+                    bundle.putString("object_id_usuario", getIntent().getExtras().getString("object_id_usuario"));
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                } else {
+                   Toast.makeText(PerfilAnimalActivity.this, "Esse animal foi cadastrado pelo seu usuário", Toast.LENGTH_SHORT).show();
+                }
+
                 progressDialog.dismiss();
 
-                    }
-                });
+            }
+        });
 
 
 
@@ -181,10 +187,14 @@ public class PerfilAnimalActivity  extends AppCompatActivity {
         botao_telefone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (telefone_contato.equals("")){
-                    Toast.makeText(PerfilAnimalActivity.this,"Telefone não informado",Toast.LENGTH_LONG).show();
-                }else{
-                    requestPermissionCall();
+                if (!getIntent().getExtras().getString("object_id_usuario").equals(ParseUser.getCurrentUser().getObjectId())) {
+                    if (telefone_contato.equals("")) {
+                        Toast.makeText(PerfilAnimalActivity.this, "Telefone não informado", Toast.LENGTH_LONG).show();
+                    } else {
+                        requestPermissionCall();
+                    }
+                } else {
+                    Toast.makeText(PerfilAnimalActivity.this, "Esse animal foi cadastrado pelo seu usuário", Toast.LENGTH_SHORT).show();
                 }
 
             }

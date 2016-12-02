@@ -1,5 +1,17 @@
 [
     {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\seek_thumb_normal.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\seek_thumb_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_secondary_holo.9.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_secondary_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo_completo.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\logo_completo.png"
+    },
+    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_call.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\ic_call.png"
     },
@@ -8,8 +20,16 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\like.png"
     },
     {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_track_holo_light.9.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_track_holo_light.9.png"
+    },
+    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_notifications.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\ic_notifications.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_control_focused_holo.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_control_focused_holo.png"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_send.png",
@@ -22,6 +42,10 @@
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_pets.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\ic_pets.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_control_pressed_holo.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_control_pressed_holo.png"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_keyboard_arrow_left.png",
@@ -40,11 +64,27 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\ic_message.png"
     },
     {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\seek_thumb_pressed.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\seek_thumb_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_primary_holo.9.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_primary_holo.9.png"
+    },
+    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_home.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\ic_action_home.png"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\logo_escrita.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\src\\main\\res\\drawable-hdpi\\logo_escrita.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_control_disabled_holo.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_control_disabled_holo.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\multislider_scrubber_control_normal_holo.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\ParseStarterProject\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-hdpi\\multislider_scrubber_control_normal_holo.png"
     }
 ]

@@ -14,6 +14,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -138,7 +139,6 @@ public class CadastroPetActivity extends AppCompatActivity {
             }
         });
 
-
         botao_continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,7 +163,8 @@ public class CadastroPetActivity extends AppCompatActivity {
                 cod_erro = verificaErro(adapter.getPosition(lista_cidade.getText().toString().toUpperCase().trim()),
                                             nome_animal.getText().toString().trim(),
                                             lista_ano_int+lista_mes_int,
-                                            lista_raca.getSelectedItemPosition());
+                                            lista_raca.getSelectedItemPosition(),
+                                            lista_estado.getSelectedItemPosition());
 
                 if (imagem_byteArray == null)
                     cod_erro = 108;
@@ -231,89 +232,128 @@ public class CadastroPetActivity extends AppCompatActivity {
         estado_count_listener++;
         if (lista_estado.getSelectedItem().toString().equals("AC")) {
             cidades = getResources().getStringArray(R.array.lista_cidade_AC);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("AL")){
             cidades = getResources().getStringArray(R.array.lista_cidade_AL);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("AP")){
             cidades = getResources().getStringArray(R.array.lista_cidade_AP);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("AM")){
             cidades = getResources().getStringArray(R.array.lista_cidade_AM);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("BA")){
             cidades = getResources().getStringArray(R.array.lista_cidade_BA);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("CE")){
             cidades = getResources().getStringArray(R.array.lista_cidade_CE);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("DF")){
             cidades = getResources().getStringArray(R.array.lista_cidade_DF);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("ES")){
             cidades = getResources().getStringArray(R.array.lista_cidade_ES);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("GO")){
             cidades = getResources().getStringArray(R.array.lista_cidade_GO);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("MA")){
             cidades = getResources().getStringArray(R.array.lista_cidade_MA);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("MT")){
             cidades = getResources().getStringArray(R.array.lista_cidade_MT);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("MS")){
             cidades = getResources().getStringArray(R.array.lista_cidade_MS);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("MG")){
             cidades = getResources().getStringArray(R.array.lista_cidade_MG);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("PA")){
             cidades = getResources().getStringArray(R.array.lista_cidade_PA);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("PB")){
             cidades = getResources().getStringArray(R.array.lista_cidade_PB);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("PR")){
             cidades = getResources().getStringArray(R.array.lista_cidade_PR);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("PE")){
             cidades = getResources().getStringArray(R.array.lista_cidade_PE);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("PI")){
             cidades = getResources().getStringArray(R.array.lista_cidade_PI);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("RJ")){
             cidades = getResources().getStringArray(R.array.lista_cidade_RJ);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("RN")){
             cidades = getResources().getStringArray(R.array.lista_cidade_RN);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("RS")){
             cidades = getResources().getStringArray(R.array.lista_cidade_RS);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("RO")){
             cidades = getResources().getStringArray(R.array.lista_cidade_RO);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("RR")){
             cidades = getResources().getStringArray(R.array.lista_cidade_RR);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("SC")){
             cidades = getResources().getStringArray(R.array.lista_cidade_SC);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("SP")){
             cidades = getResources().getStringArray(R.array.lista_cidade_SP);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("SE")){
             cidades = getResources().getStringArray(R.array.lista_cidade_SE);
+            lista_cidade.setEnabled(true);
         }
         else if (lista_estado.getSelectedItem().toString().equals("TO")){
             cidades = getResources().getStringArray(R.array.lista_cidade_TO);
+            lista_cidade.setEnabled(true);
+        }
+        else{
+            lista_cidade.setText("");
+            lista_cidade.setClickable(false);
+            cidades = null;
         }
 
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cidades);
-        lista_cidade.setAdapter(adapter);
-        lista_cidade.setThreshold(1);
+
+        if (lista_estado.getSelectedItemPosition() > 0) {
+            adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, cidades);
+            lista_cidade.setAdapter(adapter);
+            lista_cidade.setThreshold(1);
+        }else{
+            lista_cidade.setAdapter(null);
+        }
+
+
         if (estado_count_listener != 1)
             lista_cidade.setText(null);
     }
@@ -332,9 +372,11 @@ public class CadastroPetActivity extends AppCompatActivity {
         return scaledGalleryPic;
     }
 
-    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position){
+    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position, int posicao_estado){
 
-        if(posicao_cidade == -1)
+        if (posicao_estado == 0)
+            return 114;
+        else if(posicao_cidade == -1)
             return 104;
         else if(nome_animal.equals(""))
             return 107;

@@ -28,11 +28,11 @@
     </string-array>
 
     <string-array name="lista_raca_ambos_filtro">
-        <item>Todos</item>
+        <item>Todas as raças</item>
     </string-array>
 
     <string-array name="lista_raca_cachorro_filtro">
-        <item>Todos</item>
+        <item>Todas as raças</item>
         <item>Afegão Hound</item>
         <item>Affenpinscher</item>
         <item>Airedale Terrier</item>
@@ -127,7 +127,7 @@
     </string-array>
 
     <string-array name="lista_raca_gato_filtro">
-        <item>Todos</item>
+        <item>Todas as raças</item>
         <item>Abissínio</item>
         <item>Americano de pelo curto</item>
         <item>Angorá</item>
@@ -285,6 +285,7 @@
 
 
     <string-array name="lista_estado">
+        <item>Selecione o estado</item>
         <item>AC</item>
         <item>AL</item>
         <item>AP</item>

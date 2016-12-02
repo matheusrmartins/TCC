@@ -57,8 +57,9 @@ public class FavoritosAdapter extends ArrayAdapter<ParseObject> {
                 ImageView imagemPostagem = (ImageView) view.findViewById(R.id.image_lista_favoritos);
                 Picasso.with(context)
                         .load(parseObject.getParseFile("imagem").getUrl())
+                        .placeholder(R.drawable.progress_animation)
                         .fit()
-                        .centerInside()
+                        .centerCrop()
                         .into(imagemPostagem);
 
             }catch (Exception e){

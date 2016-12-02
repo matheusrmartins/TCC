@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_entrar"
         android:layout_marginTop="20dp"
-        android:background="@drawable/fundo_botao"
+        android:background="@drawable/fundo_botao_login"
         android:layout_below="@+id/editText_password"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

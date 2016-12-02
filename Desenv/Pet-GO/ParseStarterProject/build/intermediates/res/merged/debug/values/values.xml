@@ -5643,6 +5643,7 @@
 
     </string-array>
     <string-array name="lista_estado">
+        <item>Selecione o estado</item>
         <item>AC</item>
         <item>AL</item>
         <item>AP</item>
@@ -5672,7 +5673,7 @@
         <item>TO</item>
     </string-array>
     <string-array name="lista_raca_ambos_filtro">
-        <item>Todos</item>
+        <item>Todas as raças</item>
     </string-array>
     <string-array name="lista_raca_cachorro">
         <item>Selecione a raça</item>
@@ -5769,7 +5770,7 @@
         <item>Yorkshire Terrier</item>
     </string-array>
     <string-array name="lista_raca_cachorro_filtro">
-        <item>Todos</item>
+        <item>Todas as raças</item>
         <item>Afegão Hound</item>
         <item>Affenpinscher</item>
         <item>Airedale Terrier</item>
@@ -5893,7 +5894,7 @@
         <item>Sphynx</item>
     </string-array>
     <string-array name="lista_raca_gato_filtro">
-        <item>Todos</item>
+        <item>Todas as raças</item>
         <item>Abissínio</item>
         <item>Americano de pelo curto</item>
         <item>Angorá</item>
@@ -6072,6 +6073,8 @@
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
+    <declare-styleable name="MultiSlider"><attr format="integer" name="scaleMin"/><attr format="integer" name="scaleMax"/><attr format="integer" name="scaleStep"/><attr format="integer" name="stepsThumbsApart"/><attr format="boolean" name="drawThumbsApart"/><attr name="android:thumb"/><attr format="integer" name="thumbNumber"/><attr name="android:thumbOffset"/><attr format="integer" name="thumbValue1"/><attr format="integer" name="thumbValue2"/><attr format="reference" name="range1"/><attr format="reference" name="range2"/><attr name="android:track"/><attr format="reference" name="range"/><attr format="boolean" name="mirrorForRTL"/><attr format="color" name="thumbColor"/><attr format="color" name="trackColor"/><attr format="color" name="rangeColor"/><attr format="color" name="range1Color"/><attr format="color" name="range2Color"/></declare-styleable>
+    <declare-styleable name="MultiSliderTheme"><attr format="reference" name="multiSliderStyle"/></declare-styleable>
     <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>

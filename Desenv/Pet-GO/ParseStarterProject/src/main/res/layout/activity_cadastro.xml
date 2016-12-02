@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:id="@+id/button_cadastrar"
-            android:background="@drawable/fundo_botao"
+            android:background="@drawable/fundo_botao_login"
             android:padding="13dp"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/editText_telefone"

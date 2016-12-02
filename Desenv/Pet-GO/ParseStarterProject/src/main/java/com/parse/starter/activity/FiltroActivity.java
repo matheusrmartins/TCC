@@ -29,6 +29,8 @@ import com.parse.starter.R;
 
 import java.util.List;
 
+import io.apptik.widget.MultiSlider;
+
 import static android.database.sqlite.SQLiteDatabase.openDatabase;
 
 public class FiltroActivity extends AppCompatActivity {
@@ -49,6 +51,8 @@ public class FiltroActivity extends AppCompatActivity {
     private SeekBar raio;
     private int filtro_localizacao = 1;
     private TextView textView_raio;
+    private TextView textView_idade;
+    private MultiSlider range_seekbar_idade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,8 @@ public class FiltroActivity extends AppCompatActivity {
         localizacao = (Switch) findViewById(R.id.switch_localizacao);
         raio = (SeekBar) findViewById(R.id.seekBar);
         textView_raio = (TextView) findViewById(R.id.textView_raio);
+        textView_idade = (TextView) findViewById(R.id.textView_idade);
+        range_seekbar_idade = (MultiSlider) findViewById(R.id.range_seekbar_idade);
 
         spinner_raca.setEnabled(false);
 
@@ -108,8 +114,11 @@ public class FiltroActivity extends AppCompatActivity {
                 raio.setEnabled(false);
             }
 
-            raio.setProgress(Integer.parseInt(String.valueOf(cursor.getDouble(5)).replace(".0","")));
-            textView_raio.setText(String.valueOf(cursor.getDouble(5)).replace(".0",""));
+            range_seekbar_idade.setMin(cursor.getInt(6),true,true);
+            range_seekbar_idade.setMax(cursor.getInt(7),true,true);
+
+            raio.setProgress(Integer.parseInt(String.valueOf(cursor.getDouble(5)).replace(".0","")) - 30);
+            textView_raio.setText(String.valueOf(cursor.getDouble(5)).replace(".0","")+ " km");
 
             localizacao.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -133,7 +142,7 @@ public class FiltroActivity extends AppCompatActivity {
                     tipo = "Gato";
                 else
                     tipo =  "Ambos";
-                alteraSpinnerRaca("Todos");
+                alteraSpinnerRaca("Todas as raças");
             }
         });
 
@@ -146,7 +155,7 @@ public class FiltroActivity extends AppCompatActivity {
                     tipo = "Gato";
                 else
                     tipo =  "Ambos";
-                alteraSpinnerRaca("Todos");
+                alteraSpinnerRaca("Todas as raças");
             }
         });
 
@@ -156,7 +165,8 @@ public class FiltroActivity extends AppCompatActivity {
                 public void onProgressChanged(SeekBar seekBar, int progress,
                                               boolean fromUser) {
                     // TODO Auto-generated method stub
-                    textView_raio.setText(String.valueOf(progress));
+                    progress += 30;
+                    textView_raio.setText(String.valueOf(progress) + " km");
                 }
 
                 @Override
@@ -170,6 +180,21 @@ public class FiltroActivity extends AppCompatActivity {
                 }
             });
         }
+
+        range_seekbar_idade.setMin(0);
+        range_seekbar_idade.setMax(21);
+        textView_idade.setText(range_seekbar_idade.getThumb(0).getValue() + " - " + range_seekbar_idade.getThumb(1).getValue() + " anos");
+
+        range_seekbar_idade.setOnThumbValueChangeListener(new MultiSlider.OnThumbValueChangeListener() {
+            @Override
+            public void onValueChanged(MultiSlider multiSlider, MultiSlider.Thumb thumb, int thumbIndex, int value) {
+                if (thumbIndex == 0) {
+                    textView_idade.setText(String.valueOf(value) + " - " + range_seekbar_idade.getThumb(1).getValue() + " anos");
+                } else {
+                    textView_idade.setText(range_seekbar_idade.getThumb(0).getValue() + " - " + String.valueOf(value) + " anos");
+                }
+            }
+        });
 
         botao_salvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -205,7 +230,10 @@ public class FiltroActivity extends AppCompatActivity {
                     if (cursor.getCount() > 0) {
                         db.execSQL("update filtro_usuario set genero = " + filtro_genero + "," +
                                 " tipo = " + filtro_tipo + ", raca = \"" + spinner_raca.getSelectedItem().toString() + "\"," +
-                                " localizacao = "+ filtro_localizacao + ", raio = "+ textView_raio.getText().toString() + ".0" +
+                                " localizacao = "+ filtro_localizacao +
+                                ", raio = "+ textView_raio.getText().toString().replace(" km", "") + ".0" +
+                                ", idademin = " +range_seekbar_idade.getThumb(0).getValue()+
+                                ", idademax = "+range_seekbar_idade.getThumb(1).getValue()+
                                 " where object_id =  \""+ user_object_id + "\";");
                         Toast.makeText(FiltroActivity.this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
                         finish();

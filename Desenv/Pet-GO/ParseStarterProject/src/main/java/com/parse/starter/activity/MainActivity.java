@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity  {
         db.execSQL("CREATE TABLE IF NOT EXISTS usuario(_id INTEGER PRIMARY KEY, object_id VARCHAR(50));");
 
         db.execSQL("CREATE TABLE IF NOT EXISTS filtro_usuario(object_id VARCHAR(20) PRIMARY KEY, genero INTEGER, tipo INTEGER, " +
-                "raca VARCHAR(30), localizacao INTEGER, raio DOUBLE);");
+                "raca VARCHAR(30), localizacao INTEGER, raio DOUBLE, idademin INTEGER, idademax INTEGER);");
 
         try {
             String user_object_id = ParseUser.getCurrentUser().getObjectId();
@@ -91,7 +91,8 @@ public class MainActivity extends AppCompatActivity  {
             Cursor cursor = db.rawQuery("SELECT * FROM filtro_usuario where object_id = \"" + user_object_id+"\"", null);
 
             if (cursor.getCount() < 1){
-                db.execSQL("insert into filtro_usuario (object_id, genero, tipo, raca, localizacao, raio) values (\""+user_object_id+"\", 0, 0, \"Todos\", 1, 150.0);");
+                db.execSQL("insert into filtro_usuario (object_id, genero, tipo, raca, localizacao, raio, idademin, idademax)" +
+                        " values (\""+user_object_id+"\", 0, 0, \"Todas as raças\", 1, 150.0, 0, 21);");
             }
         }catch (Exception e){
             e.printStackTrace();

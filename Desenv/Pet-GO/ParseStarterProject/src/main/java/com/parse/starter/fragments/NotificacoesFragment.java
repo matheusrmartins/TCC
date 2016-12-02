@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -38,6 +39,7 @@ public class NotificacoesFragment extends Fragment {
     private ParseQuery<ParseObject> query_conversas1;
     private ParseQuery<ParseObject> query_conversas2;
     private String usuario;
+    private TextView textView_erro;
 
     public NotificacoesFragment() {
         // Required empty public constructor
@@ -50,12 +52,13 @@ public class NotificacoesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_notificacoes, container, false);
 
-
         conversas = new ArrayList<>();
         listView_conversas = (ListView) view.findViewById(R.id.listView_conversas);
         arrayAdapter = new ConversaAdapter(getActivity(), conversas);
         
         listView_conversas.setAdapter(arrayAdapter);
+
+        textView_erro = (TextView) view.findViewById(R.id.textView_erro);
 
         usuario = ParseUser.getCurrentUser().getObjectId();
 
@@ -105,6 +108,10 @@ public class NotificacoesFragment extends Fragment {
                         conversas.add(conversa);
                     }
                     listView_conversas.invalidateViews();
+                    if (conversas.size() > 0)
+                        textView_erro.setText("");
+                    else
+                        textView_erro.setText("Aqui fica a lista de conversas. Você ainda não possui nenhuma notificação.");
                 }else{
 
                 }

@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.facebook.share.model.ShareLinkContent;
+import com.parse.DeleteCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -92,18 +93,9 @@ public class VacinaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 progressDialog = new ProgressDialog(VacinaActivity.this);
                 progressDialog.setCancelable(false);
                 progressDialog.setMessage("Publicando animal...");
-                progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        progressDialog.dismiss();
-                    }
-                });
-
                 progressDialog.show();
 
                 String lista_vacinas = "";
@@ -167,6 +159,7 @@ public class VacinaActivity extends AppCompatActivity {
 
                 //Envia os objetos parse para o banco
                 final ParseObject parseObject = new ParseObject("Animal");
+
                 parseObject.put("object_id_usuario", ParseUser.getCurrentUser().getObjectId().toString());
                 parseObject.put("nome_animal", nome_animal);
                 parseObject.put("lista_genero", lista_genero);

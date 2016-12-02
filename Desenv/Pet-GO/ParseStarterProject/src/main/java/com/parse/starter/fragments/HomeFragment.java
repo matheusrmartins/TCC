@@ -14,6 +14,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -26,6 +27,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -48,6 +50,7 @@ import com.parse.starter.activity.FiltroActivity;
 import com.parse.starter.activity.MainActivity;
 import com.parse.starter.activity.PerfilAnimalActivity;
 import com.parse.starter.adapter.HomeAdapter;
+import com.parse.starter.util.Erros;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -77,6 +80,8 @@ public class HomeFragment extends Fragment implements GoogleApiClient.Connection
     private String cidade_usuario;
     private String estado_usuario;
     private Cursor cursor;
+    private TextView textView_erro;
+    private boolean acesso_gps = true;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -92,6 +97,8 @@ public class HomeFragment extends Fragment implements GoogleApiClient.Connection
         listView = (ListView) view.findViewById(R.id.list_postagens_home);
         adapter = new HomeAdapter(getActivity(), postagens);
         listView.setAdapter(adapter);
+
+        textView_erro = (TextView) view.findViewById(R.id.textView_erro);
 
         carregamento = false;
 
@@ -219,8 +226,8 @@ public class HomeFragment extends Fragment implements GoogleApiClient.Connection
                 else if (cursor.getInt(2) == 2)
                     query.whereEqualTo("lista_tipo", "Gato");
 
-                //filtro de raça - enviar todos como padrão na criação de usuário.
-                if (!cursor.getString(3).equals("Todos"))
+                //filtro de raça - enviar Todas as raças como padrão na criação de usuário.
+                if (!cursor.getString(3).equals("Todas as raças"))
                     query.whereEqualTo("lista_raca", cursor.getString(3));
 
             }
@@ -237,40 +244,72 @@ public class HomeFragment extends Fragment implements GoogleApiClient.Connection
                     if (objects.size() > 0) {
 
                         postagens.clear();
+                        acesso_gps = true;
                         for (ParseObject parseObject : objects) {
-                            try {
-                                if (cursor.getInt(4)== 1){
-                                    Location loc2 = new Location(LocationManager.GPS_PROVIDER);
-                                    loc2.setLatitude(parseObject.getDouble("Latitude"));
-                                    loc2.setLongitude(parseObject.getDouble("Longitude"));
+                            if (Integer.parseInt(parseObject.get("lista_ano").toString()) >= cursor.getInt(6) &&
+                                Integer.parseInt(parseObject.get("lista_ano").toString()) <= cursor.getInt(7)) {
+                                try {
+                                    if (cursor.getInt(4) == 1) {
+                                        Location loc2 = new Location(LocationManager.GPS_PROVIDER);
+                                        loc2.setLatitude(parseObject.getDouble("Latitude"));
+                                        loc2.setLongitude(parseObject.getDouble("Longitude"));
 
-                                    Location loc1 = new Location(LocationManager.GPS_PROVIDER);
-                                    loc1.setLatitude(mLastLocation.getLatitude());
-                                    loc1.setLongitude(mLastLocation.getLongitude());
+                                        Location loc1 = new Location(LocationManager.GPS_PROVIDER);
+                                        loc1.setLatitude(mLastLocation.getLatitude());
+                                        loc1.setLongitude(mLastLocation.getLongitude());
 
-                                    double radius = cursor.getDouble(5) * 1000; // Raio em metros.
-                                    double distance = loc1.distanceTo(loc2); // recebe distância entre os dois pontos.
-                                    if (distance < radius)  // verifica se tá dentro do raio estipulado.
+                                        double radius = cursor.getDouble(5) * 1000; // Raio em metros.
+                                        double distance = loc1.distanceTo(loc2); // recebe distância entre os dois pontos.
+                                        if (distance < radius)  // verifica se tá dentro do raio estipulado.
+                                            postagens.add(parseObject);
+                                    } else {
                                         postagens.add(parseObject);
-                                } else{
+                                    }
+                                } catch (Exception f) {
                                     postagens.add(parseObject);
+                                    acesso_gps = false;
                                 }
-                            }catch (Exception f){
-                                postagens.add(parseObject);
                             }
-
 
                         }
                         adapter.notifyDataSetChanged();
                         carregamento = true;
                         progressDialog.dismiss();
 
+                        if (!acesso_gps){
+                            final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                                    getContext());
+                            alertDialogBuilder.setTitle("Alerta")
+                                    .setMessage("Erro ao buscar animais próximos. Verifique se a sua localização está ativa.")
+                                    .setCancelable(true)
+                                    .setPositiveButton("Verificar",new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog,int id) {
+                                            startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
+                                        }
+                                    })
+                                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            AlertDialog alertDialog = alertDialogBuilder.create();
+                            alertDialog.show();
+                        }
+
+
                     }else{
                         progressDialog.dismiss();
                     }
+
+                    if (listView.getCount() > 0)
+                        textView_erro.setText("");
+                    else
+                        textView_erro.setText("Não foi encontrado nenhum animal. Verifique as configurações de interesse.");
                 } else {
                     progressDialog.dismiss();
-                    Toast.makeText(getContext(), e.getMessage() + e.getCode(), Toast.LENGTH_LONG).show();
+                    Erros erros = new Erros();
+                    Toast.makeText(getContext(), erros.retornaMensagem("PAR-"+e.getCode()), Toast.LENGTH_LONG).show();
                 }
 
             }

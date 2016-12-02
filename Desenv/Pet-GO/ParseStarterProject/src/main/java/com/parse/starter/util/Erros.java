@@ -1,5 +1,7 @@
 package com.parse.starter.util;
 
+import android.widget.Toast;
+
 /**
  * Created by Matheus on 16/08/2016.
  */
@@ -35,12 +37,22 @@ public class Erros {
                 return "Digite um número de telefone válido";
             case "APP-113":
                 return "Selecione uma raça";
+            case "APP-114":
+                return "Selecione o estado";
+            case "PAR-101":
+                return "E-mail/Senha incorretos.";
+            case "PAR-200":
+                return "O e-mail é obrigatório.";
+            case "PAR-201":
+                return "A senha é obrigatória.";
             case "PAR-202":
-                return "Esse usuário já está cadastrado.";
+                return "Esse e-mail já está cadastrado.";
             case "PAR-203":
                 return "Esse e-mail já está cadastrado.";
             case "PAR-125":
                 return "Digite um e-mail válido.";
+            case "PAR-100":
+                return "Verifique sua conexão com a internet.";
             case "APP-300":
                 return "Erro. Verifique sua conexão com a internet";
             default:

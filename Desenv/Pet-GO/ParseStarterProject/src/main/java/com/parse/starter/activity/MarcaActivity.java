@@ -1,9 +1,12 @@
 package com.parse.starter.activity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.parse.starter.R;
@@ -21,7 +24,7 @@ public class MarcaActivity extends AppCompatActivity {
 
         Random gerador = new Random();
 
-        int numero = gerador.nextInt(5);
+        int numero = gerador.nextInt(6);
 
         switch (numero) {
             case 0:
@@ -39,8 +42,10 @@ public class MarcaActivity extends AppCompatActivity {
             case 4:
                 layout.setBackgroundResource(R.drawable.fundo_marca_5);
                 break;
+            case 5:
+                layout.setBackgroundResource(R.drawable.fundo_marca_6);
+                break;
         }
-
 
         new Handler().postDelayed(new Runnable() {
             /*

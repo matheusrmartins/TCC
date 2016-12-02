@@ -99,8 +99,9 @@ public class HomeAdapter extends ArrayAdapter<ParseObject> {
 
             Picasso.with(context)
                     .load(parseObject.getParseFile("imagem").getUrl())
+                    .placeholder(R.drawable.progress_animation)
                     .fit()
-                    .centerInside()
+                    .centerCrop()
                     .into(imagemPostagem);
 
             final ImageButton botao_like = (ImageButton) view.findViewById(R.id.botao_like);

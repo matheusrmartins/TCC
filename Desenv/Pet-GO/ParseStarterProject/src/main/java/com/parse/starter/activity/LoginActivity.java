@@ -44,6 +44,7 @@ import com.parse.SignUpCallback;
 import com.parse.starter.R;
 
 import com.facebook.FacebookSdk;
+import com.parse.starter.util.Erros;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -187,7 +188,8 @@ public class LoginActivity extends AppCompatActivity {
                     abrirAreaPrincipal();
                 }else{
                     progressDialog.dismiss();
-                    Toast.makeText(LoginActivity.this,  e.getMessage()+" Codigo: PAR-"+ e.getCode(), Toast.LENGTH_SHORT).show();
+                    Erros erros = new Erros();
+                    Toast.makeText(LoginActivity.this,  erros.retornaMensagem("PAR-"+ e.getCode()), Toast.LENGTH_SHORT).show();
                 }
             }
         });

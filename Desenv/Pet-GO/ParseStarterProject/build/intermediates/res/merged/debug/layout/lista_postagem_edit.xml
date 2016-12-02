@@ -15,6 +15,7 @@
             android:textColor="@color/Preto"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:gravity="left"
