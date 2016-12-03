@@ -1,0 +1,7 @@
+#Sat Dec 03 00:44:37 BRST 2016
+base.0=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0cd0ab7d5cba3d2500a9c789c0b326840e8b4b0c
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_1a8ba96fb6c35f14d09e33279c76c5f9038a733f\\classes.dex
+base.1=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_1a8ba96fb6c35f14d09e33279c76c5f9038a733f
+file.0=C\:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0cd0ab7d5cba3d2500a9c789c0b326840e8b4b0c\\classes.dex

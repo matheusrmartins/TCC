@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiSlider"><attr format="integer" name="scaleMin"/><attr format="integer" name="scaleMax"/><attr format="integer" name="scaleStep"/><attr format="integer" name="stepsThumbsApart"/><attr format="boolean" name="drawThumbsApart"/><attr name="android:thumb"/><attr format="integer" name="thumbNumber"/><attr name="android:thumbOffset"/><attr format="integer" name="thumbValue1"/><attr format="integer" name="thumbValue2"/><attr format="reference" name="range1"/><attr format="reference" name="range2"/><attr name="android:track"/><attr format="reference" name="range"/><attr format="boolean" name="mirrorForRTL"/><attr format="color" name="thumbColor"/><attr format="color" name="trackColor"/><attr format="color" name="rangeColor"/><attr format="color" name="range1Color"/><attr format="color" name="range2Color"/></declare-styleable>
+    <declare-styleable name="MultiSliderTheme"><attr format="reference" name="multiSliderStyle"/></declare-styleable>
+</resources>

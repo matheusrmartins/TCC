@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" filepath="$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pet-GO.iml" filepath="$PROJECT_DIR$/Pet-GO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PetGOApp/PetGOApp.iml" filepath="$PROJECT_DIR$/PetGOApp/PetGOApp.iml" />
     </modules>
   </component>
 </project>
