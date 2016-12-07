@@ -1801,7 +1801,7 @@
         <item>VILA NOVA DO PIAUÍ</item>
         <item>WALL FERRAZ</item>
 
-    </string-array><string-array name="lista_cidade_RJ">
+    </string-array><string name="fb_login_protocol_scheme">fb328769967482649</string><string-array name="lista_cidade_RJ">
         <item>ANGRA DOS REIS</item>
         <item>APERIBÉ</item>
         <item>ARARUAMA</item>

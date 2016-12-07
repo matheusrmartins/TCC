@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -238,6 +239,9 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Fazendo o login...");
         progressDialog.show();
         ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
+        if (progressDialog.isShowing())
+            progressDialog.dismiss();
+
     }
 
 }

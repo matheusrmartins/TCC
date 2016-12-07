@@ -16,6 +16,7 @@
     <string name="action_compartilhar">Compartilhar</string>
 
     <string name="facebook_app_id">328769967482649</string>
+    <string name="fb_login_protocol_scheme">fb328769967482649</string>
 
     <string-array name="tipo_animal">
         <item>Cachorro</item>

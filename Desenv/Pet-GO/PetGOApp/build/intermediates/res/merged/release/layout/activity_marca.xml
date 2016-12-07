@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_marca"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_marca_1"
+    tools:context="br.com.petgoapp.activity.MarcaActivity">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_completo"
+        android:id="@+id/imageView2"
+        android:paddingLeft="100dp"
+        android:gravity="center_vertical"
+        android:paddingRight="100dp"
+        android:paddingTop="10dp"
+        android:elevation="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:gravity="center">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/luto"
+        android:paddingTop="10dp"
+        android:id="@+id/luto"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+        android:src="@drawable/chapecoense_logo"
+    android:id="@+id/chape"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:visibility="invisible"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

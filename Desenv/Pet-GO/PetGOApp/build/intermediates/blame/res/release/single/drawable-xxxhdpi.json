@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_action_home.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_action_home.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_send.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_send.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\like.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\like.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_keyboard_arrow_left.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_keyboard_arrow_left.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_pets.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_pets.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\luto.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\luto.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_notifications.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_notifications.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_today.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_today.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_call.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_call.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_message.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_message.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi\\ic_favorite.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xxxhdpi\\ic_favorite.png"
+    }
+]
