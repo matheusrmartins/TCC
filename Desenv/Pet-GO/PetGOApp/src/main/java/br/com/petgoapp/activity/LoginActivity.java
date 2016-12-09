@@ -92,8 +92,6 @@ public class LoginActivity extends AppCompatActivity {
         db.close();
 
 
-
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -234,14 +232,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        progressDialog = new ProgressDialog(LoginActivity.this);
-        progressDialog.setCancelable(false);
-        progressDialog.setMessage("Fazendo o login...");
-        progressDialog.show();
         ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
-        if (progressDialog.isShowing())
-            progressDialog.dismiss();
-
     }
 
 }
