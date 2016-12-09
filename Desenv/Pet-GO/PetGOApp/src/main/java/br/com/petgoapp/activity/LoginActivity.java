@@ -95,6 +95,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressDialog = new ProgressDialog(LoginActivity.this);
+                progressDialog.setCancelable(false);
+                progressDialog.setMessage("Fazendo o login...");
+                progressDialog.show();
+
                 ParseFacebookUtils.logInWithReadPermissionsInBackground(LoginActivity.this, Arrays.asList("public_profile","email"), new LogInCallback() {
                     @Override
                     public void done(ParseUser user, ParseException err) {
@@ -102,10 +107,6 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this,  "Erro ao fazer o login", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
                         } else if (user.isNew()) {
-                            progressDialog = new ProgressDialog(LoginActivity.this);
-                            progressDialog.setCancelable(false);
-                            progressDialog.setMessage("Fazendo o login...");
-                            progressDialog.show();
 
                             getUserDetailsFromFB();
                             abrirAreaPrincipal();
@@ -117,10 +118,6 @@ public class LoginActivity extends AppCompatActivity {
 
                             progressDialog.dismiss();
                         } else {
-                            progressDialog = new ProgressDialog(LoginActivity.this);
-                            progressDialog.setCancelable(false);
-                            progressDialog.setMessage("Fazendo o login...");
-                            progressDialog.show();
                             abrirAreaPrincipal();
 
                             SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
