@@ -164,12 +164,12 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\fundo_marca_6.xml",
-        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-hdpi\\fundo_marca_6.xml"
-    },
-    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_focused.9.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\fundo_marca_6.xml",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-hdpi\\fundo_marca_6.xml"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png",

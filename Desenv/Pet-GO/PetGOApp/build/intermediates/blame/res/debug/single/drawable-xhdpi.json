@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\exploded-aar\\io.apptik.widget\\multislider\\1.2\\res\\drawable-xhdpi\\multislider_scrubber_control_normal_holo.png"
     },
     {
-        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_today.png",
-        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xhdpi\\ic_today.png"
-    },
-    {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_call.png",
         "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xhdpi\\ic_call.png"
+    },
+    {
+        "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_today.png",
+        "source": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\src\\main\\res\\drawable-xhdpi\\ic_today.png"
     },
     {
         "merged": "C:\\Users\\Matheus\\Documents\\git\\local\\tcc\\Desenv\\Pet-GO\\PetGOApp\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\multislider_scrubber_secondary_holo.9.png",

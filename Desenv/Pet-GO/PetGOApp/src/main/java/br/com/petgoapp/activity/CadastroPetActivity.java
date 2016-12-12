@@ -54,7 +54,7 @@ public class CadastroPetActivity extends AppCompatActivity {
     private String[] cidades;
     private ArrayAdapter<String> adapter;
     private EditText telefone_contato;
-
+    private EditText nome_usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +75,20 @@ public class CadastroPetActivity extends AppCompatActivity {
         macho = (RadioButton) findViewById(R.id.radio_macho);
         cachorro = (RadioButton) findViewById(R.id.radio_cachorro);
         telefone_contato = (EditText) findViewById(R.id.editText_telefone);
+        nome_usuario = (EditText) findViewById(R.id.editText_nome_usuario);
+
+        try {
+            nome_usuario.setText(ParseUser.getCurrentUser().get("nome").toString());
+        } catch (Exception e){
+            nome_usuario.setEnabled(true);
+            nome_usuario.setVisibility(View.VISIBLE);
+        }
+
+        if (ParseUser.getCurrentUser().get("nome").toString().equals("Não Identificado")){
+            nome_usuario.setText("");
+            nome_usuario.setEnabled(true);
+            nome_usuario.setVisibility(View.VISIBLE);
+        }
 
         MaskEditTextChangedListener maskTELEFONE = new MaskEditTextChangedListener("(##) #####-####", telefone_contato);
         telefone_contato.addTextChangedListener(maskTELEFONE);
@@ -149,7 +163,8 @@ public class CadastroPetActivity extends AppCompatActivity {
                                             nome_animal.getText().toString().trim(),
                                             lista_ano_int+lista_mes_int,
                                             lista_raca.getSelectedItemPosition(),
-                                            lista_estado.getSelectedItemPosition());
+                                            lista_estado.getSelectedItemPosition(),
+                                            nome_usuario.getText().toString().trim());
 
                 if (imagem_byteArray == null)
                     cod_erro = 108;
@@ -167,7 +182,8 @@ public class CadastroPetActivity extends AppCompatActivity {
 
                     try {
                         Bundle bundle = new Bundle();
-                        bundle.putString("nome_animal", nome_animal.getText().toString());
+                        bundle.putString("nome_usuario", nome_usuario.getText().toString().trim());
+                        bundle.putString("nome_animal", nome_animal.getText().toString().trim());
                         bundle.putString("lista_genero", macho.isChecked() ? "Macho":"Fêmea");
                         bundle.putString("lista_tipo", cachorro.isChecked() ? "Cachorro":"Gato");
                         bundle.putString("lista_raca", lista_raca.getSelectedItem().toString());
@@ -177,7 +193,7 @@ public class CadastroPetActivity extends AppCompatActivity {
                         bundle.putString("lista_estado", lista_estado.getSelectedItem().toString());
                         bundle.putString("lista_cidade", lista_cidade.getText().toString().toUpperCase().trim());
                         bundle.putString("telefone_contato", telefone_contato.getText().toString());
-                        bundle.putString("descricao", descricao.getText().toString());
+                        bundle.putString("descricao", descricao.getText().toString().trim());
                         bundle.putByteArray("imagem", imagem_byteArray);
                         Intent intent = new Intent(CadastroPetActivity.this, VacinaActivity.class);
                         intent.putExtras(bundle);
@@ -357,14 +373,21 @@ public class CadastroPetActivity extends AppCompatActivity {
         return scaledGalleryPic;
     }
 
-    private final int verificaErro(int posicao_cidade, String nome_animal, String idade, int raca_position, int posicao_estado){
+    private final int verificaErro(int posicao_cidade,
+                                   String nome_animal,
+                                   String idade,
+                                   int raca_position,
+                                   int posicao_estado,
+                                   String nome_usuario){
 
-        if (posicao_estado == 0)
+        if(nome_usuario.equals(""))
+            return 115;
+        else if(nome_animal.equals(""))
+            return 107;
+        else if (posicao_estado == 0)
             return 114;
         else if(posicao_cidade == -1)
             return 104;
-        else if(nome_animal.equals(""))
-            return 107;
         else if(idade.equals("0000"))
             return 109;
         else if (raca_position == 0)

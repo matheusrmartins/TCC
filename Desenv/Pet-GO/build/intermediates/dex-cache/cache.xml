@@ -3,33 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="518adc52081d41724932b41bc132e4d50a352b86">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.6.1_281650dc398a09fe5e116e997d2279ebc0554b45\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="820605b42a2d3d9cb9e6c4cc7453fb4f802aedff">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.15.0_751abc51640935dadbb4ce9deea90113cc932ef0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_b47ed668b045ca4b68c7875ccad4e6f29fe6c444\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
         jumboMode="true"
         optimize="true"
@@ -39,30 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_e955549c71cc69e68a6a36e884a4f2354e940a53\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_c2f7adcf6a405a808f8136f14f19e038918caa71\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_09dca220eaab670fe613b2b035681616f9c7c7ea\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="e9658aa68b26f4f5567c313377eb05146bd71088">
+        sha1="34bc9b99cd88f22082d790defc3603bf767793ad">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1a8ba96fb6c35f14d09e33279c76c5f9038a733f\classes.dex" />
     </item>
     <item
@@ -102,30 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_2565eb48e25629846f88e7b3c12e57f7a5243eab\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.6.1_d5cdc9fa6876b5bc51809a721890cf624cc07f92\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_dec4bd955abd0b83b5edf5073f35ba39d598edf8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,39 +75,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_32f1632efd83aedbc9c13fdb4ceb8c1ec3385208\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_b8fc33f44d4f1bf4da76c4aaddff576b868e09bb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_d789d38494a16120f03df3a01c90458623c3b213\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\br.com.jansenfelipe\androidmask\1.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="95aefadb122067362595b093cd6538839e5a3dae">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\br.com.jansenfelipe-androidmask-1.0.1_0ff5cd4777fb7e10e3c5ad56abbac5732bc194c5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -214,8 +124,107 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="7d2668df4522800fca01812f275e740adf59c541">
+        sha1="d741b94e097761bf7f711bd9e22d8cba344b0526">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0cd0ab7d5cba3d2500a9c789c0b326840e8b4b0c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.6.1_65afbf6b19e0fbeacd399e0974cc6eea8638f023\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="518adc52081d41724932b41bc132e4d50a352b86">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.6.1_281650dc398a09fe5e116e997d2279ebc0554b45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="820605b42a2d3d9cb9e6c4cc7453fb4f802aedff">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.15.0_751abc51640935dadbb4ce9deea90113cc932ef0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_b47ed668b045ca4b68c7875ccad4e6f29fe6c444\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_e955549c71cc69e68a6a36e884a4f2354e940a53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_09dca220eaab670fe613b2b035681616f9c7c7ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_2565eb48e25629846f88e7b3c12e57f7a5243eab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.4.0_dec4bd955abd0b83b5edf5073f35ba39d598edf8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_32f1632efd83aedbc9c13fdb4ceb8c1ec3385208\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_b8fc33f44d4f1bf4da76c4aaddff576b868e09bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\br.com.jansenfelipe\androidmask\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="95aefadb122067362595b093cd6538839e5a3dae">
+        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\br.com.jansenfelipe-androidmask-1.0.1_0ff5cd4777fb7e10e3c5ad56abbac5732bc194c5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -234,15 +243,6 @@
         revision="23.0.2"
         sha1="4a36600281a648769411ef642c331851732bf29e">
         <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_fdf1322a9fe8014287abf9123272deff7ff8417e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
-        <dex dex="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.6.1_65afbf6b19e0fbeacd399e0974cc6eea8638f023\classes.dex" />
     </item>
 
 </items>

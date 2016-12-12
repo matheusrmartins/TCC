@@ -5,36 +5,36 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="1029952141405956"
+    timestamp="1249216240235197"
     token="1674489646682122821"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1589" />
+        duration="1209" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="246" />
+        duration="212" />
     <task
         name="verifier"
-        duration="24" />
+        duration="34" />
 
     <artifact
         location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
         type="DEX" />
 
     <build
-        timestamp="1029608507440871"
+        timestamp="1248621010225950"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\outputs\apk\PetGOApp-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="1029952141405956"
+        timestamp="1249216240235197"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Matheus\Documents\git\local\tcc\Desenv\Pet-GO\PetGOApp\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"

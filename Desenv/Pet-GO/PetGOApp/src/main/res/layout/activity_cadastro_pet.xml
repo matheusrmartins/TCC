@@ -37,19 +37,36 @@
             android:weightSum="1"
             android:padding="5dp">
 
-        <EditText
-            android:fontFamily="sans-serif"
-            android:layout_width="match_parent"
-            android:inputType="textPersonName|textCapWords"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="@android:color/black"
-            android:id="@+id/editText_nome_animal"
-            android:hint="Digite o nome do animal"
-            android:background="@drawable/fundo_caixa_texto"
-            android:padding="13dp"
-            android:layout_marginBottom="17dp"
-            android:layout_marginTop="18dp" />
+            <EditText
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@android:color/black"
+                android:id="@+id/editText_nome_usuario"
+                android:visibility="gone"
+                android:hint="Digite o nome do anunciante. Ex: ONG X"
+                android:background="@drawable/fundo_caixa_texto"
+                android:padding="13dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="18dp" />
+
+            <EditText
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:inputType="textPersonName|textCapWords"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@android:color/black"
+                android:id="@+id/editText_nome_animal"
+                android:hint="Digite o nome do animal. Ex: Tobias"
+                android:background="@drawable/fundo_caixa_texto"
+                android:padding="13dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="18dp" />
+
+
 
 
             <RelativeLayout
@@ -198,7 +215,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/lista_cidade"
             android:textColor="@android:color/black"
-            android:hint="Digite a cidade do animal"
+            android:hint="Digite a cidade do animal. Ex: Santos"
             android:dropDownWidth="match_parent"
             android:layout_marginTop="17dp"
             />
@@ -228,8 +245,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:height="100dp"
-            android:inputType="textMultiLine"
-            android:hint="Digite a descrição do animal"
+            android:inputType="textMultiLine|textPersonName"
+            android:hint="Digite a descrição do animal. Ex: Calmo, brincalhão, gosta de passear"
             android:textColor="@android:color/black"
             android:background="@drawable/fundo_caixa_texto"
             android:ems="10"

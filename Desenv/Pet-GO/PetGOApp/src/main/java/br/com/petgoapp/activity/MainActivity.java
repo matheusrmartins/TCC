@@ -24,10 +24,17 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
+import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
+
 import br.com.petgoapp.R;
 
 import br.com.petgoapp.adapter.TabsAdapter;
@@ -57,6 +64,59 @@ public class MainActivity extends AppCompatActivity  {
         viewPager = (ViewPager) findViewById(R.id.view_pager_main);
 
         setSupportActionBar(toolbarPrincipal);
+
+        try {
+            String usuario = ParseUser.getCurrentUser().get("nome").toString();
+            if (usuario.equals("Não Identificado")){
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+            alertDialog.setTitle("Digite o seu nome");
+            alertDialog.setMessage("Precisamos do seu nome para poder configurar a sua conta");
+
+            final EditText input = new EditText(MainActivity.this);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT);
+            input.setLayoutParams(lp);
+            alertDialog.setView(input);
+            alertDialog.setCancelable(false);
+
+            alertDialog.setPositiveButton("OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(final DialogInterface dialog, int which) {
+                            if (input.getText().toString().trim().equals("")) {
+                                ParseUser.getCurrentUser().put("nome", "Não Identificado");
+                                ParseUser.getCurrentUser().saveInBackground(new SaveCallback() {
+                                    @Override
+                                    public void done(ParseException e) {
+                                        if (e == null) {
+                                            dialog.dismiss();
+                                        }
+                                    }
+                                });
+                            }
+                            else {
+                                ParseUser.getCurrentUser().put("nome", input.getText().toString().trim());
+                                ParseUser.getCurrentUser().saveInBackground(new SaveCallback() {
+                                    @Override
+                                    public void done(ParseException e) {
+                                        if (e == null) {
+                                            dialog.dismiss();
+                                            Toast.makeText(MainActivity.this, "Seja bem-vindo " + input.getText().toString().trim(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
+
+
+            alertDialog.show();
+
+        }
+
 
         SQLiteDatabase db = openOrCreateDatabase("usuariologin.db", Context.MODE_PRIVATE, null);
 

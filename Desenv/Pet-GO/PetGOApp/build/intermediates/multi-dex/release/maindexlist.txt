@@ -396,6 +396,7 @@ android/support/v4/view/ViewCompat$JBViewCompatImpl.class
 android/support/v7/widget/RecyclerViewAccessibilityDelegate.class
 br/com/petgoapp/activity/VacinaActivity$2.class
 android/support/v4/media/MediaMetadataCompatApi21.class
+br/com/petgoapp/activity/MainActivity$3.class
 com/google/android/gms/R.class
 com/parse/ParseFacebookUtils.class
 android/support/annotation/IntegerRes.class
@@ -453,7 +454,6 @@ android/support/v7/view/ActionMode.class
 android/support/v4/app/BaseFragmentActivityHoneycomb.class
 android/support/v4/app/ActivityCompatApi23$RequestPermissionsRequestCodeValidator.class
 android/support/design/widget/Snackbar$8.class
-com/facebook/FacebookCallback.class
 android/support/v4/media/VolumeProviderCompatApi21.class
 android/support/v4/view/ViewCompat$ViewCompatImpl.class
 br/com/petgoapp/activity/MainActivity$1.class

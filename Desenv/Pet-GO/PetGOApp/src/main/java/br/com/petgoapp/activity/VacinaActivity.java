@@ -1,15 +1,18 @@
 package br.com.petgoapp.activity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -41,7 +44,7 @@ public class VacinaActivity extends AppCompatActivity {
 
         final LinearLayout attractedTo = (LinearLayout) findViewById(R.id.activity_vacina);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_vacinas);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_vacinas);
 
         toolbar.setTitle("Selecione as vacinas");
         toolbar.setTitleTextColor(R.color.Preto);
@@ -95,6 +98,7 @@ public class VacinaActivity extends AppCompatActivity {
                 String lista_mes = getIntent().getExtras().getString("lista_mes");
                 String lista_estado = getIntent().getExtras().getString("lista_estado");
                 String lista_cidade = getIntent().getExtras().getString("lista_cidade");
+                String nome_usuario = getIntent().getExtras().getString("nome_usuario");
 
                 Geocoder gc = new Geocoder(VacinaActivity.this, new Locale("pt", "BR"));
                 List<Address> addresses= null;
@@ -165,16 +169,16 @@ public class VacinaActivity extends AppCompatActivity {
                 parseObject.put("castrado", ""+castrado);
                 parseObject.put("lista_tipo", lista_tipo);
                 parseObject.put("Likes", 0);
-                parseObject.put("usuario_nome", ParseUser.getCurrentUser().get("nome"));
+                parseObject.put("usuario_nome", nome_usuario);
 
+                ParseUser.getCurrentUser().put("nome", nome_usuario);
+                ParseUser.getCurrentUser().saveInBackground();
 
                 parseObject.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
                         if (e == null){
-
                             progressDialog.dismiss();
-
                             Toast.makeText(VacinaActivity.this,  "Sucesso ao publicar animal" , Toast.LENGTH_SHORT).show();
                             finish();
                             Intent intent = new Intent(VacinaActivity.this, MainActivity.class);

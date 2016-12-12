@@ -37,6 +37,8 @@ public class Erros {
                 return "Selecione uma raça";
             case "APP-114":
                 return "Selecione o estado";
+            case "APP-115":
+                return "O nome do anunciante é obrigatório";
             case "PAR-101":
                 return "E-mail/Senha incorretos.";
             case "PAR-200":
